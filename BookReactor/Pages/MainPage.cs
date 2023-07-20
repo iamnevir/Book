@@ -1,49 +1,195 @@
-﻿using MauiReactor;
+﻿
+using MauiReactor;
 using MauiReactor.Animations;
 using MauiReactor.Shapes;
 using Microsoft.Maui.Devices;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace BookReactor.Pages;
 
+
+[Scaffold(typeof(Xe.AcrylicView.AcrylicView))]
+public partial class AcrylicView { }
+[Scaffold(typeof(SkiaSharp.Extended.UI.Controls.SKSurfaceView))]
+partial class SKSurfaceView { }
+
+[Scaffold(typeof(SkiaSharp.Extended.UI.Controls.SKAnimatedSurfaceView))]
+partial class SKAnimatedSurfaceView { }
+
+[Scaffold(typeof(SkiaSharp.Extended.UI.Controls.SKLottieView))]
+partial class SKLottieView { }
+
 class MainPageState
 {
-   
+    public Book HeaderBook { get; set; }
 }
 
 class MainPage : Component<MainPageState>
 {
-
+    GoogleBookServices _googleBookServices;
+    protected override async void OnMounted()
+    {
+        State.HeaderBook = await _googleBookServices.GetBookDetailAsync("twm-qEmxw38C");
+        Debug.WriteLine("hehe");
+        base.OnMounted();
+    }
     public override VisualNode Render()
     {
-        return new ContentPage
+        return new NavigationPage
         {
-               new Grid
-               {
-                  new StartPage()
-                  ,
-                  new HomePage()
-               }.BackgroundColor(Colors.Black)
+              new ContentPage
+              {
+                  new Grid
+                  {
+                     
+                      new NavBar()
+                  }.BackgroundColor(Colors.Black)
+              }.Set(MauiControls.NavigationPage.HasNavigationBarProperty,false)
         };
+
+    }
+}
+
+class NavBarState
+{
+    public bool HomeSelected { get; set; }
+    public bool BookSelected { get; set; }
+    public bool FavoriteSelected { get; set; }
+    public bool UserSelected { get; set; }
+}
+class NavBar : Component<NavBarState>
+{
+    public override VisualNode Render()
+    {
+        return new Border
+        {
+            new AcrylicView
+            {
+                new HStack
+                {
+                    new Image(State.HomeSelected?"nha":"inha")
+                    .HeightRequest(30),
+                    new Image(State.BookSelected?"sach":"isach")
+                    .HeightRequest(30),
+                    new Image(State.FavoriteSelected?"favorite":"ifavorite")
+                    .HeightRequest(30),
+                    new Image(State.UserSelected?"user":"iuser")
+                    .HeightRequest(30),
+                }.Spacing(35)
+                .HCenter()
+            }.EffectStyle(Xe.AcrylicView.Controls.EffectStyle.ExtraLight)
+            .HFill()
+            .VFill()
+        }.BackgroundColor(Colors.White)
+        .VEnd()
+        .Stroke(Colors.Transparent)
+        .HCenter()
+        .StrokeShape(new RoundRectangle().CornerRadius(70))
+        .HeightRequest(50)
+        .WidthRequest(300)
+        .Margin(0, 0, 0, 50);
     }
 }
 
 class HomePageState
 {
-
+    
 }
-class HomePage:Component<HomePageState>
+class HomePage : Component<HomePageState>
 {
+    Book _headerBook;
+    public HomePage GetBook(Book book)
+    {
+        _headerBook = book;
+        return this;
+    }
     public override VisualNode Render()
     {
-        return new Shell
-        {
+        return 
+             new Grid("50,400","*")
+            {
+                RenderHeader(),
+                new Border
+                {
+                    new Grid
+                    {
+                        new Image(_headerBook.items.FirstOrDefault().volumeInfo.imageLinks.thumbnail)
+                        .Aspect(Aspect.Fill)
+                        ,
+                        new Border
+                        {
 
-        }.BackgroundColor(Colors.Black);
+                        }.VEnd()
+                    }
+                }.GridRow(1)
+            }.BackgroundColor(Colors.Black)
+        ;
+           
+    }
+
+    private VisualNode RenderHeader()
+    {
+        return new HStack
+            {
+                new SKLottieView()
+                .Source(new SkiaSharp.Extended.UI.Controls.SKFileLottieImageSource()
+                {
+                    File="bookanimation.json"
+                })
+                .RepeatCount(-1)
+                .IsAnimationEnabled(true)
+                .IsEnabled(true)
+                .IsVisible(true)
+                .HeightRequest(50)
+                .WidthRequest(50)
+                .BackgroundColor(Colors.Transparent)
+                ,
+                new Label("Stories")
+                .TextColor(Colors.White)
+                .FontAttributes(Microsoft.Maui.Controls.FontAttributes.Bold)
+                .FontSize(30)
+                .FontFamily(Theme.font)
+                .HCenter()
+
+                ,
+                 new SKLottieView()
+                .Source(new SkiaSharp.Extended.UI.Controls.SKFileLottieImageSource()
+                {
+                    File="tb.json"
+                })
+                .RepeatCount(-1)
+                .IsAnimationEnabled(true)
+                .IsEnabled(true)
+                .IsVisible(true)
+                .HeightRequest(70)
+                .WidthRequest(70)
+                .BackgroundColor(Colors.Transparent)
+                .HEnd()
+                .Margin(100,10,0,0)
+                ,
+                  new SKLottieView()
+                .Source(new SkiaSharp.Extended.UI.Controls.SKFileLottieImageSource()
+                {
+                    File="search.json"
+                })
+                .RepeatCount(-1)
+                .IsAnimationEnabled(true)
+                .IsEnabled(true)
+                .IsVisible(true)
+                .HeightRequest(60)
+                .WidthRequest(60)
+                .BackgroundColor(Colors.Transparent)
+                .HEnd()
+                .Margin(-25,0,0,0)
+                ,
+            }.Spacing(10)
+            .Margin(15, 20, 0, 0)
+            .GridRow(0);
     }
 }
 
@@ -59,12 +205,6 @@ class StartPageState
 }
 class StartPage : Component<StartPageState>
 {
-    bool _isVisible;
-    public StartPage Visible(bool isVisible)
-    {
-        _isVisible = isVisible;
-        return this;
-    }
     public override VisualNode Render()
     {
         var currentImage = StartPageImage.StartPageImages[State.ImageIndex];
@@ -93,7 +233,7 @@ class StartPage : Component<StartPageState>
                                 .StartValue(State.PanX)
                                 .TargetValue(State.ScrollTo == ScrollToMode.Right ? State.ImageSize.Width : -State.ImageSize.Width)
                                 .OnTick(v => SetState(s => s.PanX = v))
-                                .Duration(500)
+                                .Duration(300)
                         }
                     }
                       .IsEnabled(State.ScrollTo != ScrollToMode.None)

@@ -1,5 +1,7 @@
 ﻿
-
+using Microsoft.Extensions.DependencyInjection;
+using SkiaSharp.Views.Maui.Controls.Hosting;
+using System;
 
 namespace BookReactor;
 
@@ -10,15 +12,18 @@ public static class MauiProgram
         var builder = MauiApp.CreateBuilder();
         builder
             .UseMauiReactorApp<MainPage>()
+            .UseAcrylicView()
+            .UseSkiaSharp()
+            
 #if DEBUG
         .EnableMauiReactorHotReload()
 #endif
             .ConfigureFonts(fonts =>
             {
                 fonts.AddFont("EmilysCandy-Regular.ttf", "EmilysCandy");
-                fonts.AddFont("EmilysCandy-Regular.ttf", "OpenSansSemiBold");
             });
-
+        builder.Services.AddHttpClient(GoogleBookServices.BookHttpClientName, httpClient =>
+       httpClient.BaseAddress = new Uri("https://www.googleapis.com/books/v1"));
         return builder.Build();
     }
 }

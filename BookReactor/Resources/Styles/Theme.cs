@@ -9,4 +9,5 @@ namespace BookReactor.Resources.Styles;
 public class Theme
 {
     public static Color Mau = Color.FromArgb("");
+    public static string font = "EmilysCandy";
 }

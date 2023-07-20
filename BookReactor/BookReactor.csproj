@@ -37,19 +37,34 @@
     <MauiAsset Include="Resources\Raw\**" LogicalName="%(RecursiveDir)%(Filename)%(Extension)" />
   </ItemGroup>
   <ItemGroup>
-    <None Remove="Resources\Fonts\EmilysCandy-Regular.ttf" />
-    <None Remove="Resources\Images\StartPage\sp1.jpg" />
-    <None Remove="Resources\Images\StartPage\sp2.jpg" />
-    <None Remove="Resources\Images\StartPage\sp3.jpg" />
+    <None Remove="Resources\Images\NavBar\inha.png" />
+    <None Remove="Resources\Images\NavBar\isach.png" />
+    <None Remove="Resources\Images\NavBar\nha.png" />
+    <None Remove="Resources\Images\NavBar\sach.png" />
+    <None Remove="Resources\Raw\bookanimation.json" />
+    <None Remove="Resources\Raw\search.json" />
+    <None Remove="Resources\Raw\tb.json" />
   </ItemGroup>
+
   <ItemGroup>
+    <MauiImage Include="Resources\Images\NavBar\sach.png" />
+    <MauiImage Include="Resources\Images\NavBar\favorite.png" />
+    <MauiImage Include="Resources\Images\NavBar\nha.png" />
+    <MauiImage Include="Resources\Images\NavBar\isach.png" />
+    <MauiImage Include="Resources\Images\NavBar\ifavorite.png" />
+    <MauiImage Include="Resources\Images\NavBar\inha.png" />
+    <MauiImage Include="Resources\Images\NavBar\iuser.png" />
+    <MauiImage Include="Resources\Images\NavBar\user.png" />
     <MauiImage Include="Resources\Images\StartPage\sp1.jpg" />
     <MauiImage Include="Resources\Images\StartPage\sp2.jpg" />
     <MauiImage Include="Resources\Images\StartPage\sp3.jpg" />
   </ItemGroup>
   <ItemGroup>
+    <PackageReference Include="AcrylicView.Maui" Version="1.13.0" />
+    <PackageReference Include="Microsoft.Extensions.Http" Version="7.0.0" />
     <PackageReference Include="Reactor.Maui" Version="1.0.138" />
     <PackageReference Include="Reactor.Maui.Canvas" Version="1.0.138" />
     <PackageReference Include="Reactor.Maui.ScaffoldGenerator" Version="1.0.138" OutputItemType="Analyzer" ReferenceOutputAssembly="false" />
+    <PackageReference Include="SkiaSharp.Extended.UI.Maui" Version="2.0.0-preview.61" />
   </ItemGroup>
 </Project>

@@ -1,24 +1,26 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\trick\\source\\repos\\BookReactor\\BookReactor\\BookReactor.csproj": {}
+    "C:\\Users\\DINH LAM\\source\\repos\\Book\\BookReactor\\BookReactor.csproj": {}
   },
   "projects": {
-    "C:\\Users\\trick\\source\\repos\\BookReactor\\BookReactor\\BookReactor.csproj": {
+    "C:\\Users\\DINH LAM\\source\\repos\\Book\\BookReactor\\BookReactor.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\trick\\source\\repos\\BookReactor\\BookReactor\\BookReactor.csproj",
+        "projectUniqueName": "C:\\Users\\DINH LAM\\source\\repos\\Book\\BookReactor\\BookReactor.csproj",
         "projectName": "BookReactor",
-        "projectPath": "C:\\Users\\trick\\source\\repos\\BookReactor\\BookReactor\\BookReactor.csproj",
-        "packagesPath": "C:\\Users\\trick\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\trick\\source\\repos\\BookReactor\\BookReactor\\obj\\",
+        "projectPath": "C:\\Users\\DINH LAM\\source\\repos\\Book\\BookReactor\\BookReactor.csproj",
+        "packagesPath": "C:\\Users\\DINH LAM\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\DINH LAM\\source\\repos\\Book\\BookReactor\\obj\\",
         "projectStyle": "PackageReference",
         "crossTargeting": true,
         "fallbackFolders": [
+          "C:\\Program Files\\DevExpress 23.1\\Components\\Offline Packages",
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\trick\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\DINH LAM\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\DevExpress 23.1.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -30,6 +32,7 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\DevExpress 23.1\\Components\\System\\Components\\Packages": {},
           "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
@@ -61,6 +64,10 @@
         "net7.0-android33.0": {
           "targetAlias": "net7.0-android",
           "dependencies": {
+            "AcrylicView.Maui": {
+              "target": "Package",
+              "version": "[1.13.0, )"
+            },
             "Microsoft.Extensions.Configuration": {
               "target": "Package",
               "version": "[7.0.0, )",
@@ -70,6 +77,10 @@
               "target": "Package",
               "version": "[7.0.0, )",
               "autoReferenced": true
+            },
+            "Microsoft.Extensions.Http": {
+              "target": "Package",
+              "version": "[7.0.0, )"
             },
             "Microsoft.Extensions.Logging": {
               "target": "Package",
@@ -97,6 +108,10 @@
             "Reactor.Maui.ScaffoldGenerator": {
               "target": "Package",
               "version": "[1.0.138, )"
+            },
+            "SkiaSharp.Extended.UI.Maui": {
+              "target": "Package",
+              "version": "[2.0.0-preview.61, )"
             },
             "Xamarin.Android.Glide": {
               "target": "Package",
@@ -187,6 +202,10 @@
         "net7.0-ios16.1": {
           "targetAlias": "net7.0-ios",
           "dependencies": {
+            "AcrylicView.Maui": {
+              "target": "Package",
+              "version": "[1.13.0, )"
+            },
             "Microsoft.Extensions.Configuration": {
               "target": "Package",
               "version": "[7.0.0, )",
@@ -196,6 +215,10 @@
               "target": "Package",
               "version": "[7.0.0, )",
               "autoReferenced": true
+            },
+            "Microsoft.Extensions.Http": {
+              "target": "Package",
+              "version": "[7.0.0, )"
             },
             "Microsoft.Extensions.Logging": {
               "target": "Package",
@@ -223,6 +246,10 @@
             "Reactor.Maui.ScaffoldGenerator": {
               "target": "Package",
               "version": "[1.0.138, )"
+            },
+            "SkiaSharp.Extended.UI.Maui": {
+              "target": "Package",
+              "version": "[2.0.0-preview.61, )"
             }
           },
           "imports": [
@@ -258,6 +285,10 @@
         "net7.0-maccatalyst16.1": {
           "targetAlias": "net7.0-maccatalyst",
           "dependencies": {
+            "AcrylicView.Maui": {
+              "target": "Package",
+              "version": "[1.13.0, )"
+            },
             "Microsoft.Extensions.Configuration": {
               "target": "Package",
               "version": "[7.0.0, )",
@@ -267,6 +298,10 @@
               "target": "Package",
               "version": "[7.0.0, )",
               "autoReferenced": true
+            },
+            "Microsoft.Extensions.Http": {
+              "target": "Package",
+              "version": "[7.0.0, )"
             },
             "Microsoft.Extensions.Logging": {
               "target": "Package",
@@ -294,6 +329,10 @@
             "Reactor.Maui.ScaffoldGenerator": {
               "target": "Package",
               "version": "[1.0.138, )"
+            },
+            "SkiaSharp.Extended.UI.Maui": {
+              "target": "Package",
+              "version": "[2.0.0-preview.61, )"
             }
           },
           "imports": [
@@ -330,6 +369,10 @@
         "net7.0-windows10.0.19041": {
           "targetAlias": "net7.0-windows10.0.19041.0",
           "dependencies": {
+            "AcrylicView.Maui": {
+              "target": "Package",
+              "version": "[1.13.0, )"
+            },
             "Microsoft.Extensions.Configuration": {
               "target": "Package",
               "version": "[7.0.0, )",
@@ -339,6 +382,10 @@
               "target": "Package",
               "version": "[7.0.0, )",
               "autoReferenced": true
+            },
+            "Microsoft.Extensions.Http": {
+              "target": "Package",
+              "version": "[7.0.0, )"
             },
             "Microsoft.Extensions.Logging": {
               "target": "Package",
@@ -382,6 +429,10 @@
             "Reactor.Maui.ScaffoldGenerator": {
               "target": "Package",
               "version": "[1.0.138, )"
+            },
+            "SkiaSharp.Extended.UI.Maui": {
+              "target": "Package",
+              "version": "[2.0.0-preview.61, )"
             }
           },
           "imports": [
