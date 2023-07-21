@@ -2,9 +2,11 @@
 using MauiReactor;
 using MauiReactor.Animations;
 using MauiReactor.Shapes;
+using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Maui.Devices;
 using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Diagnostics;
 using System.Linq;
 using System.Text;
@@ -26,17 +28,17 @@ partial class SKLottieView { }
 
 class MainPageState
 {
-    public Book HeaderBook { get; set; }
+    public Item SelectedBook { get; set; }
 }
 
 class MainPage : Component<MainPageState>
 {
-    GoogleBookServices _googleBookServices;
-    protected override async void OnMounted()
+    private async void OpenDetailBook(Item book)
     {
-        State.HeaderBook = await _googleBookServices.GetBookDetailAsync("twm-qEmxw38C");
-        Debug.WriteLine("hehe");
-        base.OnMounted();
+        await Navigation.PushAsync<DetailBook, DetailBookProps>(_ =>
+        {
+            _.Book = book;
+        });
     }
     public override VisualNode Render()
     {
@@ -46,8 +48,11 @@ class MainPage : Component<MainPageState>
               {
                   new Grid
                   {
-                     
-                      new NavBar()
+                      new StartPage(),
+                      new HomePage()
+                      .OpenBookDetail(OpenDetailBook)
+                      ,
+                      //new NavBar()
                   }.BackgroundColor(Colors.Black)
               }.Set(MauiControls.NavigationPage.HasNavigationBarProperty,false)
         };
@@ -72,7 +77,7 @@ class NavBar : Component<NavBarState>
             {
                 new HStack
                 {
-                    new Image(State.HomeSelected?"nha":"inha")
+                    new Image(State.HomeSelected?"inha":"nha")
                     .HeightRequest(30),
                     new Image(State.BookSelected?"sach":"isach")
                     .HeightRequest(30),
@@ -98,38 +103,304 @@ class NavBar : Component<NavBarState>
 
 class HomePageState
 {
-    
+    public VolumeInfo HeaderBook { get; set; } = new();
+    public List<Item> Books { get; set; } 
+    public Item SelectedBook { get; set; } 
+    public bool IsLoading { get; set; }
+    public bool IsCategoryVisible { get; set; }
 }
 class HomePage : Component<HomePageState>
 {
-    Book _headerBook;
-    public HomePage GetBook(Book book)
+    Action<Item> _selectBook;
+    public HomePage OpenBookDetail(Action<Item> action)
     {
-        _headerBook = book;
+        _selectBook = action;
         return this;
+    }
+    protected override async void OnMounted()
+    {
+        var googleBook = Services.GetRequiredService<IGoogleServices>();
+        State.IsLoading = true;
+        var books = await googleBook.GetBook();
+
+        SetState(s =>
+        {
+            s.Books=books.items;
+            s.IsLoading = false;
+        });
+        base.OnMounted();
     }
     public override VisualNode Render()
     {
         return 
-             new Grid("50,400","*")
+             new Grid("50,Auto,340,*","*")
             {
                 RenderHeader(),
-                new Border
+                new Label("Category ⇵")
+                .TextColor(Colors.White)
+                .FontAttributes(Microsoft.Maui.Controls.FontAttributes.Bold)
+                .FontSize(20)
+                .FontFamily(Theme.font)
+                .HEnd()
+                .GridRow(1)
+                .Margin(0,10,40,-30)
+                .BackgroundColor(Colors.Transparent)
+                .OnTapped(()=>SetState(s=>s.IsCategoryVisible=!s.IsCategoryVisible)),
+               RenderCategory(),
+               new ScrollView
+               {
+                   new Grid("Auto,230","*")
+                   {
+                       new Label("Popular Book")
+                        .TextColor(Colors.White)
+                        .FontSize(20)
+                        .FontFamily(Theme.font)
+                        .GridRow(0)
+                        .Margin(20,0,0,5),
+                       new CollectionView()
+                       .ItemsSource(State.Books,RenderBookList)
+                       .ItemsLayout(new HorizontalLinearItemsLayout().ItemSpacing(10))
+                       .GridRow(1)
+                       .Margin(20,10,0,0),
+                   }
+               }
+               .BackgroundColor(Colors.Black)
+               .TranslationY(State.IsCategoryVisible?0:-300)
+               .WithAnimation(easing:Easing.CubicInOut,duration:500)
+               .GridRow(3)
+            }.BackgroundColor(Colors.Black)
+            .ZIndex(0)
+        ;
+           
+    }
+    
+    private VisualNode RenderBookList(Item item)
+    {
+        var authors = item.volumeInfo.authors.FirstOrDefault();
+        var source = item.volumeInfo.imageLinks.thumbnail.Replace("&edge=curl&source=gbs_api", "").Replace("http","https");
+        return new Border
+        {
+            new VStack
+            {
+                new Image(source)
+                .HeightRequest(150)
+                .Aspect(Aspect.AspectFill),
+                new Label(item.volumeInfo.title)
+                .TextColor(Colors.White)
+                        .FontSize(11)
+                        .FontFamily(Theme.font),
+                new Label(authors)
+                .TextColor(Colors.Gray)
+                        .FontSize(8)
+                        .FontFamily(Theme.font),
+            }.Spacing(10)
+        }.HeightRequest(230)
+        .WidthRequest(115)
+        .BackgroundColor(Colors.Transparent)
+        .OnTapped(() =>
+        {
+            SetState(s => s.SelectedBook = item);
+            _selectBook(State.SelectedBook);
+        });
+    }
+
+    private VisualNode RenderCategory()
+    {
+        return new Border
+        {
+            new VStack
+            {
+                new HStack
+                {
+                    new Border
+                    {
+                        new Label("Philosophy")
+                        .HCenter().VCenter()
+                        .FontFamily(Theme.font)
+                        .TextColor(Colors.Black)
+                    }.BackgroundColor(Colors.White)
+                    .HeightRequest(80)
+                    .Stroke(Colors.Transparent)
+                    .StrokeThickness(0.5)
+                    .WidthRequest(180)
+                    .StrokeShape(new RoundRectangle().CornerRadius(80)),
+                    new Border
+                    {
+                        new Label("Science")
+                        .HCenter().VCenter()
+                        .FontFamily(Theme.font)
+                        .TextColor(Colors.White)
+                    }.BackgroundColor(Theme.BlackBorder)
+                    .Stroke(Colors.Gray)
+                    .StrokeThickness(0.5)
+                    .HeightRequest(80)
+                    .WidthRequest(80)
+                    .StrokeShape(new RoundRectangle().CornerRadius(100)),
+                    new Border
+                    {
+                        new Label("Fiction")
+                        .HCenter().VCenter()
+                        .FontFamily(Theme.font)
+                        .TextColor(Colors.White)
+                    }.BackgroundColor(Theme.BlackBorder)
+                    .Stroke(Colors.Gray)
+                    .StrokeThickness(0.5)
+                    .HeightRequest(80)
+                    .WidthRequest(80)
+                    .StrokeShape(new RoundRectangle().CornerRadius(100))
+                },
+                new HStack
+                {
+                    new Border
+                    {
+                        new Label("Nature")
+                        .HCenter().VCenter()
+                        .FontFamily(Theme.font)
+                        .TextColor(Colors.White)
+                    }.BackgroundColor(Theme.BlackBorder)
+                    .HeightRequest(80)
+                    .WidthRequest(80)
+                    .Stroke(Colors.Gray)
+                    .StrokeThickness(0.5)
+                    .StrokeShape(new RoundRectangle().CornerRadius(100)),
+                    new Border
+                    {
+                        new Label("Family")
+                        .HCenter().VCenter()
+                        .FontFamily(Theme.font)
+                        .TextColor(Colors.White)
+                    }.BackgroundColor(Theme.BlackBorder)
+                    .HeightRequest(80)
+                    .WidthRequest(180)
+                    .Stroke(Colors.Gray)
+                    .StrokeThickness(0.5)
+                    .StrokeShape(new RoundRectangle().CornerRadius(80)),
+                    new Border
+                    {
+                        new Label("Travel")
+                        .HCenter().VCenter()
+                        .FontFamily(Theme.font)
+                        .TextColor(Colors.Black)
+                    }.BackgroundColor(Colors.White)
+                    .HeightRequest(80)
+                    .WidthRequest(80)
+                    .Stroke(Colors.Transparent)
+                    .StrokeThickness(0.5)
+                    .StrokeShape(new RoundRectangle().CornerRadius(100))
+                },
+                new HStack
+                {
+                   new Border
+                    {
+                        new Label("Love")
+                        .HCenter().VCenter()
+                        .FontFamily(Theme.font)
+                        .TextColor(Colors.White)
+                    }.BackgroundColor(Theme.BlackBorder)
+                    .HeightRequest(80)
+                    .Stroke(Colors.Gray)
+                    .StrokeThickness(0.5)
+                    .WidthRequest(80)
+                    .StrokeShape(new RoundRectangle().CornerRadius(100)),
+                   new Border
+                    {
+                        new Label("Drama")
+                        .HCenter().VCenter()
+                        .FontFamily(Theme.font)
+                        .TextColor(Colors.Black)
+                    }.BackgroundColor(Colors.White)
+                    .Stroke(Colors.Transparent)
+                    .StrokeThickness(0.5)
+                    .HeightRequest(80)
+                    .WidthRequest(80)
+                    .StrokeShape(new RoundRectangle().CornerRadius(100)),
+                   new Border
+                    {
+                        new Label("Comedy")
+                        .HCenter().VCenter()
+                        .FontFamily(Theme.font)
+                        .TextColor(Colors.White)
+                    }.BackgroundColor(Theme.BlackBorder)
+                    .Stroke(Colors.Gray)
+                    .StrokeThickness(0.5)
+                    .HeightRequest(80)
+                    .WidthRequest(180)
+                    .StrokeShape(new RoundRectangle().CornerRadius(80))
+                }
+            }
+        }.HeightRequest(260)
+        .Margin(20,0,0,0)
+        .BackgroundColor(Colors.Transparent)
+        .GridRow(2)
+       
+        ;
+    }
+   
+    private VisualNode RenderMain()
+    {
+        return
+        new Border
                 {
                     new Grid
                     {
-                        new Image(_headerBook.items.FirstOrDefault().volumeInfo.imageLinks.thumbnail)
-                        .Aspect(Aspect.Fill)
+                        new Image("https://books.google.com.vn/books/content?id=twm-qEmxw38C&hl=vi&pg=PP1&img=1&zoom=3&sig=ACfU3U2TW_3Zd36f5UWf1zfwEUB8G2hG5w&w=1280")
+                        .Aspect(Aspect.AspectFill)
                         ,
                         new Border
                         {
-
-                        }.VEnd()
+                            new AcrylicView
+                            {
+                                new HStack
+                                {
+                                    new Border
+                                    {
+                                         new Label(State.HeaderBook.title)
+                                        .FontFamily(Theme.font)
+                                        .TextColor(Colors.White)
+                                        .FontSize(18)
+                                    }.BackgroundColor(Colors.Transparent)
+                                    .WidthRequest(130)
+                                   ,
+                                    new VStack
+                                    {
+                                        new Label(State.HeaderBook.authors.First())
+                                        .FontFamily(Theme.font)
+                                        .TextColor(Colors.White)
+                                        .FontSize(15),
+                                        new Label(State.HeaderBook.publishedDate)
+                                        .FontFamily(Theme.font)
+                                        .TextColor(Colors.White)
+                                        .FontSize(15),
+                                    }.Spacing(10)
+                                }.Spacing(50).Margin(15,15,0,0)
+                              
+                            }.EffectStyle(Xe.AcrylicView.Controls.EffectStyle.Light)
+                        }.HeightRequest(80)
+                        .BackgroundColor(Colors.Transparent)
+                        .StrokeShape(new RoundRectangle().CornerRadius(15))
+                        .BackgroundColor(Colors.Transparent)
+                        .VEnd(), 
+                        new Border
+                        {
+                            new AcrylicView
+                            {
+                                new Image("ifavorite")
+                                .HeightRequest(20)
+                                .WidthRequest(20)
+                            }.EffectStyle(Xe.AcrylicView.Controls.EffectStyle.Light)
+                        }.HeightRequest(40)
+                        .WidthRequest(40)
+                        .HEnd().VStart()
+                        .Stroke(Colors.Transparent)
+                        .BackgroundColor(Colors.Transparent)
+                        .Margin(0,10,10,0)
+                        .StrokeShape(new RoundRectangle().CornerRadius(5))
                     }
-                }.GridRow(1)
-            }.BackgroundColor(Colors.Black)
-        ;
-           
+                }.HeightRequest(340)
+                .StrokeShape(new RoundRectangle().CornerRadius(15))
+                .WidthRequest(340)
+                .BackgroundColor(Colors.Transparent)
+        .GridRow(1);
     }
 
     private VisualNode RenderHeader()
@@ -387,4 +658,18 @@ enum ScrollToMode
     Left,
 
     Right
+}
+enum CategorySelect
+{
+    Fiction,
+
+    Science,
+    Travel,
+
+    Philosophy,
+    Nature,
+    Love,
+    Family,
+    Drama,
+    Comedy,
 }

@@ -41,9 +41,11 @@
     <None Remove="Resources\Images\NavBar\isach.png" />
     <None Remove="Resources\Images\NavBar\nha.png" />
     <None Remove="Resources\Images\NavBar\sach.png" />
+    <None Remove="Resources\Raw\back.json" />
     <None Remove="Resources\Raw\bookanimation.json" />
     <None Remove="Resources\Raw\search.json" />
     <None Remove="Resources\Raw\tb.json" />
+    <None Remove="Resources\Raw\yeuthich.json" />
   </ItemGroup>
 
   <ItemGroup>

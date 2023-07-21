@@ -8,6 +8,6 @@ namespace BookReactor.Resources.Styles;
 
 public class Theme
 {
-    public static Color Mau = Color.FromArgb("");
+    public static Color BlackBorder = Color.FromArgb("#1D1C23");
     public static string font = "EmilysCandy";
 }

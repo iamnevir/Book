@@ -22,8 +22,7 @@ public static class MauiProgram
             {
                 fonts.AddFont("EmilysCandy-Regular.ttf", "EmilysCandy");
             });
-        builder.Services.AddHttpClient(GoogleBookServices.BookHttpClientName, httpClient =>
-       httpClient.BaseAddress = new Uri("https://www.googleapis.com/books/v1"));
+        builder.Services.AddBookServices(new Uri("https://www.googleapis.com/books/v1/"));
         return builder.Build();
     }
 }
