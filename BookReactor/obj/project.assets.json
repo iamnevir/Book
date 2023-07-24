@@ -30783,27 +30783,24 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\DINH LAM\\.nuget\\packages\\": {},
-    "C:\\Program Files\\DevExpress 23.1\\Components\\Offline Packages": {},
+    "C:\\Users\\trick\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\DINH LAM\\source\\repos\\Book\\BookReactor\\BookReactor.csproj",
+      "projectUniqueName": "C:\\Users\\trick\\source\\repos\\BookReactor\\BookReactor\\BookReactor.csproj",
       "projectName": "BookReactor",
-      "projectPath": "C:\\Users\\DINH LAM\\source\\repos\\Book\\BookReactor\\BookReactor.csproj",
-      "packagesPath": "C:\\Users\\DINH LAM\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\DINH LAM\\source\\repos\\Book\\BookReactor\\obj\\",
+      "projectPath": "C:\\Users\\trick\\source\\repos\\BookReactor\\BookReactor\\BookReactor.csproj",
+      "packagesPath": "C:\\Users\\trick\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\trick\\source\\repos\\BookReactor\\BookReactor\\obj\\",
       "projectStyle": "PackageReference",
       "crossTargeting": true,
       "fallbackFolders": [
-        "C:\\Program Files\\DevExpress 23.1\\Components\\Offline Packages",
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\DINH LAM\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\DevExpress 23.1.config",
+        "C:\\Users\\trick\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
@@ -30815,7 +30812,6 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-        "C:\\Program Files\\DevExpress 23.1\\Components\\System\\Components\\Packages": {},
         "C:\\Program Files\\dotnet\\library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },

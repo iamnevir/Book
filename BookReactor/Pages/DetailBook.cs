@@ -24,7 +24,40 @@ class DetailBook:Component<DetailBookState, DetailBookProps>
         var source = Props.Book.volumeInfo.imageLinks.thumbnail.Replace("&edge=curl&source=gbs_api", "").Replace("http", "https");
         return new ContentPage
         {
-            new VStack
+            new Grid
+            {
+                 new HStack
+                {
+                    new Border
+                    {
+                        new Label("Read Book")
+                        .TextColor(Colors.White)
+                            .FontSize(17)
+                            .FontFamily(Theme.font)
+                            .VCenter().HCenter()
+                    }
+                    .HeightRequest(60)
+                    .WidthRequest(180)
+                    .Stroke(Colors.White)
+                    .StrokeThickness(1)
+                    .BackgroundColor(Colors.Black)
+                    .StrokeShape(new RoundRectangle().CornerRadius(30)),
+                    new Border
+                    {
+                        new Label("Play Book")
+                        .TextColor(Colors.Black)
+                            .FontSize(17)
+                            .FontFamily(Theme.font)
+                            .VCenter().HCenter()
+                    }
+                    .HeightRequest(60)
+                    .WidthRequest(180)
+                    .BackgroundColor(Colors.White)
+                    .StrokeShape(new RoundRectangle().CornerRadius(30)),
+                }.VEnd().HCenter()
+                .Spacing(5)
+                .ZIndex(1),
+                 new VStack
             {
                 new HStack
                 {
@@ -100,7 +133,7 @@ class DetailBook:Component<DetailBookState, DetailBookProps>
                         .FontFamily(Theme.font).HCenter(),
                         new Label(Props.Book.volumeInfo.averageRating)
                         .TextColor(Colors.Gray)
-                        .FontSize(11)
+                        .FontSize(15)
                         .FontFamily(Theme.font).HCenter()
                     }.Spacing(10)
                     ,
@@ -116,7 +149,7 @@ class DetailBook:Component<DetailBookState, DetailBookProps>
                         .FontFamily(Theme.font).HCenter(),
                         new Label(Props.Book.volumeInfo.pageCount)
                         .TextColor(Colors.Gray)
-                        .FontSize(11)
+                        .FontSize(15)
                         .FontFamily(Theme.font).HCenter()
                     }.Spacing(10)
                     ,
@@ -132,7 +165,7 @@ class DetailBook:Component<DetailBookState, DetailBookProps>
                         .FontFamily(Theme.font).HCenter(),
                         new Label(Props.Book.volumeInfo.ratingsCount)
                         .TextColor(Colors.Gray)
-                        .FontSize(11)
+                        .FontSize(15)
                         .FontFamily(Theme.font)
                         .HCenter()
                     }.Spacing(10)
@@ -149,32 +182,12 @@ class DetailBook:Component<DetailBookState, DetailBookProps>
                     .TextColor(Colors.Gray)
                             .FontSize(15)
                             .FontFamily(Theme.font).HCenter()
-                            
+
                }.Margin(20,0,5,0).Spacing(20),
-                new HStack
-                {
-                    new Border
-                    {
-                        new Label("Read Book")
-                        .TextColor(Colors.Gray)
-                            .FontSize(15)
-                            .FontFamily(Theme.font)
-                    }
-                    .HeightRequest(100)
-                    .WidthRequest(180)
-                    .BackgroundColor(Colors.Transparent),
-                    new Border
-                    {
-                        new Label("Play Book")
-                        .TextColor(Colors.Gray)
-                            .FontSize(15)
-                            .FontFamily(Theme.font)
-                    }
-                    .HeightRequest(100)
-                    .WidthRequest(180)
-                    .BackgroundColor(Colors.Transparent),
-                }
+              
             }.BackgroundColor(Colors.Black).Spacing(20),
+            }
+            
         }.Set(MauiControls.NavigationPage.HasNavigationBarProperty,false);
     }
 }
