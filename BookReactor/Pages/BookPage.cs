@@ -10,8 +10,8 @@ class BookPageState
 {
     public List<Item> Books { get; set; }
     public bool IsLoading { get; set; }
-    public List<CategorySelect> CategorySelected { get; set; } = new();
     public Item SelectedBook { get;  set; }
+    public string TextSearch { get; set; }
 }
 class BookPage:Component<BookPageState>
 {
@@ -30,12 +30,7 @@ class BookPage:Component<BookPageState>
     {
         var googleBook = Services.GetRequiredService<IGoogleServices>();
         State.IsLoading = true;
-        var search = "";
-        foreach (var s in State.CategorySelected)
-        {
-            search += $"+subject:{s}";
-        }
-        var books = await googleBook.GetBook(State.CategorySelected.Any() ? $"{search}" : "viet&filter=ebooks", "10");
+        var books = await googleBook.GetBook("viet&filter=ebooks", "10");
         SetState(s =>
         {
             s.Books = books.items;
@@ -43,11 +38,23 @@ class BookPage:Component<BookPageState>
         });
         base.OnMounted();
     }
+    protected override async void OnPropsChanged()
+    {
+        var googleBook = Services.GetRequiredService<IGoogleServices>();
+
+        var books = await googleBook.GetBook(State.TextSearch is not null?State.TextSearch:"viet&filter=ebooks", "10");
+        SetState(s =>
+        {
+            s.Books = books.items;
+            s.IsLoading = false;
+        });
+        base.OnPropsChanged();
+    }
     public override VisualNode Render()
     {
         return new ContentPage
         {
-            new Grid("60,*","*")
+            new Grid("60,100,*","*")
             {
                  new HStack
                     {
@@ -75,7 +82,25 @@ class BookPage:Component<BookPageState>
                         .FontFamily(Theme.font)
                         .HCenter()
                         .VCenter(),
-                          new SKLottieView()
+                    }.GridRow(0)
+                    .Spacing(50)
+                    .Margin(10,10,0,0)
+                    .GridRow(0),
+                 new Border
+                 {
+                     new HStack
+                     {
+                         new Entry()
+                         .TextColor(Colors.White)
+                         .VCenter()
+                         .HCenter()
+                         .HeightRequest(60)
+                         .WidthRequest(200)
+                         .FontFamily (Theme.font)
+                         .FontSize(20)
+                         .BackgroundColor(Colors.Transparent)
+                         .OnTextChanged(v=>SetState(s=>s.TextSearch=v)),
+                        new SKLottieView()
                         .Source(new SkiaSharp.Extended.UI.Controls.SKFileLottieImageSource()
                         {
                             File="search.json"
@@ -87,10 +112,18 @@ class BookPage:Component<BookPageState>
                         .HeightRequest(70)
                         .WidthRequest(70)
                         .BackgroundColor(Colors.Transparent)
-                    }.GridRow(0)
-                    .Spacing(50)
-                    .Margin(10,10,0,0)
-                    .GridRow(0),
+                        .OnTapped(() =>
+                        {
+                            SetState(s=>s.IsLoading=true);
+                            OnPropsChanged();
+                        })
+                     }.Margin(20,0,0,0)
+                 }
+                 .HeightRequest(80)
+                 .WidthRequest(300)
+                   .BackgroundColor(Colors.Black)
+                   .StrokeShape(new RoundRectangle().CornerRadius(40))
+                   .GridRow(1),
                 new ScrollView
                 {
                     new CollectionView()
@@ -99,7 +132,7 @@ class BookPage:Component<BookPageState>
                         .VerticalItemSpacing(20)
                         .HorizontalItemSpacing(0))
                     .ItemsSource(State.Books,RenderBookGrid)
-                }.GridRow(1)
+                }.GridRow(2)
             }.BackgroundColor(Theme.Bg)
         }.Set(MauiControls.NavigationPage.HasNavigationBarProperty,false);
     }
@@ -116,45 +149,68 @@ class BookPage:Component<BookPageState>
             var source = item.volumeInfo.imageLinks.thumbnail.Replace("&edge=curl&source=gbs_api", "").Replace("http", "https");
             return new Border
             {
-                new VStack
+                new AcrylicView
                 {
-                    new Image(source)
-                    .HeightRequest(150)
-                    .Aspect(Aspect.AspectFill),
-                     new Label(item.volumeInfo.title)
-                    .TextColor(Colors.White)
-                            .FontSize(13)
-                            .FontFamily(Theme.font)
-                            .MaxLines(1),
-                    new Label(authors)
-                    .TextColor(Colors.Gray)
-                            .FontSize(10)
-                            .FontFamily(Theme.font),
-                    new Grid("*","70,45")
+                    new Grid("170,*","*")
                     {
-                         new Label(item.saleInfo.saleability)
+                        new Border
+                        {
+                             new Image(source)
+                            
+                            .Aspect(Aspect.AspectFill),
+                        }.HeightRequest(160)
+                        .WidthRequest(130)
+                        .HCenter()
+                        .StrokeShape(new RoundRectangle().CornerRadius(10))
+                        .GridRow(0)
+                        .Margin(0,10,0,0),
+                        new VStack
+                        {
+                             new Label(item.volumeInfo.title)
+                            .TextColor(Colors.White)
+                                    .FontSize(15)
+                                    .FontFamily(Theme.font)
+                                    .MaxLines(1),
+                            new Label(authors)
                             .TextColor(Colors.Gray)
-                            .FontSize(10)
-                            .FontFamily(Theme.font)
-                            .GridColumn(0),
-                         new Border
-                         {
-                             new Label("Buy")
-                             .TextColor(Colors.Black)
-                            .FontSize(10)
-                            .FontFamily(Theme.font)
-                            .VCenter().HCenter(),
-                         }.BackgroundColor(Colors.White)
-                         .StrokeShape(new RoundRectangle().CornerRadius(5))
-                         .HCenter()
-                         .HeightRequest(20)
-                         .WidthRequest(30)
-                         .GridColumn(1)
+                                    .FontSize(13)
+                                    .FontFamily(Theme.font)
+                                    .MaxLines(1),
+                            new Grid("*","85,*")
+                            {
+                                 new Label(item.saleInfo.saleability)
+                                    .TextColor(Colors.Gray)
+                                    .FontSize(13)
+                                    .FontFamily(Theme.font)
+                                    .GridColumn(0)
+                                    .Margin(0,10,0,0),
+                                 new Border
+                                 {
+                                     new Label("Buy")
+                                     .TextColor(Colors.White)
+                                    .FontSize(12)
+                                    .FontFamily(Theme.font)
+                                    .VCenter().HCenter(),
+                                 }.BackgroundColor(Colors.Black)
+                                 .StrokeShape(new RoundRectangle().CornerRadius(5))
+                                 .HCenter()
+                                 .HeightRequest(30)
+                                 .WidthRequest(50)
+                                 .Margin(0,0,15,0)
+                                 .GridColumn(1)
+                            }
+                        }.Spacing(5)
+                        .GridRow(1)
+                        .Margin(10,10,0,0)
                     }
-                }.Spacing(10)
-
-            }.WidthRequest(115)
-           .BackgroundColor(Colors.Transparent)
+                    
+                }.EffectStyle(Xe.AcrylicView.Controls.EffectStyle.Light)
+                
+            }
+            .WidthRequest(150)
+            .HeightRequest(270)
+           .BackgroundColor(Colors.Black)
+           .StrokeShape(new RoundRectangle().CornerRadius(10))
            .OnTapped(() =>
            {
                OpenDetailBook(item);
