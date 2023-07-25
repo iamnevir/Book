@@ -28,6 +28,9 @@
           }
         }
       },
+      "M.BindableProperty.Generator/0.9.0": {
+        "type": "package"
+      },
       "Microsoft.Extensions.Configuration/7.0.0": {
         "type": "package",
         "dependencies": {
@@ -244,6 +247,22 @@
         "type": "package",
         "dependencies": {
           "System.CodeDom": "7.0.0"
+        }
+      },
+      "SimpleRatingControl.MAUI/0.0.3": {
+        "type": "package",
+        "dependencies": {
+          "M.BindableProperty.Generator": "0.9.0"
+        },
+        "compile": {
+          "lib/net6.0-android31.0/SimpleRatingControlMaui.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0-android31.0/SimpleRatingControlMaui.dll": {
+            "related": ".xml"
+          }
         }
       },
       "SkiaSharp/2.88.1": {
@@ -2166,6 +2185,9 @@
           }
         }
       },
+      "M.BindableProperty.Generator/0.9.0": {
+        "type": "package"
+      },
       "Microsoft.Extensions.Configuration/7.0.0": {
         "type": "package",
         "dependencies": {
@@ -2382,6 +2404,22 @@
         "type": "package",
         "dependencies": {
           "System.CodeDom": "7.0.0"
+        }
+      },
+      "SimpleRatingControl.MAUI/0.0.3": {
+        "type": "package",
+        "dependencies": {
+          "M.BindableProperty.Generator": "0.9.0"
+        },
+        "compile": {
+          "lib/net6.0-android31.0/SimpleRatingControlMaui.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0-android31.0/SimpleRatingControlMaui.dll": {
+            "related": ".xml"
+          }
         }
       },
       "SkiaSharp/2.88.1": {
@@ -4289,6 +4327,9 @@
           }
         }
       },
+      "M.BindableProperty.Generator/0.9.0": {
+        "type": "package"
+      },
       "Microsoft.Extensions.Configuration/7.0.0": {
         "type": "package",
         "dependencies": {
@@ -4505,6 +4546,22 @@
         "type": "package",
         "dependencies": {
           "System.CodeDom": "7.0.0"
+        }
+      },
+      "SimpleRatingControl.MAUI/0.0.3": {
+        "type": "package",
+        "dependencies": {
+          "M.BindableProperty.Generator": "0.9.0"
+        },
+        "compile": {
+          "lib/net6.0-android31.0/SimpleRatingControlMaui.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0-android31.0/SimpleRatingControlMaui.dll": {
+            "related": ".xml"
+          }
         }
       },
       "SkiaSharp/2.88.1": {
@@ -6412,6 +6469,9 @@
           }
         }
       },
+      "M.BindableProperty.Generator/0.9.0": {
+        "type": "package"
+      },
       "Microsoft.Extensions.Configuration/7.0.0": {
         "type": "package",
         "dependencies": {
@@ -6628,6 +6688,22 @@
         "type": "package",
         "dependencies": {
           "System.CodeDom": "7.0.0"
+        }
+      },
+      "SimpleRatingControl.MAUI/0.0.3": {
+        "type": "package",
+        "dependencies": {
+          "M.BindableProperty.Generator": "0.9.0"
+        },
+        "compile": {
+          "lib/net6.0-android31.0/SimpleRatingControlMaui.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0-android31.0/SimpleRatingControlMaui.dll": {
+            "related": ".xml"
+          }
         }
       },
       "SkiaSharp/2.88.1": {
@@ -8535,6 +8611,9 @@
           }
         }
       },
+      "M.BindableProperty.Generator/0.9.0": {
+        "type": "package"
+      },
       "Microsoft.Extensions.Configuration/7.0.0": {
         "type": "package",
         "dependencies": {
@@ -8751,6 +8830,22 @@
         "type": "package",
         "dependencies": {
           "System.CodeDom": "7.0.0"
+        }
+      },
+      "SimpleRatingControl.MAUI/0.0.3": {
+        "type": "package",
+        "dependencies": {
+          "M.BindableProperty.Generator": "0.9.0"
+        },
+        "compile": {
+          "lib/net6.0-android31.0/SimpleRatingControlMaui.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0-android31.0/SimpleRatingControlMaui.dll": {
+            "related": ".xml"
+          }
         }
       },
       "SkiaSharp/2.88.1": {
@@ -10658,6 +10753,9 @@
           }
         }
       },
+      "M.BindableProperty.Generator/0.9.0": {
+        "type": "package"
+      },
       "Microsoft.Extensions.Configuration/7.0.0": {
         "type": "package",
         "dependencies": {
@@ -10874,6 +10972,22 @@
         "type": "package",
         "dependencies": {
           "System.CodeDom": "7.0.0"
+        }
+      },
+      "SimpleRatingControl.MAUI/0.0.3": {
+        "type": "package",
+        "dependencies": {
+          "M.BindableProperty.Generator": "0.9.0"
+        },
+        "compile": {
+          "lib/net6.0-android31.0/SimpleRatingControlMaui.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0-android31.0/SimpleRatingControlMaui.dll": {
+            "related": ".xml"
+          }
         }
       },
       "SkiaSharp/2.88.1": {
@@ -12778,6 +12892,9 @@
           }
         }
       },
+      "M.BindableProperty.Generator/0.9.0": {
+        "type": "package"
+      },
       "Microsoft.Extensions.Configuration/7.0.0": {
         "type": "package",
         "dependencies": {
@@ -12994,6 +13111,22 @@
         "type": "package",
         "dependencies": {
           "System.CodeDom": "7.0.0"
+        }
+      },
+      "SimpleRatingControl.MAUI/0.0.3": {
+        "type": "package",
+        "dependencies": {
+          "M.BindableProperty.Generator": "0.9.0"
+        },
+        "compile": {
+          "lib/net6.0-android31.0/SimpleRatingControlMaui.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0-android31.0/SimpleRatingControlMaui.dll": {
+            "related": ".xml"
+          }
         }
       },
       "SkiaSharp/2.88.1": {
@@ -14898,6 +15031,9 @@
           }
         }
       },
+      "M.BindableProperty.Generator/0.9.0": {
+        "type": "package"
+      },
       "Microsoft.Extensions.Configuration/7.0.0": {
         "type": "package",
         "dependencies": {
@@ -15114,6 +15250,22 @@
         "type": "package",
         "dependencies": {
           "System.CodeDom": "7.0.0"
+        }
+      },
+      "SimpleRatingControl.MAUI/0.0.3": {
+        "type": "package",
+        "dependencies": {
+          "M.BindableProperty.Generator": "0.9.0"
+        },
+        "compile": {
+          "lib/net6.0-android31.0/SimpleRatingControlMaui.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0-android31.0/SimpleRatingControlMaui.dll": {
+            "related": ".xml"
+          }
         }
       },
       "SkiaSharp/2.88.1": {
@@ -17001,6 +17153,9 @@
           "lib/net7.0-ios16.1/Xe.AcrylicView.dll": {}
         }
       },
+      "M.BindableProperty.Generator/0.9.0": {
+        "type": "package"
+      },
       "Microsoft.Extensions.Configuration/7.0.0": {
         "type": "package",
         "dependencies": {
@@ -17209,6 +17364,19 @@
         "type": "package",
         "dependencies": {
           "System.CodeDom": "7.0.0"
+        }
+      },
+      "SimpleRatingControl.MAUI/0.0.3": {
+        "type": "package",
+        "dependencies": {
+          "M.BindableProperty.Generator": "0.9.0",
+          "System.Runtime.InteropServices.NFloat.Internal": "6.0.1"
+        },
+        "compile": {
+          "lib/net6.0-ios15.4/SimpleRatingControlMaui.dll": {}
+        },
+        "runtime": {
+          "lib/net6.0-ios15.4/SimpleRatingControlMaui.dll": {}
         }
       },
       "SkiaSharp/2.88.1": {
@@ -17391,6 +17559,9 @@
           "lib/net7.0-ios16.1/Xe.AcrylicView.dll": {}
         }
       },
+      "M.BindableProperty.Generator/0.9.0": {
+        "type": "package"
+      },
       "Microsoft.Extensions.Configuration/7.0.0": {
         "type": "package",
         "dependencies": {
@@ -17599,6 +17770,19 @@
         "type": "package",
         "dependencies": {
           "System.CodeDom": "7.0.0"
+        }
+      },
+      "SimpleRatingControl.MAUI/0.0.3": {
+        "type": "package",
+        "dependencies": {
+          "M.BindableProperty.Generator": "0.9.0",
+          "System.Runtime.InteropServices.NFloat.Internal": "6.0.1"
+        },
+        "compile": {
+          "lib/net6.0-ios15.4/SimpleRatingControlMaui.dll": {}
+        },
+        "runtime": {
+          "lib/net6.0-ios15.4/SimpleRatingControlMaui.dll": {}
         }
       },
       "SkiaSharp/2.88.1": {
@@ -17763,6 +17947,9 @@
           "lib/net7.0-ios16.1/Xe.AcrylicView.dll": {}
         }
       },
+      "M.BindableProperty.Generator/0.9.0": {
+        "type": "package"
+      },
       "Microsoft.Extensions.Configuration/7.0.0": {
         "type": "package",
         "dependencies": {
@@ -17971,6 +18158,19 @@
         "type": "package",
         "dependencies": {
           "System.CodeDom": "7.0.0"
+        }
+      },
+      "SimpleRatingControl.MAUI/0.0.3": {
+        "type": "package",
+        "dependencies": {
+          "M.BindableProperty.Generator": "0.9.0",
+          "System.Runtime.InteropServices.NFloat.Internal": "6.0.1"
+        },
+        "compile": {
+          "lib/net6.0-ios15.4/SimpleRatingControlMaui.dll": {}
+        },
+        "runtime": {
+          "lib/net6.0-ios15.4/SimpleRatingControlMaui.dll": {}
         }
       },
       "SkiaSharp/2.88.1": {
@@ -18135,6 +18335,9 @@
           "lib/net7.0-ios16.1/Xe.AcrylicView.dll": {}
         }
       },
+      "M.BindableProperty.Generator/0.9.0": {
+        "type": "package"
+      },
       "Microsoft.Extensions.Configuration/7.0.0": {
         "type": "package",
         "dependencies": {
@@ -18343,6 +18546,19 @@
         "type": "package",
         "dependencies": {
           "System.CodeDom": "7.0.0"
+        }
+      },
+      "SimpleRatingControl.MAUI/0.0.3": {
+        "type": "package",
+        "dependencies": {
+          "M.BindableProperty.Generator": "0.9.0",
+          "System.Runtime.InteropServices.NFloat.Internal": "6.0.1"
+        },
+        "compile": {
+          "lib/net6.0-ios15.4/SimpleRatingControlMaui.dll": {}
+        },
+        "runtime": {
+          "lib/net6.0-ios15.4/SimpleRatingControlMaui.dll": {}
         }
       },
       "SkiaSharp/2.88.1": {
@@ -18507,6 +18723,9 @@
           "lib/net7.0-ios16.1/Xe.AcrylicView.dll": {}
         }
       },
+      "M.BindableProperty.Generator/0.9.0": {
+        "type": "package"
+      },
       "Microsoft.Extensions.Configuration/7.0.0": {
         "type": "package",
         "dependencies": {
@@ -18715,6 +18934,19 @@
         "type": "package",
         "dependencies": {
           "System.CodeDom": "7.0.0"
+        }
+      },
+      "SimpleRatingControl.MAUI/0.0.3": {
+        "type": "package",
+        "dependencies": {
+          "M.BindableProperty.Generator": "0.9.0",
+          "System.Runtime.InteropServices.NFloat.Internal": "6.0.1"
+        },
+        "compile": {
+          "lib/net6.0-ios15.4/SimpleRatingControlMaui.dll": {}
+        },
+        "runtime": {
+          "lib/net6.0-ios15.4/SimpleRatingControlMaui.dll": {}
         }
       },
       "SkiaSharp/2.88.1": {
@@ -18879,6 +19111,9 @@
           "lib/net7.0-ios16.1/Xe.AcrylicView.dll": {}
         }
       },
+      "M.BindableProperty.Generator/0.9.0": {
+        "type": "package"
+      },
       "Microsoft.Extensions.Configuration/7.0.0": {
         "type": "package",
         "dependencies": {
@@ -19087,6 +19322,19 @@
         "type": "package",
         "dependencies": {
           "System.CodeDom": "7.0.0"
+        }
+      },
+      "SimpleRatingControl.MAUI/0.0.3": {
+        "type": "package",
+        "dependencies": {
+          "M.BindableProperty.Generator": "0.9.0",
+          "System.Runtime.InteropServices.NFloat.Internal": "6.0.1"
+        },
+        "compile": {
+          "lib/net6.0-ios15.4/SimpleRatingControlMaui.dll": {}
+        },
+        "runtime": {
+          "lib/net6.0-ios15.4/SimpleRatingControlMaui.dll": {}
         }
       },
       "SkiaSharp/2.88.1": {
@@ -19257,6 +19505,9 @@
           "lib/net7.0-ios16.1/Xe.AcrylicView.dll": {}
         }
       },
+      "M.BindableProperty.Generator/0.9.0": {
+        "type": "package"
+      },
       "Microsoft.Extensions.Configuration/7.0.0": {
         "type": "package",
         "dependencies": {
@@ -19465,6 +19716,19 @@
         "type": "package",
         "dependencies": {
           "System.CodeDom": "7.0.0"
+        }
+      },
+      "SimpleRatingControl.MAUI/0.0.3": {
+        "type": "package",
+        "dependencies": {
+          "M.BindableProperty.Generator": "0.9.0",
+          "System.Runtime.InteropServices.NFloat.Internal": "6.0.1"
+        },
+        "compile": {
+          "lib/net6.0-ios15.4/SimpleRatingControlMaui.dll": {}
+        },
+        "runtime": {
+          "lib/net6.0-ios15.4/SimpleRatingControlMaui.dll": {}
         }
       },
       "SkiaSharp/2.88.1": {
@@ -19635,6 +19899,9 @@
           "lib/net7.0-ios16.1/Xe.AcrylicView.dll": {}
         }
       },
+      "M.BindableProperty.Generator/0.9.0": {
+        "type": "package"
+      },
       "Microsoft.Extensions.Configuration/7.0.0": {
         "type": "package",
         "dependencies": {
@@ -19843,6 +20110,19 @@
         "type": "package",
         "dependencies": {
           "System.CodeDom": "7.0.0"
+        }
+      },
+      "SimpleRatingControl.MAUI/0.0.3": {
+        "type": "package",
+        "dependencies": {
+          "M.BindableProperty.Generator": "0.9.0",
+          "System.Runtime.InteropServices.NFloat.Internal": "6.0.1"
+        },
+        "compile": {
+          "lib/net6.0-ios15.4/SimpleRatingControlMaui.dll": {}
+        },
+        "runtime": {
+          "lib/net6.0-ios15.4/SimpleRatingControlMaui.dll": {}
         }
       },
       "SkiaSharp/2.88.1": {
@@ -20007,6 +20287,9 @@
           "lib/net7.0-maccatalyst16.1/Xe.AcrylicView.dll": {}
         }
       },
+      "M.BindableProperty.Generator/0.9.0": {
+        "type": "package"
+      },
       "Microsoft.Extensions.Configuration/7.0.0": {
         "type": "package",
         "dependencies": {
@@ -20215,6 +20498,19 @@
         "type": "package",
         "dependencies": {
           "System.CodeDom": "7.0.0"
+        }
+      },
+      "SimpleRatingControl.MAUI/0.0.3": {
+        "type": "package",
+        "dependencies": {
+          "M.BindableProperty.Generator": "0.9.0",
+          "System.Runtime.InteropServices.NFloat.Internal": "6.0.1"
+        },
+        "compile": {
+          "lib/net6.0-maccatalyst15.4/SimpleRatingControlMaui.dll": {}
+        },
+        "runtime": {
+          "lib/net6.0-maccatalyst15.4/SimpleRatingControlMaui.dll": {}
         }
       },
       "SkiaSharp/2.88.1": {
@@ -20385,6 +20681,9 @@
           "lib/net7.0-maccatalyst16.1/Xe.AcrylicView.dll": {}
         }
       },
+      "M.BindableProperty.Generator/0.9.0": {
+        "type": "package"
+      },
       "Microsoft.Extensions.Configuration/7.0.0": {
         "type": "package",
         "dependencies": {
@@ -20593,6 +20892,19 @@
         "type": "package",
         "dependencies": {
           "System.CodeDom": "7.0.0"
+        }
+      },
+      "SimpleRatingControl.MAUI/0.0.3": {
+        "type": "package",
+        "dependencies": {
+          "M.BindableProperty.Generator": "0.9.0",
+          "System.Runtime.InteropServices.NFloat.Internal": "6.0.1"
+        },
+        "compile": {
+          "lib/net6.0-maccatalyst15.4/SimpleRatingControlMaui.dll": {}
+        },
+        "runtime": {
+          "lib/net6.0-maccatalyst15.4/SimpleRatingControlMaui.dll": {}
         }
       },
       "SkiaSharp/2.88.1": {
@@ -20757,6 +21069,9 @@
           "lib/net7.0-maccatalyst16.1/Xe.AcrylicView.dll": {}
         }
       },
+      "M.BindableProperty.Generator/0.9.0": {
+        "type": "package"
+      },
       "Microsoft.Extensions.Configuration/7.0.0": {
         "type": "package",
         "dependencies": {
@@ -20965,6 +21280,19 @@
         "type": "package",
         "dependencies": {
           "System.CodeDom": "7.0.0"
+        }
+      },
+      "SimpleRatingControl.MAUI/0.0.3": {
+        "type": "package",
+        "dependencies": {
+          "M.BindableProperty.Generator": "0.9.0",
+          "System.Runtime.InteropServices.NFloat.Internal": "6.0.1"
+        },
+        "compile": {
+          "lib/net6.0-maccatalyst15.4/SimpleRatingControlMaui.dll": {}
+        },
+        "runtime": {
+          "lib/net6.0-maccatalyst15.4/SimpleRatingControlMaui.dll": {}
         }
       },
       "SkiaSharp/2.88.1": {
@@ -21129,6 +21457,9 @@
           "lib/net7.0-maccatalyst16.1/Xe.AcrylicView.dll": {}
         }
       },
+      "M.BindableProperty.Generator/0.9.0": {
+        "type": "package"
+      },
       "Microsoft.Extensions.Configuration/7.0.0": {
         "type": "package",
         "dependencies": {
@@ -21337,6 +21668,19 @@
         "type": "package",
         "dependencies": {
           "System.CodeDom": "7.0.0"
+        }
+      },
+      "SimpleRatingControl.MAUI/0.0.3": {
+        "type": "package",
+        "dependencies": {
+          "M.BindableProperty.Generator": "0.9.0",
+          "System.Runtime.InteropServices.NFloat.Internal": "6.0.1"
+        },
+        "compile": {
+          "lib/net6.0-maccatalyst15.4/SimpleRatingControlMaui.dll": {}
+        },
+        "runtime": {
+          "lib/net6.0-maccatalyst15.4/SimpleRatingControlMaui.dll": {}
         }
       },
       "SkiaSharp/2.88.1": {
@@ -21501,6 +21845,9 @@
           "lib/net7.0-maccatalyst16.1/Xe.AcrylicView.dll": {}
         }
       },
+      "M.BindableProperty.Generator/0.9.0": {
+        "type": "package"
+      },
       "Microsoft.Extensions.Configuration/7.0.0": {
         "type": "package",
         "dependencies": {
@@ -21709,6 +22056,19 @@
         "type": "package",
         "dependencies": {
           "System.CodeDom": "7.0.0"
+        }
+      },
+      "SimpleRatingControl.MAUI/0.0.3": {
+        "type": "package",
+        "dependencies": {
+          "M.BindableProperty.Generator": "0.9.0",
+          "System.Runtime.InteropServices.NFloat.Internal": "6.0.1"
+        },
+        "compile": {
+          "lib/net6.0-maccatalyst15.4/SimpleRatingControlMaui.dll": {}
+        },
+        "runtime": {
+          "lib/net6.0-maccatalyst15.4/SimpleRatingControlMaui.dll": {}
         }
       },
       "SkiaSharp/2.88.1": {
@@ -21873,6 +22233,9 @@
           "lib/net7.0-maccatalyst16.1/Xe.AcrylicView.dll": {}
         }
       },
+      "M.BindableProperty.Generator/0.9.0": {
+        "type": "package"
+      },
       "Microsoft.Extensions.Configuration/7.0.0": {
         "type": "package",
         "dependencies": {
@@ -22081,6 +22444,19 @@
         "type": "package",
         "dependencies": {
           "System.CodeDom": "7.0.0"
+        }
+      },
+      "SimpleRatingControl.MAUI/0.0.3": {
+        "type": "package",
+        "dependencies": {
+          "M.BindableProperty.Generator": "0.9.0",
+          "System.Runtime.InteropServices.NFloat.Internal": "6.0.1"
+        },
+        "compile": {
+          "lib/net6.0-maccatalyst15.4/SimpleRatingControlMaui.dll": {}
+        },
+        "runtime": {
+          "lib/net6.0-maccatalyst15.4/SimpleRatingControlMaui.dll": {}
         }
       },
       "SkiaSharp/2.88.1": {
@@ -22245,6 +22621,9 @@
           "lib/net7.0-maccatalyst16.1/Xe.AcrylicView.dll": {}
         }
       },
+      "M.BindableProperty.Generator/0.9.0": {
+        "type": "package"
+      },
       "Microsoft.Extensions.Configuration/7.0.0": {
         "type": "package",
         "dependencies": {
@@ -22453,6 +22832,19 @@
         "type": "package",
         "dependencies": {
           "System.CodeDom": "7.0.0"
+        }
+      },
+      "SimpleRatingControl.MAUI/0.0.3": {
+        "type": "package",
+        "dependencies": {
+          "M.BindableProperty.Generator": "0.9.0",
+          "System.Runtime.InteropServices.NFloat.Internal": "6.0.1"
+        },
+        "compile": {
+          "lib/net6.0-maccatalyst15.4/SimpleRatingControlMaui.dll": {}
+        },
+        "runtime": {
+          "lib/net6.0-maccatalyst15.4/SimpleRatingControlMaui.dll": {}
         }
       },
       "SkiaSharp/2.88.1": {
@@ -22620,6 +23012,9 @@
           "lib/net7.0-maccatalyst16.1/Xe.AcrylicView.dll": {}
         }
       },
+      "M.BindableProperty.Generator/0.9.0": {
+        "type": "package"
+      },
       "Microsoft.Extensions.Configuration/7.0.0": {
         "type": "package",
         "dependencies": {
@@ -22830,6 +23225,19 @@
           "System.CodeDom": "7.0.0"
         }
       },
+      "SimpleRatingControl.MAUI/0.0.3": {
+        "type": "package",
+        "dependencies": {
+          "M.BindableProperty.Generator": "0.9.0",
+          "System.Runtime.InteropServices.NFloat.Internal": "6.0.1"
+        },
+        "compile": {
+          "lib/net6.0-maccatalyst15.4/SimpleRatingControlMaui.dll": {}
+        },
+        "runtime": {
+          "lib/net6.0-maccatalyst15.4/SimpleRatingControlMaui.dll": {}
+        }
+      },
       "SkiaSharp/2.88.1": {
         "type": "package",
         "dependencies": {
@@ -22991,6 +23399,9 @@
         "runtime": {
           "lib/net6.0-windows10.0.19041/Xe.AcrylicView.dll": {}
         }
+      },
+      "M.BindableProperty.Generator/0.9.0": {
+        "type": "package"
       },
       "Microsoft.Extensions.Configuration/7.0.0": {
         "type": "package",
@@ -23340,6 +23751,18 @@
           "System.CodeDom": "7.0.0"
         }
       },
+      "SimpleRatingControl.MAUI/0.0.3": {
+        "type": "package",
+        "dependencies": {
+          "M.BindableProperty.Generator": "0.9.0"
+        },
+        "compile": {
+          "lib/net6.0-windows10.0.19041/SimpleRatingControlMaui.dll": {}
+        },
+        "runtime": {
+          "lib/net6.0-windows10.0.19041/SimpleRatingControlMaui.dll": {}
+        }
+      },
       "SkiaSharp/2.88.1": {
         "type": "package",
         "dependencies": {
@@ -23521,6 +23944,9 @@
           "lib/net6.0-windows10.0.19041/Xe.AcrylicView.dll": {}
         }
       },
+      "M.BindableProperty.Generator/0.9.0": {
+        "type": "package"
+      },
       "Microsoft.Extensions.Configuration/7.0.0": {
         "type": "package",
         "dependencies": {
@@ -23839,6 +24265,18 @@
         "type": "package",
         "dependencies": {
           "System.CodeDom": "7.0.0"
+        }
+      },
+      "SimpleRatingControl.MAUI/0.0.3": {
+        "type": "package",
+        "dependencies": {
+          "M.BindableProperty.Generator": "0.9.0"
+        },
+        "compile": {
+          "lib/net6.0-windows10.0.19041/SimpleRatingControlMaui.dll": {}
+        },
+        "runtime": {
+          "lib/net6.0-windows10.0.19041/SimpleRatingControlMaui.dll": {}
         }
       },
       "SkiaSharp/2.88.1": {
@@ -24002,6 +24440,9 @@
           "lib/net6.0-windows10.0.19041/Xe.AcrylicView.dll": {}
         }
       },
+      "M.BindableProperty.Generator/0.9.0": {
+        "type": "package"
+      },
       "Microsoft.Extensions.Configuration/7.0.0": {
         "type": "package",
         "dependencies": {
@@ -24320,6 +24761,18 @@
         "type": "package",
         "dependencies": {
           "System.CodeDom": "7.0.0"
+        }
+      },
+      "SimpleRatingControl.MAUI/0.0.3": {
+        "type": "package",
+        "dependencies": {
+          "M.BindableProperty.Generator": "0.9.0"
+        },
+        "compile": {
+          "lib/net6.0-windows10.0.19041/SimpleRatingControlMaui.dll": {}
+        },
+        "runtime": {
+          "lib/net6.0-windows10.0.19041/SimpleRatingControlMaui.dll": {}
         }
       },
       "SkiaSharp/2.88.1": {
@@ -24483,6 +24936,9 @@
           "lib/net6.0-windows10.0.19041/Xe.AcrylicView.dll": {}
         }
       },
+      "M.BindableProperty.Generator/0.9.0": {
+        "type": "package"
+      },
       "Microsoft.Extensions.Configuration/7.0.0": {
         "type": "package",
         "dependencies": {
@@ -24801,6 +25257,18 @@
         "type": "package",
         "dependencies": {
           "System.CodeDom": "7.0.0"
+        }
+      },
+      "SimpleRatingControl.MAUI/0.0.3": {
+        "type": "package",
+        "dependencies": {
+          "M.BindableProperty.Generator": "0.9.0"
+        },
+        "compile": {
+          "lib/net6.0-windows10.0.19041/SimpleRatingControlMaui.dll": {}
+        },
+        "runtime": {
+          "lib/net6.0-windows10.0.19041/SimpleRatingControlMaui.dll": {}
         }
       },
       "SkiaSharp/2.88.1": {
@@ -24964,6 +25432,9 @@
           "lib/net6.0-windows10.0.19041/Xe.AcrylicView.dll": {}
         }
       },
+      "M.BindableProperty.Generator/0.9.0": {
+        "type": "package"
+      },
       "Microsoft.Extensions.Configuration/7.0.0": {
         "type": "package",
         "dependencies": {
@@ -25282,6 +25753,18 @@
         "type": "package",
         "dependencies": {
           "System.CodeDom": "7.0.0"
+        }
+      },
+      "SimpleRatingControl.MAUI/0.0.3": {
+        "type": "package",
+        "dependencies": {
+          "M.BindableProperty.Generator": "0.9.0"
+        },
+        "compile": {
+          "lib/net6.0-windows10.0.19041/SimpleRatingControlMaui.dll": {}
+        },
+        "runtime": {
+          "lib/net6.0-windows10.0.19041/SimpleRatingControlMaui.dll": {}
         }
       },
       "SkiaSharp/2.88.1": {
@@ -25445,6 +25928,9 @@
           "lib/net6.0-windows10.0.19041/Xe.AcrylicView.dll": {}
         }
       },
+      "M.BindableProperty.Generator/0.9.0": {
+        "type": "package"
+      },
       "Microsoft.Extensions.Configuration/7.0.0": {
         "type": "package",
         "dependencies": {
@@ -25763,6 +26249,18 @@
         "type": "package",
         "dependencies": {
           "System.CodeDom": "7.0.0"
+        }
+      },
+      "SimpleRatingControl.MAUI/0.0.3": {
+        "type": "package",
+        "dependencies": {
+          "M.BindableProperty.Generator": "0.9.0"
+        },
+        "compile": {
+          "lib/net6.0-windows10.0.19041/SimpleRatingControlMaui.dll": {}
+        },
+        "runtime": {
+          "lib/net6.0-windows10.0.19041/SimpleRatingControlMaui.dll": {}
         }
       },
       "SkiaSharp/2.88.1": {
@@ -25926,6 +26424,9 @@
           "lib/net6.0-windows10.0.19041/Xe.AcrylicView.dll": {}
         }
       },
+      "M.BindableProperty.Generator/0.9.0": {
+        "type": "package"
+      },
       "Microsoft.Extensions.Configuration/7.0.0": {
         "type": "package",
         "dependencies": {
@@ -26246,6 +26747,18 @@
           "System.CodeDom": "7.0.0"
         }
       },
+      "SimpleRatingControl.MAUI/0.0.3": {
+        "type": "package",
+        "dependencies": {
+          "M.BindableProperty.Generator": "0.9.0"
+        },
+        "compile": {
+          "lib/net6.0-windows10.0.19041/SimpleRatingControlMaui.dll": {}
+        },
+        "runtime": {
+          "lib/net6.0-windows10.0.19041/SimpleRatingControlMaui.dll": {}
+        }
+      },
       "SkiaSharp/2.88.1": {
         "type": "package",
         "dependencies": {
@@ -26406,6 +26919,9 @@
         "runtime": {
           "lib/net6.0-windows10.0.19041/Xe.AcrylicView.dll": {}
         }
+      },
+      "M.BindableProperty.Generator/0.9.0": {
+        "type": "package"
       },
       "Microsoft.Extensions.Configuration/7.0.0": {
         "type": "package",
@@ -26733,6 +27249,18 @@
           "System.CodeDom": "7.0.0"
         }
       },
+      "SimpleRatingControl.MAUI/0.0.3": {
+        "type": "package",
+        "dependencies": {
+          "M.BindableProperty.Generator": "0.9.0"
+        },
+        "compile": {
+          "lib/net6.0-windows10.0.19041/SimpleRatingControlMaui.dll": {}
+        },
+        "runtime": {
+          "lib/net6.0-windows10.0.19041/SimpleRatingControlMaui.dll": {}
+        }
+      },
       "SkiaSharp/2.88.1": {
         "type": "package",
         "dependencies": {
@@ -26929,6 +27457,19 @@
         "lib/net6.0-android31.0/GoogleGson.aar",
         "lib/net6.0-android31.0/GoogleGson.dll",
         "lib/net6.0-android31.0/GoogleGson.xml"
+      ]
+    },
+    "M.BindableProperty.Generator/0.9.0": {
+      "sha512": "QPi6jJyQIjRvtDNWq5WGcZ9bMW79aCIjK0ln1KaYPp2y3krBfHC/03xyHo0sGZSSZGFoTnyMKky0jwgLaxq/gA==",
+      "type": "package",
+      "path": "m.bindableproperty.generator/0.9.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "README.md",
+        "analyzers/netstandard2.0/Maui.BindableProperty.Generator.dll",
+        "m.bindableproperty.generator.0.9.0.nupkg.sha512",
+        "m.bindableproperty.generator.nuspec"
       ]
     },
     "Microsoft.Extensions.Configuration/7.0.0": {
@@ -28192,6 +28733,23 @@
         "analyzers/dotnet/cs/MauiReactor.ScaffoldGenerator.dll",
         "reactor.maui.scaffoldgenerator.1.0.138.nupkg.sha512",
         "reactor.maui.scaffoldgenerator.nuspec"
+      ]
+    },
+    "SimpleRatingControl.MAUI/0.0.3": {
+      "sha512": "CCaIamM3AlW0rLdtjvAVzs2Idlmga8upq7vqsIodkcWxCjg6+i2EUv4wdoq2OOPHzkbeBBxyfK3EQVSKFZti9A==",
+      "type": "package",
+      "path": "simpleratingcontrol.maui/0.0.3",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/net6.0-android31.0/SimpleRatingControlMaui.dll",
+        "lib/net6.0-android31.0/SimpleRatingControlMaui.xml",
+        "lib/net6.0-ios15.4/SimpleRatingControlMaui.dll",
+        "lib/net6.0-maccatalyst15.4/SimpleRatingControlMaui.dll",
+        "lib/net6.0-windows10.0.19041/SimpleRatingControlMaui.dll",
+        "lib/net6.0/SimpleRatingControlMaui.dll",
+        "simpleratingcontrol.maui.0.0.3.nupkg.sha512",
+        "simpleratingcontrol.maui.nuspec"
       ]
     },
     "SkiaSharp/2.88.1": {
@@ -30726,6 +31284,7 @@
       "Reactor.Maui >= 1.0.138",
       "Reactor.Maui.Canvas >= 1.0.138",
       "Reactor.Maui.ScaffoldGenerator >= 1.0.138",
+      "SimpleRatingControl.MAUI >= 0.0.3",
       "SkiaSharp.Extended.UI.Maui >= 2.0.0-preview.61",
       "Xamarin.Android.Glide >= 4.13.2.2",
       "Xamarin.AndroidX.Browser >= 1.4.0.3",
@@ -30750,6 +31309,7 @@
       "Reactor.Maui >= 1.0.138",
       "Reactor.Maui.Canvas >= 1.0.138",
       "Reactor.Maui.ScaffoldGenerator >= 1.0.138",
+      "SimpleRatingControl.MAUI >= 0.0.3",
       "SkiaSharp.Extended.UI.Maui >= 2.0.0-preview.61"
     ],
     "net7.0-maccatalyst16.1": [
@@ -30763,6 +31323,7 @@
       "Reactor.Maui >= 1.0.138",
       "Reactor.Maui.Canvas >= 1.0.138",
       "Reactor.Maui.ScaffoldGenerator >= 1.0.138",
+      "SimpleRatingControl.MAUI >= 0.0.3",
       "SkiaSharp.Extended.UI.Maui >= 2.0.0-preview.61"
     ],
     "net7.0-windows10.0.19041": [
@@ -30779,28 +31340,32 @@
       "Reactor.Maui >= 1.0.138",
       "Reactor.Maui.Canvas >= 1.0.138",
       "Reactor.Maui.ScaffoldGenerator >= 1.0.138",
+      "SimpleRatingControl.MAUI >= 0.0.3",
       "SkiaSharp.Extended.UI.Maui >= 2.0.0-preview.61"
     ]
   },
   "packageFolders": {
-    "C:\\Users\\trick\\.nuget\\packages\\": {},
+    "C:\\Users\\DINH LAM\\.nuget\\packages\\": {},
+    "C:\\Program Files\\DevExpress 23.1\\Components\\Offline Packages": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\trick\\source\\repos\\BookReactor\\BookReactor\\BookReactor.csproj",
+      "projectUniqueName": "C:\\Users\\DINH LAM\\Desktop\\clone\\Book\\BookReactor\\BookReactor.csproj",
       "projectName": "BookReactor",
-      "projectPath": "C:\\Users\\trick\\source\\repos\\BookReactor\\BookReactor\\BookReactor.csproj",
-      "packagesPath": "C:\\Users\\trick\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\trick\\source\\repos\\BookReactor\\BookReactor\\obj\\",
+      "projectPath": "C:\\Users\\DINH LAM\\Desktop\\clone\\Book\\BookReactor\\BookReactor.csproj",
+      "packagesPath": "C:\\Users\\DINH LAM\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\DINH LAM\\Desktop\\clone\\Book\\BookReactor\\obj\\",
       "projectStyle": "PackageReference",
       "crossTargeting": true,
       "fallbackFolders": [
+        "C:\\Program Files\\DevExpress 23.1\\Components\\Offline Packages",
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\trick\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\DINH LAM\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\DevExpress 23.1.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
@@ -30812,6 +31377,7 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "C:\\Program Files\\DevExpress 23.1\\Components\\System\\Components\\Packages": {},
         "C:\\Program Files\\dotnet\\library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
@@ -30887,6 +31453,10 @@
           "Reactor.Maui.ScaffoldGenerator": {
             "target": "Package",
             "version": "[1.0.138, )"
+          },
+          "SimpleRatingControl.MAUI": {
+            "target": "Package",
+            "version": "[0.0.3, )"
           },
           "SkiaSharp.Extended.UI.Maui": {
             "target": "Package",
@@ -31026,6 +31596,10 @@
             "target": "Package",
             "version": "[1.0.138, )"
           },
+          "SimpleRatingControl.MAUI": {
+            "target": "Package",
+            "version": "[0.0.3, )"
+          },
           "SkiaSharp.Extended.UI.Maui": {
             "target": "Package",
             "version": "[2.0.0-preview.61, )"
@@ -31108,6 +31682,10 @@
           "Reactor.Maui.ScaffoldGenerator": {
             "target": "Package",
             "version": "[1.0.138, )"
+          },
+          "SimpleRatingControl.MAUI": {
+            "target": "Package",
+            "version": "[0.0.3, )"
           },
           "SkiaSharp.Extended.UI.Maui": {
             "target": "Package",
@@ -31208,6 +31786,10 @@
           "Reactor.Maui.ScaffoldGenerator": {
             "target": "Package",
             "version": "[1.0.138, )"
+          },
+          "SimpleRatingControl.MAUI": {
+            "target": "Package",
+            "version": "[0.0.3, )"
           },
           "SkiaSharp.Extended.UI.Maui": {
             "target": "Package",

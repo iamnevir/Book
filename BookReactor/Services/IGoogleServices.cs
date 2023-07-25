@@ -10,7 +10,8 @@ namespace BookReactor.Services;
 public interface IGoogleServices
 {
     Task<Book> GetBookDetailAsync(string id);
-    Task<Book> GetBook();
+    Task<Book> GetBook(string filter, string resultcount);
+    Task<Item> GetBookById(string id);
 }
 public static class ServiceCollectionExtensions
 {

@@ -22,6 +22,7 @@ public class MonoPackageManager_Resources {
 		"Microsoft.Maui.Graphics.dll",
 		"MauiReactor.dll",
 		"MauiReactor.Canvas.dll",
+		"SimpleRatingControlMaui.dll",
 		"SkiaSharp.dll",
 		"SkiaSharp.Extended.dll",
 		"SkiaSharp.Extended.UI.dll",

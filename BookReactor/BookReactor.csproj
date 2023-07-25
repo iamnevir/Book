@@ -41,8 +41,14 @@
     <None Remove="Resources\Images\NavBar\isach.png" />
     <None Remove="Resources\Images\NavBar\nha.png" />
     <None Remove="Resources\Images\NavBar\sach.png" />
+    <None Remove="Resources\Images\SideMenu\book_img.png" />
+    <None Remove="Resources\Images\SideMenu\ebook_img.png" />
+    <None Remove="Resources\Images\SideMenu\favorites_img.png" />
+    <None Remove="Resources\Images\SideMenu\help_img.png" />
+    <None Remove="Resources\Images\SideMenu\user_dark.svg" />
     <None Remove="Resources\Raw\back.json" />
     <None Remove="Resources\Raw\bookanimation.json" />
+    <None Remove="Resources\Raw\close.json" />
     <None Remove="Resources\Raw\search.json" />
     <None Remove="Resources\Raw\tb.json" />
     <None Remove="Resources\Raw\yeuthich.json" />
@@ -57,6 +63,11 @@
     <MauiImage Include="Resources\Images\NavBar\inha.png" />
     <MauiImage Include="Resources\Images\NavBar\iuser.png" />
     <MauiImage Include="Resources\Images\NavBar\user.png" />
+    <EmbeddedResource Include="Resources\Images\SideMenu\book_img.png" />
+    <EmbeddedResource Include="Resources\Images\SideMenu\ebook_img.png" />
+    <EmbeddedResource Include="Resources\Images\SideMenu\favorites_img.png" />
+    <EmbeddedResource Include="Resources\Images\SideMenu\help_img.png" />
+    <MauiImage Include="Resources\Images\SideMenu\user_dark.svg" />
     <MauiImage Include="Resources\Images\StartPage\sp1.jpg" />
     <MauiImage Include="Resources\Images\StartPage\sp2.jpg" />
     <MauiImage Include="Resources\Images\StartPage\sp3.jpg" />
@@ -67,6 +78,7 @@
     <PackageReference Include="Reactor.Maui" Version="1.0.138" />
     <PackageReference Include="Reactor.Maui.Canvas" Version="1.0.138" />
     <PackageReference Include="Reactor.Maui.ScaffoldGenerator" Version="1.0.138" OutputItemType="Analyzer" ReferenceOutputAssembly="false" />
+    <PackageReference Include="SimpleRatingControl.MAUI" Version="0.0.3" />
     <PackageReference Include="SkiaSharp.Extended.UI.Maui" Version="2.0.0-preview.61" />
   </ItemGroup>
 </Project>

@@ -7,6 +7,7 @@ Microsoft.Maui.Controls.Xaml.dll
 Microsoft.Maui.dll
 Microsoft.Maui.Essentials.dll
 Microsoft.Maui.Graphics.dll
+SimpleRatingControlMaui.dll
 SkiaSharp.dll
 SkiaSharp.Extended.UI.dll
 SkiaSharp.SceneGraph.dll

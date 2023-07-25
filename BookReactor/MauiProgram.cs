@@ -1,5 +1,5 @@
 ﻿
-using Microsoft.Extensions.DependencyInjection;
+using SimpleRatingControlMaui;
 using SkiaSharp.Views.Maui.Controls.Hosting;
 using System;
 
@@ -14,7 +14,7 @@ public static class MauiProgram
             .UseMauiReactorApp<MainPage>()
             .UseAcrylicView()
             .UseSkiaSharp()
-            
+            .UseSimpleRatingControl()
 #if DEBUG
         .EnableMauiReactorHotReload()
 #endif

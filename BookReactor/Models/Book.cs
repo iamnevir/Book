@@ -7,7 +7,6 @@ using System.Threading.Tasks;
 
 namespace BookReactor.Models;
 
-
 public class Book
 {
     public string kind { get; set; }
@@ -38,6 +37,10 @@ public class ImageLinks
 {
     public string smallThumbnail { get; set; }
     public string thumbnail { get; set; }
+    public string small { get; set; }
+    public string medium { get; set; }
+    public string large { get; set; }
+    public string extraLarge { get; set; }
 }
 
 public class IndustryIdentifier

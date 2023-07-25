@@ -20,10 +20,13 @@ public class GoogleBookServices: IGoogleServices
     public async Task<Book?> GetBookDetailAsync(string id) =>
        await httpClient.GetFromJsonAsync<Book>(
            $"volumes?q={id}&key={ApiKey}");
-    public async Task<Book> GetBook() =>
+    public async Task<Book> GetBook(string filter, string resultcount) =>
        await httpClient.GetFromJsonAsync<Book>(
-           $"volumes?q=inauthor:Stephen+inauthor:King&maxResults=5&key={ApiKey}");
-     public static class ServiceUrl
+           $"volumes?q={filter}&maxResults={resultcount}&key={ApiKey}");
+    public async Task<Item> GetBookById(string id) =>
+       await httpClient.GetFromJsonAsync<Item>(
+           $"volumes/{id}");
+    public static class ServiceUrl
     {
         public const string header = "/volumes?q=id=";
     }

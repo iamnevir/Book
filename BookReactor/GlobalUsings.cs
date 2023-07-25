@@ -8,3 +8,6 @@ global using BookReactor.Services;
 global using MauiReactor;
 global using Xe.AcrylicView;
 global using BookReactor.Resources.Styles;
+global using MauiReactor.Animations;
+global using MauiReactor.Canvas;
+global using MauiReactor.Shapes;
