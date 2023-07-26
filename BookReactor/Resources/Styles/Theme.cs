@@ -10,6 +10,7 @@ public class Theme
 {
     public static Color BlackBorder = Color.FromArgb("#1D1C23");
     public static Color Bg = Color.FromArgb("#17161E");
+    public static Color Kem = Color.FromArgb("#FFFAF0");
     public static string font = "EmilysCandy";
     public static Color Background { get; } = Color.FromUint(0xFFF2F6FF);
     public static Color Shadow { get; } = Color.FromUint(0xFF4A5367);

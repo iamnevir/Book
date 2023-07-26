@@ -3061,19 +3061,6 @@ C:\Users\DINH LAM\Desktop\clone\Book\BookReactor\obj\Debug\net7.0-android\lp\153
 C:\Users\DINH LAM\Desktop\clone\Book\BookReactor\obj\Debug\net7.0-android\lp\158\jl\files.cache
 C:\Users\DINH LAM\Desktop\clone\Book\BookReactor\obj\Debug\net7.0-android\lp\160\jl\files.cache
 C:\Users\DINH LAM\Desktop\clone\Book\BookReactor\obj\Debug\net7.0-android\lp\168\jl\files.cache
-C:\Users\DINH LAM\Desktop\clone\Book\BookReactor\obj\Debug\net7.0-android\android\assets\mscorlib.dll
-C:\Users\DINH LAM\Desktop\clone\Book\BookReactor\obj\Debug\net7.0-android\android\assets\System.Collections.Concurrent.dll
-C:\Users\DINH LAM\Desktop\clone\Book\BookReactor\obj\Debug\net7.0-android\android\assets\System.Data.Common.dll
-C:\Users\DINH LAM\Desktop\clone\Book\BookReactor\obj\Debug\net7.0-android\android\assets\System.Data.dll
-C:\Users\DINH LAM\Desktop\clone\Book\BookReactor\obj\Debug\net7.0-android\android\assets\System.Diagnostics.StackTrace.dll
-C:\Users\DINH LAM\Desktop\clone\Book\BookReactor\obj\Debug\net7.0-android\android\assets\System.Diagnostics.TraceSource.dll
-C:\Users\DINH LAM\Desktop\clone\Book\BookReactor\obj\Debug\net7.0-android\android\assets\System.dll
-C:\Users\DINH LAM\Desktop\clone\Book\BookReactor\obj\Debug\net7.0-android\android\assets\System.Private.CoreLib.dll
-C:\Users\DINH LAM\Desktop\clone\Book\BookReactor\obj\Debug\net7.0-android\android\assets\System.Private.Uri.dll
-C:\Users\DINH LAM\Desktop\clone\Book\BookReactor\obj\Debug\net7.0-android\android\assets\System.Runtime.dll
-C:\Users\DINH LAM\Desktop\clone\Book\BookReactor\obj\Debug\net7.0-android\android\assets\System.Runtime.Extensions.dll
-C:\Users\DINH LAM\Desktop\clone\Book\BookReactor\obj\Debug\net7.0-android\android\assets\System.Runtime.Serialization.Formatters.dll
-C:\Users\DINH LAM\Desktop\clone\Book\BookReactor\obj\Debug\net7.0-android\android\assets\System.Xml.dll
 C:\Users\DINH LAM\Desktop\clone\Book\BookReactor\obj\Debug\net7.0-android\resizetizer\r\drawable\billing_img.png
 C:\Users\DINH LAM\Desktop\clone\Book\BookReactor\obj\Debug\net7.0-android\resizetizer\r\drawable\favorites_img.png
 C:\Users\DINH LAM\Desktop\clone\Book\BookReactor\obj\Debug\net7.0-android\resizetizer\r\drawable\help_img.png
@@ -4185,3 +4172,18 @@ C:\Users\trick\source\repos\Book\BookReactor\obj\Debug\net7.0-android\android\jn
 C:\Users\trick\source\repos\Book\BookReactor\obj\Debug\net7.0-android\app_shared_libraries\armeabi-v7a\libxamarin-app.so
 C:\Users\trick\source\repos\Book\BookReactor\obj\Debug\net7.0-android\app_shared_libraries\arm64-v8a\libxamarin-app.so
 C:\Users\trick\source\repos\Book\BookReactor\obj\Debug\net7.0-android\app_shared_libraries\x86\libxamarin-app.so
+C:\Users\DINH LAM\Desktop\clone\Book\BookReactor\obj\Debug\net7.0-android\android\assets\mscorlib.dll
+C:\Users\DINH LAM\Desktop\clone\Book\BookReactor\obj\Debug\net7.0-android\android\assets\System.Collections.Concurrent.dll
+C:\Users\DINH LAM\Desktop\clone\Book\BookReactor\obj\Debug\net7.0-android\android\assets\System.Data.Common.dll
+C:\Users\DINH LAM\Desktop\clone\Book\BookReactor\obj\Debug\net7.0-android\android\assets\System.Data.dll
+C:\Users\DINH LAM\Desktop\clone\Book\BookReactor\obj\Debug\net7.0-android\android\assets\System.Diagnostics.StackTrace.dll
+C:\Users\DINH LAM\Desktop\clone\Book\BookReactor\obj\Debug\net7.0-android\android\assets\System.Diagnostics.TraceSource.dll
+C:\Users\DINH LAM\Desktop\clone\Book\BookReactor\obj\Debug\net7.0-android\android\assets\System.dll
+C:\Users\DINH LAM\Desktop\clone\Book\BookReactor\obj\Debug\net7.0-android\android\assets\System.Private.CoreLib.dll
+C:\Users\DINH LAM\Desktop\clone\Book\BookReactor\obj\Debug\net7.0-android\android\assets\System.Private.Uri.dll
+C:\Users\DINH LAM\Desktop\clone\Book\BookReactor\obj\Debug\net7.0-android\android\assets\System.Runtime.dll
+C:\Users\DINH LAM\Desktop\clone\Book\BookReactor\obj\Debug\net7.0-android\android\assets\System.Runtime.Extensions.dll
+C:\Users\DINH LAM\Desktop\clone\Book\BookReactor\obj\Debug\net7.0-android\android\assets\System.Runtime.Serialization.Formatters.dll
+C:\Users\DINH LAM\Desktop\clone\Book\BookReactor\obj\Debug\net7.0-android\android\assets\System.Xml.dll
+C:\Users\DINH LAM\Desktop\clone\Book\BookReactor\obj\Debug\net7.0-android\android\assets\Maui.Skeleton.dll
+C:\Users\DINH LAM\Desktop\clone\Book\BookReactor\obj\Debug\net7.0-android\android\assets\Newtonsoft.Json.dll

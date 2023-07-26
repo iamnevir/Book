@@ -1,24 +1,26 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\trick\\source\\repos\\Book\\BookReactor\\BookReactor.csproj": {}
+    "C:\\Users\\DINH LAM\\Desktop\\clone\\Book\\BookReactor\\BookReactor.csproj": {}
   },
   "projects": {
-    "C:\\Users\\trick\\source\\repos\\Book\\BookReactor\\BookReactor.csproj": {
+    "C:\\Users\\DINH LAM\\Desktop\\clone\\Book\\BookReactor\\BookReactor.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\trick\\source\\repos\\Book\\BookReactor\\BookReactor.csproj",
+        "projectUniqueName": "C:\\Users\\DINH LAM\\Desktop\\clone\\Book\\BookReactor\\BookReactor.csproj",
         "projectName": "BookReactor",
-        "projectPath": "C:\\Users\\trick\\source\\repos\\Book\\BookReactor\\BookReactor.csproj",
-        "packagesPath": "C:\\Users\\trick\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\trick\\source\\repos\\Book\\BookReactor\\obj\\",
+        "projectPath": "C:\\Users\\DINH LAM\\Desktop\\clone\\Book\\BookReactor\\BookReactor.csproj",
+        "packagesPath": "C:\\Users\\DINH LAM\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\DINH LAM\\Desktop\\clone\\Book\\BookReactor\\obj\\",
         "projectStyle": "PackageReference",
         "crossTargeting": true,
         "fallbackFolders": [
+          "C:\\Program Files\\DevExpress 23.1\\Components\\Offline Packages",
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\trick\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\DINH LAM\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\DevExpress 23.1.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -30,6 +32,7 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\DevExpress 23.1\\Components\\System\\Components\\Packages": {},
           "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
@@ -65,6 +68,10 @@
               "target": "Package",
               "version": "[1.13.0, )"
             },
+            "HorusStudio.Maui.Skeleton": {
+              "target": "Package",
+              "version": "[2.0.0, )"
+            },
             "Microsoft.Extensions.Configuration": {
               "target": "Package",
               "version": "[7.0.0, )",
@@ -93,6 +100,10 @@
               "target": "Package",
               "version": "[7.0.86, )",
               "autoReferenced": true
+            },
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[13.0.3, )"
             },
             "Reactor.Maui": {
               "target": "Package",
@@ -207,6 +218,10 @@
               "target": "Package",
               "version": "[1.13.0, )"
             },
+            "HorusStudio.Maui.Skeleton": {
+              "target": "Package",
+              "version": "[2.0.0, )"
+            },
             "Microsoft.Extensions.Configuration": {
               "target": "Package",
               "version": "[7.0.0, )",
@@ -235,6 +250,10 @@
               "target": "Package",
               "version": "[7.0.86, )",
               "autoReferenced": true
+            },
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[13.0.3, )"
             },
             "Reactor.Maui": {
               "target": "Package",
@@ -294,6 +313,10 @@
               "target": "Package",
               "version": "[1.13.0, )"
             },
+            "HorusStudio.Maui.Skeleton": {
+              "target": "Package",
+              "version": "[2.0.0, )"
+            },
             "Microsoft.Extensions.Configuration": {
               "target": "Package",
               "version": "[7.0.0, )",
@@ -322,6 +345,10 @@
               "target": "Package",
               "version": "[7.0.86, )",
               "autoReferenced": true
+            },
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[13.0.3, )"
             },
             "Reactor.Maui": {
               "target": "Package",
@@ -382,6 +409,10 @@
               "target": "Package",
               "version": "[1.13.0, )"
             },
+            "HorusStudio.Maui.Skeleton": {
+              "target": "Package",
+              "version": "[2.0.0, )"
+            },
             "Microsoft.Extensions.Configuration": {
               "target": "Package",
               "version": "[7.0.0, )",
@@ -426,6 +457,10 @@
               "target": "Package",
               "version": "[1.2.221209.1, )",
               "autoReferenced": true
+            },
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[13.0.3, )"
             },
             "Reactor.Maui": {
               "target": "Package",

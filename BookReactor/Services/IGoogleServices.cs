@@ -24,4 +24,13 @@ public static class ServiceCollectionExtensions
             httpClient.BaseAddress = serverUri;
         });
     }
+    public static void AddGutenbergServices(this IServiceCollection services, Uri serverUri)
+    {
+        services.AddSingleton<IGutenbergApiService, GutenbergApiService>();
+
+        services.AddHttpClient("GutenbergApi", httpClient =>
+        {
+            httpClient.BaseAddress = serverUri;
+        });
+    }
 }

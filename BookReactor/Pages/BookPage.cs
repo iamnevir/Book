@@ -1,8 +1,8 @@
-﻿using Microsoft.Extensions.DependencyInjection;
-using System;
+﻿
+using Maui.Skeleton;
+using Microsoft.Extensions.DependencyInjection;
 using System.Collections.Generic;
 using System.Linq;
-using System.Threading.Tasks;
 
 namespace BookReactor.Pages;
 
@@ -126,15 +126,35 @@ class BookPage:Component<BookPageState>
                    .GridRow(1),
                 new ScrollView
                 {
-                    new CollectionView()
+                    RenderCollection()
+                }.GridRow(2)
+            }.BackgroundColor(Theme.Bg)
+        }.Set(MauiControls.NavigationPage.HasNavigationBarProperty,false);
+    }
+
+    private VisualNode RenderCollection()
+    {
+        if (State.IsLoading)
+        {
+            return new Grid
+            {
+                new Label("Thí chú đợi xíu ...")
+                .TextColor(Colors.White)
+                .FontSize(20)
+                .Margin(10,0,0,0)
+                .FontFamily(Theme.font)
+            };
+        }
+        else
+        {
+            return new CollectionView()
                     .ItemsLayout(
                         new VerticalGridItemsLayout(2)
                         .VerticalItemSpacing(20)
                         .HorizontalItemSpacing(0))
-                    .ItemsSource(State.Books,RenderBookGrid)
-                }.GridRow(2)
-            }.BackgroundColor(Theme.Bg)
-        }.Set(MauiControls.NavigationPage.HasNavigationBarProperty,false);
+                    .ItemsSource(State.Books, RenderBookGrid)
+                    ;
+        }
     }
 
     private VisualNode RenderBookGrid(Item item)
@@ -147,7 +167,7 @@ class BookPage:Component<BookPageState>
         {
             var authors = item.volumeInfo.authors.FirstOrDefault();
             var source = item.volumeInfo.imageLinks.thumbnail.Replace("&edge=curl&source=gbs_api", "").Replace("http", "https");
-            return new Border
+            return new Border()
             {
                 new AcrylicView
                 {
@@ -183,6 +203,7 @@ class BookPage:Component<BookPageState>
                                     .FontSize(13)
                                     .FontFamily(Theme.font)
                                     .GridColumn(0)
+                                    .MaxLines(1)
                                     .Margin(0,10,0,0),
                                  new Border
                                  {
@@ -204,8 +225,7 @@ class BookPage:Component<BookPageState>
                         .Margin(10,10,0,0)
                     }
                     
-                }.EffectStyle(Xe.AcrylicView.Controls.EffectStyle.Light)
-                
+                }.EffectStyle(Xe.AcrylicView.Controls.EffectStyle.Light),
             }
             .WidthRequest(150)
             .HeightRequest(270)
@@ -214,8 +234,9 @@ class BookPage:Component<BookPageState>
            .OnTapped(() =>
            {
                OpenDetailBook(item);
-
-           }); ;
+           })
+           
+           ; 
         }
     }
 }

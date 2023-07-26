@@ -10,7 +10,7 @@
     <UseMaui>true</UseMaui>
     <SingleProject>true</SingleProject>
     <!-- Display name -->
-    <ApplicationTitle>BookReactor</ApplicationTitle>
+    <ApplicationTitle>Magic Book</ApplicationTitle>
     <!-- App Identifier -->
     <ApplicationId>com.companyname.bookreactor</ApplicationId>
     <ApplicationIdGuid>25f39401-8c74-4bc9-abeb-61c13bdb1fd7</ApplicationIdGuid>
@@ -26,9 +26,9 @@
   </PropertyGroup>
   <ItemGroup>
     <!-- App Icon -->
-    <MauiIcon Include="Resources\AppIcon\appicon.svg" ForegroundFile="Resources\AppIcon\appiconfg.svg" Color="#512BD4" />
+    <MauiIcon Include="Resources\AppIcon\appicon.svg" Color="#9900CC" />
     <!-- Splash Screen -->
-    <MauiSplashScreen Include="Resources\Splash\splash.svg" Color="#512BD4" BaseSize="128,128" />
+    <MauiSplashScreen Include="Resources\Splash\splash.svg" Color="#17161E" BaseSize="300,300" />
     <!-- Images -->
     <MauiImage Include="Resources\Images\*" />
     <!-- Custom Fonts -->
@@ -74,7 +74,9 @@
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="AcrylicView.Maui" Version="1.13.0" />
+    <PackageReference Include="HorusStudio.Maui.Skeleton" Version="2.0.0" />
     <PackageReference Include="Microsoft.Extensions.Http" Version="7.0.0" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
     <PackageReference Include="Reactor.Maui" Version="1.0.138" />
     <PackageReference Include="Reactor.Maui.Canvas" Version="1.0.138" />
     <PackageReference Include="Reactor.Maui.ScaffoldGenerator" Version="1.0.138" OutputItemType="Analyzer" ReferenceOutputAssembly="false" />

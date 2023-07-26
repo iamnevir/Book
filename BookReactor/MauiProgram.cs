@@ -23,6 +23,7 @@ public static class MauiProgram
                 fonts.AddFont("EmilysCandy-Regular.ttf", "EmilysCandy");
             });
         builder.Services.AddBookServices(new Uri("https://www.googleapis.com/books/v1/"));
+        builder.Services.AddGutenbergServices(new Uri("https://www.gutenberg.org/"));
         return builder.Build();
     }
 }

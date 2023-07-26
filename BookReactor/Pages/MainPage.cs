@@ -41,6 +41,10 @@ class MainPage : Component<MainPageState>
     {
         await Navigation.PushAsync<BookPage>();
     }
+    private async void OpenReadPage()
+    {
+        await Navigation.PushAsync<ReadPage>();
+    }
     public override VisualNode Render()
     {
         return new NavigationPage
@@ -53,6 +57,8 @@ class MainPage : Component<MainPageState>
                       new HomePage()
                       .IsHidden(State.IsSideMenuShown)
                       .OpenBookDetail(OpenDetailBook)
+                      .OnBookPage(OpenMarket)
+                      .OnReadPage(OpenReadPage)
                       .OpenSideMenu(()=>SetState(s=>s.IsSideMenuShown=true))
                       ,
                       new SideMenu()
@@ -89,7 +95,19 @@ class HomePage : Component<HomePageState>
 {
      bool _isShown;
     Action _action1;
+    Action _action2;
+    Action _action3;
     Action<Item> _selectBook;
+    public HomePage OnReadPage(Action action)
+    {
+        _action3 = action;
+        return this;
+    }
+    public HomePage OnBookPage(Action action)
+    {
+        _action2 = action;
+        return this;
+    }
     public HomePage IsHidden(bool isHidden)
     {
         _isShown = !isHidden;
@@ -198,7 +216,7 @@ class HomePage : Component<HomePageState>
                         .FontSize(20)
                         .FontFamily(Theme.font)
                         .GridRow(2)
-                        .Margin(20,0,0,15),
+                        .Margin(20,20,0,15),
                        new ScrollView
                         {
                            new CollectionView()
@@ -608,6 +626,7 @@ class HomePage : Component<HomePageState>
                 .StrokeShape(new RoundRectangle().CornerRadius(15))
                 .WidthRequest(340)
                 .BackgroundColor(Colors.Transparent)
+                .OnTapped(_action3)
         .GridRow(1);
     }
 
@@ -666,6 +685,7 @@ class HomePage : Component<HomePageState>
                 .BackgroundColor(Colors.Transparent)
                 .HEnd()
                 .Margin(-25,0,0,0)
+                .OnTapped(_action2)
                 ,
             }.Spacing(10)
             .Margin(15, 20, 0, 0)

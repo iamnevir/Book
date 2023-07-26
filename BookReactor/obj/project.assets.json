@@ -28,6 +28,19 @@
           }
         }
       },
+      "HorusStudio.Maui.Skeleton/2.0.0": {
+        "type": "package",
+        "compile": {
+          "lib/net6.0/Maui.Skeleton.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0/Maui.Skeleton.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "M.BindableProperty.Generator/0.9.0": {
         "type": "package"
       },
@@ -211,6 +224,19 @@
         "runtime": {
           "lib/net7.0-android33.0/Microsoft.Maui.Graphics.dll": {
             "related": ".pdb;.xml"
+          }
+        }
+      },
+      "Newtonsoft.Json/13.0.3": {
+        "type": "package",
+        "compile": {
+          "lib/net6.0/Newtonsoft.Json.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0/Newtonsoft.Json.dll": {
+            "related": ".xml"
           }
         }
       },
@@ -2185,6 +2211,19 @@
           }
         }
       },
+      "HorusStudio.Maui.Skeleton/2.0.0": {
+        "type": "package",
+        "compile": {
+          "lib/net6.0/Maui.Skeleton.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0/Maui.Skeleton.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "M.BindableProperty.Generator/0.9.0": {
         "type": "package"
       },
@@ -2368,6 +2407,19 @@
         "runtime": {
           "lib/net7.0-android33.0/Microsoft.Maui.Graphics.dll": {
             "related": ".pdb;.xml"
+          }
+        }
+      },
+      "Newtonsoft.Json/13.0.3": {
+        "type": "package",
+        "compile": {
+          "lib/net6.0/Newtonsoft.Json.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0/Newtonsoft.Json.dll": {
+            "related": ".xml"
           }
         }
       },
@@ -4327,6 +4379,19 @@
           }
         }
       },
+      "HorusStudio.Maui.Skeleton/2.0.0": {
+        "type": "package",
+        "compile": {
+          "lib/net6.0/Maui.Skeleton.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0/Maui.Skeleton.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "M.BindableProperty.Generator/0.9.0": {
         "type": "package"
       },
@@ -4510,6 +4575,19 @@
         "runtime": {
           "lib/net7.0-android33.0/Microsoft.Maui.Graphics.dll": {
             "related": ".pdb;.xml"
+          }
+        }
+      },
+      "Newtonsoft.Json/13.0.3": {
+        "type": "package",
+        "compile": {
+          "lib/net6.0/Newtonsoft.Json.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0/Newtonsoft.Json.dll": {
+            "related": ".xml"
           }
         }
       },
@@ -6469,6 +6547,19 @@
           }
         }
       },
+      "HorusStudio.Maui.Skeleton/2.0.0": {
+        "type": "package",
+        "compile": {
+          "lib/net6.0/Maui.Skeleton.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0/Maui.Skeleton.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "M.BindableProperty.Generator/0.9.0": {
         "type": "package"
       },
@@ -6652,6 +6743,19 @@
         "runtime": {
           "lib/net7.0-android33.0/Microsoft.Maui.Graphics.dll": {
             "related": ".pdb;.xml"
+          }
+        }
+      },
+      "Newtonsoft.Json/13.0.3": {
+        "type": "package",
+        "compile": {
+          "lib/net6.0/Newtonsoft.Json.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0/Newtonsoft.Json.dll": {
+            "related": ".xml"
           }
         }
       },
@@ -8611,6 +8715,19 @@
           }
         }
       },
+      "HorusStudio.Maui.Skeleton/2.0.0": {
+        "type": "package",
+        "compile": {
+          "lib/net6.0/Maui.Skeleton.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0/Maui.Skeleton.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "M.BindableProperty.Generator/0.9.0": {
         "type": "package"
       },
@@ -8794,6 +8911,19 @@
         "runtime": {
           "lib/net7.0-android33.0/Microsoft.Maui.Graphics.dll": {
             "related": ".pdb;.xml"
+          }
+        }
+      },
+      "Newtonsoft.Json/13.0.3": {
+        "type": "package",
+        "compile": {
+          "lib/net6.0/Newtonsoft.Json.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0/Newtonsoft.Json.dll": {
+            "related": ".xml"
           }
         }
       },
@@ -10753,6 +10883,19 @@
           }
         }
       },
+      "HorusStudio.Maui.Skeleton/2.0.0": {
+        "type": "package",
+        "compile": {
+          "lib/net6.0/Maui.Skeleton.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0/Maui.Skeleton.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "M.BindableProperty.Generator/0.9.0": {
         "type": "package"
       },
@@ -10936,6 +11079,19 @@
         "runtime": {
           "lib/net7.0-android33.0/Microsoft.Maui.Graphics.dll": {
             "related": ".pdb;.xml"
+          }
+        }
+      },
+      "Newtonsoft.Json/13.0.3": {
+        "type": "package",
+        "compile": {
+          "lib/net6.0/Newtonsoft.Json.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0/Newtonsoft.Json.dll": {
+            "related": ".xml"
           }
         }
       },
@@ -12892,6 +13048,19 @@
           }
         }
       },
+      "HorusStudio.Maui.Skeleton/2.0.0": {
+        "type": "package",
+        "compile": {
+          "lib/net6.0/Maui.Skeleton.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0/Maui.Skeleton.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "M.BindableProperty.Generator/0.9.0": {
         "type": "package"
       },
@@ -13075,6 +13244,19 @@
         "runtime": {
           "lib/net7.0-android33.0/Microsoft.Maui.Graphics.dll": {
             "related": ".pdb;.xml"
+          }
+        }
+      },
+      "Newtonsoft.Json/13.0.3": {
+        "type": "package",
+        "compile": {
+          "lib/net6.0/Newtonsoft.Json.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0/Newtonsoft.Json.dll": {
+            "related": ".xml"
           }
         }
       },
@@ -15031,6 +15213,19 @@
           }
         }
       },
+      "HorusStudio.Maui.Skeleton/2.0.0": {
+        "type": "package",
+        "compile": {
+          "lib/net6.0/Maui.Skeleton.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0/Maui.Skeleton.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "M.BindableProperty.Generator/0.9.0": {
         "type": "package"
       },
@@ -15214,6 +15409,19 @@
         "runtime": {
           "lib/net7.0-android33.0/Microsoft.Maui.Graphics.dll": {
             "related": ".pdb;.xml"
+          }
+        }
+      },
+      "Newtonsoft.Json/13.0.3": {
+        "type": "package",
+        "compile": {
+          "lib/net6.0/Newtonsoft.Json.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0/Newtonsoft.Json.dll": {
+            "related": ".xml"
           }
         }
       },
@@ -17153,6 +17361,19 @@
           "lib/net7.0-ios16.1/Xe.AcrylicView.dll": {}
         }
       },
+      "HorusStudio.Maui.Skeleton/2.0.0": {
+        "type": "package",
+        "compile": {
+          "lib/net6.0/Maui.Skeleton.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0/Maui.Skeleton.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "M.BindableProperty.Generator/0.9.0": {
         "type": "package"
       },
@@ -17336,6 +17557,19 @@
         "runtime": {
           "lib/net7.0-ios16.1/Microsoft.Maui.Graphics.dll": {
             "related": ".pdb;.xml"
+          }
+        }
+      },
+      "Newtonsoft.Json/13.0.3": {
+        "type": "package",
+        "compile": {
+          "lib/net6.0/Newtonsoft.Json.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0/Newtonsoft.Json.dll": {
+            "related": ".xml"
           }
         }
       },
@@ -17559,6 +17793,19 @@
           "lib/net7.0-ios16.1/Xe.AcrylicView.dll": {}
         }
       },
+      "HorusStudio.Maui.Skeleton/2.0.0": {
+        "type": "package",
+        "compile": {
+          "lib/net6.0/Maui.Skeleton.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0/Maui.Skeleton.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "M.BindableProperty.Generator/0.9.0": {
         "type": "package"
       },
@@ -17742,6 +17989,19 @@
         "runtime": {
           "lib/net7.0-ios16.1/Microsoft.Maui.Graphics.dll": {
             "related": ".pdb;.xml"
+          }
+        }
+      },
+      "Newtonsoft.Json/13.0.3": {
+        "type": "package",
+        "compile": {
+          "lib/net6.0/Newtonsoft.Json.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0/Newtonsoft.Json.dll": {
+            "related": ".xml"
           }
         }
       },
@@ -17947,6 +18207,19 @@
           "lib/net7.0-ios16.1/Xe.AcrylicView.dll": {}
         }
       },
+      "HorusStudio.Maui.Skeleton/2.0.0": {
+        "type": "package",
+        "compile": {
+          "lib/net6.0/Maui.Skeleton.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0/Maui.Skeleton.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "M.BindableProperty.Generator/0.9.0": {
         "type": "package"
       },
@@ -18130,6 +18403,19 @@
         "runtime": {
           "lib/net7.0-ios16.1/Microsoft.Maui.Graphics.dll": {
             "related": ".pdb;.xml"
+          }
+        }
+      },
+      "Newtonsoft.Json/13.0.3": {
+        "type": "package",
+        "compile": {
+          "lib/net6.0/Newtonsoft.Json.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0/Newtonsoft.Json.dll": {
+            "related": ".xml"
           }
         }
       },
@@ -18335,6 +18621,19 @@
           "lib/net7.0-ios16.1/Xe.AcrylicView.dll": {}
         }
       },
+      "HorusStudio.Maui.Skeleton/2.0.0": {
+        "type": "package",
+        "compile": {
+          "lib/net6.0/Maui.Skeleton.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0/Maui.Skeleton.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "M.BindableProperty.Generator/0.9.0": {
         "type": "package"
       },
@@ -18518,6 +18817,19 @@
         "runtime": {
           "lib/net7.0-ios16.1/Microsoft.Maui.Graphics.dll": {
             "related": ".pdb;.xml"
+          }
+        }
+      },
+      "Newtonsoft.Json/13.0.3": {
+        "type": "package",
+        "compile": {
+          "lib/net6.0/Newtonsoft.Json.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0/Newtonsoft.Json.dll": {
+            "related": ".xml"
           }
         }
       },
@@ -18723,6 +19035,19 @@
           "lib/net7.0-ios16.1/Xe.AcrylicView.dll": {}
         }
       },
+      "HorusStudio.Maui.Skeleton/2.0.0": {
+        "type": "package",
+        "compile": {
+          "lib/net6.0/Maui.Skeleton.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0/Maui.Skeleton.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "M.BindableProperty.Generator/0.9.0": {
         "type": "package"
       },
@@ -18906,6 +19231,19 @@
         "runtime": {
           "lib/net7.0-ios16.1/Microsoft.Maui.Graphics.dll": {
             "related": ".pdb;.xml"
+          }
+        }
+      },
+      "Newtonsoft.Json/13.0.3": {
+        "type": "package",
+        "compile": {
+          "lib/net6.0/Newtonsoft.Json.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0/Newtonsoft.Json.dll": {
+            "related": ".xml"
           }
         }
       },
@@ -19111,6 +19449,19 @@
           "lib/net7.0-ios16.1/Xe.AcrylicView.dll": {}
         }
       },
+      "HorusStudio.Maui.Skeleton/2.0.0": {
+        "type": "package",
+        "compile": {
+          "lib/net6.0/Maui.Skeleton.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0/Maui.Skeleton.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "M.BindableProperty.Generator/0.9.0": {
         "type": "package"
       },
@@ -19294,6 +19645,19 @@
         "runtime": {
           "lib/net7.0-ios16.1/Microsoft.Maui.Graphics.dll": {
             "related": ".pdb;.xml"
+          }
+        }
+      },
+      "Newtonsoft.Json/13.0.3": {
+        "type": "package",
+        "compile": {
+          "lib/net6.0/Newtonsoft.Json.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0/Newtonsoft.Json.dll": {
+            "related": ".xml"
           }
         }
       },
@@ -19505,6 +19869,19 @@
           "lib/net7.0-ios16.1/Xe.AcrylicView.dll": {}
         }
       },
+      "HorusStudio.Maui.Skeleton/2.0.0": {
+        "type": "package",
+        "compile": {
+          "lib/net6.0/Maui.Skeleton.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0/Maui.Skeleton.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "M.BindableProperty.Generator/0.9.0": {
         "type": "package"
       },
@@ -19688,6 +20065,19 @@
         "runtime": {
           "lib/net7.0-ios16.1/Microsoft.Maui.Graphics.dll": {
             "related": ".pdb;.xml"
+          }
+        }
+      },
+      "Newtonsoft.Json/13.0.3": {
+        "type": "package",
+        "compile": {
+          "lib/net6.0/Newtonsoft.Json.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0/Newtonsoft.Json.dll": {
+            "related": ".xml"
           }
         }
       },
@@ -19899,6 +20289,19 @@
           "lib/net7.0-ios16.1/Xe.AcrylicView.dll": {}
         }
       },
+      "HorusStudio.Maui.Skeleton/2.0.0": {
+        "type": "package",
+        "compile": {
+          "lib/net6.0/Maui.Skeleton.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0/Maui.Skeleton.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "M.BindableProperty.Generator/0.9.0": {
         "type": "package"
       },
@@ -20082,6 +20485,19 @@
         "runtime": {
           "lib/net7.0-ios16.1/Microsoft.Maui.Graphics.dll": {
             "related": ".pdb;.xml"
+          }
+        }
+      },
+      "Newtonsoft.Json/13.0.3": {
+        "type": "package",
+        "compile": {
+          "lib/net6.0/Newtonsoft.Json.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0/Newtonsoft.Json.dll": {
+            "related": ".xml"
           }
         }
       },
@@ -20287,6 +20703,19 @@
           "lib/net7.0-maccatalyst16.1/Xe.AcrylicView.dll": {}
         }
       },
+      "HorusStudio.Maui.Skeleton/2.0.0": {
+        "type": "package",
+        "compile": {
+          "lib/net6.0/Maui.Skeleton.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0/Maui.Skeleton.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "M.BindableProperty.Generator/0.9.0": {
         "type": "package"
       },
@@ -20470,6 +20899,19 @@
         "runtime": {
           "lib/net7.0-maccatalyst16.1/Microsoft.Maui.Graphics.dll": {
             "related": ".pdb;.xml"
+          }
+        }
+      },
+      "Newtonsoft.Json/13.0.3": {
+        "type": "package",
+        "compile": {
+          "lib/net6.0/Newtonsoft.Json.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0/Newtonsoft.Json.dll": {
+            "related": ".xml"
           }
         }
       },
@@ -20681,6 +21123,19 @@
           "lib/net7.0-maccatalyst16.1/Xe.AcrylicView.dll": {}
         }
       },
+      "HorusStudio.Maui.Skeleton/2.0.0": {
+        "type": "package",
+        "compile": {
+          "lib/net6.0/Maui.Skeleton.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0/Maui.Skeleton.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "M.BindableProperty.Generator/0.9.0": {
         "type": "package"
       },
@@ -20864,6 +21319,19 @@
         "runtime": {
           "lib/net7.0-maccatalyst16.1/Microsoft.Maui.Graphics.dll": {
             "related": ".pdb;.xml"
+          }
+        }
+      },
+      "Newtonsoft.Json/13.0.3": {
+        "type": "package",
+        "compile": {
+          "lib/net6.0/Newtonsoft.Json.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0/Newtonsoft.Json.dll": {
+            "related": ".xml"
           }
         }
       },
@@ -21069,6 +21537,19 @@
           "lib/net7.0-maccatalyst16.1/Xe.AcrylicView.dll": {}
         }
       },
+      "HorusStudio.Maui.Skeleton/2.0.0": {
+        "type": "package",
+        "compile": {
+          "lib/net6.0/Maui.Skeleton.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0/Maui.Skeleton.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "M.BindableProperty.Generator/0.9.0": {
         "type": "package"
       },
@@ -21252,6 +21733,19 @@
         "runtime": {
           "lib/net7.0-maccatalyst16.1/Microsoft.Maui.Graphics.dll": {
             "related": ".pdb;.xml"
+          }
+        }
+      },
+      "Newtonsoft.Json/13.0.3": {
+        "type": "package",
+        "compile": {
+          "lib/net6.0/Newtonsoft.Json.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0/Newtonsoft.Json.dll": {
+            "related": ".xml"
           }
         }
       },
@@ -21457,6 +21951,19 @@
           "lib/net7.0-maccatalyst16.1/Xe.AcrylicView.dll": {}
         }
       },
+      "HorusStudio.Maui.Skeleton/2.0.0": {
+        "type": "package",
+        "compile": {
+          "lib/net6.0/Maui.Skeleton.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0/Maui.Skeleton.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "M.BindableProperty.Generator/0.9.0": {
         "type": "package"
       },
@@ -21640,6 +22147,19 @@
         "runtime": {
           "lib/net7.0-maccatalyst16.1/Microsoft.Maui.Graphics.dll": {
             "related": ".pdb;.xml"
+          }
+        }
+      },
+      "Newtonsoft.Json/13.0.3": {
+        "type": "package",
+        "compile": {
+          "lib/net6.0/Newtonsoft.Json.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0/Newtonsoft.Json.dll": {
+            "related": ".xml"
           }
         }
       },
@@ -21845,6 +22365,19 @@
           "lib/net7.0-maccatalyst16.1/Xe.AcrylicView.dll": {}
         }
       },
+      "HorusStudio.Maui.Skeleton/2.0.0": {
+        "type": "package",
+        "compile": {
+          "lib/net6.0/Maui.Skeleton.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0/Maui.Skeleton.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "M.BindableProperty.Generator/0.9.0": {
         "type": "package"
       },
@@ -22028,6 +22561,19 @@
         "runtime": {
           "lib/net7.0-maccatalyst16.1/Microsoft.Maui.Graphics.dll": {
             "related": ".pdb;.xml"
+          }
+        }
+      },
+      "Newtonsoft.Json/13.0.3": {
+        "type": "package",
+        "compile": {
+          "lib/net6.0/Newtonsoft.Json.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0/Newtonsoft.Json.dll": {
+            "related": ".xml"
           }
         }
       },
@@ -22233,6 +22779,19 @@
           "lib/net7.0-maccatalyst16.1/Xe.AcrylicView.dll": {}
         }
       },
+      "HorusStudio.Maui.Skeleton/2.0.0": {
+        "type": "package",
+        "compile": {
+          "lib/net6.0/Maui.Skeleton.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0/Maui.Skeleton.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "M.BindableProperty.Generator/0.9.0": {
         "type": "package"
       },
@@ -22416,6 +22975,19 @@
         "runtime": {
           "lib/net7.0-maccatalyst16.1/Microsoft.Maui.Graphics.dll": {
             "related": ".pdb;.xml"
+          }
+        }
+      },
+      "Newtonsoft.Json/13.0.3": {
+        "type": "package",
+        "compile": {
+          "lib/net6.0/Newtonsoft.Json.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0/Newtonsoft.Json.dll": {
+            "related": ".xml"
           }
         }
       },
@@ -22621,6 +23193,19 @@
           "lib/net7.0-maccatalyst16.1/Xe.AcrylicView.dll": {}
         }
       },
+      "HorusStudio.Maui.Skeleton/2.0.0": {
+        "type": "package",
+        "compile": {
+          "lib/net6.0/Maui.Skeleton.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0/Maui.Skeleton.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "M.BindableProperty.Generator/0.9.0": {
         "type": "package"
       },
@@ -22804,6 +23389,19 @@
         "runtime": {
           "lib/net7.0-maccatalyst16.1/Microsoft.Maui.Graphics.dll": {
             "related": ".pdb;.xml"
+          }
+        }
+      },
+      "Newtonsoft.Json/13.0.3": {
+        "type": "package",
+        "compile": {
+          "lib/net6.0/Newtonsoft.Json.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0/Newtonsoft.Json.dll": {
+            "related": ".xml"
           }
         }
       },
@@ -23012,6 +23610,19 @@
           "lib/net7.0-maccatalyst16.1/Xe.AcrylicView.dll": {}
         }
       },
+      "HorusStudio.Maui.Skeleton/2.0.0": {
+        "type": "package",
+        "compile": {
+          "lib/net6.0/Maui.Skeleton.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0/Maui.Skeleton.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "M.BindableProperty.Generator/0.9.0": {
         "type": "package"
       },
@@ -23195,6 +23806,19 @@
         "runtime": {
           "lib/net7.0-maccatalyst16.1/Microsoft.Maui.Graphics.dll": {
             "related": ".pdb;.xml"
+          }
+        }
+      },
+      "Newtonsoft.Json/13.0.3": {
+        "type": "package",
+        "compile": {
+          "lib/net6.0/Newtonsoft.Json.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0/Newtonsoft.Json.dll": {
+            "related": ".xml"
           }
         }
       },
@@ -23398,6 +24022,19 @@
         },
         "runtime": {
           "lib/net6.0-windows10.0.19041/Xe.AcrylicView.dll": {}
+        }
+      },
+      "HorusStudio.Maui.Skeleton/2.0.0": {
+        "type": "package",
+        "compile": {
+          "lib/net6.0/Maui.Skeleton.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0/Maui.Skeleton.dll": {
+            "related": ".xml"
+          }
         }
       },
       "M.BindableProperty.Generator/0.9.0": {
@@ -23724,6 +24361,19 @@
           }
         }
       },
+      "Newtonsoft.Json/13.0.3": {
+        "type": "package",
+        "compile": {
+          "lib/net6.0/Newtonsoft.Json.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0/Newtonsoft.Json.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "Reactor.Maui/1.0.138": {
         "type": "package",
         "compile": {
@@ -23944,6 +24594,19 @@
           "lib/net6.0-windows10.0.19041/Xe.AcrylicView.dll": {}
         }
       },
+      "HorusStudio.Maui.Skeleton/2.0.0": {
+        "type": "package",
+        "compile": {
+          "lib/net6.0/Maui.Skeleton.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0/Maui.Skeleton.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "M.BindableProperty.Generator/0.9.0": {
         "type": "package"
       },
@@ -24238,6 +24901,19 @@
         "build": {
           "buildTransitive/Microsoft.WindowsAppSDK.props": {},
           "buildTransitive/Microsoft.WindowsAppSDK.targets": {}
+        }
+      },
+      "Newtonsoft.Json/13.0.3": {
+        "type": "package",
+        "compile": {
+          "lib/net6.0/Newtonsoft.Json.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0/Newtonsoft.Json.dll": {
+            "related": ".xml"
+          }
         }
       },
       "Reactor.Maui/1.0.138": {
@@ -24440,6 +25116,19 @@
           "lib/net6.0-windows10.0.19041/Xe.AcrylicView.dll": {}
         }
       },
+      "HorusStudio.Maui.Skeleton/2.0.0": {
+        "type": "package",
+        "compile": {
+          "lib/net6.0/Maui.Skeleton.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0/Maui.Skeleton.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "M.BindableProperty.Generator/0.9.0": {
         "type": "package"
       },
@@ -24734,6 +25423,19 @@
         "build": {
           "buildTransitive/Microsoft.WindowsAppSDK.props": {},
           "buildTransitive/Microsoft.WindowsAppSDK.targets": {}
+        }
+      },
+      "Newtonsoft.Json/13.0.3": {
+        "type": "package",
+        "compile": {
+          "lib/net6.0/Newtonsoft.Json.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0/Newtonsoft.Json.dll": {
+            "related": ".xml"
+          }
         }
       },
       "Reactor.Maui/1.0.138": {
@@ -24936,6 +25638,19 @@
           "lib/net6.0-windows10.0.19041/Xe.AcrylicView.dll": {}
         }
       },
+      "HorusStudio.Maui.Skeleton/2.0.0": {
+        "type": "package",
+        "compile": {
+          "lib/net6.0/Maui.Skeleton.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0/Maui.Skeleton.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "M.BindableProperty.Generator/0.9.0": {
         "type": "package"
       },
@@ -25230,6 +25945,19 @@
         "build": {
           "buildTransitive/Microsoft.WindowsAppSDK.props": {},
           "buildTransitive/Microsoft.WindowsAppSDK.targets": {}
+        }
+      },
+      "Newtonsoft.Json/13.0.3": {
+        "type": "package",
+        "compile": {
+          "lib/net6.0/Newtonsoft.Json.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0/Newtonsoft.Json.dll": {
+            "related": ".xml"
+          }
         }
       },
       "Reactor.Maui/1.0.138": {
@@ -25432,6 +26160,19 @@
           "lib/net6.0-windows10.0.19041/Xe.AcrylicView.dll": {}
         }
       },
+      "HorusStudio.Maui.Skeleton/2.0.0": {
+        "type": "package",
+        "compile": {
+          "lib/net6.0/Maui.Skeleton.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0/Maui.Skeleton.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "M.BindableProperty.Generator/0.9.0": {
         "type": "package"
       },
@@ -25726,6 +26467,19 @@
         "build": {
           "buildTransitive/Microsoft.WindowsAppSDK.props": {},
           "buildTransitive/Microsoft.WindowsAppSDK.targets": {}
+        }
+      },
+      "Newtonsoft.Json/13.0.3": {
+        "type": "package",
+        "compile": {
+          "lib/net6.0/Newtonsoft.Json.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0/Newtonsoft.Json.dll": {
+            "related": ".xml"
+          }
         }
       },
       "Reactor.Maui/1.0.138": {
@@ -25928,6 +26682,19 @@
           "lib/net6.0-windows10.0.19041/Xe.AcrylicView.dll": {}
         }
       },
+      "HorusStudio.Maui.Skeleton/2.0.0": {
+        "type": "package",
+        "compile": {
+          "lib/net6.0/Maui.Skeleton.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0/Maui.Skeleton.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "M.BindableProperty.Generator/0.9.0": {
         "type": "package"
       },
@@ -26222,6 +26989,19 @@
         "build": {
           "buildTransitive/Microsoft.WindowsAppSDK.props": {},
           "buildTransitive/Microsoft.WindowsAppSDK.targets": {}
+        }
+      },
+      "Newtonsoft.Json/13.0.3": {
+        "type": "package",
+        "compile": {
+          "lib/net6.0/Newtonsoft.Json.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0/Newtonsoft.Json.dll": {
+            "related": ".xml"
+          }
         }
       },
       "Reactor.Maui/1.0.138": {
@@ -26424,6 +27204,19 @@
           "lib/net6.0-windows10.0.19041/Xe.AcrylicView.dll": {}
         }
       },
+      "HorusStudio.Maui.Skeleton/2.0.0": {
+        "type": "package",
+        "compile": {
+          "lib/net6.0/Maui.Skeleton.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0/Maui.Skeleton.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "M.BindableProperty.Generator/0.9.0": {
         "type": "package"
       },
@@ -26720,6 +27513,19 @@
           "buildTransitive/Microsoft.WindowsAppSDK.targets": {}
         }
       },
+      "Newtonsoft.Json/13.0.3": {
+        "type": "package",
+        "compile": {
+          "lib/net6.0/Newtonsoft.Json.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0/Newtonsoft.Json.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "Reactor.Maui/1.0.138": {
         "type": "package",
         "compile": {
@@ -26918,6 +27724,19 @@
         },
         "runtime": {
           "lib/net6.0-windows10.0.19041/Xe.AcrylicView.dll": {}
+        }
+      },
+      "HorusStudio.Maui.Skeleton/2.0.0": {
+        "type": "package",
+        "compile": {
+          "lib/net6.0/Maui.Skeleton.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0/Maui.Skeleton.dll": {
+            "related": ".xml"
+          }
         }
       },
       "M.BindableProperty.Generator/0.9.0": {
@@ -27222,6 +28041,19 @@
           "buildTransitive/Microsoft.WindowsAppSDK.targets": {}
         }
       },
+      "Newtonsoft.Json/13.0.3": {
+        "type": "package",
+        "compile": {
+          "lib/net6.0/Newtonsoft.Json.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0/Newtonsoft.Json.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "Reactor.Maui/1.0.138": {
         "type": "package",
         "compile": {
@@ -27457,6 +28289,19 @@
         "lib/net6.0-android31.0/GoogleGson.aar",
         "lib/net6.0-android31.0/GoogleGson.dll",
         "lib/net6.0-android31.0/GoogleGson.xml"
+      ]
+    },
+    "HorusStudio.Maui.Skeleton/2.0.0": {
+      "sha512": "afjshuB9nNDBm73JV7h1SzHraz6AEibskMqsZiWZIwX0tm+qd78/gkedmFRHObW2qSAZh0/j0IhWOiP9SDdb5g==",
+      "type": "package",
+      "path": "horusstudio.maui.skeleton/2.0.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "horusstudio.maui.skeleton.2.0.0.nupkg.sha512",
+        "horusstudio.maui.skeleton.nuspec",
+        "lib/net6.0/Maui.Skeleton.dll",
+        "lib/net6.0/Maui.Skeleton.xml"
       ]
     },
     "M.BindableProperty.Generator/0.9.0": {
@@ -28685,6 +29530,36 @@
         "tools/net5.0/zh-TW/Microsoft.Build.Msix.resources.dll",
         "tools/x64/GenXbf.dll",
         "tools/x86/GenXbf.dll"
+      ]
+    },
+    "Newtonsoft.Json/13.0.3": {
+      "sha512": "HrC5BXdl00IP9zeV+0Z848QWPAoCr9P3bDEZguI+gkLcBKAOxix/tLEAAHC+UvDNPv4a2d18lOReHMOagPa+zQ==",
+      "type": "package",
+      "path": "newtonsoft.json/13.0.3",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.md",
+        "README.md",
+        "lib/net20/Newtonsoft.Json.dll",
+        "lib/net20/Newtonsoft.Json.xml",
+        "lib/net35/Newtonsoft.Json.dll",
+        "lib/net35/Newtonsoft.Json.xml",
+        "lib/net40/Newtonsoft.Json.dll",
+        "lib/net40/Newtonsoft.Json.xml",
+        "lib/net45/Newtonsoft.Json.dll",
+        "lib/net45/Newtonsoft.Json.xml",
+        "lib/net6.0/Newtonsoft.Json.dll",
+        "lib/net6.0/Newtonsoft.Json.xml",
+        "lib/netstandard1.0/Newtonsoft.Json.dll",
+        "lib/netstandard1.0/Newtonsoft.Json.xml",
+        "lib/netstandard1.3/Newtonsoft.Json.dll",
+        "lib/netstandard1.3/Newtonsoft.Json.xml",
+        "lib/netstandard2.0/Newtonsoft.Json.dll",
+        "lib/netstandard2.0/Newtonsoft.Json.xml",
+        "newtonsoft.json.13.0.3.nupkg.sha512",
+        "newtonsoft.json.nuspec",
+        "packageIcon.png"
       ]
     },
     "Reactor.Maui/1.0.138": {
@@ -31275,12 +32150,14 @@
   "projectFileDependencyGroups": {
     "net7.0-android33.0": [
       "AcrylicView.Maui >= 1.13.0",
+      "HorusStudio.Maui.Skeleton >= 2.0.0",
       "Microsoft.Extensions.Configuration >= 7.0.0",
       "Microsoft.Extensions.DependencyInjection >= 7.0.0",
       "Microsoft.Extensions.Http >= 7.0.0",
       "Microsoft.Extensions.Logging >= 7.0.0",
       "Microsoft.Extensions.Logging.Abstractions >= 7.0.0",
       "Microsoft.Maui.Graphics >= 7.0.86",
+      "Newtonsoft.Json >= 13.0.3",
       "Reactor.Maui >= 1.0.138",
       "Reactor.Maui.Canvas >= 1.0.138",
       "Reactor.Maui.ScaffoldGenerator >= 1.0.138",
@@ -31300,12 +32177,14 @@
     ],
     "net7.0-ios16.1": [
       "AcrylicView.Maui >= 1.13.0",
+      "HorusStudio.Maui.Skeleton >= 2.0.0",
       "Microsoft.Extensions.Configuration >= 7.0.0",
       "Microsoft.Extensions.DependencyInjection >= 7.0.0",
       "Microsoft.Extensions.Http >= 7.0.0",
       "Microsoft.Extensions.Logging >= 7.0.0",
       "Microsoft.Extensions.Logging.Abstractions >= 7.0.0",
       "Microsoft.Maui.Graphics >= 7.0.86",
+      "Newtonsoft.Json >= 13.0.3",
       "Reactor.Maui >= 1.0.138",
       "Reactor.Maui.Canvas >= 1.0.138",
       "Reactor.Maui.ScaffoldGenerator >= 1.0.138",
@@ -31314,12 +32193,14 @@
     ],
     "net7.0-maccatalyst16.1": [
       "AcrylicView.Maui >= 1.13.0",
+      "HorusStudio.Maui.Skeleton >= 2.0.0",
       "Microsoft.Extensions.Configuration >= 7.0.0",
       "Microsoft.Extensions.DependencyInjection >= 7.0.0",
       "Microsoft.Extensions.Http >= 7.0.0",
       "Microsoft.Extensions.Logging >= 7.0.0",
       "Microsoft.Extensions.Logging.Abstractions >= 7.0.0",
       "Microsoft.Maui.Graphics >= 7.0.86",
+      "Newtonsoft.Json >= 13.0.3",
       "Reactor.Maui >= 1.0.138",
       "Reactor.Maui.Canvas >= 1.0.138",
       "Reactor.Maui.ScaffoldGenerator >= 1.0.138",
@@ -31328,6 +32209,7 @@
     ],
     "net7.0-windows10.0.19041": [
       "AcrylicView.Maui >= 1.13.0",
+      "HorusStudio.Maui.Skeleton >= 2.0.0",
       "Microsoft.Extensions.Configuration >= 7.0.0",
       "Microsoft.Extensions.DependencyInjection >= 7.0.0",
       "Microsoft.Extensions.Http >= 7.0.0",
@@ -31337,6 +32219,7 @@
       "Microsoft.Maui.Graphics.Win2D.WinUI.Desktop >= 7.0.86",
       "Microsoft.Windows.SDK.BuildTools >= 10.0.22621.755",
       "Microsoft.WindowsAppSDK >= 1.2.221209.1",
+      "Newtonsoft.Json >= 13.0.3",
       "Reactor.Maui >= 1.0.138",
       "Reactor.Maui.Canvas >= 1.0.138",
       "Reactor.Maui.ScaffoldGenerator >= 1.0.138",
@@ -31345,24 +32228,27 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\trick\\.nuget\\packages\\": {},
+    "C:\\Users\\DINH LAM\\.nuget\\packages\\": {},
+    "C:\\Program Files\\DevExpress 23.1\\Components\\Offline Packages": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\trick\\source\\repos\\Book\\BookReactor\\BookReactor.csproj",
+      "projectUniqueName": "C:\\Users\\DINH LAM\\Desktop\\clone\\Book\\BookReactor\\BookReactor.csproj",
       "projectName": "BookReactor",
-      "projectPath": "C:\\Users\\trick\\source\\repos\\Book\\BookReactor\\BookReactor.csproj",
-      "packagesPath": "C:\\Users\\trick\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\trick\\source\\repos\\Book\\BookReactor\\obj\\",
+      "projectPath": "C:\\Users\\DINH LAM\\Desktop\\clone\\Book\\BookReactor\\BookReactor.csproj",
+      "packagesPath": "C:\\Users\\DINH LAM\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\DINH LAM\\Desktop\\clone\\Book\\BookReactor\\obj\\",
       "projectStyle": "PackageReference",
       "crossTargeting": true,
       "fallbackFolders": [
+        "C:\\Program Files\\DevExpress 23.1\\Components\\Offline Packages",
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\trick\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\DINH LAM\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\DevExpress 23.1.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
@@ -31374,6 +32260,7 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "C:\\Program Files\\DevExpress 23.1\\Components\\System\\Components\\Packages": {},
         "C:\\Program Files\\dotnet\\library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
@@ -31409,6 +32296,10 @@
             "target": "Package",
             "version": "[1.13.0, )"
           },
+          "HorusStudio.Maui.Skeleton": {
+            "target": "Package",
+            "version": "[2.0.0, )"
+          },
           "Microsoft.Extensions.Configuration": {
             "target": "Package",
             "version": "[7.0.0, )",
@@ -31437,6 +32328,10 @@
             "target": "Package",
             "version": "[7.0.86, )",
             "autoReferenced": true
+          },
+          "Newtonsoft.Json": {
+            "target": "Package",
+            "version": "[13.0.3, )"
           },
           "Reactor.Maui": {
             "target": "Package",
@@ -31551,6 +32446,10 @@
             "target": "Package",
             "version": "[1.13.0, )"
           },
+          "HorusStudio.Maui.Skeleton": {
+            "target": "Package",
+            "version": "[2.0.0, )"
+          },
           "Microsoft.Extensions.Configuration": {
             "target": "Package",
             "version": "[7.0.0, )",
@@ -31579,6 +32478,10 @@
             "target": "Package",
             "version": "[7.0.86, )",
             "autoReferenced": true
+          },
+          "Newtonsoft.Json": {
+            "target": "Package",
+            "version": "[13.0.3, )"
           },
           "Reactor.Maui": {
             "target": "Package",
@@ -31638,6 +32541,10 @@
             "target": "Package",
             "version": "[1.13.0, )"
           },
+          "HorusStudio.Maui.Skeleton": {
+            "target": "Package",
+            "version": "[2.0.0, )"
+          },
           "Microsoft.Extensions.Configuration": {
             "target": "Package",
             "version": "[7.0.0, )",
@@ -31666,6 +32573,10 @@
             "target": "Package",
             "version": "[7.0.86, )",
             "autoReferenced": true
+          },
+          "Newtonsoft.Json": {
+            "target": "Package",
+            "version": "[13.0.3, )"
           },
           "Reactor.Maui": {
             "target": "Package",
@@ -31726,6 +32637,10 @@
             "target": "Package",
             "version": "[1.13.0, )"
           },
+          "HorusStudio.Maui.Skeleton": {
+            "target": "Package",
+            "version": "[2.0.0, )"
+          },
           "Microsoft.Extensions.Configuration": {
             "target": "Package",
             "version": "[7.0.0, )",
@@ -31770,6 +32685,10 @@
             "target": "Package",
             "version": "[1.2.221209.1, )",
             "autoReferenced": true
+          },
+          "Newtonsoft.Json": {
+            "target": "Package",
+            "version": "[13.0.3, )"
           },
           "Reactor.Maui": {
             "target": "Package",
