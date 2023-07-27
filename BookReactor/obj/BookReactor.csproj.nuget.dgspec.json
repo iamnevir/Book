@@ -105,6 +105,10 @@
               "target": "Package",
               "version": "[13.0.3, )"
             },
+            "Plugin.Maui.ScreenBrightness": {
+              "target": "Package",
+              "version": "[1.0.0-preview3, )"
+            },
             "Reactor.Maui": {
               "target": "Package",
               "version": "[1.0.138, )"
@@ -255,6 +259,10 @@
               "target": "Package",
               "version": "[13.0.3, )"
             },
+            "Plugin.Maui.ScreenBrightness": {
+              "target": "Package",
+              "version": "[1.0.0-preview3, )"
+            },
             "Reactor.Maui": {
               "target": "Package",
               "version": "[1.0.138, )"
@@ -349,6 +357,10 @@
             "Newtonsoft.Json": {
               "target": "Package",
               "version": "[13.0.3, )"
+            },
+            "Plugin.Maui.ScreenBrightness": {
+              "target": "Package",
+              "version": "[1.0.0-preview3, )"
             },
             "Reactor.Maui": {
               "target": "Package",
@@ -461,6 +473,10 @@
             "Newtonsoft.Json": {
               "target": "Package",
               "version": "[13.0.3, )"
+            },
+            "Plugin.Maui.ScreenBrightness": {
+              "target": "Package",
+              "version": "[1.0.0-preview3, )"
             },
             "Reactor.Maui": {
               "target": "Package",

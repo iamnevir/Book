@@ -22,6 +22,7 @@ public class MonoPackageManager_Resources {
 		"Microsoft.Extensions.Primitives.dll",
 		"Microsoft.Maui.Graphics.dll",
 		"Newtonsoft.Json.dll",
+		"Plugin.Maui.ScreenBrightness.dll",
 		"MauiReactor.dll",
 		"MauiReactor.Canvas.dll",
 		"SimpleRatingControlMaui.dll",

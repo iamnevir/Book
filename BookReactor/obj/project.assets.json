@@ -240,6 +240,19 @@
           }
         }
       },
+      "Plugin.Maui.ScreenBrightness/1.0.0-preview3": {
+        "type": "package",
+        "compile": {
+          "lib/net6.0-android31.0/Plugin.Maui.ScreenBrightness.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0-android31.0/Plugin.Maui.ScreenBrightness.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "Reactor.Maui/1.0.138": {
         "type": "package",
         "compile": {
@@ -2423,6 +2436,19 @@
           }
         }
       },
+      "Plugin.Maui.ScreenBrightness/1.0.0-preview3": {
+        "type": "package",
+        "compile": {
+          "lib/net6.0-android31.0/Plugin.Maui.ScreenBrightness.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0-android31.0/Plugin.Maui.ScreenBrightness.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "Reactor.Maui/1.0.138": {
         "type": "package",
         "compile": {
@@ -4587,6 +4613,19 @@
         },
         "runtime": {
           "lib/net6.0/Newtonsoft.Json.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "Plugin.Maui.ScreenBrightness/1.0.0-preview3": {
+        "type": "package",
+        "compile": {
+          "lib/net6.0-android31.0/Plugin.Maui.ScreenBrightness.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0-android31.0/Plugin.Maui.ScreenBrightness.dll": {
             "related": ".xml"
           }
         }
@@ -6759,6 +6798,19 @@
           }
         }
       },
+      "Plugin.Maui.ScreenBrightness/1.0.0-preview3": {
+        "type": "package",
+        "compile": {
+          "lib/net6.0-android31.0/Plugin.Maui.ScreenBrightness.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0-android31.0/Plugin.Maui.ScreenBrightness.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "Reactor.Maui/1.0.138": {
         "type": "package",
         "compile": {
@@ -8923,6 +8975,19 @@
         },
         "runtime": {
           "lib/net6.0/Newtonsoft.Json.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "Plugin.Maui.ScreenBrightness/1.0.0-preview3": {
+        "type": "package",
+        "compile": {
+          "lib/net6.0-android31.0/Plugin.Maui.ScreenBrightness.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0-android31.0/Plugin.Maui.ScreenBrightness.dll": {
             "related": ".xml"
           }
         }
@@ -11095,6 +11160,19 @@
           }
         }
       },
+      "Plugin.Maui.ScreenBrightness/1.0.0-preview3": {
+        "type": "package",
+        "compile": {
+          "lib/net6.0-android31.0/Plugin.Maui.ScreenBrightness.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0-android31.0/Plugin.Maui.ScreenBrightness.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "Reactor.Maui/1.0.138": {
         "type": "package",
         "compile": {
@@ -13256,6 +13334,19 @@
         },
         "runtime": {
           "lib/net6.0/Newtonsoft.Json.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "Plugin.Maui.ScreenBrightness/1.0.0-preview3": {
+        "type": "package",
+        "compile": {
+          "lib/net6.0-android31.0/Plugin.Maui.ScreenBrightness.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0-android31.0/Plugin.Maui.ScreenBrightness.dll": {
             "related": ".xml"
           }
         }
@@ -15425,6 +15516,19 @@
           }
         }
       },
+      "Plugin.Maui.ScreenBrightness/1.0.0-preview3": {
+        "type": "package",
+        "compile": {
+          "lib/net6.0-android31.0/Plugin.Maui.ScreenBrightness.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0-android31.0/Plugin.Maui.ScreenBrightness.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "Reactor.Maui/1.0.138": {
         "type": "package",
         "compile": {
@@ -17573,6 +17677,18 @@
           }
         }
       },
+      "Plugin.Maui.ScreenBrightness/1.0.0-preview3": {
+        "type": "package",
+        "dependencies": {
+          "System.Runtime.InteropServices.NFloat.Internal": "6.0.1"
+        },
+        "compile": {
+          "lib/net6.0-ios16.1/Plugin.Maui.ScreenBrightness.dll": {}
+        },
+        "runtime": {
+          "lib/net6.0-ios16.1/Plugin.Maui.ScreenBrightness.dll": {}
+        }
+      },
       "Reactor.Maui/1.0.138": {
         "type": "package",
         "compile": {
@@ -18005,6 +18121,18 @@
           }
         }
       },
+      "Plugin.Maui.ScreenBrightness/1.0.0-preview3": {
+        "type": "package",
+        "dependencies": {
+          "System.Runtime.InteropServices.NFloat.Internal": "6.0.1"
+        },
+        "compile": {
+          "lib/net6.0-ios16.1/Plugin.Maui.ScreenBrightness.dll": {}
+        },
+        "runtime": {
+          "lib/net6.0-ios16.1/Plugin.Maui.ScreenBrightness.dll": {}
+        }
+      },
       "Reactor.Maui/1.0.138": {
         "type": "package",
         "compile": {
@@ -18417,6 +18545,18 @@
           "lib/net6.0/Newtonsoft.Json.dll": {
             "related": ".xml"
           }
+        }
+      },
+      "Plugin.Maui.ScreenBrightness/1.0.0-preview3": {
+        "type": "package",
+        "dependencies": {
+          "System.Runtime.InteropServices.NFloat.Internal": "6.0.1"
+        },
+        "compile": {
+          "lib/net6.0-ios16.1/Plugin.Maui.ScreenBrightness.dll": {}
+        },
+        "runtime": {
+          "lib/net6.0-ios16.1/Plugin.Maui.ScreenBrightness.dll": {}
         }
       },
       "Reactor.Maui/1.0.138": {
@@ -18833,6 +18973,18 @@
           }
         }
       },
+      "Plugin.Maui.ScreenBrightness/1.0.0-preview3": {
+        "type": "package",
+        "dependencies": {
+          "System.Runtime.InteropServices.NFloat.Internal": "6.0.1"
+        },
+        "compile": {
+          "lib/net6.0-ios16.1/Plugin.Maui.ScreenBrightness.dll": {}
+        },
+        "runtime": {
+          "lib/net6.0-ios16.1/Plugin.Maui.ScreenBrightness.dll": {}
+        }
+      },
       "Reactor.Maui/1.0.138": {
         "type": "package",
         "compile": {
@@ -19247,6 +19399,18 @@
           }
         }
       },
+      "Plugin.Maui.ScreenBrightness/1.0.0-preview3": {
+        "type": "package",
+        "dependencies": {
+          "System.Runtime.InteropServices.NFloat.Internal": "6.0.1"
+        },
+        "compile": {
+          "lib/net6.0-ios16.1/Plugin.Maui.ScreenBrightness.dll": {}
+        },
+        "runtime": {
+          "lib/net6.0-ios16.1/Plugin.Maui.ScreenBrightness.dll": {}
+        }
+      },
       "Reactor.Maui/1.0.138": {
         "type": "package",
         "compile": {
@@ -19659,6 +19823,18 @@
           "lib/net6.0/Newtonsoft.Json.dll": {
             "related": ".xml"
           }
+        }
+      },
+      "Plugin.Maui.ScreenBrightness/1.0.0-preview3": {
+        "type": "package",
+        "dependencies": {
+          "System.Runtime.InteropServices.NFloat.Internal": "6.0.1"
+        },
+        "compile": {
+          "lib/net6.0-ios16.1/Plugin.Maui.ScreenBrightness.dll": {}
+        },
+        "runtime": {
+          "lib/net6.0-ios16.1/Plugin.Maui.ScreenBrightness.dll": {}
         }
       },
       "Reactor.Maui/1.0.138": {
@@ -20081,6 +20257,18 @@
           }
         }
       },
+      "Plugin.Maui.ScreenBrightness/1.0.0-preview3": {
+        "type": "package",
+        "dependencies": {
+          "System.Runtime.InteropServices.NFloat.Internal": "6.0.1"
+        },
+        "compile": {
+          "lib/net6.0-ios16.1/Plugin.Maui.ScreenBrightness.dll": {}
+        },
+        "runtime": {
+          "lib/net6.0-ios16.1/Plugin.Maui.ScreenBrightness.dll": {}
+        }
+      },
       "Reactor.Maui/1.0.138": {
         "type": "package",
         "compile": {
@@ -20501,6 +20689,18 @@
           }
         }
       },
+      "Plugin.Maui.ScreenBrightness/1.0.0-preview3": {
+        "type": "package",
+        "dependencies": {
+          "System.Runtime.InteropServices.NFloat.Internal": "6.0.1"
+        },
+        "compile": {
+          "lib/net6.0-ios16.1/Plugin.Maui.ScreenBrightness.dll": {}
+        },
+        "runtime": {
+          "lib/net6.0-ios16.1/Plugin.Maui.ScreenBrightness.dll": {}
+        }
+      },
       "Reactor.Maui/1.0.138": {
         "type": "package",
         "compile": {
@@ -20913,6 +21113,15 @@
           "lib/net6.0/Newtonsoft.Json.dll": {
             "related": ".xml"
           }
+        }
+      },
+      "Plugin.Maui.ScreenBrightness/1.0.0-preview3": {
+        "type": "package",
+        "compile": {
+          "lib/net6.0/Plugin.Maui.ScreenBrightness.dll": {}
+        },
+        "runtime": {
+          "lib/net6.0/Plugin.Maui.ScreenBrightness.dll": {}
         }
       },
       "Reactor.Maui/1.0.138": {
@@ -21335,6 +21544,15 @@
           }
         }
       },
+      "Plugin.Maui.ScreenBrightness/1.0.0-preview3": {
+        "type": "package",
+        "compile": {
+          "lib/net6.0/Plugin.Maui.ScreenBrightness.dll": {}
+        },
+        "runtime": {
+          "lib/net6.0/Plugin.Maui.ScreenBrightness.dll": {}
+        }
+      },
       "Reactor.Maui/1.0.138": {
         "type": "package",
         "compile": {
@@ -21747,6 +21965,15 @@
           "lib/net6.0/Newtonsoft.Json.dll": {
             "related": ".xml"
           }
+        }
+      },
+      "Plugin.Maui.ScreenBrightness/1.0.0-preview3": {
+        "type": "package",
+        "compile": {
+          "lib/net6.0/Plugin.Maui.ScreenBrightness.dll": {}
+        },
+        "runtime": {
+          "lib/net6.0/Plugin.Maui.ScreenBrightness.dll": {}
         }
       },
       "Reactor.Maui/1.0.138": {
@@ -22163,6 +22390,15 @@
           }
         }
       },
+      "Plugin.Maui.ScreenBrightness/1.0.0-preview3": {
+        "type": "package",
+        "compile": {
+          "lib/net6.0/Plugin.Maui.ScreenBrightness.dll": {}
+        },
+        "runtime": {
+          "lib/net6.0/Plugin.Maui.ScreenBrightness.dll": {}
+        }
+      },
       "Reactor.Maui/1.0.138": {
         "type": "package",
         "compile": {
@@ -22575,6 +22811,15 @@
           "lib/net6.0/Newtonsoft.Json.dll": {
             "related": ".xml"
           }
+        }
+      },
+      "Plugin.Maui.ScreenBrightness/1.0.0-preview3": {
+        "type": "package",
+        "compile": {
+          "lib/net6.0/Plugin.Maui.ScreenBrightness.dll": {}
+        },
+        "runtime": {
+          "lib/net6.0/Plugin.Maui.ScreenBrightness.dll": {}
         }
       },
       "Reactor.Maui/1.0.138": {
@@ -22991,6 +23236,15 @@
           }
         }
       },
+      "Plugin.Maui.ScreenBrightness/1.0.0-preview3": {
+        "type": "package",
+        "compile": {
+          "lib/net6.0/Plugin.Maui.ScreenBrightness.dll": {}
+        },
+        "runtime": {
+          "lib/net6.0/Plugin.Maui.ScreenBrightness.dll": {}
+        }
+      },
       "Reactor.Maui/1.0.138": {
         "type": "package",
         "compile": {
@@ -23403,6 +23657,15 @@
           "lib/net6.0/Newtonsoft.Json.dll": {
             "related": ".xml"
           }
+        }
+      },
+      "Plugin.Maui.ScreenBrightness/1.0.0-preview3": {
+        "type": "package",
+        "compile": {
+          "lib/net6.0/Plugin.Maui.ScreenBrightness.dll": {}
+        },
+        "runtime": {
+          "lib/net6.0/Plugin.Maui.ScreenBrightness.dll": {}
         }
       },
       "Reactor.Maui/1.0.138": {
@@ -23820,6 +24083,15 @@
           "lib/net6.0/Newtonsoft.Json.dll": {
             "related": ".xml"
           }
+        }
+      },
+      "Plugin.Maui.ScreenBrightness/1.0.0-preview3": {
+        "type": "package",
+        "compile": {
+          "lib/net6.0/Plugin.Maui.ScreenBrightness.dll": {}
+        },
+        "runtime": {
+          "lib/net6.0/Plugin.Maui.ScreenBrightness.dll": {}
         }
       },
       "Reactor.Maui/1.0.138": {
@@ -24374,6 +24646,22 @@
           }
         }
       },
+      "Plugin.Maui.ScreenBrightness/1.0.0-preview3": {
+        "type": "package",
+        "dependencies": {
+          "System.Management": "7.0.0"
+        },
+        "compile": {
+          "lib/net6.0-windows10.0.19041/Plugin.Maui.ScreenBrightness.dll": {
+            "related": ".pri"
+          }
+        },
+        "runtime": {
+          "lib/net6.0-windows10.0.19041/Plugin.Maui.ScreenBrightness.dll": {
+            "related": ".pri"
+          }
+        }
+      },
       "Reactor.Maui/1.0.138": {
         "type": "package",
         "compile": {
@@ -24581,6 +24869,31 @@
         },
         "build": {
           "buildTransitive/net6.0/_._": {}
+        }
+      },
+      "System.Management/7.0.0": {
+        "type": "package",
+        "dependencies": {
+          "System.CodeDom": "7.0.0"
+        },
+        "compile": {
+          "lib/net7.0/System.Management.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net7.0/System.Management.dll": {
+            "related": ".xml"
+          }
+        },
+        "build": {
+          "buildTransitive/net6.0/_._": {}
+        },
+        "runtimeTargets": {
+          "runtimes/win/lib/net7.0/System.Management.dll": {
+            "assetType": "runtime",
+            "rid": "win"
+          }
         }
       }
     },
@@ -24916,6 +25229,22 @@
           }
         }
       },
+      "Plugin.Maui.ScreenBrightness/1.0.0-preview3": {
+        "type": "package",
+        "dependencies": {
+          "System.Management": "7.0.0"
+        },
+        "compile": {
+          "lib/net6.0-windows10.0.19041/Plugin.Maui.ScreenBrightness.dll": {
+            "related": ".pri"
+          }
+        },
+        "runtime": {
+          "lib/net6.0-windows10.0.19041/Plugin.Maui.ScreenBrightness.dll": {
+            "related": ".pri"
+          }
+        }
+      },
       "Reactor.Maui/1.0.138": {
         "type": "package",
         "compile": {
@@ -25098,6 +25427,25 @@
         },
         "runtime": {
           "lib/net7.0/System.CodeDom.dll": {
+            "related": ".xml"
+          }
+        },
+        "build": {
+          "buildTransitive/net6.0/_._": {}
+        }
+      },
+      "System.Management/7.0.0": {
+        "type": "package",
+        "dependencies": {
+          "System.CodeDom": "7.0.0"
+        },
+        "compile": {
+          "lib/net7.0/System.Management.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net7.0/System.Management.dll": {
             "related": ".xml"
           }
         },
@@ -25438,6 +25786,22 @@
           }
         }
       },
+      "Plugin.Maui.ScreenBrightness/1.0.0-preview3": {
+        "type": "package",
+        "dependencies": {
+          "System.Management": "7.0.0"
+        },
+        "compile": {
+          "lib/net6.0-windows10.0.19041/Plugin.Maui.ScreenBrightness.dll": {
+            "related": ".pri"
+          }
+        },
+        "runtime": {
+          "lib/net6.0-windows10.0.19041/Plugin.Maui.ScreenBrightness.dll": {
+            "related": ".pri"
+          }
+        }
+      },
       "Reactor.Maui/1.0.138": {
         "type": "package",
         "compile": {
@@ -25620,6 +25984,25 @@
         },
         "runtime": {
           "lib/net7.0/System.CodeDom.dll": {
+            "related": ".xml"
+          }
+        },
+        "build": {
+          "buildTransitive/net6.0/_._": {}
+        }
+      },
+      "System.Management/7.0.0": {
+        "type": "package",
+        "dependencies": {
+          "System.CodeDom": "7.0.0"
+        },
+        "compile": {
+          "lib/net7.0/System.Management.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net7.0/System.Management.dll": {
             "related": ".xml"
           }
         },
@@ -25960,6 +26343,22 @@
           }
         }
       },
+      "Plugin.Maui.ScreenBrightness/1.0.0-preview3": {
+        "type": "package",
+        "dependencies": {
+          "System.Management": "7.0.0"
+        },
+        "compile": {
+          "lib/net6.0-windows10.0.19041/Plugin.Maui.ScreenBrightness.dll": {
+            "related": ".pri"
+          }
+        },
+        "runtime": {
+          "lib/net6.0-windows10.0.19041/Plugin.Maui.ScreenBrightness.dll": {
+            "related": ".pri"
+          }
+        }
+      },
       "Reactor.Maui/1.0.138": {
         "type": "package",
         "compile": {
@@ -26142,6 +26541,25 @@
         },
         "runtime": {
           "lib/net7.0/System.CodeDom.dll": {
+            "related": ".xml"
+          }
+        },
+        "build": {
+          "buildTransitive/net6.0/_._": {}
+        }
+      },
+      "System.Management/7.0.0": {
+        "type": "package",
+        "dependencies": {
+          "System.CodeDom": "7.0.0"
+        },
+        "compile": {
+          "lib/net7.0/System.Management.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net7.0/System.Management.dll": {
             "related": ".xml"
           }
         },
@@ -26482,6 +26900,22 @@
           }
         }
       },
+      "Plugin.Maui.ScreenBrightness/1.0.0-preview3": {
+        "type": "package",
+        "dependencies": {
+          "System.Management": "7.0.0"
+        },
+        "compile": {
+          "lib/net6.0-windows10.0.19041/Plugin.Maui.ScreenBrightness.dll": {
+            "related": ".pri"
+          }
+        },
+        "runtime": {
+          "lib/net6.0-windows10.0.19041/Plugin.Maui.ScreenBrightness.dll": {
+            "related": ".pri"
+          }
+        }
+      },
       "Reactor.Maui/1.0.138": {
         "type": "package",
         "compile": {
@@ -26664,6 +27098,25 @@
         },
         "runtime": {
           "lib/net7.0/System.CodeDom.dll": {
+            "related": ".xml"
+          }
+        },
+        "build": {
+          "buildTransitive/net6.0/_._": {}
+        }
+      },
+      "System.Management/7.0.0": {
+        "type": "package",
+        "dependencies": {
+          "System.CodeDom": "7.0.0"
+        },
+        "compile": {
+          "lib/net7.0/System.Management.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net7.0/System.Management.dll": {
             "related": ".xml"
           }
         },
@@ -27004,6 +27457,22 @@
           }
         }
       },
+      "Plugin.Maui.ScreenBrightness/1.0.0-preview3": {
+        "type": "package",
+        "dependencies": {
+          "System.Management": "7.0.0"
+        },
+        "compile": {
+          "lib/net6.0-windows10.0.19041/Plugin.Maui.ScreenBrightness.dll": {
+            "related": ".pri"
+          }
+        },
+        "runtime": {
+          "lib/net6.0-windows10.0.19041/Plugin.Maui.ScreenBrightness.dll": {
+            "related": ".pri"
+          }
+        }
+      },
       "Reactor.Maui/1.0.138": {
         "type": "package",
         "compile": {
@@ -27186,6 +27655,25 @@
         },
         "runtime": {
           "lib/net7.0/System.CodeDom.dll": {
+            "related": ".xml"
+          }
+        },
+        "build": {
+          "buildTransitive/net6.0/_._": {}
+        }
+      },
+      "System.Management/7.0.0": {
+        "type": "package",
+        "dependencies": {
+          "System.CodeDom": "7.0.0"
+        },
+        "compile": {
+          "lib/net7.0/System.Management.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net7.0/System.Management.dll": {
             "related": ".xml"
           }
         },
@@ -27526,6 +28014,22 @@
           }
         }
       },
+      "Plugin.Maui.ScreenBrightness/1.0.0-preview3": {
+        "type": "package",
+        "dependencies": {
+          "System.Management": "7.0.0"
+        },
+        "compile": {
+          "lib/net6.0-windows10.0.19041/Plugin.Maui.ScreenBrightness.dll": {
+            "related": ".pri"
+          }
+        },
+        "runtime": {
+          "lib/net6.0-windows10.0.19041/Plugin.Maui.ScreenBrightness.dll": {
+            "related": ".pri"
+          }
+        }
+      },
       "Reactor.Maui/1.0.138": {
         "type": "package",
         "compile": {
@@ -27708,6 +28212,25 @@
         },
         "runtime": {
           "lib/net7.0/System.CodeDom.dll": {
+            "related": ".xml"
+          }
+        },
+        "build": {
+          "buildTransitive/net6.0/_._": {}
+        }
+      },
+      "System.Management/7.0.0": {
+        "type": "package",
+        "dependencies": {
+          "System.CodeDom": "7.0.0"
+        },
+        "compile": {
+          "lib/net7.0/System.Management.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net7.0/System.Management.dll": {
             "related": ".xml"
           }
         },
@@ -28054,6 +28577,22 @@
           }
         }
       },
+      "Plugin.Maui.ScreenBrightness/1.0.0-preview3": {
+        "type": "package",
+        "dependencies": {
+          "System.Management": "7.0.0"
+        },
+        "compile": {
+          "lib/net6.0-windows10.0.19041/Plugin.Maui.ScreenBrightness.dll": {
+            "related": ".pri"
+          }
+        },
+        "runtime": {
+          "lib/net6.0-windows10.0.19041/Plugin.Maui.ScreenBrightness.dll": {
+            "related": ".pri"
+          }
+        }
+      },
       "Reactor.Maui/1.0.138": {
         "type": "package",
         "compile": {
@@ -28239,6 +28778,25 @@
         },
         "runtime": {
           "lib/net7.0/System.CodeDom.dll": {
+            "related": ".xml"
+          }
+        },
+        "build": {
+          "buildTransitive/net6.0/_._": {}
+        }
+      },
+      "System.Management/7.0.0": {
+        "type": "package",
+        "dependencies": {
+          "System.CodeDom": "7.0.0"
+        },
+        "compile": {
+          "lib/net7.0/System.Management.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "runtimes/win/lib/net7.0/System.Management.dll": {
             "related": ".xml"
           }
         },
@@ -29562,6 +30120,24 @@
         "packageIcon.png"
       ]
     },
+    "Plugin.Maui.ScreenBrightness/1.0.0-preview3": {
+      "sha512": "MQOEQlj08B3IPOvuN9Gx1PDnF5JCXA+r+5XOUXs7+YLt98FyWg4VL2kWeLLVbh68FhnxTKtyXS1E0xOWjg8n7Q==",
+      "type": "package",
+      "path": "plugin.maui.screenbrightness/1.0.0-preview3",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "icon.png",
+        "lib/net6.0-android31.0/Plugin.Maui.ScreenBrightness.dll",
+        "lib/net6.0-android31.0/Plugin.Maui.ScreenBrightness.xml",
+        "lib/net6.0-ios16.1/Plugin.Maui.ScreenBrightness.dll",
+        "lib/net6.0-windows10.0.19041/Plugin.Maui.ScreenBrightness.dll",
+        "lib/net6.0-windows10.0.19041/Plugin.Maui.ScreenBrightness.pri",
+        "lib/net6.0/Plugin.Maui.ScreenBrightness.dll",
+        "plugin.maui.screenbrightness.1.0.0-preview3.nupkg.sha512",
+        "plugin.maui.screenbrightness.nuspec"
+      ]
+    },
     "Reactor.Maui/1.0.138": {
       "sha512": "ND2+cWvcVsK8Kr7VVw8HR8t7gDgdljuxUCvso2Xsf2IASK7+wdWRKlgHL1MwBHZq1pi20vAhJekRVWjcq7Vqxg==",
       "type": "package",
@@ -30129,6 +30705,34 @@
         "lib/netstandard2.0/System.CodeDom.xml",
         "system.codedom.7.0.0.nupkg.sha512",
         "system.codedom.nuspec",
+        "useSharedDesignerContext.txt"
+      ]
+    },
+    "System.Management/7.0.0": {
+      "sha512": "A4jed4QUviDOm7fJNKAJObEAEkEUXmkGL/w0iyCYTzrl1rezTj8LGFHfsVst4Vb9JwFcTpboiDrvdST48avBpw==",
+      "type": "package",
+      "path": "system.management/7.0.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Icon.png",
+        "LICENSE.TXT",
+        "THIRD-PARTY-NOTICES.TXT",
+        "buildTransitive/net6.0/_._",
+        "buildTransitive/netcoreapp2.0/System.Management.targets",
+        "lib/net462/_._",
+        "lib/net6.0/System.Management.dll",
+        "lib/net6.0/System.Management.xml",
+        "lib/net7.0/System.Management.dll",
+        "lib/net7.0/System.Management.xml",
+        "lib/netstandard2.0/System.Management.dll",
+        "lib/netstandard2.0/System.Management.xml",
+        "runtimes/win/lib/net6.0/System.Management.dll",
+        "runtimes/win/lib/net6.0/System.Management.xml",
+        "runtimes/win/lib/net7.0/System.Management.dll",
+        "runtimes/win/lib/net7.0/System.Management.xml",
+        "system.management.7.0.0.nupkg.sha512",
+        "system.management.nuspec",
         "useSharedDesignerContext.txt"
       ]
     },
@@ -32158,6 +32762,7 @@
       "Microsoft.Extensions.Logging.Abstractions >= 7.0.0",
       "Microsoft.Maui.Graphics >= 7.0.86",
       "Newtonsoft.Json >= 13.0.3",
+      "Plugin.Maui.ScreenBrightness >= 1.0.0-preview3",
       "Reactor.Maui >= 1.0.138",
       "Reactor.Maui.Canvas >= 1.0.138",
       "Reactor.Maui.ScaffoldGenerator >= 1.0.138",
@@ -32185,6 +32790,7 @@
       "Microsoft.Extensions.Logging.Abstractions >= 7.0.0",
       "Microsoft.Maui.Graphics >= 7.0.86",
       "Newtonsoft.Json >= 13.0.3",
+      "Plugin.Maui.ScreenBrightness >= 1.0.0-preview3",
       "Reactor.Maui >= 1.0.138",
       "Reactor.Maui.Canvas >= 1.0.138",
       "Reactor.Maui.ScaffoldGenerator >= 1.0.138",
@@ -32201,6 +32807,7 @@
       "Microsoft.Extensions.Logging.Abstractions >= 7.0.0",
       "Microsoft.Maui.Graphics >= 7.0.86",
       "Newtonsoft.Json >= 13.0.3",
+      "Plugin.Maui.ScreenBrightness >= 1.0.0-preview3",
       "Reactor.Maui >= 1.0.138",
       "Reactor.Maui.Canvas >= 1.0.138",
       "Reactor.Maui.ScaffoldGenerator >= 1.0.138",
@@ -32220,6 +32827,7 @@
       "Microsoft.Windows.SDK.BuildTools >= 10.0.22621.755",
       "Microsoft.WindowsAppSDK >= 1.2.221209.1",
       "Newtonsoft.Json >= 13.0.3",
+      "Plugin.Maui.ScreenBrightness >= 1.0.0-preview3",
       "Reactor.Maui >= 1.0.138",
       "Reactor.Maui.Canvas >= 1.0.138",
       "Reactor.Maui.ScaffoldGenerator >= 1.0.138",
@@ -32332,6 +32940,10 @@
           "Newtonsoft.Json": {
             "target": "Package",
             "version": "[13.0.3, )"
+          },
+          "Plugin.Maui.ScreenBrightness": {
+            "target": "Package",
+            "version": "[1.0.0-preview3, )"
           },
           "Reactor.Maui": {
             "target": "Package",
@@ -32483,6 +33095,10 @@
             "target": "Package",
             "version": "[13.0.3, )"
           },
+          "Plugin.Maui.ScreenBrightness": {
+            "target": "Package",
+            "version": "[1.0.0-preview3, )"
+          },
           "Reactor.Maui": {
             "target": "Package",
             "version": "[1.0.138, )"
@@ -32577,6 +33193,10 @@
           "Newtonsoft.Json": {
             "target": "Package",
             "version": "[13.0.3, )"
+          },
+          "Plugin.Maui.ScreenBrightness": {
+            "target": "Package",
+            "version": "[1.0.0-preview3, )"
           },
           "Reactor.Maui": {
             "target": "Package",
@@ -32689,6 +33309,10 @@
           "Newtonsoft.Json": {
             "target": "Package",
             "version": "[13.0.3, )"
+          },
+          "Plugin.Maui.ScreenBrightness": {
+            "target": "Package",
+            "version": "[1.0.0-preview3, )"
           },
           "Reactor.Maui": {
             "target": "Package",

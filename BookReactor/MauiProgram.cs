@@ -21,6 +21,9 @@ public static class MauiProgram
             .ConfigureFonts(fonts =>
             {
                 fonts.AddFont("EmilysCandy-Regular.ttf", "EmilysCandy");
+                fonts.AddFont("OpenSans-Regular.ttf", "OpenSan");
+                fonts.AddFont("Poppins-Regular.ttf", "Poppins");
+                fonts.AddFont("Roboto-Regular.ttf", "Roboto");
             });
         builder.Services.AddBookServices(new Uri("https://www.googleapis.com/books/v1/"));
         builder.Services.AddGutenbergServices(new Uri("https://www.gutenberg.org/"));

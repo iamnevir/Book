@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <BundleResource Include="C:\Users\DINH LAM\Desktop\clone\Book\BookReactor\obj\Release\net7.0-maccatalyst\resizetizer\r\Resources\favorite.png" />
+    <BundleResource Include="C:\Users\DINH LAM\Desktop\clone\Book\BookReactor\obj\Release\net7.0-maccatalyst\resizetizer\r\Resources\ifavorite.png" />
+    <BundleResource Include="C:\Users\DINH LAM\Desktop\clone\Book\BookReactor\obj\Release\net7.0-maccatalyst\resizetizer\r\Resources\inha.png" />
+    <BundleResource Include="C:\Users\DINH LAM\Desktop\clone\Book\BookReactor\obj\Release\net7.0-maccatalyst\resizetizer\r\Resources\isach.png" />
+    <BundleResource Include="C:\Users\DINH LAM\Desktop\clone\Book\BookReactor\obj\Release\net7.0-maccatalyst\resizetizer\r\Resources\iuser.png" />
+    <BundleResource Include="C:\Users\DINH LAM\Desktop\clone\Book\BookReactor\obj\Release\net7.0-maccatalyst\resizetizer\r\Resources\kmo.png" />
+    <BundleResource Include="C:\Users\DINH LAM\Desktop\clone\Book\BookReactor\obj\Release\net7.0-maccatalyst\resizetizer\r\Resources\mo.png" />
+    <BundleResource Include="C:\Users\DINH LAM\Desktop\clone\Book\BookReactor\obj\Release\net7.0-maccatalyst\resizetizer\r\Resources\nha.png" />
+    <BundleResource Include="C:\Users\DINH LAM\Desktop\clone\Book\BookReactor\obj\Release\net7.0-maccatalyst\resizetizer\r\Resources\sach.png" />
+    <BundleResource Include="C:\Users\DINH LAM\Desktop\clone\Book\BookReactor\obj\Release\net7.0-maccatalyst\resizetizer\r\Resources\sp1.jpg" />
+    <BundleResource Include="C:\Users\DINH LAM\Desktop\clone\Book\BookReactor\obj\Release\net7.0-maccatalyst\resizetizer\r\Resources\sp2.jpg" />
+    <BundleResource Include="C:\Users\DINH LAM\Desktop\clone\Book\BookReactor\obj\Release\net7.0-maccatalyst\resizetizer\r\Resources\sp3.jpg" />
+    <BundleResource Include="C:\Users\DINH LAM\Desktop\clone\Book\BookReactor\obj\Release\net7.0-maccatalyst\resizetizer\r\Resources\trove.png" />
+    <BundleResource Include="C:\Users\DINH LAM\Desktop\clone\Book\BookReactor\obj\Release\net7.0-maccatalyst\resizetizer\r\Resources\user.png" />
+    <BundleResource Include="C:\Users\DINH LAM\Desktop\clone\Book\BookReactor\obj\Release\net7.0-maccatalyst\resizetizer\r\user_dark.png" />
+    <BundleResource Include="C:\Users\DINH LAM\Desktop\clone\Book\BookReactor\obj\Release\net7.0-maccatalyst\resizetizer\r\user_dark@2x.png" />
+    <BundleResource Include="C:\Users\DINH LAM\Desktop\clone\Book\BookReactor\obj\Release\net7.0-maccatalyst\resizetizer\r\user_dark@3x.png" />
+    <BundleResource Include="obj\Release\net7.0-maccatalyst\resizetizer\f\EmilysCandy-Regular.ttf" />
+    <BundleResource Include="obj\Release\net7.0-maccatalyst\resizetizer\f\OpenSans-Regular.ttf" />
+    <BundleResource Include="obj\Release\net7.0-maccatalyst\resizetizer\f\Poppins-Regular.ttf" />
+    <BundleResource Include="obj\Release\net7.0-maccatalyst\resizetizer\f\Roboto-Regular.ttf" />
+  </ItemGroup>
+</Project>

@@ -4172,6 +4172,8 @@ C:\Users\trick\source\repos\Book\BookReactor\obj\Debug\net7.0-android\android\jn
 C:\Users\trick\source\repos\Book\BookReactor\obj\Debug\net7.0-android\app_shared_libraries\armeabi-v7a\libxamarin-app.so
 C:\Users\trick\source\repos\Book\BookReactor\obj\Debug\net7.0-android\app_shared_libraries\arm64-v8a\libxamarin-app.so
 C:\Users\trick\source\repos\Book\BookReactor\obj\Debug\net7.0-android\app_shared_libraries\x86\libxamarin-app.so
+C:\Users\DINH LAM\Desktop\clone\Book\BookReactor\obj\Debug\net7.0-android\android\assets\Maui.Skeleton.dll
+C:\Users\DINH LAM\Desktop\clone\Book\BookReactor\obj\Debug\net7.0-android\android\assets\Newtonsoft.Json.dll
 C:\Users\DINH LAM\Desktop\clone\Book\BookReactor\obj\Debug\net7.0-android\android\assets\mscorlib.dll
 C:\Users\DINH LAM\Desktop\clone\Book\BookReactor\obj\Debug\net7.0-android\android\assets\System.Collections.Concurrent.dll
 C:\Users\DINH LAM\Desktop\clone\Book\BookReactor\obj\Debug\net7.0-android\android\assets\System.Data.Common.dll
@@ -4185,5 +4187,9 @@ C:\Users\DINH LAM\Desktop\clone\Book\BookReactor\obj\Debug\net7.0-android\androi
 C:\Users\DINH LAM\Desktop\clone\Book\BookReactor\obj\Debug\net7.0-android\android\assets\System.Runtime.Extensions.dll
 C:\Users\DINH LAM\Desktop\clone\Book\BookReactor\obj\Debug\net7.0-android\android\assets\System.Runtime.Serialization.Formatters.dll
 C:\Users\DINH LAM\Desktop\clone\Book\BookReactor\obj\Debug\net7.0-android\android\assets\System.Xml.dll
-C:\Users\DINH LAM\Desktop\clone\Book\BookReactor\obj\Debug\net7.0-android\android\assets\Maui.Skeleton.dll
-C:\Users\DINH LAM\Desktop\clone\Book\BookReactor\obj\Debug\net7.0-android\android\assets\Newtonsoft.Json.dll
+C:\Users\DINH LAM\Desktop\clone\Book\BookReactor\obj\Debug\net7.0-android\android\assets\Plugin.Maui.ScreenBrightness.dll
+C:\Users\DINH LAM\Desktop\clone\Book\BookReactor\obj\Debug\net7.0-android\resizetizer\f\Poppins-Regular.ttf
+C:\Users\DINH LAM\Desktop\clone\Book\BookReactor\obj\Debug\net7.0-android\resizetizer\f\Roboto-Regular.ttf
+C:\Users\DINH LAM\Desktop\clone\Book\BookReactor\obj\Debug\net7.0-android\resizetizer\r\drawable\kmo.png
+C:\Users\DINH LAM\Desktop\clone\Book\BookReactor\obj\Debug\net7.0-android\resizetizer\r\drawable\mo.png
+C:\Users\DINH LAM\Desktop\clone\Book\BookReactor\obj\Debug\net7.0-android\resizetizer\r\drawable\trove.png

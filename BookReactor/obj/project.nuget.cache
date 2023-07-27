@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "CVlJXiq5nP5E0l48KW6klPjFgMxuQJ+XRiGiQIPbIhg8k8HSvNKYRLuFFzaYBzGDdkUG4tvggQtZnR3geeVxVw==",
+  "dgSpecHash": "dGmsgCj04SJEHj0tb5744GRU7QFGr5WCAJSpPL6Pgcj8cUn402weeBYy/Ay2KKInHteqkjV2NSpbtBqksTDirQ==",
   "success": true,
   "projectFilePath": "C:\\Users\\DINH LAM\\Desktop\\clone\\Book\\BookReactor\\BookReactor.csproj",
   "expectedPackageFiles": [
@@ -23,6 +23,7 @@
     "C:\\Users\\DINH LAM\\.nuget\\packages\\microsoft.windows.sdk.buildtools\\10.0.22621.755\\microsoft.windows.sdk.buildtools.10.0.22621.755.nupkg.sha512",
     "C:\\Users\\DINH LAM\\.nuget\\packages\\microsoft.windowsappsdk\\1.2.221209.1\\microsoft.windowsappsdk.1.2.221209.1.nupkg.sha512",
     "C:\\Users\\DINH LAM\\.nuget\\packages\\newtonsoft.json\\13.0.3\\newtonsoft.json.13.0.3.nupkg.sha512",
+    "C:\\Users\\DINH LAM\\.nuget\\packages\\plugin.maui.screenbrightness\\1.0.0-preview3\\plugin.maui.screenbrightness.1.0.0-preview3.nupkg.sha512",
     "C:\\Users\\DINH LAM\\.nuget\\packages\\reactor.maui\\1.0.138\\reactor.maui.1.0.138.nupkg.sha512",
     "C:\\Users\\DINH LAM\\.nuget\\packages\\reactor.maui.canvas\\1.0.138\\reactor.maui.canvas.1.0.138.nupkg.sha512",
     "C:\\Users\\DINH LAM\\.nuget\\packages\\reactor.maui.scaffoldgenerator\\1.0.138\\reactor.maui.scaffoldgenerator.1.0.138.nupkg.sha512",
@@ -41,6 +42,7 @@
     "C:\\Users\\DINH LAM\\.nuget\\packages\\skiasharp.views.maui.core\\2.88.1\\skiasharp.views.maui.core.2.88.1.nupkg.sha512",
     "C:\\Users\\DINH LAM\\.nuget\\packages\\skiasharp.views.winui\\2.88.1\\skiasharp.views.winui.2.88.1.nupkg.sha512",
     "C:\\Users\\DINH LAM\\.nuget\\packages\\system.codedom\\7.0.0\\system.codedom.7.0.0.nupkg.sha512",
+    "C:\\Users\\DINH LAM\\.nuget\\packages\\system.management\\7.0.0\\system.management.7.0.0.nupkg.sha512",
     "C:\\Users\\DINH LAM\\.nuget\\packages\\system.runtime.interopservices.nfloat.internal\\6.0.1\\system.runtime.interopservices.nfloat.internal.6.0.1.nupkg.sha512",
     "C:\\Users\\DINH LAM\\.nuget\\packages\\xamarin.android.glide\\4.13.2.2\\xamarin.android.glide.4.13.2.2.nupkg.sha512",
     "C:\\Users\\DINH LAM\\.nuget\\packages\\xamarin.android.glide.annotations\\4.13.2.2\\xamarin.android.glide.annotations.4.13.2.2.nupkg.sha512",

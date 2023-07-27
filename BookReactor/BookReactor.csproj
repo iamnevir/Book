@@ -24,6 +24,9 @@
     <TargetPlatformMinVersion Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'windows'">10.0.17763.0</TargetPlatformMinVersion>
     <SupportedOSPlatformVersion Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'tizen'">6.5</SupportedOSPlatformVersion>
   </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Release|net7.0-android|AnyCPU'">
+    <AndroidPackageFormat>apk</AndroidPackageFormat>
+  </PropertyGroup>
   <ItemGroup>
     <!-- App Icon -->
     <MauiIcon Include="Resources\AppIcon\appicon.svg" Color="#9900CC" />
@@ -37,6 +40,10 @@
     <MauiAsset Include="Resources\Raw\**" LogicalName="%(RecursiveDir)%(Filename)%(Extension)" />
   </ItemGroup>
   <ItemGroup>
+    <None Remove="Resources\Fonts\Poppins-Regular.ttf" />
+    <None Remove="Resources\Fonts\Roboto-Regular.ttf" />
+    <None Remove="Resources\Images\kmo.png" />
+    <None Remove="Resources\Images\mo.png" />
     <None Remove="Resources\Images\NavBar\inha.png" />
     <None Remove="Resources\Images\NavBar\isach.png" />
     <None Remove="Resources\Images\NavBar\nha.png" />
@@ -46,6 +53,7 @@
     <None Remove="Resources\Images\SideMenu\favorites_img.png" />
     <None Remove="Resources\Images\SideMenu\help_img.png" />
     <None Remove="Resources\Images\SideMenu\user_dark.svg" />
+    <None Remove="Resources\Images\trove.png" />
     <None Remove="Resources\Raw\back.json" />
     <None Remove="Resources\Raw\bookanimation.json" />
     <None Remove="Resources\Raw\close.json" />
@@ -77,6 +85,7 @@
     <PackageReference Include="HorusStudio.Maui.Skeleton" Version="2.0.0" />
     <PackageReference Include="Microsoft.Extensions.Http" Version="7.0.0" />
     <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
+    <PackageReference Include="Plugin.Maui.ScreenBrightness" Version="1.0.0-preview3" />
     <PackageReference Include="Reactor.Maui" Version="1.0.138" />
     <PackageReference Include="Reactor.Maui.Canvas" Version="1.0.138" />
     <PackageReference Include="Reactor.Maui.ScaffoldGenerator" Version="1.0.138" OutputItemType="Analyzer" ReferenceOutputAssembly="false" />
