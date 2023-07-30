@@ -539,7 +539,7 @@ class HomePage : Component<HomePageState>
             //}
             
         }.HeightRequest(260)
-        .Margin(20, 0, 0, 0)
+        .Margin(20, 0, 20, 0)
         .BackgroundColor(Colors.Transparent)
         .GridRow(3)
 
@@ -624,7 +624,7 @@ class HomePage : Component<HomePageState>
                     }
                 }.HeightRequest(340)
                 .StrokeShape(new RoundRectangle().CornerRadius(15))
-                .WidthRequest(340)
+                .Margin(30,0,30,0)
                 .BackgroundColor(Colors.Transparent)
                 .OnTapped(_action3)
         .GridRow(1);
@@ -632,7 +632,7 @@ class HomePage : Component<HomePageState>
 
     private VisualNode RenderHeader()
     {
-        return new HStack
+        return new Grid("*","Auto,Auto,*,Auto,Auto")
             {
                 new SKLottieView()
                 .Source(new SkiaSharp.Extended.UI.Controls.SKFileLottieImageSource()
@@ -647,14 +647,15 @@ class HomePage : Component<HomePageState>
                 .WidthRequest(50)
                 .BackgroundColor(Colors.Transparent)
                 .OnTapped(_action1)
+                .GridColumn(0)
                 ,
                 new Label("Stories")
                 .TextColor(Colors.White)
                 .FontAttributes(Microsoft.Maui.Controls.FontAttributes.Bold)
                 .FontSize(30)
                 .FontFamily(Theme.font)
-                .HCenter()
-
+                .GridColumn(1)
+                .Margin(10,0,0,0)
                 ,
                  new SKLottieView()
                 .Source(new SkiaSharp.Extended.UI.Controls.SKFileLottieImageSource()
@@ -669,8 +670,10 @@ class HomePage : Component<HomePageState>
                 .WidthRequest(70)
                 .BackgroundColor(Colors.Transparent)
                 .HEnd()
-                .Margin(100,10,0,0)
+                .GridColumn(3)
+                .Margin(0,10,0,0)
                 ,
+
                   new SKLottieView()
                 .Source(new SkiaSharp.Extended.UI.Controls.SKFileLottieImageSource()
                 {
@@ -683,12 +686,13 @@ class HomePage : Component<HomePageState>
                 .HeightRequest(60)
                 .WidthRequest(60)
                 .BackgroundColor(Colors.Transparent)
-                .HEnd()
+                .GridColumn(4)
                 .Margin(-25,0,0,0)
                 .OnTapped(_action2)
                 ,
-            }.Spacing(10)
-            .Margin(15, 20, 0, 0)
+            }
+            .Margin(15, 20, 10, 0)
+            .BackgroundColor(Colors.Transparent)
             .GridRow(0);
     }
 }
@@ -792,13 +796,15 @@ class StartPage : Component<StartPageState>
                     new VStack
                     {
                           new Label("Immerse in the story")
-                         .FontSize(30)
+                         .FontSize(27)
+                         .MaxLines(1)
                          .FontFamily("EmilysCandy")
                          .VCenter().HCenter()
                          .FontAttributes(Microsoft.Maui.Controls.FontAttributes.Bold)
                          .TextColor(Colors.White),
                         new Label("The books contain stories that have never been told, mysteries that lie deep in the dark waiting to be answered")
                          .FontSize(13)
+                         .MaxLines(3)
                          .FontFamily("EmilysCandy")
                          .VCenter().HCenter()
                          .HorizontalTextAlignment(TextAlignment.Center)
@@ -806,7 +812,7 @@ class StartPage : Component<StartPageState>
                          .TextColor(Colors.Gray)
                     }
                 }.HeightRequest(120)
-                  .WidthRequest(State.ImageSize.Width-100)
+                  .WidthRequest(State.ImageSize.Width-80)
                   .BackgroundColor(Colors.Transparent)
                   .VEnd().HCenter()
                   .Margin(0,0,0,130),

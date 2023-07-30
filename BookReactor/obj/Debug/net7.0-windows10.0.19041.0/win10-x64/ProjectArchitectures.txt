@@ -1,1 +1,1 @@
-C:\Users\DINH LAM\source\repos\Book\BookReactor\BookReactor.csproj;x64
+C:\Users\trick\source\repos\Book\BookReactor\BookReactor.csproj;x64

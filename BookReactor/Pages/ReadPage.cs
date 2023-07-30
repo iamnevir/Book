@@ -85,30 +85,7 @@ class ReadPage:Component<ReadPageState>
                 {
                         new VStack
                         {
-                            new HStack
-                            {
-                                new Border
-                                {
-                                    new Image(State.OpenSetting?"kmo":"mo")
-                                    .HCenter().VCenter()
-                                    .Aspect(Aspect.AspectFit)
-                                    .HeightRequest(20)
-                                    .WidthRequest(20)
-                                }.HeightRequest(40)
-                                .WidthRequest(40)
-                                .OnTapped(()=>SetState(s=>s.OpenSetting=!s.OpenSetting))
-                                .BackgroundColor(Theme.Bg)
-                                .StrokeShape(new MauiReactor.Shapes.Ellipse())
-                                .Margin(10,0,0,0),
-                                new Label("Cài đặt")
-                                .TextColor(Theme.Xanh)
-                                .FontAttributes(Microsoft.Maui.Controls.FontAttributes.Bold)
-                                .FontSize(20)
-                                .Margin(0,5,0,0),
-                            }.Spacing(10)
-                            ,
-                            new Label("_______________________________________________________________")
-                            .TextColor(Colors.Gray)
+                            new Border().HeightRequest(30).BackgroundColor(Colors.Transparent)
                             ,
                             new HStack
                             {
@@ -117,9 +94,6 @@ class ReadPage:Component<ReadPageState>
                                RenderColorPicker(Colors.White,State.Mau==MauNen.Xam,Theme.Bg,MauNen.Xam),
                                RenderColorPicker(Colors.White,State.Mau==MauNen.Den,Colors.Black,MauNen.Den),
                             }.VStart().HCenter().Spacing(35),
-                            new Label("__________________________________________________________")
-                            .HCenter()
-                            .TextColor(Theme.Xanh),
                             new Grid("*","100,200")
                             {
                                 new Label("Phông chữ")
@@ -160,9 +134,6 @@ class ReadPage:Component<ReadPageState>
                             .HeightRequest(30)
                             .BackgroundColor(Colors.Transparent)
                             .WidthRequest(300),
-                            new Label("__________________________________________________________")
-                            .HCenter()
-                            .TextColor(Theme.Xanh),
                             new HStack
                             {
                                 new VStack
@@ -264,17 +235,42 @@ class ReadPage:Component<ReadPageState>
                             }.Spacing(-15)
                             .Margin(0,20,0,0)
                             .HCenter(),
-                        }.Spacing(5)
+                             new Grid("*","*,Auto,Auto")
+                            {
+                                new Border
+                                {
+                                    new Image(State.OpenSetting?"kmo":"mo")
+                                    .HCenter().VCenter()
+                                    .Aspect(Aspect.AspectFit)
+                                    .HeightRequest(20)
+                                    .WidthRequest(20)
+                                }.HeightRequest(40)
+                                .WidthRequest(40)
+                                .OnTapped(()=>SetState(s=>s.OpenSetting=!s.OpenSetting))
+                                .BackgroundColor(Theme.Bg)
+                                .StrokeShape(new MauiReactor.Shapes.Ellipse())
+                                .Margin(0,0,10,0)
+                                .GridColumn(2),
+                                new Label("Cài đặt")
+                                .TextColor(Theme.Xanh)
+                                .FontAttributes(Microsoft.Maui.Controls.FontAttributes.Bold)
+                                .FontSize(20)
+                                .Margin(0,5,10,0)
+                                .GridColumn(1),
+                            }.Margin(0,10,0,0)
+                            ,
+                        }.Spacing(20)
                         .Margin(0,10,0,0)
                         .VStart()
                 }.HeightRequest(400)
                 .VStart()
                 .StrokeShape(new RoundRectangle().CornerRadius(5))
                 .BackgroundColor(Theme.XanhDam)
-                .TranslationY(State.OpenSetting?405: 745)
+                .TranslationY(State.OpenSetting?-330: 0)
                 .IsVisible(State.OpenBorder)
                 .WithAnimation(easing:Easing.CubicInOut,duration:300)
                 ,
+
                  new Border
                  {
                       new Image("trove")
@@ -282,8 +278,8 @@ class ReadPage:Component<ReadPageState>
                                     .Aspect(Aspect.AspectFit)
                                     .HeightRequest(20)
                                     .WidthRequest(20)
-                 }.HeightRequest(40)
-                                .WidthRequest(40)
+                 }.HeightRequest(50)
+                                .WidthRequest(50)
                                 .OnTapped(Back)
                                 .BackgroundColor(Theme.Bg)
                                 .StrokeShape(new MauiReactor.Shapes.Ellipse())

@@ -3072,6 +3072,27 @@ C:\Users\DINH LAM\Desktop\clone\Book\BookReactor\obj\Debug\net7.0-android\resize
 C:\Users\DINH LAM\Desktop\clone\Book\BookReactor\obj\Debug\net7.0-android\resizetizer\r\drawable-xhdpi\user_dark.png
 C:\Users\DINH LAM\Desktop\clone\Book\BookReactor\obj\Debug\net7.0-android\resizetizer\r\drawable-xxhdpi\user_dark.png
 C:\Users\DINH LAM\Desktop\clone\Book\BookReactor\obj\Debug\net7.0-android\resizetizer\r\drawable-xxxhdpi\user_dark.png
+C:\Users\DINH LAM\Desktop\clone\Book\BookReactor\obj\Debug\net7.0-android\android\assets\Maui.Skeleton.dll
+C:\Users\DINH LAM\Desktop\clone\Book\BookReactor\obj\Debug\net7.0-android\android\assets\Newtonsoft.Json.dll
+C:\Users\DINH LAM\Desktop\clone\Book\BookReactor\obj\Debug\net7.0-android\android\assets\mscorlib.dll
+C:\Users\DINH LAM\Desktop\clone\Book\BookReactor\obj\Debug\net7.0-android\android\assets\System.Collections.Concurrent.dll
+C:\Users\DINH LAM\Desktop\clone\Book\BookReactor\obj\Debug\net7.0-android\android\assets\System.Data.Common.dll
+C:\Users\DINH LAM\Desktop\clone\Book\BookReactor\obj\Debug\net7.0-android\android\assets\System.Data.dll
+C:\Users\DINH LAM\Desktop\clone\Book\BookReactor\obj\Debug\net7.0-android\android\assets\System.Diagnostics.StackTrace.dll
+C:\Users\DINH LAM\Desktop\clone\Book\BookReactor\obj\Debug\net7.0-android\android\assets\System.Diagnostics.TraceSource.dll
+C:\Users\DINH LAM\Desktop\clone\Book\BookReactor\obj\Debug\net7.0-android\android\assets\System.dll
+C:\Users\DINH LAM\Desktop\clone\Book\BookReactor\obj\Debug\net7.0-android\android\assets\System.Private.CoreLib.dll
+C:\Users\DINH LAM\Desktop\clone\Book\BookReactor\obj\Debug\net7.0-android\android\assets\System.Private.Uri.dll
+C:\Users\DINH LAM\Desktop\clone\Book\BookReactor\obj\Debug\net7.0-android\android\assets\System.Runtime.dll
+C:\Users\DINH LAM\Desktop\clone\Book\BookReactor\obj\Debug\net7.0-android\android\assets\System.Runtime.Extensions.dll
+C:\Users\DINH LAM\Desktop\clone\Book\BookReactor\obj\Debug\net7.0-android\android\assets\System.Runtime.Serialization.Formatters.dll
+C:\Users\DINH LAM\Desktop\clone\Book\BookReactor\obj\Debug\net7.0-android\android\assets\System.Xml.dll
+C:\Users\DINH LAM\Desktop\clone\Book\BookReactor\obj\Debug\net7.0-android\android\assets\Plugin.Maui.ScreenBrightness.dll
+C:\Users\DINH LAM\Desktop\clone\Book\BookReactor\obj\Debug\net7.0-android\resizetizer\f\Poppins-Regular.ttf
+C:\Users\DINH LAM\Desktop\clone\Book\BookReactor\obj\Debug\net7.0-android\resizetizer\f\Roboto-Regular.ttf
+C:\Users\DINH LAM\Desktop\clone\Book\BookReactor\obj\Debug\net7.0-android\resizetizer\r\drawable\kmo.png
+C:\Users\DINH LAM\Desktop\clone\Book\BookReactor\obj\Debug\net7.0-android\resizetizer\r\drawable\mo.png
+C:\Users\DINH LAM\Desktop\clone\Book\BookReactor\obj\Debug\net7.0-android\resizetizer\r\drawable\trove.png
 C:\Users\trick\source\repos\Book\BookReactor\bin\Debug\net7.0-android\BookReactor.runtimeconfig.json
 C:\Users\trick\source\repos\Book\BookReactor\bin\Debug\net7.0-android\BookReactor.dll
 C:\Users\trick\source\repos\Book\BookReactor\bin\Debug\net7.0-android\BookReactor.pdb
@@ -3093,9 +3114,9 @@ C:\Users\trick\source\repos\Book\BookReactor\obj\Debug\net7.0-android\resizetize
 C:\Users\trick\source\repos\Book\BookReactor\obj\Debug\net7.0-android\mauisplash.stamp
 C:\Users\trick\source\repos\Book\BookReactor\obj\Debug\net7.0-android\mauifont.stamp
 C:\Users\trick\source\repos\Book\BookReactor\obj\Debug\net7.0-android\resizetizer\f\EmilysCandy-Regular.ttf
-C:\Users\trick\source\repos\Book\BookReactor\obj\Debug\net7.0-android\resizetizer\f\HennyPenny-Regular.ttf
 C:\Users\trick\source\repos\Book\BookReactor\obj\Debug\net7.0-android\resizetizer\f\OpenSans-Regular.ttf
-C:\Users\trick\source\repos\Book\BookReactor\obj\Debug\net7.0-android\resizetizer\f\OpenSans-Semibold.ttf
+C:\Users\trick\source\repos\Book\BookReactor\obj\Debug\net7.0-android\resizetizer\f\Poppins-Regular.ttf
+C:\Users\trick\source\repos\Book\BookReactor\obj\Debug\net7.0-android\resizetizer\f\Roboto-Regular.ttf
 C:\Users\trick\source\repos\Book\BookReactor\obj\Debug\net7.0-android\resizetizer\r\drawable-hdpi\splash.png
 C:\Users\trick\source\repos\Book\BookReactor\obj\Debug\net7.0-android\resizetizer\r\drawable-hdpi\user_dark.png
 C:\Users\trick\source\repos\Book\BookReactor\obj\Debug\net7.0-android\resizetizer\r\drawable-mdpi\splash.png
@@ -3106,35 +3127,20 @@ C:\Users\trick\source\repos\Book\BookReactor\obj\Debug\net7.0-android\resizetize
 C:\Users\trick\source\repos\Book\BookReactor\obj\Debug\net7.0-android\resizetizer\r\drawable-xxhdpi\user_dark.png
 C:\Users\trick\source\repos\Book\BookReactor\obj\Debug\net7.0-android\resizetizer\r\drawable-xxxhdpi\splash.png
 C:\Users\trick\source\repos\Book\BookReactor\obj\Debug\net7.0-android\resizetizer\r\drawable-xxxhdpi\user_dark.png
-C:\Users\trick\source\repos\Book\BookReactor\obj\Debug\net7.0-android\resizetizer\r\drawable\billing_img.png
-C:\Users\trick\source\repos\Book\BookReactor\obj\Debug\net7.0-android\resizetizer\r\drawable\book.png
-C:\Users\trick\source\repos\Book\BookReactor\obj\Debug\net7.0-android\resizetizer\r\drawable\cover1.jpg
-C:\Users\trick\source\repos\Book\BookReactor\obj\Debug\net7.0-android\resizetizer\r\drawable\cover11.jpg
-C:\Users\trick\source\repos\Book\BookReactor\obj\Debug\net7.0-android\resizetizer\r\drawable\cover2.jpg
-C:\Users\trick\source\repos\Book\BookReactor\obj\Debug\net7.0-android\resizetizer\r\drawable\cover3.jpg
 C:\Users\trick\source\repos\Book\BookReactor\obj\Debug\net7.0-android\resizetizer\r\drawable\favorite.png
-C:\Users\trick\source\repos\Book\BookReactor\obj\Debug\net7.0-android\resizetizer\r\drawable\favorites_img.png
-C:\Users\trick\source\repos\Book\BookReactor\obj\Debug\net7.0-android\resizetizer\r\drawable\help_img.png
-C:\Users\trick\source\repos\Book\BookReactor\obj\Debug\net7.0-android\resizetizer\r\drawable\home.png
-C:\Users\trick\source\repos\Book\BookReactor\obj\Debug\net7.0-android\resizetizer\r\drawable\home_img.png
-C:\Users\trick\source\repos\Book\BookReactor\obj\Debug\net7.0-android\resizetizer\r\drawable\ibook.gif
-C:\Users\trick\source\repos\Book\BookReactor\obj\Debug\net7.0-android\resizetizer\r\drawable\ibook.png
 C:\Users\trick\source\repos\Book\BookReactor\obj\Debug\net7.0-android\resizetizer\r\drawable\ifavorite.png
-C:\Users\trick\source\repos\Book\BookReactor\obj\Debug\net7.0-android\resizetizer\r\drawable\ihome.png
 C:\Users\trick\source\repos\Book\BookReactor\obj\Debug\net7.0-android\resizetizer\r\drawable\inha.png
 C:\Users\trick\source\repos\Book\BookReactor\obj\Debug\net7.0-android\resizetizer\r\drawable\isach.png
 C:\Users\trick\source\repos\Book\BookReactor\obj\Debug\net7.0-android\resizetizer\r\drawable\iuser.png
+C:\Users\trick\source\repos\Book\BookReactor\obj\Debug\net7.0-android\resizetizer\r\drawable\kmo.png
+C:\Users\trick\source\repos\Book\BookReactor\obj\Debug\net7.0-android\resizetizer\r\drawable\mo.png
 C:\Users\trick\source\repos\Book\BookReactor\obj\Debug\net7.0-android\resizetizer\r\drawable\nha.png
-C:\Users\trick\source\repos\Book\BookReactor\obj\Debug\net7.0-android\resizetizer\r\drawable\p1.jpg
-C:\Users\trick\source\repos\Book\BookReactor\obj\Debug\net7.0-android\resizetizer\r\drawable\p2.jpg
-C:\Users\trick\source\repos\Book\BookReactor\obj\Debug\net7.0-android\resizetizer\r\drawable\p3.jpg
 C:\Users\trick\source\repos\Book\BookReactor\obj\Debug\net7.0-android\resizetizer\r\drawable\sach.png
-C:\Users\trick\source\repos\Book\BookReactor\obj\Debug\net7.0-android\resizetizer\r\drawable\search_img.png
 C:\Users\trick\source\repos\Book\BookReactor\obj\Debug\net7.0-android\resizetizer\r\drawable\sp1.jpg
 C:\Users\trick\source\repos\Book\BookReactor\obj\Debug\net7.0-android\resizetizer\r\drawable\sp2.jpg
 C:\Users\trick\source\repos\Book\BookReactor\obj\Debug\net7.0-android\resizetizer\r\drawable\sp3.jpg
+C:\Users\trick\source\repos\Book\BookReactor\obj\Debug\net7.0-android\resizetizer\r\drawable\trove.png
 C:\Users\trick\source\repos\Book\BookReactor\obj\Debug\net7.0-android\resizetizer\r\drawable\user.png
-C:\Users\trick\source\repos\Book\BookReactor\obj\Debug\net7.0-android\resizetizer\r\drawable\videos_img.png
 C:\Users\trick\source\repos\Book\BookReactor\obj\Debug\net7.0-android\resizetizer\r\mipmap-anydpi-v26\appicon.xml
 C:\Users\trick\source\repos\Book\BookReactor\obj\Debug\net7.0-android\resizetizer\r\mipmap-anydpi-v26\appicon_round.xml
 C:\Users\trick\source\repos\Book\BookReactor\obj\Debug\net7.0-android\resizetizer\r\mipmap-hdpi\appicon.png
@@ -3158,27 +3164,26 @@ C:\Users\trick\source\repos\Book\BookReactor\obj\Debug\net7.0-android\stamp\_Bui
 C:\Users\trick\source\repos\Book\BookReactor\obj\Debug\net7.0-android\res.flag
 C:\Users\trick\source\repos\Book\BookReactor\obj\Debug\net7.0-android\resizetizer\3E4017757CC97BD9-files.cache
 C:\Users\trick\source\repos\Book\BookReactor\obj\Debug\net7.0-android\resizetizer\D05A8838A97C2DE2-files.cache
-C:\Users\trick\source\repos\Book\BookReactor\obj\Debug\net7.0-android\lp\101\jl\files.cache
 C:\Users\trick\source\repos\Book\BookReactor\obj\Debug\net7.0-android\lp\102\jl\files.cache
 C:\Users\trick\source\repos\Book\BookReactor\obj\Debug\net7.0-android\lp\103\jl\files.cache
-C:\Users\trick\source\repos\Book\BookReactor\obj\Debug\net7.0-android\lp\106\jl\files.cache
+C:\Users\trick\source\repos\Book\BookReactor\obj\Debug\net7.0-android\lp\104\jl\files.cache
 C:\Users\trick\source\repos\Book\BookReactor\obj\Debug\net7.0-android\lp\107\jl\files.cache
 C:\Users\trick\source\repos\Book\BookReactor\obj\Debug\net7.0-android\lp\108\jl\files.cache
 C:\Users\trick\source\repos\Book\BookReactor\obj\Debug\net7.0-android\lp\109\jl\files.cache
 C:\Users\trick\source\repos\Book\BookReactor\obj\Debug\net7.0-android\lp\110\jl\files.cache
-C:\Users\trick\source\repos\Book\BookReactor\obj\Debug\net7.0-android\lp\112\jl\files.cache
+C:\Users\trick\source\repos\Book\BookReactor\obj\Debug\net7.0-android\lp\111\jl\files.cache
 C:\Users\trick\source\repos\Book\BookReactor\obj\Debug\net7.0-android\lp\113\jl\files.cache
 C:\Users\trick\source\repos\Book\BookReactor\obj\Debug\net7.0-android\lp\114\jl\files.cache
 C:\Users\trick\source\repos\Book\BookReactor\obj\Debug\net7.0-android\lp\115\jl\files.cache
 C:\Users\trick\source\repos\Book\BookReactor\obj\Debug\net7.0-android\lp\116\jl\files.cache
-C:\Users\trick\source\repos\Book\BookReactor\obj\Debug\net7.0-android\lp\120\jl\files.cache
+C:\Users\trick\source\repos\Book\BookReactor\obj\Debug\net7.0-android\lp\117\jl\files.cache
 C:\Users\trick\source\repos\Book\BookReactor\obj\Debug\net7.0-android\lp\121\jl\files.cache
-C:\Users\trick\source\repos\Book\BookReactor\obj\Debug\net7.0-android\lp\123\jl\files.cache
+C:\Users\trick\source\repos\Book\BookReactor\obj\Debug\net7.0-android\lp\122\jl\files.cache
 C:\Users\trick\source\repos\Book\BookReactor\obj\Debug\net7.0-android\lp\124\jl\files.cache
-C:\Users\trick\source\repos\Book\BookReactor\obj\Debug\net7.0-android\lp\127\jl\files.cache
+C:\Users\trick\source\repos\Book\BookReactor\obj\Debug\net7.0-android\lp\125\jl\files.cache
 C:\Users\trick\source\repos\Book\BookReactor\obj\Debug\net7.0-android\lp\128\jl\files.cache
-C:\Users\trick\source\repos\Book\BookReactor\obj\Debug\net7.0-android\lp\130\jl\files.cache
-C:\Users\trick\source\repos\Book\BookReactor\obj\Debug\net7.0-android\lp\132\jl\files.cache
+C:\Users\trick\source\repos\Book\BookReactor\obj\Debug\net7.0-android\lp\129\jl\files.cache
+C:\Users\trick\source\repos\Book\BookReactor\obj\Debug\net7.0-android\lp\131\jl\files.cache
 C:\Users\trick\source\repos\Book\BookReactor\obj\Debug\net7.0-android\lp\133\jl\files.cache
 C:\Users\trick\source\repos\Book\BookReactor\obj\Debug\net7.0-android\lp\134\jl\files.cache
 C:\Users\trick\source\repos\Book\BookReactor\obj\Debug\net7.0-android\lp\135\jl\files.cache
@@ -3187,7 +3192,7 @@ C:\Users\trick\source\repos\Book\BookReactor\obj\Debug\net7.0-android\lp\137\jl\
 C:\Users\trick\source\repos\Book\BookReactor\obj\Debug\net7.0-android\lp\138\jl\files.cache
 C:\Users\trick\source\repos\Book\BookReactor\obj\Debug\net7.0-android\lp\139\jl\files.cache
 C:\Users\trick\source\repos\Book\BookReactor\obj\Debug\net7.0-android\lp\140\jl\files.cache
-C:\Users\trick\source\repos\Book\BookReactor\obj\Debug\net7.0-android\lp\142\jl\files.cache
+C:\Users\trick\source\repos\Book\BookReactor\obj\Debug\net7.0-android\lp\141\jl\files.cache
 C:\Users\trick\source\repos\Book\BookReactor\obj\Debug\net7.0-android\lp\143\jl\files.cache
 C:\Users\trick\source\repos\Book\BookReactor\obj\Debug\net7.0-android\lp\144\jl\files.cache
 C:\Users\trick\source\repos\Book\BookReactor\obj\Debug\net7.0-android\lp\145\jl\files.cache
@@ -3199,13 +3204,14 @@ C:\Users\trick\source\repos\Book\BookReactor\obj\Debug\net7.0-android\lp\150\jl\
 C:\Users\trick\source\repos\Book\BookReactor\obj\Debug\net7.0-android\lp\151\jl\files.cache
 C:\Users\trick\source\repos\Book\BookReactor\obj\Debug\net7.0-android\lp\152\jl\files.cache
 C:\Users\trick\source\repos\Book\BookReactor\obj\Debug\net7.0-android\lp\153\jl\files.cache
-C:\Users\trick\source\repos\Book\BookReactor\obj\Debug\net7.0-android\lp\158\jl\files.cache
-C:\Users\trick\source\repos\Book\BookReactor\obj\Debug\net7.0-android\lp\160\jl\files.cache
-C:\Users\trick\source\repos\Book\BookReactor\obj\Debug\net7.0-android\lp\164\jl\files.cache
+C:\Users\trick\source\repos\Book\BookReactor\obj\Debug\net7.0-android\lp\154\jl\files.cache
+C:\Users\trick\source\repos\Book\BookReactor\obj\Debug\net7.0-android\lp\159\jl\files.cache
+C:\Users\trick\source\repos\Book\BookReactor\obj\Debug\net7.0-android\lp\161\jl\files.cache
 C:\Users\trick\source\repos\Book\BookReactor\obj\Debug\net7.0-android\lp\165\jl\files.cache
 C:\Users\trick\source\repos\Book\BookReactor\obj\Debug\net7.0-android\lp\166\jl\files.cache
 C:\Users\trick\source\repos\Book\BookReactor\obj\Debug\net7.0-android\lp\167\jl\files.cache
 C:\Users\trick\source\repos\Book\BookReactor\obj\Debug\net7.0-android\lp\168\jl\files.cache
+C:\Users\trick\source\repos\Book\BookReactor\obj\Debug\net7.0-android\lp\169\jl\files.cache
 C:\Users\trick\source\repos\Book\BookReactor\obj\Debug\net7.0-android\R.txt
 C:\Users\trick\source\repos\Book\BookReactor\obj\Debug\net7.0-android\R.cs.flag
 C:\Users\trick\source\repos\Book\BookReactor\obj\Debug\net7.0-android\BookReactor.GeneratedMSBuildEditorConfig.editorconfig
@@ -3228,6 +3234,7 @@ C:\Users\trick\source\repos\Book\BookReactor\obj\Debug\net7.0-android\android\as
 C:\Users\trick\source\repos\Book\BookReactor\obj\Debug\net7.0-android\android\assets\GoogleGson.dll
 C:\Users\trick\source\repos\Book\BookReactor\obj\Debug\net7.0-android\android\assets\Java.Interop.dll
 C:\Users\trick\source\repos\Book\BookReactor\obj\Debug\net7.0-android\android\assets\Java.Interop.pdb
+C:\Users\trick\source\repos\Book\BookReactor\obj\Debug\net7.0-android\android\assets\Maui.Skeleton.dll
 C:\Users\trick\source\repos\Book\BookReactor\obj\Debug\net7.0-android\android\assets\MauiReactor.Canvas.dll
 C:\Users\trick\source\repos\Book\BookReactor\obj\Debug\net7.0-android\android\assets\MauiReactor.dll
 C:\Users\trick\source\repos\Book\BookReactor\obj\Debug\net7.0-android\android\assets\Microsoft.CSharp.dll
@@ -3261,6 +3268,8 @@ C:\Users\trick\source\repos\Book\BookReactor\obj\Debug\net7.0-android\android\as
 C:\Users\trick\source\repos\Book\BookReactor\obj\Debug\net7.0-android\android\assets\Mono.Android.Export.pdb
 C:\Users\trick\source\repos\Book\BookReactor\obj\Debug\net7.0-android\android\assets\Mono.Android.pdb
 C:\Users\trick\source\repos\Book\BookReactor\obj\Debug\net7.0-android\android\assets\netstandard.dll
+C:\Users\trick\source\repos\Book\BookReactor\obj\Debug\net7.0-android\android\assets\Newtonsoft.Json.dll
+C:\Users\trick\source\repos\Book\BookReactor\obj\Debug\net7.0-android\android\assets\Plugin.Maui.ScreenBrightness.dll
 C:\Users\trick\source\repos\Book\BookReactor\obj\Debug\net7.0-android\android\assets\SimpleRatingControlMaui.dll
 C:\Users\trick\source\repos\Book\BookReactor\obj\Debug\net7.0-android\android\assets\SkiaSharp.dll
 C:\Users\trick\source\repos\Book\BookReactor\obj\Debug\net7.0-android\android\assets\SkiaSharp.Extended.dll
@@ -4172,24 +4181,3 @@ C:\Users\trick\source\repos\Book\BookReactor\obj\Debug\net7.0-android\android\jn
 C:\Users\trick\source\repos\Book\BookReactor\obj\Debug\net7.0-android\app_shared_libraries\armeabi-v7a\libxamarin-app.so
 C:\Users\trick\source\repos\Book\BookReactor\obj\Debug\net7.0-android\app_shared_libraries\arm64-v8a\libxamarin-app.so
 C:\Users\trick\source\repos\Book\BookReactor\obj\Debug\net7.0-android\app_shared_libraries\x86\libxamarin-app.so
-C:\Users\DINH LAM\Desktop\clone\Book\BookReactor\obj\Debug\net7.0-android\android\assets\Maui.Skeleton.dll
-C:\Users\DINH LAM\Desktop\clone\Book\BookReactor\obj\Debug\net7.0-android\android\assets\Newtonsoft.Json.dll
-C:\Users\DINH LAM\Desktop\clone\Book\BookReactor\obj\Debug\net7.0-android\android\assets\mscorlib.dll
-C:\Users\DINH LAM\Desktop\clone\Book\BookReactor\obj\Debug\net7.0-android\android\assets\System.Collections.Concurrent.dll
-C:\Users\DINH LAM\Desktop\clone\Book\BookReactor\obj\Debug\net7.0-android\android\assets\System.Data.Common.dll
-C:\Users\DINH LAM\Desktop\clone\Book\BookReactor\obj\Debug\net7.0-android\android\assets\System.Data.dll
-C:\Users\DINH LAM\Desktop\clone\Book\BookReactor\obj\Debug\net7.0-android\android\assets\System.Diagnostics.StackTrace.dll
-C:\Users\DINH LAM\Desktop\clone\Book\BookReactor\obj\Debug\net7.0-android\android\assets\System.Diagnostics.TraceSource.dll
-C:\Users\DINH LAM\Desktop\clone\Book\BookReactor\obj\Debug\net7.0-android\android\assets\System.dll
-C:\Users\DINH LAM\Desktop\clone\Book\BookReactor\obj\Debug\net7.0-android\android\assets\System.Private.CoreLib.dll
-C:\Users\DINH LAM\Desktop\clone\Book\BookReactor\obj\Debug\net7.0-android\android\assets\System.Private.Uri.dll
-C:\Users\DINH LAM\Desktop\clone\Book\BookReactor\obj\Debug\net7.0-android\android\assets\System.Runtime.dll
-C:\Users\DINH LAM\Desktop\clone\Book\BookReactor\obj\Debug\net7.0-android\android\assets\System.Runtime.Extensions.dll
-C:\Users\DINH LAM\Desktop\clone\Book\BookReactor\obj\Debug\net7.0-android\android\assets\System.Runtime.Serialization.Formatters.dll
-C:\Users\DINH LAM\Desktop\clone\Book\BookReactor\obj\Debug\net7.0-android\android\assets\System.Xml.dll
-C:\Users\DINH LAM\Desktop\clone\Book\BookReactor\obj\Debug\net7.0-android\android\assets\Plugin.Maui.ScreenBrightness.dll
-C:\Users\DINH LAM\Desktop\clone\Book\BookReactor\obj\Debug\net7.0-android\resizetizer\f\Poppins-Regular.ttf
-C:\Users\DINH LAM\Desktop\clone\Book\BookReactor\obj\Debug\net7.0-android\resizetizer\f\Roboto-Regular.ttf
-C:\Users\DINH LAM\Desktop\clone\Book\BookReactor\obj\Debug\net7.0-android\resizetizer\r\drawable\kmo.png
-C:\Users\DINH LAM\Desktop\clone\Book\BookReactor\obj\Debug\net7.0-android\resizetizer\r\drawable\mo.png
-C:\Users\DINH LAM\Desktop\clone\Book\BookReactor\obj\Debug\net7.0-android\resizetizer\r\drawable\trove.png

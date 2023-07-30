@@ -1,4 +1,5 @@
 ﻿using MauiReactor.Shapes;
+using Microsoft.Maui.Devices;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -28,7 +29,7 @@ class DetailBook:Component<DetailBookState, DetailBookProps>
         var preView = $"https://www.google.com.vn/books/edition/The_White_Company/{Props.Book.id}?hl=vi&gbpv=1";
         return new ContentPage
         {
-            new Grid("*,60","*")
+            new Grid("*","*")
             {
                  new HStack
                 {
@@ -39,9 +40,8 @@ class DetailBook:Component<DetailBookState, DetailBookProps>
                             .FontSize(17)
                             .FontFamily(Theme.font)
                             .VCenter().HCenter()
+                            .Margin(40,20,40,20)
                     }
-                    .HeightRequest(60)
-                    .WidthRequest(180)
                     .Stroke(Colors.White)
                     .StrokeThickness(1)
                     .BackgroundColor(Colors.Black)
@@ -54,21 +54,17 @@ class DetailBook:Component<DetailBookState, DetailBookProps>
                             .FontSize(17)
                             .FontFamily(Theme.font)
                             .VCenter().HCenter()
+                            .Margin(40,20,40,20)
                     }
-                    .HeightRequest(60)
-                    .WidthRequest(180)
                     .BackgroundColor(Colors.White)
                     .StrokeShape(new RoundRectangle().CornerRadius(30)),
-                }.VEnd().HCenter()
+                }.VEnd()
+                .HCenter().GridRow(0).ZIndex(1)
                 .Spacing(5)
-                .ZIndex(1)
-                .GridRow(1)
-                .HeightRequest(60),
-                 new ScrollView
-                 {
-                    new VStack
+                .Margin(0,20,0,5),
+                 new Grid("Auto,Auto,Auto,Auto,*","*")
                 {
-                    new HStack
+                    new Grid("*","Auto,*,Auto,*,Auto")
                     {
                         new Border
                         {
@@ -86,6 +82,7 @@ class DetailBook:Component<DetailBookState, DetailBookProps>
                         .HeightRequest(50)
                         .WidthRequest(50)
                         .OnTapped(Back)
+                        .GridColumn(0)
                         .BackgroundColor(Colors.White),
                         new Label("Book Detail")
                         .TextColor(Colors.White)
@@ -93,7 +90,8 @@ class DetailBook:Component<DetailBookState, DetailBookProps>
                         .FontSize(25)
                         .FontFamily(Theme.font)
                         .HCenter()
-                        .VCenter(),
+                        .VCenter()
+                        .GridColumn(2),
                         new SKLottieView()
                             .Source(new SkiaSharp.Extended.UI.Controls.SKFileLottieImageSource()
                             {
@@ -105,37 +103,42 @@ class DetailBook:Component<DetailBookState, DetailBookProps>
                             .IsVisible(true)
                             .HeightRequest(50)
                             .WidthRequest(50)
-                            .BackgroundColor(Colors.Transparent),
+                            .BackgroundColor(Colors.Transparent)
+                            .GridColumn(4),
                     }.GridRow(0)
-                    .Spacing(70)
                     .Margin(10,10,0,0),
-                    new Grid("*","210,150")
+                    new Grid("*","Auto,*,Auto")
                     {
                         new VStack
                         {
                             new Label(Props.Book.volumeInfo.title)
                             .TextColor(Colors.White)
                             .FontSize(23)
+                            .MaxLines(3)
                             .FontFamily(Theme.font),
                             new Label($"By {authors}")
                             .TextColor(Colors.Gray)
                             .FontSize(15)
+                            .MaxLines(2)
                             .FontFamily(Theme.font),
                             new Label($"Published {Props.Book.volumeInfo.publishedDate}")
                             .TextColor(Colors.Gray)
                             .FontSize(15)
+                            .MaxLines(1)
                             .FontFamily(Theme.font)
                         }.Spacing(10).GridColumn(0)
+                                                .HeightRequest(200)
+                        .WidthRequest(150)
                         ,
                         new Image(source)
                         .HeightRequest(200)
                         .WidthRequest(150)
-                        .GridColumn(1)
+                        .GridColumn(2)
                         .VStart(),
-                    }
-                    .Margin(15,0,0,0)
+                    }.GridRow(1)
+                    .Margin(15,20,0,0)
                     ,
-                    new HStack
+                    new Grid("*","Auto,*,Auto,*,Auto,*,Auto,*,Auto")
                     {
                         new VStack
                         {
@@ -148,10 +151,12 @@ class DetailBook:Component<DetailBookState, DetailBookProps>
                             .FontSize(15)
                             .FontFamily(Theme.font).HCenter()
                         }.Spacing(10)
+                        .GridColumn(0)
                         ,
                         new Label("|")
                          .TextColor(Colors.Gray)
                             .FontSize(35)
+                            .GridColumn(2)
                         ,
                         new VStack
                         {
@@ -164,10 +169,12 @@ class DetailBook:Component<DetailBookState, DetailBookProps>
                             .FontSize(15)
                             .FontFamily(Theme.font).HCenter()
                         }.Spacing(10)
+                        .GridColumn(4)
                         ,
                         new Label("|")
                          .TextColor(Colors.Gray)
                             .FontSize(35)
+                            .GridColumn(6)
                         ,
                         new VStack
                         {
@@ -181,14 +188,17 @@ class DetailBook:Component<DetailBookState, DetailBookProps>
                             .FontFamily(Theme.font)
                             .HCenter()
                         }.Spacing(10)
+                        .GridColumn(8)
                         ,
-                    }.Spacing(43).Margin(20,0,0,0),
-                   new VStack
+                    }.Margin(20,20,20,0).GridRow(2),
+                   new Grid("Auto,*,60","*")
                    {
                         new Label(Props.Book.volumeInfo.title)
                         .TextColor(Colors.White)
                             .FontSize(25)
                             .FontFamily(Theme.font).HStart()
+                            .GridRow(0)
+                            .MaxLines(1)
                             ,
                         new Grid
                         {
@@ -199,18 +209,11 @@ class DetailBook:Component<DetailBookState, DetailBookProps>
                                 .FontSize(15)
                                 .FontFamily(Theme.font).HCenter()
                             }
-                        }.HeightRequest(286),
-                        //new Label("...Read More")
-                        //.TextColor(Colors.Gray)
-                        //        .FontSize(15)
-                        //        .FontFamily(Theme.font).HEnd()
-                        //        .Margin(0,-22,30,0)
-                        //        .IsVisible(State.ReadMore==false)
-                        //        .OnTapped(()=>SetState(s=>s.ReadMore=true))
-                   }.Margin(20,0,15,0).Spacing(20),
-
-                }.Spacing(20).HCenter(),
-                 },
+                        }.HeightRequest(300)
+                        .GridRow(1)
+                        .Margin(0,15,0,0),
+                   }.Margin(20,20,15,0).GridRow(3),
+                }.HCenter().GridRow(0),
                   new Grid
                  {
                      new WebView(preView),
@@ -223,10 +226,9 @@ class DetailBook:Component<DetailBookState, DetailBookProps>
                      .Margin(10,10,0,0)
                      .OnTapped(()=>SetState(s=>s.IsRead=false))
                  }.IsVisible(State.IsRead)
-                 .GridRow(0)
                  .GridRowSpan(2)
                  .ZIndex(2)
-            }.Margin(5,0,0,0),
+            }.Margin(5,0,5,0),
         }.Set(MauiControls.NavigationPage.HasNavigationBarProperty,false).BackgroundColor(Theme.Bg);
     }
 }
