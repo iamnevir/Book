@@ -16,18 +16,10 @@ public class GoogleBookServices: IGoogleServices
     public GoogleBookServices(IHttpClientFactory httpClientFactory)
     { _httpClientFactory = httpClientFactory; }
     HttpClient httpClient => _httpClientFactory.CreateClient(BookHttpClientName);
-
-    public async Task<Book?> GetBookDetailAsync(string id) =>
+    public async Task<Book> GetBook(string filter) =>
        await httpClient.GetFromJsonAsync<Book>(
-           $"volumes?q={id}&key={ApiKey}");
-    public async Task<Book> GetBook(string filter, string resultcount) =>
-       await httpClient.GetFromJsonAsync<Book>(
-           $"volumes?q={filter}&maxResults={resultcount}&key={ApiKey}");
+           $"volumes?q={filter}&key={ApiKey}");
     public async Task<Item> GetBookById(string id) =>
        await httpClient.GetFromJsonAsync<Item>(
-           $"volumes/{id}");
-    public static class ServiceUrl
-    {
-        public const string header = "/volumes?q=id=";
-    }
+           $"volumes/{id}?key={ApiKey}");
 }

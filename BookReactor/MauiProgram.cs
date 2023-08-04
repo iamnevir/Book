@@ -26,7 +26,7 @@ public static class MauiProgram
                 fonts.AddFont("Roboto-Regular.ttf", "Roboto");
             });
         builder.Services.AddBookServices(new Uri("https://www.googleapis.com/books/v1/"));
-        builder.Services.AddGutenbergServices(new Uri("https://www.gutenberg.org/"));
+        builder.Services.AddGutenbergServices(new Uri("https://gutendex.com/"));
         return builder.Build();
     }
 }

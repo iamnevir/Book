@@ -26,6 +26,28 @@
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Release|net7.0-android|AnyCPU'">
     <AndroidPackageFormat>apk</AndroidPackageFormat>
+    <NoWarn>1701;1702;8632</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Debug|net7.0-android|AnyCPU'">
+    <NoWarn>1701;1702;8632</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Debug|net7.0-ios|AnyCPU'">
+    <NoWarn>1701;1702;8632</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Debug|net7.0-maccatalyst|AnyCPU'">
+    <NoWarn>1701;1702;8632</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Debug|net7.0-windows10.0.19041.0|AnyCPU'">
+    <NoWarn>1701;1702;8632</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Release|net7.0-ios|AnyCPU'">
+    <NoWarn>1701;1702;8632</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Release|net7.0-maccatalyst|AnyCPU'">
+    <NoWarn>1701;1702;8632</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Release|net7.0-windows10.0.19041.0|AnyCPU'">
+    <NoWarn>1701;1702;8632</NoWarn>
   </PropertyGroup>
   <ItemGroup>
     <!-- App Icon -->
@@ -42,39 +64,66 @@
   <ItemGroup>
     <None Remove="Resources\Fonts\Poppins-Regular.ttf" />
     <None Remove="Resources\Fonts\Roboto-Regular.ttf" />
+    <None Remove="Resources\Images\EbookDetail\back.png" />
+    <None Remove="Resources\Images\EbookDetail\favori.png" />
+    <None Remove="Resources\Images\Ebook\authors.png" />
+    <None Remove="Resources\Images\Ebook\backgroundbai.jpg" />
+    <None Remove="Resources\Images\Ebook\bai1.jpg" />
+    <None Remove="Resources\Images\Ebook\bai2.jpg" />
+    <None Remove="Resources\Images\Ebook\bai3.jpg" />
+    <None Remove="Resources\Images\Ebook\bai4.jpg" />
+    <None Remove="Resources\Images\Ebook\bai5.jpg" />
+    <None Remove="Resources\Images\Ebook\bai6.jpg" />
+    <None Remove="Resources\Images\Ebook\bai7.jpg" />
+    <None Remove="Resources\Images\Ebook\bai8.jpg" />
+    <None Remove="Resources\Images\Ebook\bai9.jpg" />
+    <None Remove="Resources\Images\Ebook\Itagaki.jpg" />
+    <None Remove="Resources\Images\Ebook\lungbai.jpg" />
+    <None Remove="Resources\Images\Ebook\miura.png" />
+    <None Remove="Resources\Images\Ebook\scott.jpg" />
+    <None Remove="Resources\Images\Ebook\stephenking.jpg" />
     <None Remove="Resources\Images\kmo.png" />
     <None Remove="Resources\Images\mo.png" />
-    <None Remove="Resources\Images\NavBar\inha.png" />
-    <None Remove="Resources\Images\NavBar\isach.png" />
-    <None Remove="Resources\Images\NavBar\nha.png" />
-    <None Remove="Resources\Images\NavBar\sach.png" />
     <None Remove="Resources\Images\SideMenu\book_img.png" />
     <None Remove="Resources\Images\SideMenu\ebook_img.png" />
     <None Remove="Resources\Images\SideMenu\favorites_img.png" />
     <None Remove="Resources\Images\SideMenu\help_img.png" />
+    <None Remove="Resources\Images\SideMenu\homeback.png" />
     <None Remove="Resources\Images\SideMenu\user_dark.svg" />
     <None Remove="Resources\Images\trove.png" />
     <None Remove="Resources\Raw\back.json" />
     <None Remove="Resources\Raw\bookanimation.json" />
     <None Remove="Resources\Raw\close.json" />
+    <None Remove="Resources\Raw\loading.json" />
     <None Remove="Resources\Raw\search.json" />
     <None Remove="Resources\Raw\tb.json" />
     <None Remove="Resources\Raw\yeuthich.json" />
   </ItemGroup>
 
   <ItemGroup>
-    <MauiImage Include="Resources\Images\NavBar\sach.png" />
-    <MauiImage Include="Resources\Images\NavBar\favorite.png" />
-    <MauiImage Include="Resources\Images\NavBar\nha.png" />
-    <MauiImage Include="Resources\Images\NavBar\isach.png" />
-    <MauiImage Include="Resources\Images\NavBar\ifavorite.png" />
-    <MauiImage Include="Resources\Images\NavBar\inha.png" />
-    <MauiImage Include="Resources\Images\NavBar\iuser.png" />
-    <MauiImage Include="Resources\Images\NavBar\user.png" />
     <EmbeddedResource Include="Resources\Images\SideMenu\book_img.png" />
     <EmbeddedResource Include="Resources\Images\SideMenu\ebook_img.png" />
     <EmbeddedResource Include="Resources\Images\SideMenu\favorites_img.png" />
     <EmbeddedResource Include="Resources\Images\SideMenu\help_img.png" />
+    <EmbeddedResource Include="Resources\Images\SideMenu\homeback.png" />
+    <MauiImage Include="Resources\Images\EbookDetail\back.png" />
+    <MauiImage Include="Resources\Images\EbookDetail\favori.png" />
+    <MauiImage Include="Resources\Images\Ebook\authors.png" />
+    <MauiImage Include="Resources\Images\Ebook\backgroundbai.jpg" />
+    <MauiImage Include="Resources\Images\Ebook\bai1.jpg" />
+    <MauiImage Include="Resources\Images\Ebook\bai2.jpg" />
+    <MauiImage Include="Resources\Images\Ebook\bai3.jpg" />
+    <MauiImage Include="Resources\Images\Ebook\bai4.jpg" />
+    <MauiImage Include="Resources\Images\Ebook\bai5.jpg" />
+    <MauiImage Include="Resources\Images\Ebook\bai6.jpg" />
+    <MauiImage Include="Resources\Images\Ebook\bai7.jpg" />
+    <MauiImage Include="Resources\Images\Ebook\bai8.jpg" />
+    <MauiImage Include="Resources\Images\Ebook\bai9.jpg" />
+    <MauiImage Include="Resources\Images\Ebook\itagaki.jpg" />
+    <MauiImage Include="Resources\Images\Ebook\lungbai.jpg" />
+    <MauiImage Include="Resources\Images\Ebook\miura.png" />
+    <MauiImage Include="Resources\Images\Ebook\scott.jpg" />
+    <MauiImage Include="Resources\Images\Ebook\stephenking.jpg" />
     <MauiImage Include="Resources\Images\SideMenu\user_dark.svg" />
     <MauiImage Include="Resources\Images\StartPage\sp1.jpg" />
     <MauiImage Include="Resources\Images\StartPage\sp2.jpg" />

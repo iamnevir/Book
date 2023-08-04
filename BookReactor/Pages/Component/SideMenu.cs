@@ -17,7 +17,7 @@ class SideMenuState
 
     public double TranslationX { get; set; } = -250;
 
-    public CommandMenuItem SelectedMenuItem { get; set; }
+    public CommandMenuItem SelectedMenuItem { get; set; } 
 }
 
 class SideMenu : Component<SideMenuState>
@@ -25,10 +25,28 @@ class SideMenu : Component<SideMenuState>
     private bool _isShown;
     private Action _onClose;
     private Action _openBookPage;
+    private Action _openeBookPage;
+    private Action _homePage;
+    private CommandMenuItem _menuSelect;
 
+    public SideMenu MenuSelect(CommandMenuItem com)
+    {
+        _menuSelect = com;
+        return this;
+    }
+    public SideMenu HomePage(Action action)
+    {
+        _homePage = action;
+        return this;
+    }
     public SideMenu OnBookPage(Action action)
     {
         _openBookPage = action;
+        return this;
+    }
+    public SideMenu OneBookPage(Action action)
+    {
+        _openeBookPage = action;
         return this;
     }
     public SideMenu OnClose(Action action)
@@ -47,7 +65,7 @@ class SideMenu : Component<SideMenuState>
         State.TranslationX = _isShown ? 0 : -250;
         State.Opacity = _isShown ? 1.0 : 0.0;
         State.RotationY = _isShown ? 0.0 : 10;
-
+        SetState(s => s.SelectedMenuItem = _menuSelect);
         base.OnMounted();
     }
 
@@ -56,7 +74,7 @@ class SideMenu : Component<SideMenuState>
         State.TranslationX = _isShown ? 0 : -250;
         State.Opacity = _isShown ? 1.0 : 0.0;
         State.RotationY = _isShown ? 0.0 : 10;
-
+        SetState(s => s.SelectedMenuItem = _menuSelect);
         base.OnPropsChanged();
     }
 
@@ -136,7 +154,7 @@ class SideMenu : Component<SideMenuState>
 
     VisualNode RenderBrowse()
     {
-        return new Grid("16, 120,16,120,20", "*")
+        return new Grid("16, 180,16,120,20", "*")
         {
             new Label("BROWSE")
                 .FontSize(12)
@@ -147,6 +165,7 @@ class SideMenu : Component<SideMenuState>
 
             new VStack(spacing: 0)
             {
+                RenderMenuItem("Home", "homeback.png", CommandMenuItem.Home,_homePage),
                 RenderMenuItem("Favorites", "favorites_img.png", CommandMenuItem.Favorites),
                 RenderMenuItem("Help", "help_img.png", CommandMenuItem.Help),
             }
@@ -162,7 +181,7 @@ class SideMenu : Component<SideMenuState>
             new VStack(spacing: 0)
             {
                 RenderMenuItem("Books Market", "book_img.png", CommandMenuItem.Book,_openBookPage),
-                RenderMenuItem("eBook", "ebook_img.png", CommandMenuItem.EBook),
+                RenderMenuItem("eBook", "ebook_img.png", CommandMenuItem.EBook,_openeBookPage),
             }.GridRow(3)
             .Margin(20,8,0,0)
             ,
@@ -393,6 +412,7 @@ class AnimatedIcon : Component<AnimatedIconState>
 enum CommandMenuItem
 {
     None,
+    Home,
 
     Favorites,
 

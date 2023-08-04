@@ -1,10 +1,13 @@
 ﻿
 using BookReactor.Pages.Component;
+using Maui.Skeleton.Animations;
+using Maui.Skeleton;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Maui.Devices;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using MauiReactor;
 
 namespace BookReactor.Pages;
 
@@ -26,9 +29,13 @@ class MainPageState
 {
     public bool IsSideMenuShown { get; set; }
     public Item SelectedBook { get; set; }
+    public CommandMenuItem SelectedMenu { get; set; } = CommandMenuItem.Home;
 }
-
-class MainPage : Component<MainPageState>
+class MainPageProps
+{
+    public bool IsStartPage { get; set; }=true;
+}
+class MainPage : Component<MainPageState, MainPageProps>
 {
     private async void OpenDetailBook(Item book)
     {
@@ -40,6 +47,10 @@ class MainPage : Component<MainPageState>
     private async void OpenMarket()
     {
         await Navigation.PushAsync<BookPage>();
+    }
+    private async void OpenEBookPage()
+    {
+        await Navigation.PushAsync<EBookPage>();
     }
     private async void OpenReadPage()
     {
@@ -53,7 +64,9 @@ class MainPage : Component<MainPageState>
               {
                   new Grid("*","*")
                   {
-                      new StartPage(),
+                      new StartPage()
+                      .Visible(Props.IsStartPage)
+                      ,
                       new HomePage()
                       .IsHidden(State.IsSideMenuShown)
                       .OpenBookDetail(OpenDetailBook)
@@ -62,14 +75,18 @@ class MainPage : Component<MainPageState>
                       .OpenSideMenu(()=>SetState(s=>s.IsSideMenuShown=true))
                       ,
                       new SideMenu()
+                      .MenuSelect(State.SelectedMenu)
                       .IsShown(State.IsSideMenuShown)
                       .OnBookPage(OpenMarket)
+                      .OneBookPage(OpenEBookPage)
                       .OnClose(()=>SetState(s=>s.IsSideMenuShown=false))
-                  }.BackgroundColor(Colors.Black)
+                  }.BackgroundColor(Colors.Transparent)
               }.Set(MauiControls.NavigationPage.HasNavigationBarProperty,false)
         };
 
     }
+
+    
 }
 
 
@@ -127,18 +144,13 @@ class HomePage : Component<HomePageState>
     {
         var googleBook = Services.GetRequiredService<IGoogleServices>();
         State.IsLoading = true;
-        var search = "";
-        foreach(var s in State.CategorySelected)
-        {
-            search += $"+subject:{s}";
-        }
-        var books = await googleBook.GetBook(State.CategorySelected.Any()?$"{search}":"inauthor:Stephen+inauthor:King", "10");
-        var books1 = await googleBook.GetBook("subject:Fiction", "10");
-        var headerbook = await googleBook.GetBookById("Di-gEAAAQBAJ");
+        var books = await googleBook.GetBook("Dark Nights: Metal");
+        var books1 = await googleBook.GetBook("Dark Nights: Death Metal");
+        var headerbook = await googleBook.GetBookById("ubVYEAAAQBAJ");
         SetState(s =>
         {
             s.HeaderBook = headerbook.volumeInfo;
-            s.HeaderBookSoure = headerbook.volumeInfo.imageLinks.extraLarge.Replace("&edge=curl&source=gbs_api", "").Replace("http", "https");
+            s.HeaderBookSoure = headerbook.volumeInfo.imageLinks.extraLarge.Replace("http", "https");
             s.HeaderBookAuthor = headerbook.volumeInfo.authors.First();
             s.Books = books.items;
             s.Books1 = books1.items;
@@ -149,20 +161,34 @@ class HomePage : Component<HomePageState>
     }
     protected override async void OnPropsChanged()
     {
-        InitializeState();
         var googleBook = Services.GetRequiredService<IGoogleServices>();
-        State.IsLoading = true;
-        var search = "";
-        foreach (var s in State.CategorySelected)
+        InitializeState();
+        if (State.CategorySelected.Any())
         {
-            search += $"+subject:{s}";
+           
+            State.IsLoading = true;
+            var search = "";
+            foreach (var s in State.CategorySelected)
+            {
+                search += $"+subject:{s}";
+            }
+            var books = await googleBook.GetBook($"{search}");
+            SetState(s =>
+            {
+                s.Books = books.items;
+                s.IsLoading = false;
+            });
         }
-        var books = await googleBook.GetBook(State.CategorySelected.Any() ? $"{search}" : "inauthor:Stephen+inauthor:King", "10");
-        SetState(s =>
+        else
         {
-            s.Books = books.items;
-            s.IsLoading = false;
-        });
+            State.IsLoading = true;
+            var books = await googleBook.GetBook("Dark Nights: Death Metal");
+            SetState(s =>
+            {
+                s.Books = books.items;
+                s.IsLoading = false;
+            });
+        }
         base.OnPropsChanged();
     }
     void InitializeState()
@@ -183,22 +209,40 @@ class HomePage : Component<HomePageState>
     {
         return new ScrollView
         {
-             new Grid("50,400,Auto,340,*", "*")
+             new Grid("60,400,Auto,340,*", "*")
             {
                 RenderHeader(),
                 RenderMain(),
-                new Label("Category ⇵")
-                .TextColor(Colors.White)
-                .FontAttributes(Microsoft.Maui.Controls.FontAttributes.Bold)
-                .FontSize(20)
-                .FontFamily(Theme.font)
-                .HEnd()
-                .GridRow(2)
-                .Margin(0,10,40,-30)
-                .BackgroundColor(Colors.Transparent)
-                .OnTapped(()=>SetState(s=>s.IsCategoryVisible=!s.IsCategoryVisible)),
+                new HStack
+                {
+                    new Label("Category")
+                    .TextColor(Colors.White)
+                    .FontAttributes(Microsoft.Maui.Controls.FontAttributes.Bold)
+                    .FontSize(20)
+                    .FontFamily(Theme.font)
+                    .BackgroundColor(Colors.Transparent)
+                    .OnTapped(()=>SetState(s=>s.IsCategoryVisible=!s.IsCategoryVisible)),
+                    new Border
+                                {
+                                    new Image(State.IsCategoryVisible?"mo":"kmo")
+                                    .HCenter().VCenter()
+                                    .Aspect(Aspect.AspectFit)
+                                    .HeightRequest(20)
+                                    .WidthRequest(20)
+                                    .ScaleX(0.8)
+                                }
+                                .OnTapped(()=>SetState(s=>s.IsCategoryVisible=!s.IsCategoryVisible))
+                                .BackgroundColor(Colors.Transparent)
+                                .Margin(0,0,0,1)
+                }.GridRow(2)
+                .Margin(0,0,20,-30)
+                .HEnd(),
+               //new CollectionView()
+               //.ItemsSource(Category.All,RenderCategoryItem)
+               //.ItemsLayout(new VerticalGridItemsLayout(3))
+               //.GridRow(3),
                RenderCategory(),
-                   new Grid("Auto,Auto,,Auto,*","*")
+                   new Grid("Auto,Auto,Auto,*","*")
                    {
                        new Label(State.CategorySelected.Any()?"Search Book":"Horror Book")
                         .TextColor(Colors.White)
@@ -240,7 +284,7 @@ class HomePage : Component<HomePageState>
     private VisualNode RenderBookList1(Item item)
     {
         var authors = item.volumeInfo.authors.FirstOrDefault();
-        var source = /*item.volumeInfo.imageLinks.thumbnail!=null ?*/ item.volumeInfo.imageLinks.thumbnail.Replace("&edge=curl&source=gbs_api", "").Replace("http", "https")/*:""*/;
+        var source =  item.volumeInfo.imageLinks.thumbnail.Replace("http", "https");
         return new Border
         {
             new Grid("*","100,*")
@@ -295,7 +339,7 @@ class HomePage : Component<HomePageState>
         else
         {
             var authors = item.volumeInfo.authors.FirstOrDefault();
-            var source = item.volumeInfo.imageLinks.thumbnail.Replace("&edge=curl&source=gbs_api", "").Replace("http", "https");
+            var source = item.volumeInfo.imageLinks.thumbnail.Replace("http", "https");
             return new Border
             {
                 new VStack
@@ -314,6 +358,10 @@ class HomePage : Component<HomePageState>
                             .FontFamily(Theme.font),
                 }.Spacing(10)
             }
+            .Set(Skeleton.IsBusyProperty, State.IsLoading)
+                    .Set(Skeleton.BackgroundColorProperty, Theme.Bg)
+                    .Set(Skeleton.AnimationProperty, new VerticalShakeAnimation(500, null))
+                    .Set(Skeleton.IsParentProperty, true)
            .WidthRequest(115)
            .BackgroundColor(Colors.Transparent)
            .OnTapped(() =>
@@ -329,7 +377,7 @@ class HomePage : Component<HomePageState>
     {
         return new Border
         {
-            new VStack
+            new Grid("Auto,Auto,Auto","*")
             {
                 new HStack
                 {
@@ -343,11 +391,11 @@ class HomePage : Component<HomePageState>
                     .HeightRequest(80)
                     .Stroke(State.CategorySelected.Where(c=>c==CategorySelect.Philosophy).FirstOrDefault()==CategorySelect.Philosophy?Colors.White:Colors.Transparent)
                     .StrokeThickness(0.5)
-                    .WidthRequest(180)
+                    .WidthRequest(160)
                     .StrokeShape(new RoundRectangle().CornerRadius(80))
                     .OnTapped(() =>
                     {
-                       
+
                         SetState(s=>
                         {
                                 if (s.CategorySelected.Where(c=>c==CategorySelect.Philosophy).FirstOrDefault() ==CategorySelect.Philosophy) { s.CategorySelected.Remove(CategorySelect.Philosophy); }
@@ -397,7 +445,7 @@ class HomePage : Component<HomePageState>
                         });
                         OnPropsChanged();
                     })
-                },
+                }.GridRow(0),
                 new HStack
                 {
                     new Border
@@ -429,7 +477,7 @@ class HomePage : Component<HomePageState>
                         .TextColor(State.CategorySelected.Where(c=>c==CategorySelect.Family).FirstOrDefault()==CategorySelect.Family? Colors.Black:Colors.White)
                     }.BackgroundColor(State.CategorySelected.Where(c=>c==CategorySelect.Family).FirstOrDefault()==CategorySelect.Family? Colors.White:Theme.BlackBorder)
                     .HeightRequest(80)
-                    .WidthRequest(180)
+                    .WidthRequest(160)
                     .Stroke(State.CategorySelected.Where(c => c == CategorySelect.Family).FirstOrDefault() == CategorySelect.Family?Colors.White:Colors.Transparent)
                     .StrokeThickness(0.5)
                     .StrokeShape(new RoundRectangle().CornerRadius(80))
@@ -463,7 +511,7 @@ class HomePage : Component<HomePageState>
                         });
                         OnPropsChanged();
                     })
-                },
+                }.GridRow(1),
                 new HStack
                 {
                    new Border
@@ -518,7 +566,7 @@ class HomePage : Component<HomePageState>
                     .Stroke(State.CategorySelected.Where(c => c == CategorySelect.Comedy).FirstOrDefault() == CategorySelect.Comedy?Colors.White:Colors.Transparent)
                     .StrokeThickness(0.5)
                     .HeightRequest(80)
-                    .WidthRequest(180)
+                    .WidthRequest(160)
                     .StrokeShape(new RoundRectangle().CornerRadius(80))
                     .OnTapped(() =>
                     {
@@ -529,8 +577,8 @@ class HomePage : Component<HomePageState>
                         });
                         OnPropsChanged();
                     })
-                }
-            },
+                }.GridRow(2)
+            }.HCenter().VCenter(),
             //new Grid
             //{
             //    new CollectionView().ItemsSource(Category.All,RenderCategoryItem)
@@ -546,19 +594,20 @@ class HomePage : Component<HomePageState>
         ;
     }
 
-    //private VisualNode RenderCategoryItem(Category item) => 
+    //private VisualNode RenderCategoryItem(Category item) =>
     //    new Border
     //                {
-    //                    new Label(item.Name)
+    //                new Label(item.Name)
+    //                    .MaxLines(1)
     //                    .HCenter().VCenter()
     //                    .FontFamily(Theme.font)
     //                    .TextColor(Colors.White)
+    //                    .HorizontalTextAlignment(TextAlignment.Center)
+    //                    .Margin(20,10,20,10)
     //                }.BackgroundColor(Colors.Black)
-    //                .HeightRequest(item.Heigh)
     //                .Stroke(Colors.White)
     //                .StrokeThickness(0.5)
-    //                .WidthRequest(item.Width)
-    //                .StrokeShape(new RoundRectangle().CornerRadius(item.Radius));
+    //                .StrokeShape(new RoundRectangle().CornerRadius(80));
 
     private VisualNode RenderMain()
     {
@@ -639,7 +688,7 @@ class HomePage : Component<HomePageState>
                 {
                     File="bookanimation.json"
                 })
-                .RepeatCount(-1)
+                .RepeatCount(-1)               
                 .IsAnimationEnabled(true)
                 .IsEnabled(true)
                 .IsVisible(true)
@@ -709,6 +758,17 @@ class StartPageState
 }
 class StartPage : Component<StartPageState>
 {
+    bool _isVisible;
+    public StartPage Visible(bool isVisible)
+    {
+        _isVisible= isVisible;
+        return this;
+    }
+    protected override void OnMounted()
+    {
+        SetState(s=>s.StartPageVisible= _isVisible);
+        base.OnMounted();
+    }
     public override VisualNode Render()
     {
         var currentImage = StartPageImage.StartPageImages[State.ImageIndex];
@@ -740,7 +800,7 @@ class StartPage : Component<StartPageState>
                                 .Duration(300)
                         }
                     }
-                      .IsEnabled(State.ScrollTo != ScrollToMode.None)
+                     .IsEnabled(State.ScrollTo != ScrollToMode.None)
                     .OnIsEnabledChanged(enabled =>
                     {
                         SetState(s =>
@@ -791,21 +851,21 @@ class StartPage : Component<StartPageState>
                   .BackgroundColor(Colors.Transparent)
                   .VEnd().HCenter()
                   .Margin(0,0,0,100),
-                new Border
+              new Border
                 {
                     new VStack
                     {
                           new Label("Immerse in the story")
                          .FontSize(27)
                          .MaxLines(1)
-                         .FontFamily("EmilysCandy")
+                         .FontFamily(Theme.font)
                          .VCenter().HCenter()
                          .FontAttributes(Microsoft.Maui.Controls.FontAttributes.Bold)
                          .TextColor(Colors.White),
                         new Label("The books contain stories that have never been told, mysteries that lie deep in the dark waiting to be answered")
                          .FontSize(13)
                          .MaxLines(3)
-                         .FontFamily("EmilysCandy")
+                         .FontFamily(Theme.font)
                          .VCenter().HCenter()
                          .HorizontalTextAlignment(TextAlignment.Center)
                          .FontAttributes(Microsoft.Maui.Controls.FontAttributes.Bold)
@@ -818,7 +878,7 @@ class StartPage : Component<StartPageState>
                   .Margin(0,0,0,130),
                 new Button("Skip")
                      .FontSize(18)
-                     .FontFamily("EmilysCandy")
+                     .FontFamily(Theme.font)
                      .TextColor(Colors.Black)
                      .VEnd().HCenter()
                      .BackgroundColor(Colors.White)
@@ -827,9 +887,40 @@ class StartPage : Component<StartPageState>
                      .CornerRadius(30)
                      .Margin(0,0,0,50)
                      .OnClicked(()=>SetState(s=>s.StartPageVisible=false))
-        }.IsVisible(State.StartPageVisible).ZIndex(1)
+        }.IsVisible(State.StartPageVisible).ZIndex(1).Margin(0, 0, 0, -2)
           ;
     }
+    //private VisualNode RenderStartItem(Start start)
+    //{
+    //    return new Grid
+    //    {
+    //        new Image(start.Source).Aspect(Aspect.Fill),
+    //                     new Border
+    //                    {
+    //                        new VStack
+    //                        {
+    //                              new Label(start.Title)
+    //                             .FontSize(27)
+    //                             .MaxLines(1)
+    //                             .FontFamily("EmilysCandy")
+    //                             .VCenter().HCenter()
+    //                             .FontAttributes(Microsoft.Maui.Controls.FontAttributes.Bold)
+    //                             .TextColor(Colors.White),
+    //                            new Label(start.Description)
+    //                             .FontSize(13)
+    //                             .MaxLines(3)
+    //                             .FontFamily("EmilysCandy")
+    //                             .VCenter().HCenter()
+    //                             .HorizontalTextAlignment(TextAlignment.Center)
+    //                             .FontAttributes(Microsoft.Maui.Controls.FontAttributes.Bold)
+    //                             .TextColor(Colors.Gray)
+    //                        }
+    //                    }.HeightRequest(120)
+    //                      .BackgroundColor(Colors.Transparent)
+    //                      .VEnd().HCenter()
+    //                      .Margin(50,0,50,130),
+    //    };
+    //}
     void OnPan(object? sender, MauiControls.PanUpdatedEventArgs args)
     {
         if (State.ImageSize.IsZero)
@@ -886,6 +977,7 @@ class StartPage : Component<StartPageState>
         }
     }
 }
+
 enum ScrollToMode
 {
     None,

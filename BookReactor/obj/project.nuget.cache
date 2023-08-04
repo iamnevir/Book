@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "q/1/nOQUO0OmRjKlfrt/9T5ep/6J1dI/IcEMiMh15dLxm7Ia4p/BiTT+YfcWJO30EQA/NM/wFljpv2e4YU9gBw==",
+  "dgSpecHash": "4WKM2SG1YubNPdg/jLWfurAHM4X+AcmEBswzwAWxpRJEWT42VsRcj9AcbiNjRVJhrtrBkq8tzaM4LxX/uj2Tzg==",
   "success": true,
   "projectFilePath": "C:\\Users\\trick\\source\\repos\\Book\\BookReactor\\BookReactor.csproj",
   "expectedPackageFiles": [
@@ -125,6 +125,7 @@
     "C:\\Users\\trick\\.nuget\\packages\\xamarin.kotlin.stdlib.jdk8\\1.7.20.1\\xamarin.kotlin.stdlib.jdk8.1.7.20.1.nupkg.sha512",
     "C:\\Users\\trick\\.nuget\\packages\\xamarin.kotlinx.coroutines.android\\1.6.4.1\\xamarin.kotlinx.coroutines.android.1.6.4.1.nupkg.sha512",
     "C:\\Users\\trick\\.nuget\\packages\\xamarin.kotlinx.coroutines.core.jvm\\1.6.4.1\\xamarin.kotlinx.coroutines.core.jvm.1.6.4.1.nupkg.sha512",
+    "C:\\Users\\trick\\.nuget\\packages\\microsoft.netcore.app.crossgen2.win-x64\\7.0.9\\microsoft.netcore.app.crossgen2.win-x64.7.0.9.nupkg.sha512",
     "C:\\Users\\trick\\.nuget\\packages\\microsoft.windows.sdk.net.ref\\10.0.19041.29\\microsoft.windows.sdk.net.ref.10.0.19041.29.nupkg.sha512",
     "C:\\Users\\trick\\.nuget\\packages\\microsoft.aspnetcore.app.runtime.win-x64\\7.0.9\\microsoft.aspnetcore.app.runtime.win-x64.7.0.9.nupkg.sha512",
     "C:\\Users\\trick\\.nuget\\packages\\microsoft.windowsdesktop.app.runtime.win-x64\\7.0.9\\microsoft.windowsdesktop.app.runtime.win-x64.7.0.9.nupkg.sha512",

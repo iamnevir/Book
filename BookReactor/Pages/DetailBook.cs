@@ -25,7 +25,7 @@ class DetailBook:Component<DetailBookState, DetailBookProps>
     public override VisualNode Render()
     {
         var authors = Props.Book.volumeInfo.authors.FirstOrDefault();
-        var source = Props.Book.volumeInfo.imageLinks.thumbnail.Replace("&edge=curl&source=gbs_api", "").Replace("http", "https");
+        var source = Props.Book.volumeInfo.imageLinks.thumbnail.Replace("http", "https");
         var preView = $"https://www.google.com.vn/books/edition/The_White_Company/{Props.Book.id}?hl=vi&gbpv=1";
         return new ContentPage
         {
@@ -35,7 +35,7 @@ class DetailBook:Component<DetailBookState, DetailBookProps>
                 {
                     new Border
                     {
-                        new Label("Read Book")
+                        new Label("Book Preview")
                         .TextColor(Colors.White)
                             .FontSize(17)
                             .FontFamily(Theme.font)
@@ -49,7 +49,7 @@ class DetailBook:Component<DetailBookState, DetailBookProps>
                     .OnTapped(()=>SetState(s=>s.IsRead=true)),
                     new Border
                     {
-                        new Label("Play Book")
+                        new Label("Buy Book")
                         .TextColor(Colors.Black)
                             .FontSize(17)
                             .FontFamily(Theme.font)

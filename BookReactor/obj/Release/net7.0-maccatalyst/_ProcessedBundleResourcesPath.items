@@ -1,4 +1,33 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
-  <ItemGroup />
+  <ItemGroup>
+    <BundleResource Include="C:\Users\trick\source\repos\Book\BookReactor\obj\Release\net7.0-maccatalyst\resizetizer\r\Resources\authors.png" />
+    <BundleResource Include="C:\Users\trick\source\repos\Book\BookReactor\obj\Release\net7.0-maccatalyst\resizetizer\r\Resources\back.png" />
+    <BundleResource Include="C:\Users\trick\source\repos\Book\BookReactor\obj\Release\net7.0-maccatalyst\resizetizer\r\Resources\backgroundbai.jpg" />
+    <BundleResource Include="C:\Users\trick\source\repos\Book\BookReactor\obj\Release\net7.0-maccatalyst\resizetizer\r\Resources\bai1.jpg" />
+    <BundleResource Include="C:\Users\trick\source\repos\Book\BookReactor\obj\Release\net7.0-maccatalyst\resizetizer\r\Resources\bai2.jpg" />
+    <BundleResource Include="C:\Users\trick\source\repos\Book\BookReactor\obj\Release\net7.0-maccatalyst\resizetizer\r\Resources\bai3.jpg" />
+    <BundleResource Include="C:\Users\trick\source\repos\Book\BookReactor\obj\Release\net7.0-maccatalyst\resizetizer\r\Resources\bai4.jpg" />
+    <BundleResource Include="C:\Users\trick\source\repos\Book\BookReactor\obj\Release\net7.0-maccatalyst\resizetizer\r\Resources\bai5.jpg" />
+    <BundleResource Include="C:\Users\trick\source\repos\Book\BookReactor\obj\Release\net7.0-maccatalyst\resizetizer\r\Resources\bai6.jpg" />
+    <BundleResource Include="C:\Users\trick\source\repos\Book\BookReactor\obj\Release\net7.0-maccatalyst\resizetizer\r\Resources\bai7.jpg" />
+    <BundleResource Include="C:\Users\trick\source\repos\Book\BookReactor\obj\Release\net7.0-maccatalyst\resizetizer\r\Resources\bai8.jpg" />
+    <BundleResource Include="C:\Users\trick\source\repos\Book\BookReactor\obj\Release\net7.0-maccatalyst\resizetizer\r\Resources\bai9.jpg" />
+    <BundleResource Include="C:\Users\trick\source\repos\Book\BookReactor\obj\Release\net7.0-maccatalyst\resizetizer\r\Resources\favori.png" />
+    <BundleResource Include="C:\Users\trick\source\repos\Book\BookReactor\obj\Release\net7.0-maccatalyst\resizetizer\r\Resources\favorite.png" />
+    <BundleResource Include="C:\Users\trick\source\repos\Book\BookReactor\obj\Release\net7.0-maccatalyst\resizetizer\r\Resources\itagaki.jpg" />
+    <BundleResource Include="C:\Users\trick\source\repos\Book\BookReactor\obj\Release\net7.0-maccatalyst\resizetizer\r\Resources\kmo.png" />
+    <BundleResource Include="C:\Users\trick\source\repos\Book\BookReactor\obj\Release\net7.0-maccatalyst\resizetizer\r\Resources\lungbai.jpg" />
+    <BundleResource Include="C:\Users\trick\source\repos\Book\BookReactor\obj\Release\net7.0-maccatalyst\resizetizer\r\Resources\miura.png" />
+    <BundleResource Include="C:\Users\trick\source\repos\Book\BookReactor\obj\Release\net7.0-maccatalyst\resizetizer\r\Resources\mo.png" />
+    <BundleResource Include="C:\Users\trick\source\repos\Book\BookReactor\obj\Release\net7.0-maccatalyst\resizetizer\r\Resources\scott.jpg" />
+    <BundleResource Include="C:\Users\trick\source\repos\Book\BookReactor\obj\Release\net7.0-maccatalyst\resizetizer\r\Resources\sp1.jpg" />
+    <BundleResource Include="C:\Users\trick\source\repos\Book\BookReactor\obj\Release\net7.0-maccatalyst\resizetizer\r\Resources\sp2.jpg" />
+    <BundleResource Include="C:\Users\trick\source\repos\Book\BookReactor\obj\Release\net7.0-maccatalyst\resizetizer\r\Resources\sp3.jpg" />
+    <BundleResource Include="C:\Users\trick\source\repos\Book\BookReactor\obj\Release\net7.0-maccatalyst\resizetizer\r\Resources\stephenking.jpg" />
+    <BundleResource Include="C:\Users\trick\source\repos\Book\BookReactor\obj\Release\net7.0-maccatalyst\resizetizer\r\Resources\trove.png" />
+    <BundleResource Include="C:\Users\trick\source\repos\Book\BookReactor\obj\Release\net7.0-maccatalyst\resizetizer\r\user_dark.png" />
+    <BundleResource Include="C:\Users\trick\source\repos\Book\BookReactor\obj\Release\net7.0-maccatalyst\resizetizer\r\user_dark@2x.png" />
+    <BundleResource Include="C:\Users\trick\source\repos\Book\BookReactor\obj\Release\net7.0-maccatalyst\resizetizer\r\user_dark@3x.png" />
+  </ItemGroup>
 </Project>

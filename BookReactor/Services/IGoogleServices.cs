@@ -9,8 +9,7 @@ namespace BookReactor.Services;
 
 public interface IGoogleServices
 {
-    Task<Book> GetBookDetailAsync(string id);
-    Task<Book> GetBook(string filter, string resultcount);
+    Task<Book> GetBook(string filter);
     Task<Item> GetBookById(string id);
 }
 public static class ServiceCollectionExtensions
@@ -29,6 +28,15 @@ public static class ServiceCollectionExtensions
         services.AddSingleton<IGutenbergApiService, GutenbergApiService>();
 
         services.AddHttpClient("GutenbergApi", httpClient =>
+        {
+            httpClient.BaseAddress = serverUri;
+        });
+    }
+    public static void AddGetTextServices(this IServiceCollection services, Uri serverUri)
+    {
+        services.AddSingleton<IGetTextServices, GetTextServices>();
+
+        services.AddHttpClient("GetTextApi", httpClient =>
         {
             httpClient.BaseAddress = serverUri;
         });

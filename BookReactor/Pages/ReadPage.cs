@@ -36,9 +36,9 @@ class ReadPage:Component<ReadPageState>
     }
     protected override async void OnMounted()
     {
-        var gutenberg = Services.GetRequiredService<IGutenbergApiService>();
+        var gutenberg = Services.GetRequiredService<IGetTextServices>();
         State.IsLoading = true;
-        var text = await gutenberg.GetTextAsync("files/1513/1513-0.txt");
+        var text = await gutenberg.GetTextAsync("https://www.gutenberg.org/files/1513/1513-0.txt");
         SetState(s =>
         {
             s.Text = text;

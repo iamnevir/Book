@@ -11,5 +11,5 @@ namespace BookReactor.Services;
 public interface IGutenbergApiService
 {
     Task<GutenbergBook> GetBookDetailAsync(string id);
-    Task<string> GetTextAsync(string link);
+
 }

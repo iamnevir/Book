@@ -1,6 +1,11 @@
 ﻿
+using BookReactor.Pages.Component;
 using Maui.Skeleton;
+using Maui.Skeleton.Animations;
+using MauiReactor;
 using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Maui.Devices;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 
@@ -12,12 +17,28 @@ class BookPageState
     public bool IsLoading { get; set; }
     public Item SelectedBook { get;  set; }
     public string TextSearch { get; set; }
+    public Category CategorySelected { get; set; }
+    public bool IsSideMenuShown { get; set; }
+    public double TranslationX { get; set; } = 220;
+
+    public double RotationY { get; set; } = -12;
+    public double MarginLeft { get; set; } = -30.0;
+
 }
-class BookPage:Component<BookPageState>
+public class BookPageProps
+{
+    public int InitialValue { get; set; }
+
+    public Action<bool> OnValueSet { get; set; }
+}
+class BookPage:Component<BookPageState, BookPageProps>
 {
     private async void Back()
     {
-        await Navigation.PopAsync();
+        await Navigation.PushAsync<MainPage,MainPageProps>(_ =>
+        {
+            _.IsStartPage = false;
+        });
     }
     private async void OpenDetailBook(Item book)
     {
@@ -26,11 +47,16 @@ class BookPage:Component<BookPageState>
             _.Book = book;
         });
     }
+    private async void OpenEBookPage()
+    {
+        await Navigation.PushAsync<EBookPage>();
+    }
     protected override async void OnMounted()
     {
+        InitializeState();
         var googleBook = Services.GetRequiredService<IGoogleServices>();
         State.IsLoading = true;
-        var books = await googleBook.GetBook("viet&filter=ebooks", "10");
+        var books = await googleBook.GetBook("the dark knight");
         SetState(s =>
         {
             s.Books = books.items;
@@ -40,9 +66,10 @@ class BookPage:Component<BookPageState>
     }
     protected override async void OnPropsChanged()
     {
+        InitializeState();
         var googleBook = Services.GetRequiredService<IGoogleServices>();
-
-        var books = await googleBook.GetBook(State.TextSearch is not null?State.TextSearch:"viet&filter=ebooks", "10");
+        State.IsLoading = true;
+        var books = await googleBook.GetBook(State.TextSearch is not null ? State.TextSearch : State.CategorySelected is not null ? $"subject:{State.CategorySelected.Name}" : "the dark knight");
         SetState(s =>
         {
             s.Books = books.items;
@@ -50,103 +77,161 @@ class BookPage:Component<BookPageState>
         });
         base.OnPropsChanged();
     }
+    void InitializeState()
+    {
+        if (DeviceInfo.Current.Platform == DevicePlatform.Android)
+        {
+            State.TranslationX = !State.IsSideMenuShown ? 0 : 220;
+            State.MarginLeft = !State.IsSideMenuShown ? -30 : 0;
+        }
+        else
+        {
+            State.TranslationX = !State.IsSideMenuShown ? 0 : 300;
+        }
+
+        State.RotationY = !State.IsSideMenuShown ? 0.0 : -12;
+    }
     public override VisualNode Render()
     {
         return new ContentPage
         {
-            new Grid("60,100,*","*")
+            new Grid("*","*")
             {
-                 new HStack
-                    {
-                        new Border
+                new SideMenu()
+                      .IsShown(State.IsSideMenuShown)
+                      .HomePage(Back)
+                      .OneBookPage(OpenEBookPage)
+                      .MenuSelect(CommandMenuItem.Book)
+                      .OnClose(()=>{
+                      SetState(s=>s.IsSideMenuShown=false);
+                      InitializeState(); })
+                ,
+                new Grid("60,100,Auto,*","*")
+                {
+                     new HStack
                         {
+                                new SKLottieView()
+                                .Source(new SkiaSharp.Extended.UI.Controls.SKFileLottieImageSource()
+                                {
+                                    File="bookanimation.json"
+                                })
+                                .RepeatCount(-1)
+                                .IsAnimationEnabled(true)
+                                .IsEnabled(true)
+                                .IsVisible(true)
+                                .HeightRequest(50)
+                                .WidthRequest(50)
+                                .BackgroundColor(Colors.Transparent)
+                                .OnTapped(()=>{
+                                    SetState(s=>s.IsSideMenuShown=true);
+                                     InitializeState();
+                                    }),
+
+                            new Label("Explore Market")
+                            .TextColor(Colors.White)
+                            .FontAttributes(Microsoft.Maui.Controls.FontAttributes.Bold)
+                            .FontSize(25)
+                            .FontFamily(Theme.font)
+                            .HCenter()
+                            .VCenter(),
+                        }.GridRow(0)
+                        .Spacing(50)
+                        .Margin(10,10,0,0)
+                        .GridRow(0),
+                     new Border
+                     {
+                         new HStack
+                         {
+                             new Entry()
+                             .TextColor(Colors.White)
+                             .VCenter()
+                             .HCenter()
+                             .HeightRequest(60)
+                             .WidthRequest(200)
+                             .FontFamily (Theme.font)
+                             .FontSize(20)
+                             .BackgroundColor(Colors.Transparent)
+                             .OnTextChanged(v=>SetState(s=>s.TextSearch=v)),
                             new SKLottieView()
                             .Source(new SkiaSharp.Extended.UI.Controls.SKFileLottieImageSource()
                             {
-                                File="back.json"
+                                File="search.json"
                             })
-                            .RepeatCount(-1)
+                            .RepeatCount(0)
                             .IsAnimationEnabled(true)
                             .IsEnabled(true)
                             .IsVisible(true)
-                            .BackgroundColor(Colors.Transparent),
-                        }.StrokeShape(new RoundRectangle().CornerRadius(50))
-                        .HeightRequest(50)
-                        .WidthRequest(50)
-                        .OnTapped(Back)
-                        .BackgroundColor(Colors.White),
-                        new Label("Explore Market")
-                        .TextColor(Colors.White)
-                        .FontAttributes(Microsoft.Maui.Controls.FontAttributes.Bold)
-                        .FontSize(25)
-                        .FontFamily(Theme.font)
-                        .HCenter()
-                        .VCenter(),
-                    }.GridRow(0)
-                    .Spacing(50)
-                    .Margin(10,10,0,0)
-                    .GridRow(0),
-                 new Border
-                 {
-                     new HStack
-                     {
-                         new Entry()
-                         .TextColor(Colors.White)
-                         .VCenter()
-                         .HCenter()
-                         .HeightRequest(60)
-                         .WidthRequest(200)
-                         .FontFamily (Theme.font)
-                         .FontSize(20)
-                         .BackgroundColor(Colors.Transparent)
-                         .OnTextChanged(v=>SetState(s=>s.TextSearch=v)),
-                        new SKLottieView()
-                        .Source(new SkiaSharp.Extended.UI.Controls.SKFileLottieImageSource()
-                        {
-                            File="search.json"
-                        })
-                        .RepeatCount(0)
-                        .IsAnimationEnabled(true)
-                        .IsEnabled(true)
-                        .IsVisible(true)
-                        .HeightRequest(70)
-                        .WidthRequest(70)
-                        .BackgroundColor(Colors.Transparent)
-                        .OnTapped(() =>
-                        {
-                            SetState(s=>s.IsLoading=true);
-                            OnPropsChanged();
-                        })
-                     }.Margin(20,0,0,0)
-                 }
-                 .HeightRequest(80)
-                 .WidthRequest(300)
-                   .BackgroundColor(Colors.Black)
-                   .StrokeShape(new RoundRectangle().CornerRadius(40))
-                   .GridRow(1),
-                new ScrollView
-                {
-                    RenderCollection()
-                }.GridRow(2)
-            }.BackgroundColor(Theme.Bg)
-        }.Set(MauiControls.NavigationPage.HasNavigationBarProperty,false);
+                            .HeightRequest(70)
+                            .WidthRequest(70)
+                            .BackgroundColor(Colors.Transparent)
+                            .OnTapped(() =>
+                            {
+                                SetState(s=>s.IsLoading=true);
+                                OnPropsChanged();
+                            })
+                         }.Margin(20,0,0,0)
+                     }
+                     .HeightRequest(80)
+                     .WidthRequest(300)
+                       .BackgroundColor(Colors.Black)
+                       .StrokeShape(new RoundRectangle().CornerRadius(40))
+                       .GridRow(1),
+                     new CollectionView()
+                     .ItemsSource(Category.All,RenderCategorySearch)
+                     .ItemsLayout(new HorizontalLinearItemsLayout().ItemSpacing(5))
+                     .GridRow(2)
+                     .Margin(20,5,0,10)
+                     ,
+                    new ScrollView
+                    {
+                        RenderCollection()
+                    }.GridRow(3)
+
+                }
+                .RotationY(State.RotationY)
+            .TranslationX(State.TranslationX)
+            .WithAnimation(easing: Easing.CubicIn, duration: 300)
+            }
+        .BackgroundColor(Theme.Bg)
+        }
+        .Set(MauiControls.NavigationPage.HasNavigationBarProperty,false);
+    }
+
+    private VisualNode RenderCategorySearch(Category item)
+    {
+        return new Border
+        {
+            new Label(item.Name)
+             .TextColor(State.CategorySelected == item ? Colors.Black:Colors.White)
+                .FontFamily(Theme.font)
+                .HCenter().VCenter()
+                .MaxLines(1)
+                .Margin(35,15,35,15)
+        }.BackgroundColor(State.CategorySelected == item ? Colors.White:Theme.BlackBorder)
+        .StrokeShape(new RoundRectangle().CornerRadius(20))
+        .Stroke(State.CategorySelected==item?Colors.Transparent:Colors.White)
+        .StrokeThickness(0.5)
+        .OnTapped(()=> {
+            if(State.CategorySelected != item)
+            {
+                SetState(s => {
+                    s.CategorySelected = item;
+                    s.TextSearch = null;
+                    });
+            }
+            else
+            {
+                SetState(s => s.CategorySelected = null);
+            }
+            
+            OnPropsChanged();
+        })
+        ;
+
     }
 
     private VisualNode RenderCollection()
     {
-        if (State.IsLoading)
-        {
-            return new Grid
-            {
-                new Label("Thí chú đợi xíu ...")
-                .TextColor(Colors.White)
-                .FontSize(20)
-                .Margin(10,0,0,0)
-                .FontFamily(Theme.font)
-            };
-        }
-        else
-        {
             return new CollectionView()
                     .ItemsLayout(
                         new VerticalGridItemsLayout(2)
@@ -154,7 +239,6 @@ class BookPage:Component<BookPageState>
                         .HorizontalItemSpacing(0))
                     .ItemsSource(State.Books, RenderBookGrid)
                     ;
-        }
     }
 
     private VisualNode RenderBookGrid(Item item)
@@ -227,6 +311,10 @@ class BookPage:Component<BookPageState>
                     
                 }.EffectStyle(Xe.AcrylicView.Controls.EffectStyle.Light),
             }
+            .Set(Skeleton.IsBusyProperty, State.IsLoading)
+                    .Set(Skeleton.BackgroundColorProperty, Theme.Bg)
+                    .Set(Skeleton.AnimationProperty, new FadeAnimation(500, null))
+                    .Set(Skeleton.IsParentProperty, true)
             .WidthRequest(150)
             .HeightRequest(270)
            .BackgroundColor(Colors.Black)

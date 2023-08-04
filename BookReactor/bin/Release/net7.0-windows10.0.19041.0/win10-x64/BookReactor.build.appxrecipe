@@ -769,6 +769,9 @@
     <AppxPackagedFile Include="C:\Users\trick\source\repos\Book\BookReactor\Resources\Raw\close.json">
       <PackagePath>close.json</PackagePath>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\trick\source\repos\Book\BookReactor\Resources\Raw\loading.json">
+      <PackagePath>loading.json</PackagePath>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\trick\source\repos\Book\BookReactor\Resources\Raw\search.json">
       <PackagePath>search.json</PackagePath>
     </AppxPackagedFile>
@@ -943,6 +946,45 @@
     <AppxPackagedFile Include="C:\Users\trick\source\repos\Book\BookReactor\obj\Release\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconWideTile.scale-400.png">
       <PackagePath>appiconWideTile.scale-400.png</PackagePath>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\trick\source\repos\Book\BookReactor\obj\Release\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\authors.scale-100.png">
+      <PackagePath>authors.scale-100.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\trick\source\repos\Book\BookReactor\obj\Release\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\back.scale-100.png">
+      <PackagePath>back.scale-100.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\trick\source\repos\Book\BookReactor\obj\Release\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\backgroundbai.scale-100.jpg">
+      <PackagePath>backgroundbai.scale-100.jpg</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\trick\source\repos\Book\BookReactor\obj\Release\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\bai1.scale-100.jpg">
+      <PackagePath>bai1.scale-100.jpg</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\trick\source\repos\Book\BookReactor\obj\Release\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\bai2.scale-100.jpg">
+      <PackagePath>bai2.scale-100.jpg</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\trick\source\repos\Book\BookReactor\obj\Release\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\bai3.scale-100.jpg">
+      <PackagePath>bai3.scale-100.jpg</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\trick\source\repos\Book\BookReactor\obj\Release\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\bai4.scale-100.jpg">
+      <PackagePath>bai4.scale-100.jpg</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\trick\source\repos\Book\BookReactor\obj\Release\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\bai5.scale-100.jpg">
+      <PackagePath>bai5.scale-100.jpg</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\trick\source\repos\Book\BookReactor\obj\Release\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\bai6.scale-100.jpg">
+      <PackagePath>bai6.scale-100.jpg</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\trick\source\repos\Book\BookReactor\obj\Release\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\bai7.scale-100.jpg">
+      <PackagePath>bai7.scale-100.jpg</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\trick\source\repos\Book\BookReactor\obj\Release\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\bai8.scale-100.jpg">
+      <PackagePath>bai8.scale-100.jpg</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\trick\source\repos\Book\BookReactor\obj\Release\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\bai9.scale-100.jpg">
+      <PackagePath>bai9.scale-100.jpg</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\trick\source\repos\Book\BookReactor\obj\Release\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\favori.scale-100.png">
+      <PackagePath>favori.scale-100.png</PackagePath>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\trick\source\repos\Book\BookReactor\obj\Release\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\favorite.scale-100.png">
       <PackagePath>favorite.scale-100.png</PackagePath>
     </AppxPackagedFile>
@@ -955,11 +997,20 @@
     <AppxPackagedFile Include="C:\Users\trick\source\repos\Book\BookReactor\obj\Release\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\isach.scale-100.png">
       <PackagePath>isach.scale-100.png</PackagePath>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\trick\source\repos\Book\BookReactor\obj\Release\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\itagaki.scale-100.jpg">
+      <PackagePath>itagaki.scale-100.jpg</PackagePath>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\trick\source\repos\Book\BookReactor\obj\Release\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\iuser.scale-100.png">
       <PackagePath>iuser.scale-100.png</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\trick\source\repos\Book\BookReactor\obj\Release\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\kmo.scale-100.png">
       <PackagePath>kmo.scale-100.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\trick\source\repos\Book\BookReactor\obj\Release\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\lungbai.scale-100.jpg">
+      <PackagePath>lungbai.scale-100.jpg</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\trick\source\repos\Book\BookReactor\obj\Release\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\miura.scale-100.png">
+      <PackagePath>miura.scale-100.png</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\trick\source\repos\Book\BookReactor\obj\Release\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\mo.scale-100.png">
       <PackagePath>mo.scale-100.png</PackagePath>
@@ -970,6 +1021,9 @@
     <AppxPackagedFile Include="C:\Users\trick\source\repos\Book\BookReactor\obj\Release\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\sach.scale-100.png">
       <PackagePath>sach.scale-100.png</PackagePath>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\trick\source\repos\Book\BookReactor\obj\Release\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\scott.scale-100.jpg">
+      <PackagePath>scott.scale-100.jpg</PackagePath>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\trick\source\repos\Book\BookReactor\obj\Release\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\sp1.scale-100.jpg">
       <PackagePath>sp1.scale-100.jpg</PackagePath>
     </AppxPackagedFile>
@@ -978,6 +1032,9 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\trick\source\repos\Book\BookReactor\obj\Release\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\sp3.scale-100.jpg">
       <PackagePath>sp3.scale-100.jpg</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\trick\source\repos\Book\BookReactor\obj\Release\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\stephenking.scale-100.jpg">
+      <PackagePath>stephenking.scale-100.jpg</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\trick\source\repos\Book\BookReactor\obj\Release\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\trove.scale-100.png">
       <PackagePath>trove.scale-100.png</PackagePath>
