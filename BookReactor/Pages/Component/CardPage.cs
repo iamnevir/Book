@@ -25,6 +25,16 @@ class CardPage:Component<CardPageState>
     {
         return new Grid
         {
+            new Label("Con đường nào rồi cũng sẽ dẫn đến bóng tối, hãy chọn 3 lá bài cho riêng mình ta sẽ ban cho cậu 3 trong 9 con quỷ trong đa vũ trụ tối.")
+            .FontFamily(Theme.font)
+            .FontSize(13)
+            .Margin(20,20,20,10)
+            .TextColor(Colors.Gray)
+            .HorizontalTextAlignment(TextAlignment.Center)
+            .VStart()
+            .HCenter()
+            .ZIndex(1)
+            ,
             new Image("backgroundbai")
             .Aspect(Aspect.Fill)
             ,
@@ -55,9 +65,9 @@ class CardPage:Component<CardPageState>
             .FontFamily(Theme.font)
             .FontSize(15)
             .BackgroundColor(Theme.Tim)
-            .HeightRequest(50)
+            .HeightRequest(60)
             .WidthRequest(300)
-            .Margin(20,0,20,10)
+            .Margin(20,0,20,20)
             .CornerRadius(50)
             .OnClicked(()=>{
                 SetState(s=>s.BaiVisible=false);
@@ -71,9 +81,9 @@ class CardPage:Component<CardPageState>
         return new Border
         {
             new Image(State.BaiSelected.Where(b => b == baiSelect).FirstOrDefault() == baiSelect? source:"lungbai")
-            .Aspect (Aspect.AspectFit)
-        }.HeightRequest(190)
-        .WidthRequest(120)
+            .Aspect (Aspect.Fill)
+        }.HeightRequest(169)
+        .WidthRequest(100)
         .StrokeShape(new RoundRectangle().CornerRadius(10))
         .BackgroundColor(Colors.Transparent)
         .RotationY(State.BaiSelected.Where(b => b == baiSelect).FirstOrDefault() == baiSelect ? 180 : 0)

@@ -61,10 +61,6 @@
         "net7.0-android33.0": {
           "targetAlias": "net7.0-android",
           "dependencies": {
-            "AcrylicView.Maui": {
-              "target": "Package",
-              "version": "[1.13.0, )"
-            },
             "HorusStudio.Maui.Skeleton": {
               "target": "Package",
               "version": "[2.0.0, )"
@@ -215,10 +211,6 @@
         "net7.0-ios16.1": {
           "targetAlias": "net7.0-ios",
           "dependencies": {
-            "AcrylicView.Maui": {
-              "target": "Package",
-              "version": "[1.13.0, )"
-            },
             "HorusStudio.Maui.Skeleton": {
               "target": "Package",
               "version": "[2.0.0, )"
@@ -314,10 +306,6 @@
         "net7.0-maccatalyst16.1": {
           "targetAlias": "net7.0-maccatalyst",
           "dependencies": {
-            "AcrylicView.Maui": {
-              "target": "Package",
-              "version": "[1.13.0, )"
-            },
             "HorusStudio.Maui.Skeleton": {
               "target": "Package",
               "version": "[2.0.0, )"
@@ -414,10 +402,6 @@
         "net7.0-windows10.0.19041": {
           "targetAlias": "net7.0-windows10.0.19041.0",
           "dependencies": {
-            "AcrylicView.Maui": {
-              "target": "Package",
-              "version": "[1.13.0, )"
-            },
             "HorusStudio.Maui.Skeleton": {
               "target": "Package",
               "version": "[2.0.0, )"
@@ -513,10 +497,6 @@
               "version": "[7.0.9, 7.0.9]"
             },
             {
-              "name": "Microsoft.NETCore.App.Crossgen2.win-x64",
-              "version": "[7.0.9, 7.0.9]"
-            },
-            {
               "name": "Microsoft.NETCore.App.Runtime.win-x64",
               "version": "[7.0.9, 7.0.9]"
             },
@@ -563,9 +543,6 @@
           "#import": []
         },
         "iossimulator-x64": {
-          "#import": []
-        },
-        "maccatalyst-arm64": {
           "#import": []
         },
         "maccatalyst-x64": {

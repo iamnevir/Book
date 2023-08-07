@@ -227,7 +227,7 @@ class EBookPage:Component<EBookPageState>
                 }.GridRow(0)
                 .StrokeShape(new MauiReactor.Shapes.Ellipse())
                 .Stroke(Colors.Transparent)
-                .HeightRequest(75).WidthRequest(75)
+                .HeightRequest(70).WidthRequest(70)
                 .OnTapped(()=>OpenDetailAuthor(author))
                 ,
                     new Label(author.Name)
@@ -238,9 +238,9 @@ class EBookPage:Component<EBookPageState>
                             .HorizontalTextAlignment(TextAlignment.Center)
                     .MaxLines(1)
                     .GridRow(1)
-                    .WidthRequest(75)
+                    .WidthRequest(70)
             }
-        }.HeightRequest(100).WidthRequest(75)
+        }.HeightRequest(100).WidthRequest(70)
         ;
     }
 
@@ -344,7 +344,7 @@ class BookForYou : Component<BookForYouState>
                     .OnTapped(()=>_action(rightImage))
                     .Rotation(10)
                     .Opacity(0.5).OnPanUpdated(OnPan)
-                    .Margin(0,10,250,0),
+                    .Margin(0,10,200,0),
                     new Border
                     {
                         new Image(GetSource(leftImage.volumeInfo.imageLinks.extraLarge))
@@ -356,7 +356,7 @@ class BookForYou : Component<BookForYouState>
                     .Stroke(Colors.Transparent)
                     .TranslationX(-State.ImageSize.Width + State.PanX)
                     .OnTapped(()=>_action(leftImage))
-                    .Rotation(-10).Margin(250,60,0,0)
+                    .Rotation(-10).Margin(200,60,0,0)
                     .Opacity(0.5).OnPanUpdated(OnPan),
                     new Border
                     {

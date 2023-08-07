@@ -12,7 +12,6 @@ public static class MauiProgram
         var builder = MauiApp.CreateBuilder();
         builder
             .UseMauiReactorApp<MainPage>()
-            .UseAcrylicView()
             .UseSkiaSharp()
             .UseSimpleRatingControl()
 #if DEBUG
@@ -27,6 +26,7 @@ public static class MauiProgram
             });
         builder.Services.AddBookServices(new Uri("https://www.googleapis.com/books/v1/"));
         builder.Services.AddGutenbergServices(new Uri("https://gutendex.com/"));
+        builder.Services.AddGetTextServices(new Uri("https://www.gutenberg.org/"));
         return builder.Build();
     }
 }

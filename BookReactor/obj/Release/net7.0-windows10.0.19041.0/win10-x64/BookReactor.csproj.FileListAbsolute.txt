@@ -363,7 +363,6 @@ C:\Users\trick\source\repos\Book\BookReactor\bin\Release\net7.0-windows10.0.1904
 C:\Users\trick\source\repos\Book\BookReactor\bin\Release\net7.0-windows10.0.19041.0\win10-x64\BookReactor.pdb
 C:\Users\trick\source\repos\Book\BookReactor\bin\Release\net7.0-windows10.0.19041.0\win10-x64\resources.pri
 C:\Users\trick\source\repos\Book\BookReactor\bin\Release\net7.0-windows10.0.19041.0\win10-x64\AppxManifest.xml
-C:\Users\trick\source\repos\Book\BookReactor\bin\Release\net7.0-windows10.0.19041.0\win10-x64\Xe.AcrylicView.dll
 C:\Users\trick\source\repos\Book\BookReactor\bin\Release\net7.0-windows10.0.19041.0\win10-x64\Maui.Skeleton.dll
 C:\Users\trick\source\repos\Book\BookReactor\bin\Release\net7.0-windows10.0.19041.0\win10-x64\Microsoft.Extensions.Configuration.dll
 C:\Users\trick\source\repos\Book\BookReactor\bin\Release\net7.0-windows10.0.19041.0\win10-x64\Microsoft.Extensions.Configuration.Abstractions.dll

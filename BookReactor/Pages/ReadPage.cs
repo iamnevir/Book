@@ -2,13 +2,7 @@
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Maui.Devices;
 using Plugin.Maui.ScreenBrightness;
-using System;
-using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
-using System.Linq;
-using System.Net.Http;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace BookReactor.Pages;
 
@@ -28,7 +22,11 @@ class ReadPageState
     public bool OpenSetting { get; set; }
     public bool OpenBorder { get; set; }
 }
-class ReadPage:Component<ReadPageState>
+class ReadPageProps
+{
+    public string Id { get; set; }
+}
+class ReadPage:Component<ReadPageState, ReadPageProps>
 {
     private async void Back()
     {
@@ -38,7 +36,7 @@ class ReadPage:Component<ReadPageState>
     {
         var gutenberg = Services.GetRequiredService<IGetTextServices>();
         State.IsLoading = true;
-        var text = await gutenberg.GetTextAsync("https://www.gutenberg.org/files/1513/1513-0.txt");
+        var text = await gutenberg.GetTextAsync($"cache/epub/{Props.Id}/pg{Props.Id}.txt");
         SetState(s =>
         {
             s.Text = text;
@@ -46,11 +44,12 @@ class ReadPage:Component<ReadPageState>
         });
         base.OnMounted();
     }
-    protected override void OnPropsChanged()
+    void ChangeFontSize()
     {
         switch (State.FontChu)
         {
-            case 1 : SetState(s => s.Font = Theme.font);
+            case 1:
+                SetState(s => s.Font = Theme.font);
                 break;
             case 2:
                 SetState(s => s.Font = "OpenSan");
@@ -62,7 +61,6 @@ class ReadPage:Component<ReadPageState>
                 SetState(s => s.Font = "Roboto");
                 break;
         }
-        base.OnPropsChanged();
     }
     public override VisualNode Render()
     {
@@ -79,7 +77,9 @@ class ReadPage:Component<ReadPageState>
                         .LineHeight(State.LineHeight)
                         .CharacterSpacing(State.CharacterSpacing)
                         .OnTapped(()=>SetState(s=>s.OpenBorder=!s.OpenBorder))
-                }.Margin(30).BackgroundColor(Colors.Transparent)
+                }.Margin(30)
+                .BackgroundColor(Colors.Transparent)
+                .VerticalScrollBarVisibility(ScrollBarVisibility.Never)
                 ,
                 new Border
                 {
@@ -121,7 +121,7 @@ class ReadPage:Component<ReadPageState>
                                                 s.FontChu=1;
                                             }
                                         });
-                                        OnPropsChanged();
+                                        ChangeFontSize();
                                     })
                                 }.BackgroundColor(Colors.Transparent)
                                 .GridColumn(1)
@@ -311,6 +311,27 @@ class ReadPage:Component<ReadPageState>
                                 .StrokeShape(new MauiReactor.Shapes.Ellipse())
                                 .OnTapped(()=>SetState(s=>s.Mau=theme));
                                 
+}
+
+class ReadPageHtmlProps
+{
+    public string Id { get; set; }
+}
+class ReadPageHtmlState
+{
+}
+class ReadPageHtml:Component<ReadPageHtmlState, ReadPageHtmlProps>
+{
+    public override VisualNode Render()
+    {
+        return new ContentPage
+        {
+            new Grid
+            {
+                new WebView($"https://www.gutenberg.org/cache/epub/{Props.Id}/pg{Props.Id}-images.html")
+            }
+        }.Set(MauiControls.NavigationPage.HasNavigationBarProperty, false);
+    }
 }
 public enum MauNen
 {

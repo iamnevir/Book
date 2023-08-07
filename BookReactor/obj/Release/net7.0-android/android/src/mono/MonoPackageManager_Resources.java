@@ -3,7 +3,6 @@ public class MonoPackageManager_Resources {
 	public static String[] Assemblies = new String[]{
 		/* We need to ensure that "BookReactor.dll" comes first in this list. */
 		"BookReactor.dll",
-		"Xe.AcrylicView.dll",
 		"Maui.Skeleton.dll",
 		"Microsoft.Extensions.Configuration.dll",
 		"Microsoft.Extensions.Configuration.Abstractions.dll",

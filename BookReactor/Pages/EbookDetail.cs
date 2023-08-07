@@ -20,6 +20,42 @@ class EbookDetail:Component<EbookDetailState, EbookDetailProps>
     {
         await Navigation.PopAsync();
     }
+    private async void OpenReadEBook()
+    {
+        await Navigation.PushAsync<ReadPage, ReadPageProps>(_ =>
+        {
+            switch(Props.Book.id)
+            {
+                case "PcWrDwAAQBAJ":
+                    _.Id = "5201";
+                    break;
+                case "yzowDwAAQBAJ":
+                    _.Id = "7849";
+                    break;
+                case "BCgqDwAAQBAJ":
+                    _.Id = "68283";
+                    break;
+                case "uicqDwAAQBAJ":
+                    _.Id = "6087";
+                    break;
+                case "gTowDwAAQBAJ":
+                    _.Id = "71085";
+                    break;
+                case "pjowDwAAQBAJ":
+                    _.Id = "71180";
+                    break;
+                case "LS81DwAAQBAJ":
+                    _.Id = "2701";
+                    break;
+                case "FJkAEAAAQBAJ":
+                    _.Id = "31619";
+                    break;
+                case "q7ACEAAAQBAJ":
+                    _.Id = "69087";
+                    break;
+            }
+        });
+    }
     public override VisualNode Render()
     {
         var source = Props.Book.volumeInfo.imageLinks.extraLarge.Replace("http", "https");
@@ -30,11 +66,9 @@ class EbookDetail:Component<EbookDetailState, EbookDetailProps>
                 RenderHeader(),
                 new Grid("*","*")
                 {
-                     new AcrylicView
-                     {
                          new Image(source)
-                         .Aspect(Aspect.Fill),
-                     }.EffectStyle(Xe.AcrylicView.Controls.EffectStyle.Light).Opacity(0.2),
+                         .Aspect(Aspect.Fill)
+                         .Opacity(0.2),
                      new Border
                      {
                          new Image(source)
@@ -53,8 +87,6 @@ class EbookDetail:Component<EbookDetailState, EbookDetailProps>
                     ,
                     new Border
                     {
-                        new AcrylicView
-                        {
                             new Grid("*", "Auto,*,Auto,*,Auto,*,Auto,*,Auto")
                             {
                                 new VStack
@@ -111,13 +143,13 @@ class EbookDetail:Component<EbookDetailState, EbookDetailProps>
                                     .FontAttributes(Microsoft.Maui.Controls.FontAttributes.Bold)
                                 }.GridColumn(8).VCenter().Spacing(5).Margin(0,0,20,0)
                             }
-                        }.EffectStyle(Xe.AcrylicView.Controls.EffectStyle.Light).Opacity(0.8)
+                       
                         
                     }.VEnd()
                     .HeightRequest(90)
                     .Margin(30,0,30,20)
                     .StrokeShape(new RoundRectangle().CornerRadius(10))
-                    .BackgroundColor(Colors.Transparent)
+                    .BackgroundColor(Colors.Black).Opacity(0.6)
                 }.GridRow(0).Margin(10,10,10,0),
                 RenderRead()
             }
@@ -159,8 +191,7 @@ class EbookDetail:Component<EbookDetailState, EbookDetailProps>
                     }
                 }.GridRow(1)
                 .GridColumn(1)
-                .Margin(0,10,0,0)
-                .HeightRequest(100),
+                .HeightRequest(110),
                 new Grid("*","Auto,*")
                 {
                     new Border
@@ -182,7 +213,8 @@ class EbookDetail:Component<EbookDetailState, EbookDetailProps>
                     .CornerRadius(10)
                     .HeightRequest(50)
                     .GridColumn(1)
-                    .Margin(20,0,10,0),
+                    .Margin(20,0,10,0)
+                    .OnClicked(OpenReadEBook),
                 }
                 .GridRow(2)
                 .GridColumnSpan(2)

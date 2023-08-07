@@ -589,9 +589,6 @@
     <AppxPackagedFile Include="C:\Users\trick\.nuget\packages\microsoft.netcore.app.runtime.win-x64\7.0.9\runtimes\win-x64\lib\net7.0\netstandard.dll">
       <PackagePath>netstandard.dll</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\trick\source\repos\Book\BookReactor\obj\Release\net7.0-windows10.0.19041.0\win10-x64\R2R\Xe.AcrylicView.dll">
-      <PackagePath>Xe.AcrylicView.dll</PackagePath>
-    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\trick\source\repos\Book\BookReactor\obj\Release\net7.0-windows10.0.19041.0\win10-x64\R2R\Maui.Skeleton.dll">
       <PackagePath>Maui.Skeleton.dll</PackagePath>
     </AppxPackagedFile>

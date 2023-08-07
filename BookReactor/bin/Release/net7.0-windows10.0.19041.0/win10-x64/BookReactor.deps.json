@@ -9,7 +9,6 @@
     ".NETCoreApp,Version=v7.0/win10-x64": {
       "BookReactor/1.0": {
         "dependencies": {
-          "AcrylicView.Maui": "1.13.0",
           "HorusStudio.Maui.Skeleton": "2.0.0",
           "Microsoft.Extensions.Configuration": "7.0.0",
           "Microsoft.Extensions.DependencyInjection": "7.0.0",
@@ -801,14 +800,6 @@
           }
         }
       },
-      "AcrylicView.Maui/1.13.0": {
-        "runtime": {
-          "lib/net6.0-windows10.0.19041/Xe.AcrylicView.dll": {
-            "assemblyVersion": "1.13.0.0",
-            "fileVersion": "1.13.0.0"
-          }
-        }
-      },
       "HorusStudio.Maui.Skeleton/2.0.0": {
         "runtime": {
           "lib/net6.0/Maui.Skeleton.dll": {
@@ -1222,13 +1213,6 @@
       "type": "runtimepack",
       "serviceable": false,
       "sha512": ""
-    },
-    "AcrylicView.Maui/1.13.0": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-q/540iKKrC+ppqIl49IHhIBtkgoST5Ku06EPyXJ/zDdXRuFGRVzjU7ZYfkerfkhBqNv2fS/oRUdE0No7zcbg9A==",
-      "path": "acrylicview.maui/1.13.0",
-      "hashPath": "acrylicview.maui.1.13.0.nupkg.sha512"
     },
     "HorusStudio.Maui.Skeleton/2.0.0": {
       "type": "package",

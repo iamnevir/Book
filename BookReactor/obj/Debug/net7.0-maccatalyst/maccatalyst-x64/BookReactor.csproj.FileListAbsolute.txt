@@ -271,7 +271,6 @@ C:\Users\DINH LAM\source\repos\Book\BookReactor\obj\Debug\net7.0-maccatalyst\mac
 C:\Users\trick\source\repos\Book\BookReactor\bin\Debug\net7.0-maccatalyst\maccatalyst-x64\BookReactor.runtimeconfig.json
 C:\Users\trick\source\repos\Book\BookReactor\bin\Debug\net7.0-maccatalyst\maccatalyst-x64\BookReactor.dll
 C:\Users\trick\source\repos\Book\BookReactor\bin\Debug\net7.0-maccatalyst\maccatalyst-x64\BookReactor.pdb
-C:\Users\trick\source\repos\Book\BookReactor\bin\Debug\net7.0-maccatalyst\maccatalyst-x64\Xe.AcrylicView.dll
 C:\Users\trick\source\repos\Book\BookReactor\bin\Debug\net7.0-maccatalyst\maccatalyst-x64\Maui.Skeleton.dll
 C:\Users\trick\source\repos\Book\BookReactor\bin\Debug\net7.0-maccatalyst\maccatalyst-x64\Microsoft.Extensions.Configuration.dll
 C:\Users\trick\source\repos\Book\BookReactor\bin\Debug\net7.0-maccatalyst\maccatalyst-x64\Microsoft.Extensions.Configuration.Abstractions.dll
@@ -517,6 +516,7 @@ C:\Users\trick\source\repos\Book\BookReactor\obj\Debug\net7.0-maccatalyst\maccat
 C:\Users\trick\source\repos\Book\BookReactor\obj\Debug\net7.0-maccatalyst\maccatalyst-x64\resizetizer\r\Assets.xcassets\appicon.appiconset\appiconItunesArtwork.png
 C:\Users\trick\source\repos\Book\BookReactor\obj\Debug\net7.0-maccatalyst\maccatalyst-x64\resizetizer\r\Assets.xcassets\appicon.appiconset\Contents.json
 C:\Users\trick\source\repos\Book\BookReactor\obj\Debug\net7.0-maccatalyst\maccatalyst-x64\resizetizer\r\Resources\authors.png
+C:\Users\trick\source\repos\Book\BookReactor\obj\Debug\net7.0-maccatalyst\maccatalyst-x64\resizetizer\r\Resources\back.png
 C:\Users\trick\source\repos\Book\BookReactor\obj\Debug\net7.0-maccatalyst\maccatalyst-x64\resizetizer\r\Resources\backgroundbai.jpg
 C:\Users\trick\source\repos\Book\BookReactor\obj\Debug\net7.0-maccatalyst\maccatalyst-x64\resizetizer\r\Resources\bai1.jpg
 C:\Users\trick\source\repos\Book\BookReactor\obj\Debug\net7.0-maccatalyst\maccatalyst-x64\resizetizer\r\Resources\bai2.jpg
@@ -527,6 +527,8 @@ C:\Users\trick\source\repos\Book\BookReactor\obj\Debug\net7.0-maccatalyst\maccat
 C:\Users\trick\source\repos\Book\BookReactor\obj\Debug\net7.0-maccatalyst\maccatalyst-x64\resizetizer\r\Resources\bai7.jpg
 C:\Users\trick\source\repos\Book\BookReactor\obj\Debug\net7.0-maccatalyst\maccatalyst-x64\resizetizer\r\Resources\bai8.jpg
 C:\Users\trick\source\repos\Book\BookReactor\obj\Debug\net7.0-maccatalyst\maccatalyst-x64\resizetizer\r\Resources\bai9.jpg
+C:\Users\trick\source\repos\Book\BookReactor\obj\Debug\net7.0-maccatalyst\maccatalyst-x64\resizetizer\r\Resources\favori.png
+C:\Users\trick\source\repos\Book\BookReactor\obj\Debug\net7.0-maccatalyst\maccatalyst-x64\resizetizer\r\Resources\favorite.png
 C:\Users\trick\source\repos\Book\BookReactor\obj\Debug\net7.0-maccatalyst\maccatalyst-x64\resizetizer\r\Resources\itagaki.jpg
 C:\Users\trick\source\repos\Book\BookReactor\obj\Debug\net7.0-maccatalyst\maccatalyst-x64\resizetizer\r\Resources\kmo.png
 C:\Users\trick\source\repos\Book\BookReactor\obj\Debug\net7.0-maccatalyst\maccatalyst-x64\resizetizer\r\Resources\lungbai.jpg

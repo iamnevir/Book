@@ -102,7 +102,8 @@ class SideMenu : Component<SideMenuState>
         .Opacity(State.Opacity)
         .WithAnimation(easing: Easing.CubicIn, duration: 300)
         .BackgroundColor(Theme.Bg)
-        .HStart();
+        .HStart()
+        .ZIndex(2);
     }
 
     VisualNode RenderHeader()

@@ -64,9 +64,13 @@ class BookPage:Component<BookPageState, BookPageProps>
         });
         base.OnMounted();
     }
-    protected override async void OnPropsChanged()
+    protected override void OnPropsChanged()
     {
         InitializeState();
+        base.OnPropsChanged();
+    }
+    async void Search()
+    {
         var googleBook = Services.GetRequiredService<IGoogleServices>();
         State.IsLoading = true;
         var books = await googleBook.GetBook(State.TextSearch is not null ? State.TextSearch : State.CategorySelected is not null ? $"subject:{State.CategorySelected.Name}" : "the dark knight");
@@ -75,7 +79,6 @@ class BookPage:Component<BookPageState, BookPageProps>
             s.Books = books.items;
             s.IsLoading = false;
         });
-        base.OnPropsChanged();
     }
     void InitializeState()
     {
@@ -167,7 +170,7 @@ class BookPage:Component<BookPageState, BookPageProps>
                             .OnTapped(() =>
                             {
                                 SetState(s=>s.IsLoading=true);
-                                OnPropsChanged();
+                                Search();
                             })
                          }.Margin(20,0,0,0)
                      }
@@ -223,8 +226,8 @@ class BookPage:Component<BookPageState, BookPageProps>
             {
                 SetState(s => s.CategorySelected = null);
             }
-            
-            OnPropsChanged();
+
+            Search();
         })
         ;
 
@@ -253,8 +256,6 @@ class BookPage:Component<BookPageState, BookPageProps>
             var source = item.volumeInfo.imageLinks.thumbnail.Replace("&edge=curl&source=gbs_api", "").Replace("http", "https");
             return new Border()
             {
-                new AcrylicView
-                {
                     new Grid("170,*","*")
                     {
                         new Border
@@ -308,8 +309,6 @@ class BookPage:Component<BookPageState, BookPageProps>
                         .GridRow(1)
                         .Margin(10,10,0,0)
                     }
-                    
-                }.EffectStyle(Xe.AcrylicView.Controls.EffectStyle.Light),
             }
             .Set(Skeleton.IsBusyProperty, State.IsLoading)
                     .Set(Skeleton.BackgroundColorProperty, Theme.Bg)
@@ -317,7 +316,7 @@ class BookPage:Component<BookPageState, BookPageProps>
                     .Set(Skeleton.IsParentProperty, true)
             .WidthRequest(150)
             .HeightRequest(270)
-           .BackgroundColor(Colors.Black)
+           .BackgroundColor(Theme.BlackBorder3)
            .StrokeShape(new RoundRectangle().CornerRadius(10))
            .OnTapped(() =>
            {

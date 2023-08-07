@@ -12,8 +12,6 @@ using MauiReactor;
 namespace BookReactor.Pages;
 
 
-[Scaffold(typeof(Xe.AcrylicView.AcrylicView))]
-public partial class AcrylicView { }
 [Scaffold(typeof(SkiaSharp.Extended.UI.Controls.SKSurfaceView))]
 partial class SKSurfaceView { }
 
@@ -71,7 +69,6 @@ class MainPage : Component<MainPageState, MainPageProps>
                       .IsHidden(State.IsSideMenuShown)
                       .OpenBookDetail(OpenDetailBook)
                       .OnBookPage(OpenMarket)
-                      .OnReadPage(OpenReadPage)
                       .OpenSideMenu(()=>SetState(s=>s.IsSideMenuShown=true))
                       ,
                       new SideMenu()
@@ -159,13 +156,17 @@ class HomePage : Component<HomePageState>
         InitializeState();
         base.OnMounted();
     }
-    protected override async void OnPropsChanged()
+    protected override void OnPropsChanged()
+    {
+        InitializeState();
+        base.OnPropsChanged();
+    }
+    async void Search()
     {
         var googleBook = Services.GetRequiredService<IGoogleServices>();
-        InitializeState();
         if (State.CategorySelected.Any())
         {
-           
+
             State.IsLoading = true;
             var search = "";
             foreach (var s in State.CategorySelected)
@@ -189,7 +190,6 @@ class HomePage : Component<HomePageState>
                 s.IsLoading = false;
             });
         }
-        base.OnPropsChanged();
     }
     void InitializeState()
     {
@@ -401,7 +401,7 @@ class HomePage : Component<HomePageState>
                                 if (s.CategorySelected.Where(c=>c==CategorySelect.Philosophy).FirstOrDefault() ==CategorySelect.Philosophy) { s.CategorySelected.Remove(CategorySelect.Philosophy); }
                             else { s.CategorySelected.Add(CategorySelect.Philosophy); }
                         });
-                         OnPropsChanged();
+                         Search();
                     }),
                     new Border
                     {
@@ -422,7 +422,7 @@ class HomePage : Component<HomePageState>
                                 if (s.CategorySelected.Where(c=>c==CategorySelect.Science).FirstOrDefault() ==CategorySelect.Science) { s.CategorySelected.Remove(CategorySelect.Science); }
                             else { s.CategorySelected.Add(CategorySelect.Science); }
                         });
-                        OnPropsChanged();
+                        Search();
                     }),
                     new Border
                     {
@@ -443,7 +443,7 @@ class HomePage : Component<HomePageState>
                                 if (s.CategorySelected.Where(c=>c==CategorySelect.Fiction).FirstOrDefault() ==CategorySelect.Fiction) { s.CategorySelected.Remove(CategorySelect.Fiction); }
                             else { s.CategorySelected.Add(CategorySelect.Fiction); }
                         });
-                        OnPropsChanged();
+                        Search();
                     })
                 }.GridRow(0),
                 new HStack
@@ -467,7 +467,7 @@ class HomePage : Component<HomePageState>
                                 if (s.CategorySelected.Where(c=>c==CategorySelect.Nature).FirstOrDefault() ==CategorySelect.Nature) { s.CategorySelected.Remove(CategorySelect.Nature); }
                             else { s.CategorySelected.Add(CategorySelect.Nature); }
                         });
-                        OnPropsChanged();
+                        Search();
                     }),
                     new Border
                     {
@@ -488,7 +488,7 @@ class HomePage : Component<HomePageState>
                                 if (s.CategorySelected.Where(c=>c==CategorySelect.Family).FirstOrDefault() ==CategorySelect.Family) { s.CategorySelected.Remove(CategorySelect.Family); }
                             else { s.CategorySelected.Add(CategorySelect.Family); }
                         });
-                        OnPropsChanged();
+                        Search();
                     }),
                     new Border
                     {
@@ -509,7 +509,7 @@ class HomePage : Component<HomePageState>
                                 if (s.CategorySelected.Where(c=>c==CategorySelect.Travel).FirstOrDefault() ==CategorySelect.Travel) { s.CategorySelected.Remove(CategorySelect.Travel); }
                             else { s.CategorySelected.Add(CategorySelect.Travel); }
                         });
-                        OnPropsChanged();
+                        Search();
                     })
                 }.GridRow(1),
                 new HStack
@@ -533,7 +533,7 @@ class HomePage : Component<HomePageState>
                                 if (s.CategorySelected.Where(c=>c==CategorySelect.Love).FirstOrDefault() ==CategorySelect.Love) { s.CategorySelected.Remove(CategorySelect.Love); }
                             else { s.CategorySelected.Add(CategorySelect.Love); }
                         });
-                        OnPropsChanged();
+                        Search();
                     }),
                    new Border
                     {
@@ -554,7 +554,7 @@ class HomePage : Component<HomePageState>
                                 if (s.CategorySelected.Where(c=>c==CategorySelect.Drama).FirstOrDefault() ==CategorySelect.Drama) { s.CategorySelected.Remove(CategorySelect.Drama); }
                             else { s.CategorySelected.Add(CategorySelect.Drama); }
                         });
-                        OnPropsChanged();
+                        Search();
                     }),
                    new Border
                     {
@@ -575,7 +575,7 @@ class HomePage : Component<HomePageState>
                                 if (s.CategorySelected.Where(c=>c==CategorySelect.Comedy).FirstOrDefault() ==CategorySelect.Comedy) { s.CategorySelected.Remove(CategorySelect.Comedy); }
                             else { s.CategorySelected.Add(CategorySelect.Comedy); }
                         });
-                        OnPropsChanged();
+                        Search();
                     })
                 }.GridRow(2)
             }.HCenter().VCenter(),
@@ -619,55 +619,47 @@ class HomePage : Component<HomePageState>
                         new Image(State.HeaderBookSoure)
                         .Aspect(Aspect.AspectFill)
                         ,
+                        //new Border
+                        //{
+                        //    new HStack
+                        //        {
+                        //            new Border
+                        //            {
+                        //                 new Label(State.HeaderBook.title)
+                        //                .FontFamily(Theme.font)
+                        //                .TextColor(Colors.White)
+                        //                .FontSize(18)
+                        //                .MaxLines(2)
+                        //            }.BackgroundColor(Colors.Transparent)
+                        //            .WidthRequest(150)
+                        //           ,
+                        //            new VStack
+                        //            {
+                        //                new Label(State.HeaderBookAuthor)
+                        //                .FontFamily(Theme.font)
+                        //                .TextColor(Colors.White)
+                        //                .FontSize(15),
+                        //                new Label(State.HeaderBook.publishedDate)
+                        //                .FontFamily(Theme.font)
+                        //                .TextColor(Colors.White)
+                        //                .FontSize(15),
+                        //            }.Spacing(10)
+                        //        }.Spacing(10).Margin(15,15,0,0)
+                        //}.HeightRequest(90)
+                        //.BackgroundColor(Theme.BlackBorder3)
+                        //.StrokeShape(new RoundRectangle().CornerRadius(15))
+                        //.VEnd()
+                        //.Margin(-2,0,-2,-2),
                         new Border
                         {
-                            new AcrylicView
-                            {
-                                new HStack
-                                {
-                                    new Border
-                                    {
-                                         new Label(State.HeaderBook.title)
-                                        .FontFamily(Theme.font)
-                                        .TextColor(Colors.White)
-                                        .FontSize(18)
-                                        .MaxLines(2)
-                                    }.BackgroundColor(Colors.Transparent)
-                                    .WidthRequest(150)
-                                   ,
-                                    new VStack
-                                    {
-                                        new Label(State.HeaderBookAuthor)
-                                        .FontFamily(Theme.font)
-                                        .TextColor(Colors.White)
-                                        .FontSize(15),
-                                        new Label(State.HeaderBook.publishedDate)
-                                        .FontFamily(Theme.font)
-                                        .TextColor(Colors.White)
-                                        .FontSize(15),
-                                    }.Spacing(10)
-                                }.Spacing(10).Margin(15,15,0,0)
-
-                            }.EffectStyle(Xe.AcrylicView.Controls.EffectStyle.Dark)
-                        }.HeightRequest(80)
-                        .BackgroundColor(Colors.Transparent)
-                        .StrokeShape(new RoundRectangle().CornerRadius(15))
-                        .BackgroundColor(Colors.Transparent)
-                        .VEnd()
-                        .Margin(-2,0,-2,-2),
-                        new Border
-                        {
-                            new AcrylicView
-                            {
                                 new Image("favorite")
                                 .HeightRequest(20)
                                 .WidthRequest(20)
-                            }.EffectStyle(Xe.AcrylicView.Controls.EffectStyle.Dark)
                         }.HeightRequest(40)
                         .WidthRequest(40)
                         .HEnd().VStart()
                         .Stroke(Colors.Transparent)
-                        .BackgroundColor(Colors.Transparent)
+                        .BackgroundColor(Colors.WhiteSmoke)
                         .Margin(0,10,10,0)
                         .StrokeShape(new RoundRectangle().CornerRadius(5))
                     }
@@ -675,7 +667,6 @@ class HomePage : Component<HomePageState>
                 .StrokeShape(new RoundRectangle().CornerRadius(15))
                 .Margin(30,0,30,0)
                 .BackgroundColor(Colors.Transparent)
-                .OnTapped(_action3)
         .GridRow(1);
     }
 
@@ -826,25 +817,29 @@ class StartPage : Component<StartPageState>
                   {
                       new HStack
                       {
-                          new MauiReactor.Shapes.Ellipse()
+                          new RoundRectangle()
                           .HeightRequest(10)
-                          .WidthRequest(10)
+                          .WidthRequest(State.ImageIndex==0?30:10)
                           .Stroke(State.ImageIndex==0?Colors.White: Colors.Gray)
-                          .StrokeThickness(1)
+                          .StrokeThickness(1).CornerRadius(10)
                           .Fill(State.ImageIndex==0?Colors.White:Colors.Transparent)
+                          .WithAnimation(easing:Easing.CubicInOut,duration:500)
                           ,
-                          new MauiReactor.Shapes.Ellipse()
+                          new RoundRectangle()
                            .HeightRequest(10)
-                          .WidthRequest(10)
+                          .WidthRequest(State.ImageIndex==1?30:10)
                           .Stroke(State.ImageIndex==1?Colors.White: Colors.Gray)
-                          .StrokeThickness(1)
-                          .Fill(State.ImageIndex==1?Colors.White:Colors.Transparent),
-                          new MauiReactor.Shapes.Ellipse()
+                          .StrokeThickness(1).CornerRadius(10)
+                          .Fill(State.ImageIndex==1?Colors.White:Colors.Transparent)
+                          .WithAnimation(easing:Easing.CubicInOut,duration:500),
+                          new RoundRectangle()
                            .HeightRequest(10)
-                          .WidthRequest(10)
+                          .WidthRequest(State.ImageIndex==2?30:10)
                           .Stroke(State.ImageIndex==2?Colors.White: Colors.Gray)
                           .StrokeThickness(1)
-                          .Fill(State.ImageIndex==2?Colors.White:Colors.Transparent),
+                          .CornerRadius(10)
+                          .Fill(State.ImageIndex==2?Colors.White:Colors.Transparent)
+                          .WithAnimation(easing:Easing.CubicInOut,duration:500),
                       }.Spacing(10).HCenter()
                   }.HeightRequest(50)
                   .WidthRequest(100)

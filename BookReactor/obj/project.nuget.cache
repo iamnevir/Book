@@ -1,10 +1,9 @@
 {
   "version": 2,
-  "dgSpecHash": "4WKM2SG1YubNPdg/jLWfurAHM4X+AcmEBswzwAWxpRJEWT42VsRcj9AcbiNjRVJhrtrBkq8tzaM4LxX/uj2Tzg==",
+  "dgSpecHash": "8P/3ag/28dbWbhUCDRVJsyc7rhBRguhPY1UDerepRQmMOKd366ZNpZtCuviC1iCNzLbk0mAngPkaBcqelKMEdQ==",
   "success": true,
   "projectFilePath": "C:\\Users\\trick\\source\\repos\\Book\\BookReactor\\BookReactor.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\trick\\.nuget\\packages\\acrylicview.maui\\1.13.0\\acrylicview.maui.1.13.0.nupkg.sha512",
     "C:\\Users\\trick\\.nuget\\packages\\googlegson\\2.9.1.1\\googlegson.2.9.1.1.nupkg.sha512",
     "C:\\Users\\trick\\.nuget\\packages\\horusstudio.maui.skeleton\\2.0.0\\horusstudio.maui.skeleton.2.0.0.nupkg.sha512",
     "C:\\Users\\trick\\.nuget\\packages\\m.bindableproperty.generator\\0.9.0\\m.bindableproperty.generator.0.9.0.nupkg.sha512",
@@ -125,7 +124,6 @@
     "C:\\Users\\trick\\.nuget\\packages\\xamarin.kotlin.stdlib.jdk8\\1.7.20.1\\xamarin.kotlin.stdlib.jdk8.1.7.20.1.nupkg.sha512",
     "C:\\Users\\trick\\.nuget\\packages\\xamarin.kotlinx.coroutines.android\\1.6.4.1\\xamarin.kotlinx.coroutines.android.1.6.4.1.nupkg.sha512",
     "C:\\Users\\trick\\.nuget\\packages\\xamarin.kotlinx.coroutines.core.jvm\\1.6.4.1\\xamarin.kotlinx.coroutines.core.jvm.1.6.4.1.nupkg.sha512",
-    "C:\\Users\\trick\\.nuget\\packages\\microsoft.netcore.app.crossgen2.win-x64\\7.0.9\\microsoft.netcore.app.crossgen2.win-x64.7.0.9.nupkg.sha512",
     "C:\\Users\\trick\\.nuget\\packages\\microsoft.windows.sdk.net.ref\\10.0.19041.29\\microsoft.windows.sdk.net.ref.10.0.19041.29.nupkg.sha512",
     "C:\\Users\\trick\\.nuget\\packages\\microsoft.aspnetcore.app.runtime.win-x64\\7.0.9\\microsoft.aspnetcore.app.runtime.win-x64.7.0.9.nupkg.sha512",
     "C:\\Users\\trick\\.nuget\\packages\\microsoft.windowsdesktop.app.runtime.win-x64\\7.0.9\\microsoft.windowsdesktop.app.runtime.win-x64.7.0.9.nupkg.sha512",

@@ -305,7 +305,6 @@ C:\Users\DINH LAM\Desktop\clone\Book\BookReactor\obj\Release\net7.0-ios\iossimul
 C:\Users\trick\source\repos\Book\BookReactor\bin\Release\net7.0-ios\iossimulator-x64\BookReactor.runtimeconfig.json
 C:\Users\trick\source\repos\Book\BookReactor\bin\Release\net7.0-ios\iossimulator-x64\BookReactor.dll
 C:\Users\trick\source\repos\Book\BookReactor\bin\Release\net7.0-ios\iossimulator-x64\BookReactor.pdb
-C:\Users\trick\source\repos\Book\BookReactor\bin\Release\net7.0-ios\iossimulator-x64\Xe.AcrylicView.dll
 C:\Users\trick\source\repos\Book\BookReactor\bin\Release\net7.0-ios\iossimulator-x64\Maui.Skeleton.dll
 C:\Users\trick\source\repos\Book\BookReactor\bin\Release\net7.0-ios\iossimulator-x64\Microsoft.Extensions.Configuration.dll
 C:\Users\trick\source\repos\Book\BookReactor\bin\Release\net7.0-ios\iossimulator-x64\Microsoft.Extensions.Configuration.Abstractions.dll

@@ -6,7 +6,6 @@ global using BookReactor.Pages;
 global using BookReactor.Models;
 global using BookReactor.Services;
 global using MauiReactor;
-global using Xe.AcrylicView;
 global using BookReactor.Resources.Styles;
 global using MauiReactor.Animations;
 global using MauiReactor.Canvas;
