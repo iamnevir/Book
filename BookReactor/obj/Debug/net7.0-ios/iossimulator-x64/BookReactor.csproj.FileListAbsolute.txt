@@ -282,6 +282,8 @@ C:\Users\trick\source\repos\Book\BookReactor\bin\Debug\net7.0-ios\iossimulator-x
 C:\Users\trick\source\repos\Book\BookReactor\bin\Debug\net7.0-ios\iossimulator-x64\BookReactor.dll
 C:\Users\trick\source\repos\Book\BookReactor\bin\Debug\net7.0-ios\iossimulator-x64\BookReactor.pdb
 C:\Users\trick\source\repos\Book\BookReactor\bin\Debug\net7.0-ios\iossimulator-x64\Maui.Skeleton.dll
+C:\Users\trick\source\repos\Book\BookReactor\bin\Debug\net7.0-ios\iossimulator-x64\IdentityModel.dll
+C:\Users\trick\source\repos\Book\BookReactor\bin\Debug\net7.0-ios\iossimulator-x64\IdentityModel.OidcClient.dll
 C:\Users\trick\source\repos\Book\BookReactor\bin\Debug\net7.0-ios\iossimulator-x64\Microsoft.Extensions.Configuration.dll
 C:\Users\trick\source\repos\Book\BookReactor\bin\Debug\net7.0-ios\iossimulator-x64\Microsoft.Extensions.Configuration.Abstractions.dll
 C:\Users\trick\source\repos\Book\BookReactor\bin\Debug\net7.0-ios\iossimulator-x64\Microsoft.Extensions.DependencyInjection.dll
@@ -547,8 +549,10 @@ C:\Users\trick\source\repos\Book\BookReactor\obj\Debug\net7.0-ios\iossimulator-x
 C:\Users\trick\source\repos\Book\BookReactor\obj\Debug\net7.0-ios\iossimulator-x64\resizetizer\r\Resources\bai9.jpg
 C:\Users\trick\source\repos\Book\BookReactor\obj\Debug\net7.0-ios\iossimulator-x64\resizetizer\r\Resources\favori.png
 C:\Users\trick\source\repos\Book\BookReactor\obj\Debug\net7.0-ios\iossimulator-x64\resizetizer\r\Resources\favorite.png
+C:\Users\trick\source\repos\Book\BookReactor\obj\Debug\net7.0-ios\iossimulator-x64\resizetizer\r\Resources\ifavori.png
 C:\Users\trick\source\repos\Book\BookReactor\obj\Debug\net7.0-ios\iossimulator-x64\resizetizer\r\Resources\itagaki.jpg
 C:\Users\trick\source\repos\Book\BookReactor\obj\Debug\net7.0-ios\iossimulator-x64\resizetizer\r\Resources\kmo.png
+C:\Users\trick\source\repos\Book\BookReactor\obj\Debug\net7.0-ios\iossimulator-x64\resizetizer\r\Resources\loginbg.jpg
 C:\Users\trick\source\repos\Book\BookReactor\obj\Debug\net7.0-ios\iossimulator-x64\resizetizer\r\Resources\lungbai.jpg
 C:\Users\trick\source\repos\Book\BookReactor\obj\Debug\net7.0-ios\iossimulator-x64\resizetizer\r\Resources\miura.png
 C:\Users\trick\source\repos\Book\BookReactor\obj\Debug\net7.0-ios\iossimulator-x64\resizetizer\r\Resources\mo.png

@@ -1,4 +1,5 @@
-﻿using Microsoft.Extensions.DependencyInjection;
+﻿using BookReactor.Auth0;
+using Microsoft.Extensions.DependencyInjection;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -14,6 +15,10 @@ public interface IGoogleServices
 }
 public static class ServiceCollectionExtensions
 {
+    public static void AddAuth0Services(this IServiceCollection services,Auth0Client auth0Client)
+    {
+        services.AddSingleton<IAuth0Client>(auth0Client);
+    }
     public static void AddBookServices(this IServiceCollection services, Uri serverUri)
     {
         services.AddSingleton<IGoogleServices, GoogleBookServices>();

@@ -48,6 +48,10 @@ class EBookPage:Component<EBookPageState>
     {
         await Navigation.PushAsync<BookPage>();
     }
+    private async void OpenFavoritePage()
+    {
+        await Navigation.PushAsync<FavoritePage>();
+    }
     void InitializeState()
     {
         if (DeviceInfo.Current.Platform == DevicePlatform.Android)
@@ -111,6 +115,10 @@ class EBookPage:Component<EBookPageState>
         });
         base.OnPropsChanged();
     }
+    private async void OpenLoginPage()
+    {
+        await Navigation.PushAsync<LoginPage>();
+    }
     public override VisualNode Render()
     {
 
@@ -127,6 +135,8 @@ class EBookPage:Component<EBookPageState>
                       .IsShown(State.IsSideMenuShown)
                       .HomePage(OpenHomePage)
                       .OnBookPage(OpenBookPage)
+                      .OpenLoginPage(OpenLoginPage)
+                      .OpenFavoritePage(OpenFavoritePage)
                       .MenuSelect(CommandMenuItem.EBook)
                       .OnClose(()=>{
                       SetState(s=>s.IsSideMenuShown=false);

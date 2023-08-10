@@ -15,10 +15,12 @@
         "projectStyle": "PackageReference",
         "crossTargeting": true,
         "fallbackFolders": [
+          "D:\\DevExpress\\Components\\Offline Packages",
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
           "C:\\Users\\trick\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\DevExpress 23.1.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -31,6 +33,7 @@
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "C:\\Program Files\\dotnet\\library-packs": {},
+          "D:\\DevExpress\\Components\\System\\Components\\Packages": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -64,6 +67,10 @@
             "HorusStudio.Maui.Skeleton": {
               "target": "Package",
               "version": "[2.0.0, )"
+            },
+            "IdentityModel.OidcClient": {
+              "target": "Package",
+              "version": "[5.2.1, )"
             },
             "Microsoft.Extensions.Configuration": {
               "target": "Package",
@@ -104,15 +111,15 @@
             },
             "Reactor.Maui": {
               "target": "Package",
-              "version": "[1.0.138, )"
+              "version": "[1.0.139, )"
             },
             "Reactor.Maui.Canvas": {
               "target": "Package",
-              "version": "[1.0.138, )"
+              "version": "[1.0.139, )"
             },
             "Reactor.Maui.ScaffoldGenerator": {
               "target": "Package",
-              "version": "[1.0.138, )"
+              "version": "[1.0.139, )"
             },
             "SimpleRatingControl.MAUI": {
               "target": "Package",
@@ -215,6 +222,10 @@
               "target": "Package",
               "version": "[2.0.0, )"
             },
+            "IdentityModel.OidcClient": {
+              "target": "Package",
+              "version": "[5.2.1, )"
+            },
             "Microsoft.Extensions.Configuration": {
               "target": "Package",
               "version": "[7.0.0, )",
@@ -254,15 +265,15 @@
             },
             "Reactor.Maui": {
               "target": "Package",
-              "version": "[1.0.138, )"
+              "version": "[1.0.139, )"
             },
             "Reactor.Maui.Canvas": {
               "target": "Package",
-              "version": "[1.0.138, )"
+              "version": "[1.0.139, )"
             },
             "Reactor.Maui.ScaffoldGenerator": {
               "target": "Package",
-              "version": "[1.0.138, )"
+              "version": "[1.0.139, )"
             },
             "SimpleRatingControl.MAUI": {
               "target": "Package",
@@ -310,6 +321,10 @@
               "target": "Package",
               "version": "[2.0.0, )"
             },
+            "IdentityModel.OidcClient": {
+              "target": "Package",
+              "version": "[5.2.1, )"
+            },
             "Microsoft.Extensions.Configuration": {
               "target": "Package",
               "version": "[7.0.0, )",
@@ -349,15 +364,15 @@
             },
             "Reactor.Maui": {
               "target": "Package",
-              "version": "[1.0.138, )"
+              "version": "[1.0.139, )"
             },
             "Reactor.Maui.Canvas": {
               "target": "Package",
-              "version": "[1.0.138, )"
+              "version": "[1.0.139, )"
             },
             "Reactor.Maui.ScaffoldGenerator": {
               "target": "Package",
-              "version": "[1.0.138, )"
+              "version": "[1.0.139, )"
             },
             "SimpleRatingControl.MAUI": {
               "target": "Package",
@@ -405,6 +420,10 @@
             "HorusStudio.Maui.Skeleton": {
               "target": "Package",
               "version": "[2.0.0, )"
+            },
+            "IdentityModel.OidcClient": {
+              "target": "Package",
+              "version": "[5.2.1, )"
             },
             "Microsoft.Extensions.Configuration": {
               "target": "Package",
@@ -461,15 +480,15 @@
             },
             "Reactor.Maui": {
               "target": "Package",
-              "version": "[1.0.138, )"
+              "version": "[1.0.139, )"
             },
             "Reactor.Maui.Canvas": {
               "target": "Package",
-              "version": "[1.0.138, )"
+              "version": "[1.0.139, )"
             },
             "Reactor.Maui.ScaffoldGenerator": {
               "target": "Package",
-              "version": "[1.0.138, )"
+              "version": "[1.0.139, )"
             },
             "SimpleRatingControl.MAUI": {
               "target": "Package",

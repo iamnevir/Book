@@ -3,6 +3,7 @@ using MauiReactor.Canvas;
 using MauiReactor.Shapes;
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -17,7 +18,8 @@ class SideMenuState
 
     public double TranslationX { get; set; } = -250;
 
-    public CommandMenuItem SelectedMenuItem { get; set; } 
+    public CommandMenuItem SelectedMenuItem { get; set; }
+    public string UserName { get; set; }
 }
 
 class SideMenu : Component<SideMenuState>
@@ -27,6 +29,8 @@ class SideMenu : Component<SideMenuState>
     private Action _openBookPage;
     private Action _openeBookPage;
     private Action _homePage;
+    private Action _openFavoritePage;
+    private Action _openLoginPage;
     private CommandMenuItem _menuSelect;
 
     public SideMenu MenuSelect(CommandMenuItem com)
@@ -34,9 +38,19 @@ class SideMenu : Component<SideMenuState>
         _menuSelect = com;
         return this;
     }
+    public SideMenu OpenLoginPage(Action action)
+    {
+        _openLoginPage = action;
+        return this;
+    }
     public SideMenu HomePage(Action action)
     {
         _homePage = action;
+        return this;
+    }
+    public SideMenu OpenFavoritePage(Action action)
+    {
+        _openFavoritePage = action;
         return this;
     }
     public SideMenu OnBookPage(Action action)
@@ -60,8 +74,9 @@ class SideMenu : Component<SideMenuState>
         return this;
     }
 
-    protected override void OnMounted()
+    protected override async void OnMounted()
     {
+        State.UserName=Logger.KiemTraLogin()? await Logger.GetLogAsync():"Unknown";
         State.TranslationX = _isShown ? 0 : -250;
         State.Opacity = _isShown ? 1.0 : 0.0;
         State.RotationY = _isShown ? 0.0 : 10;
@@ -69,7 +84,7 @@ class SideMenu : Component<SideMenuState>
         base.OnMounted();
     }
 
-    protected override void OnPropsChanged()
+    protected override  void OnPropsChanged()
     {
         State.TranslationX = _isShown ? 0 : -250;
         State.Opacity = _isShown ? 1.0 : 0.0;
@@ -118,7 +133,7 @@ class SideMenu : Component<SideMenuState>
                 .VStart()
                 .Clip(new EllipseGeometry().RadiusX(18).RadiusY(18).Center(18,18)),
 
-            new Label("Nevir")
+            new Label(State.UserName)
                 .FontSize(17)
                 .TextColor(Colors.White)
                 .FontFamily(Theme.font)
@@ -167,8 +182,8 @@ class SideMenu : Component<SideMenuState>
             new VStack(spacing: 0)
             {
                 RenderMenuItem("Home", "homeback.png", CommandMenuItem.Home,_homePage),
-                RenderMenuItem("Favorites", "favorites_img.png", CommandMenuItem.Favorites),
-                RenderMenuItem("Help", "help_img.png", CommandMenuItem.Help),
+                RenderMenuItem("Favorites", "favorites_img.png", CommandMenuItem.Favorites,_openFavoritePage),
+                RenderMenuItem("Help", "help_img.png", CommandMenuItem.Help,_openLoginPage),
             }
             .Margin(20,8,0,0)
             .GridRow(1),

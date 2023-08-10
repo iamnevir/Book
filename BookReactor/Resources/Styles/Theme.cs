@@ -1,4 +1,4 @@
-﻿using System;
+﻿ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -27,4 +27,18 @@ public class Theme
     public static Color ShadowDark { get; } = Color.FromUint(0xFF000000);
     public static MauiControls.Brush ShadowDarkBrush { get; } = new MauiControls.SolidColorBrush(Shadow);
     public static Color Background2 { get; } = Color.FromUint(0xFF17203A);
+
+    public static List<Color> RandomColors = new()
+    {
+        Color.FromArgb("#FFCCFF"),
+        Color.FromArgb("#99FFFF"),
+        Color.FromArgb("#99FF00"),
+        Color.FromArgb("#0099FF"),
+        Color.FromArgb("#FF33FF"),
+        Color.FromArgb("#00EE00"),
+        Color.FromArgb("#0000FF"),
+        Color.FromArgb("#FFFF00"),
+        Color.FromArgb("#FF3366"),
+        Color.FromArgb("#FF99CC"),
+    };
 }

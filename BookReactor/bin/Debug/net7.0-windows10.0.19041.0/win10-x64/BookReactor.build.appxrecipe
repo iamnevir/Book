@@ -607,6 +607,12 @@
     <AppxPackagedFile Include="C:\Users\trick\.nuget\packages\horusstudio.maui.skeleton\2.0.0\lib\net6.0\Maui.Skeleton.dll">
       <PackagePath>Maui.Skeleton.dll</PackagePath>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\trick\.nuget\packages\identitymodel\5.2.0\lib\net5.0\IdentityModel.dll">
+      <PackagePath>IdentityModel.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\trick\.nuget\packages\identitymodel.oidcclient\5.2.1\lib\netstandard2.0\IdentityModel.OidcClient.dll">
+      <PackagePath>IdentityModel.OidcClient.dll</PackagePath>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\trick\.nuget\packages\microsoft.extensions.configuration\7.0.0\lib\net7.0\Microsoft.Extensions.Configuration.dll">
       <PackagePath>Microsoft.Extensions.Configuration.dll</PackagePath>
     </AppxPackagedFile>
@@ -691,10 +697,10 @@
     <AppxPackagedFile Include="C:\Users\trick\.nuget\packages\plugin.maui.screenbrightness\1.0.0-preview3\lib\net6.0-windows10.0.19041\Plugin.Maui.ScreenBrightness.dll">
       <PackagePath>Plugin.Maui.ScreenBrightness.dll</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\trick\.nuget\packages\reactor.maui\1.0.138\lib\net7.0-windows10.0.19041\MauiReactor.dll">
+    <AppxPackagedFile Include="C:\Users\trick\.nuget\packages\reactor.maui\1.0.139\lib\net7.0-windows10.0.19041\MauiReactor.dll">
       <PackagePath>MauiReactor.dll</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\trick\.nuget\packages\reactor.maui.canvas\1.0.138\lib\net7.0-windows10.0.19041\MauiReactor.Canvas.dll">
+    <AppxPackagedFile Include="C:\Users\trick\.nuget\packages\reactor.maui.canvas\1.0.139\lib\net7.0-windows10.0.19041\MauiReactor.Canvas.dll">
       <PackagePath>MauiReactor.Canvas.dll</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\trick\.nuget\packages\simpleratingcontrol.maui\0.0.3\lib\net6.0-windows10.0.19041\SimpleRatingControlMaui.dll">
@@ -765,6 +771,9 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\trick\source\repos\Book\BookReactor\Resources\Raw\close.json">
       <PackagePath>close.json</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\trick\source\repos\Book\BookReactor\Resources\Raw\ggicon.json">
+      <PackagePath>ggicon.json</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\trick\source\repos\Book\BookReactor\Resources\Raw\loading.json">
       <PackagePath>loading.json</PackagePath>
@@ -985,11 +994,17 @@
     <AppxPackagedFile Include="C:\Users\trick\source\repos\Book\BookReactor\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\favorite.scale-100.png">
       <PackagePath>favorite.scale-100.png</PackagePath>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\trick\source\repos\Book\BookReactor\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\ifavori.scale-100.png">
+      <PackagePath>ifavori.scale-100.png</PackagePath>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\trick\source\repos\Book\BookReactor\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\itagaki.scale-100.jpg">
       <PackagePath>itagaki.scale-100.jpg</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\trick\source\repos\Book\BookReactor\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\kmo.scale-100.png">
       <PackagePath>kmo.scale-100.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\trick\source\repos\Book\BookReactor\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\loginbg.scale-100.jpg">
+      <PackagePath>loginbg.scale-100.jpg</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\trick\source\repos\Book\BookReactor\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\lungbai.scale-100.jpg">
       <PackagePath>lungbai.scale-100.jpg</PackagePath>

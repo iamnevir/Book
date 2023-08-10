@@ -62,8 +62,10 @@ bai8.scale-100.jpg
 bai9.scale-100.jpg
 favori.scale-100.png
 favorite.scale-100.png
+ifavori.scale-100.png
 itagaki.scale-100.jpg
 kmo.scale-100.png
+loginbg.scale-100.jpg
 lungbai.scale-100.jpg
 miura.scale-100.png
 mo.scale-100.png
@@ -87,6 +89,7 @@ AboutAssets.txt
 back.json
 bookanimation.json
 close.json
+ggicon.json
 loading.json
 search.json
 tb.json

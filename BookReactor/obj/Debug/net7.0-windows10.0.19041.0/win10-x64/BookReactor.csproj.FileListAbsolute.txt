@@ -355,6 +355,8 @@ C:\Users\trick\source\repos\Book\BookReactor\bin\Debug\net7.0-windows10.0.19041.
 C:\Users\trick\source\repos\Book\BookReactor\bin\Debug\net7.0-windows10.0.19041.0\win10-x64\resources.pri
 C:\Users\trick\source\repos\Book\BookReactor\bin\Debug\net7.0-windows10.0.19041.0\win10-x64\AppxManifest.xml
 C:\Users\trick\source\repos\Book\BookReactor\bin\Debug\net7.0-windows10.0.19041.0\win10-x64\Maui.Skeleton.dll
+C:\Users\trick\source\repos\Book\BookReactor\bin\Debug\net7.0-windows10.0.19041.0\win10-x64\IdentityModel.dll
+C:\Users\trick\source\repos\Book\BookReactor\bin\Debug\net7.0-windows10.0.19041.0\win10-x64\IdentityModel.OidcClient.dll
 C:\Users\trick\source\repos\Book\BookReactor\bin\Debug\net7.0-windows10.0.19041.0\win10-x64\Microsoft.Extensions.Configuration.dll
 C:\Users\trick\source\repos\Book\BookReactor\bin\Debug\net7.0-windows10.0.19041.0\win10-x64\Microsoft.Extensions.Configuration.Abstractions.dll
 C:\Users\trick\source\repos\Book\BookReactor\bin\Debug\net7.0-windows10.0.19041.0\win10-x64\Microsoft.Extensions.DependencyInjection.dll
@@ -671,8 +673,10 @@ C:\Users\trick\source\repos\Book\BookReactor\obj\Debug\net7.0-windows10.0.19041.
 C:\Users\trick\source\repos\Book\BookReactor\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\bai9.scale-100.jpg
 C:\Users\trick\source\repos\Book\BookReactor\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\favori.scale-100.png
 C:\Users\trick\source\repos\Book\BookReactor\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\favorite.scale-100.png
+C:\Users\trick\source\repos\Book\BookReactor\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\ifavori.scale-100.png
 C:\Users\trick\source\repos\Book\BookReactor\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\itagaki.scale-100.jpg
 C:\Users\trick\source\repos\Book\BookReactor\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\kmo.scale-100.png
+C:\Users\trick\source\repos\Book\BookReactor\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\loginbg.scale-100.jpg
 C:\Users\trick\source\repos\Book\BookReactor\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\lungbai.scale-100.jpg
 C:\Users\trick\source\repos\Book\BookReactor\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\miura.scale-100.png
 C:\Users\trick\source\repos\Book\BookReactor\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\mo.scale-100.png

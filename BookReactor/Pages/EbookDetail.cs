@@ -9,6 +9,7 @@ namespace BookReactor.Pages;
 
 class EbookDetailState
 {
+    public bool IsFavorite { get; set; }
 }
 class EbookDetailProps
 {
@@ -55,6 +56,14 @@ class EbookDetail:Component<EbookDetailState, EbookDetailProps>
                     break;
             }
         });
+    }
+    private async void AddToFavorite()
+    {
+        await Logger.AddFavoriteAsync(Props.Book.id);
+    }
+    private async void RemoveFromFavorite()
+    {
+        await Logger.RemoveFavoriteAsync(Props.Book.id);
     }
     public override VisualNode Render()
     {
@@ -196,7 +205,7 @@ class EbookDetail:Component<EbookDetailState, EbookDetailProps>
                 {
                     new Border
                     {
-                        new Image("favori")
+                        new Image(State.IsFavorite?"ifavori":"favori")
                         .Aspect(Aspect.AspectFit)
                         .HeightRequest(20)
                         .WidthRequest(20)
@@ -205,7 +214,20 @@ class EbookDetail:Component<EbookDetailState, EbookDetailProps>
                     .StrokeShape(new RoundRectangle().CornerRadius(10))
                     .HeightRequest(50)
                     .WidthRequest(50)
-                    .GridColumn(0),
+                    .GridColumn(0)
+                    .OnTapped(() =>
+                    {
+                        if(State.IsFavorite)
+                        {
+                            SetState(s=>s.IsFavorite=false);
+                            RemoveFromFavorite();
+                        }
+                        else
+                        {
+                            SetState(s=>s.IsFavorite=true);
+                            AddToFavorite();
+                        }
+                    }),
                     new Button("Start Reading")
                     .TextColor(Colors.White)
                     .BackgroundColor(Theme.Cam)

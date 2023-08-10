@@ -28,6 +28,36 @@
           }
         }
       },
+      "IdentityModel/5.2.0": {
+        "type": "package",
+        "compile": {
+          "lib/net5.0/IdentityModel.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net5.0/IdentityModel.dll": {
+            "related": ".pdb;.xml"
+          }
+        }
+      },
+      "IdentityModel.OidcClient/5.2.1": {
+        "type": "package",
+        "dependencies": {
+          "IdentityModel": "5.2.0",
+          "Microsoft.Extensions.Logging": "6.0.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/IdentityModel.OidcClient.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/IdentityModel.OidcClient.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "M.BindableProperty.Generator/0.9.0": {
         "type": "package"
       },
@@ -240,7 +270,7 @@
           }
         }
       },
-      "Reactor.Maui/1.0.138": {
+      "Reactor.Maui/1.0.139": {
         "type": "package",
         "compile": {
           "lib/net7.0-android33.0/MauiReactor.dll": {
@@ -253,10 +283,10 @@
           }
         }
       },
-      "Reactor.Maui.Canvas/1.0.138": {
+      "Reactor.Maui.Canvas/1.0.139": {
         "type": "package",
         "dependencies": {
-          "Reactor.Maui": "1.0.138"
+          "Reactor.Maui": "1.0.139"
         },
         "compile": {
           "lib/net7.0-android33.0/MauiReactor.Canvas.dll": {
@@ -269,7 +299,7 @@
           }
         }
       },
-      "Reactor.Maui.ScaffoldGenerator/1.0.138": {
+      "Reactor.Maui.ScaffoldGenerator/1.0.139": {
         "type": "package",
         "dependencies": {
           "System.CodeDom": "7.0.0"
@@ -2211,6 +2241,36 @@
           }
         }
       },
+      "IdentityModel/5.2.0": {
+        "type": "package",
+        "compile": {
+          "lib/net5.0/IdentityModel.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net5.0/IdentityModel.dll": {
+            "related": ".pdb;.xml"
+          }
+        }
+      },
+      "IdentityModel.OidcClient/5.2.1": {
+        "type": "package",
+        "dependencies": {
+          "IdentityModel": "5.2.0",
+          "Microsoft.Extensions.Logging": "6.0.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/IdentityModel.OidcClient.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/IdentityModel.OidcClient.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "M.BindableProperty.Generator/0.9.0": {
         "type": "package"
       },
@@ -2423,7 +2483,7 @@
           }
         }
       },
-      "Reactor.Maui/1.0.138": {
+      "Reactor.Maui/1.0.139": {
         "type": "package",
         "compile": {
           "lib/net7.0-android33.0/MauiReactor.dll": {
@@ -2436,10 +2496,10 @@
           }
         }
       },
-      "Reactor.Maui.Canvas/1.0.138": {
+      "Reactor.Maui.Canvas/1.0.139": {
         "type": "package",
         "dependencies": {
-          "Reactor.Maui": "1.0.138"
+          "Reactor.Maui": "1.0.139"
         },
         "compile": {
           "lib/net7.0-android33.0/MauiReactor.Canvas.dll": {
@@ -2452,7 +2512,7 @@
           }
         }
       },
-      "Reactor.Maui.ScaffoldGenerator/1.0.138": {
+      "Reactor.Maui.ScaffoldGenerator/1.0.139": {
         "type": "package",
         "dependencies": {
           "System.CodeDom": "7.0.0"
@@ -4379,6 +4439,36 @@
           }
         }
       },
+      "IdentityModel/5.2.0": {
+        "type": "package",
+        "compile": {
+          "lib/net5.0/IdentityModel.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net5.0/IdentityModel.dll": {
+            "related": ".pdb;.xml"
+          }
+        }
+      },
+      "IdentityModel.OidcClient/5.2.1": {
+        "type": "package",
+        "dependencies": {
+          "IdentityModel": "5.2.0",
+          "Microsoft.Extensions.Logging": "6.0.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/IdentityModel.OidcClient.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/IdentityModel.OidcClient.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "M.BindableProperty.Generator/0.9.0": {
         "type": "package"
       },
@@ -4591,7 +4681,7 @@
           }
         }
       },
-      "Reactor.Maui/1.0.138": {
+      "Reactor.Maui/1.0.139": {
         "type": "package",
         "compile": {
           "lib/net7.0-android33.0/MauiReactor.dll": {
@@ -4604,10 +4694,10 @@
           }
         }
       },
-      "Reactor.Maui.Canvas/1.0.138": {
+      "Reactor.Maui.Canvas/1.0.139": {
         "type": "package",
         "dependencies": {
-          "Reactor.Maui": "1.0.138"
+          "Reactor.Maui": "1.0.139"
         },
         "compile": {
           "lib/net7.0-android33.0/MauiReactor.Canvas.dll": {
@@ -4620,7 +4710,7 @@
           }
         }
       },
-      "Reactor.Maui.ScaffoldGenerator/1.0.138": {
+      "Reactor.Maui.ScaffoldGenerator/1.0.139": {
         "type": "package",
         "dependencies": {
           "System.CodeDom": "7.0.0"
@@ -6547,6 +6637,36 @@
           }
         }
       },
+      "IdentityModel/5.2.0": {
+        "type": "package",
+        "compile": {
+          "lib/net5.0/IdentityModel.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net5.0/IdentityModel.dll": {
+            "related": ".pdb;.xml"
+          }
+        }
+      },
+      "IdentityModel.OidcClient/5.2.1": {
+        "type": "package",
+        "dependencies": {
+          "IdentityModel": "5.2.0",
+          "Microsoft.Extensions.Logging": "6.0.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/IdentityModel.OidcClient.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/IdentityModel.OidcClient.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "M.BindableProperty.Generator/0.9.0": {
         "type": "package"
       },
@@ -6759,7 +6879,7 @@
           }
         }
       },
-      "Reactor.Maui/1.0.138": {
+      "Reactor.Maui/1.0.139": {
         "type": "package",
         "compile": {
           "lib/net7.0-android33.0/MauiReactor.dll": {
@@ -6772,10 +6892,10 @@
           }
         }
       },
-      "Reactor.Maui.Canvas/1.0.138": {
+      "Reactor.Maui.Canvas/1.0.139": {
         "type": "package",
         "dependencies": {
-          "Reactor.Maui": "1.0.138"
+          "Reactor.Maui": "1.0.139"
         },
         "compile": {
           "lib/net7.0-android33.0/MauiReactor.Canvas.dll": {
@@ -6788,7 +6908,7 @@
           }
         }
       },
-      "Reactor.Maui.ScaffoldGenerator/1.0.138": {
+      "Reactor.Maui.ScaffoldGenerator/1.0.139": {
         "type": "package",
         "dependencies": {
           "System.CodeDom": "7.0.0"
@@ -8715,6 +8835,36 @@
           }
         }
       },
+      "IdentityModel/5.2.0": {
+        "type": "package",
+        "compile": {
+          "lib/net5.0/IdentityModel.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net5.0/IdentityModel.dll": {
+            "related": ".pdb;.xml"
+          }
+        }
+      },
+      "IdentityModel.OidcClient/5.2.1": {
+        "type": "package",
+        "dependencies": {
+          "IdentityModel": "5.2.0",
+          "Microsoft.Extensions.Logging": "6.0.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/IdentityModel.OidcClient.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/IdentityModel.OidcClient.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "M.BindableProperty.Generator/0.9.0": {
         "type": "package"
       },
@@ -8927,7 +9077,7 @@
           }
         }
       },
-      "Reactor.Maui/1.0.138": {
+      "Reactor.Maui/1.0.139": {
         "type": "package",
         "compile": {
           "lib/net7.0-android33.0/MauiReactor.dll": {
@@ -8940,10 +9090,10 @@
           }
         }
       },
-      "Reactor.Maui.Canvas/1.0.138": {
+      "Reactor.Maui.Canvas/1.0.139": {
         "type": "package",
         "dependencies": {
-          "Reactor.Maui": "1.0.138"
+          "Reactor.Maui": "1.0.139"
         },
         "compile": {
           "lib/net7.0-android33.0/MauiReactor.Canvas.dll": {
@@ -8956,7 +9106,7 @@
           }
         }
       },
-      "Reactor.Maui.ScaffoldGenerator/1.0.138": {
+      "Reactor.Maui.ScaffoldGenerator/1.0.139": {
         "type": "package",
         "dependencies": {
           "System.CodeDom": "7.0.0"
@@ -10883,6 +11033,36 @@
           }
         }
       },
+      "IdentityModel/5.2.0": {
+        "type": "package",
+        "compile": {
+          "lib/net5.0/IdentityModel.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net5.0/IdentityModel.dll": {
+            "related": ".pdb;.xml"
+          }
+        }
+      },
+      "IdentityModel.OidcClient/5.2.1": {
+        "type": "package",
+        "dependencies": {
+          "IdentityModel": "5.2.0",
+          "Microsoft.Extensions.Logging": "6.0.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/IdentityModel.OidcClient.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/IdentityModel.OidcClient.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "M.BindableProperty.Generator/0.9.0": {
         "type": "package"
       },
@@ -11095,7 +11275,7 @@
           }
         }
       },
-      "Reactor.Maui/1.0.138": {
+      "Reactor.Maui/1.0.139": {
         "type": "package",
         "compile": {
           "lib/net7.0-android33.0/MauiReactor.dll": {
@@ -11108,10 +11288,10 @@
           }
         }
       },
-      "Reactor.Maui.Canvas/1.0.138": {
+      "Reactor.Maui.Canvas/1.0.139": {
         "type": "package",
         "dependencies": {
-          "Reactor.Maui": "1.0.138"
+          "Reactor.Maui": "1.0.139"
         },
         "compile": {
           "lib/net7.0-android33.0/MauiReactor.Canvas.dll": {
@@ -11124,7 +11304,7 @@
           }
         }
       },
-      "Reactor.Maui.ScaffoldGenerator/1.0.138": {
+      "Reactor.Maui.ScaffoldGenerator/1.0.139": {
         "type": "package",
         "dependencies": {
           "System.CodeDom": "7.0.0"
@@ -13048,6 +13228,36 @@
           }
         }
       },
+      "IdentityModel/5.2.0": {
+        "type": "package",
+        "compile": {
+          "lib/net5.0/IdentityModel.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net5.0/IdentityModel.dll": {
+            "related": ".pdb;.xml"
+          }
+        }
+      },
+      "IdentityModel.OidcClient/5.2.1": {
+        "type": "package",
+        "dependencies": {
+          "IdentityModel": "5.2.0",
+          "Microsoft.Extensions.Logging": "6.0.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/IdentityModel.OidcClient.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/IdentityModel.OidcClient.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "M.BindableProperty.Generator/0.9.0": {
         "type": "package"
       },
@@ -13260,7 +13470,7 @@
           }
         }
       },
-      "Reactor.Maui/1.0.138": {
+      "Reactor.Maui/1.0.139": {
         "type": "package",
         "compile": {
           "lib/net7.0-android33.0/MauiReactor.dll": {
@@ -13273,10 +13483,10 @@
           }
         }
       },
-      "Reactor.Maui.Canvas/1.0.138": {
+      "Reactor.Maui.Canvas/1.0.139": {
         "type": "package",
         "dependencies": {
-          "Reactor.Maui": "1.0.138"
+          "Reactor.Maui": "1.0.139"
         },
         "compile": {
           "lib/net7.0-android33.0/MauiReactor.Canvas.dll": {
@@ -13289,7 +13499,7 @@
           }
         }
       },
-      "Reactor.Maui.ScaffoldGenerator/1.0.138": {
+      "Reactor.Maui.ScaffoldGenerator/1.0.139": {
         "type": "package",
         "dependencies": {
           "System.CodeDom": "7.0.0"
@@ -15213,6 +15423,36 @@
           }
         }
       },
+      "IdentityModel/5.2.0": {
+        "type": "package",
+        "compile": {
+          "lib/net5.0/IdentityModel.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net5.0/IdentityModel.dll": {
+            "related": ".pdb;.xml"
+          }
+        }
+      },
+      "IdentityModel.OidcClient/5.2.1": {
+        "type": "package",
+        "dependencies": {
+          "IdentityModel": "5.2.0",
+          "Microsoft.Extensions.Logging": "6.0.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/IdentityModel.OidcClient.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/IdentityModel.OidcClient.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "M.BindableProperty.Generator/0.9.0": {
         "type": "package"
       },
@@ -15425,7 +15665,7 @@
           }
         }
       },
-      "Reactor.Maui/1.0.138": {
+      "Reactor.Maui/1.0.139": {
         "type": "package",
         "compile": {
           "lib/net7.0-android33.0/MauiReactor.dll": {
@@ -15438,10 +15678,10 @@
           }
         }
       },
-      "Reactor.Maui.Canvas/1.0.138": {
+      "Reactor.Maui.Canvas/1.0.139": {
         "type": "package",
         "dependencies": {
-          "Reactor.Maui": "1.0.138"
+          "Reactor.Maui": "1.0.139"
         },
         "compile": {
           "lib/net7.0-android33.0/MauiReactor.Canvas.dll": {
@@ -15454,7 +15694,7 @@
           }
         }
       },
-      "Reactor.Maui.ScaffoldGenerator/1.0.138": {
+      "Reactor.Maui.ScaffoldGenerator/1.0.139": {
         "type": "package",
         "dependencies": {
           "System.CodeDom": "7.0.0"
@@ -17365,6 +17605,36 @@
           }
         }
       },
+      "IdentityModel/5.2.0": {
+        "type": "package",
+        "compile": {
+          "lib/net5.0/IdentityModel.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net5.0/IdentityModel.dll": {
+            "related": ".pdb;.xml"
+          }
+        }
+      },
+      "IdentityModel.OidcClient/5.2.1": {
+        "type": "package",
+        "dependencies": {
+          "IdentityModel": "5.2.0",
+          "Microsoft.Extensions.Logging": "6.0.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/IdentityModel.OidcClient.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/IdentityModel.OidcClient.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "M.BindableProperty.Generator/0.9.0": {
         "type": "package"
       },
@@ -17576,7 +17846,7 @@
           "lib/net6.0-ios16.1/Plugin.Maui.ScreenBrightness.dll": {}
         }
       },
-      "Reactor.Maui/1.0.138": {
+      "Reactor.Maui/1.0.139": {
         "type": "package",
         "compile": {
           "lib/net7.0-ios16.1/MauiReactor.dll": {}
@@ -17585,10 +17855,10 @@
           "lib/net7.0-ios16.1/MauiReactor.dll": {}
         }
       },
-      "Reactor.Maui.Canvas/1.0.138": {
+      "Reactor.Maui.Canvas/1.0.139": {
         "type": "package",
         "dependencies": {
-          "Reactor.Maui": "1.0.138"
+          "Reactor.Maui": "1.0.139"
         },
         "compile": {
           "lib/net7.0-ios16.1/MauiReactor.Canvas.dll": {}
@@ -17597,7 +17867,7 @@
           "lib/net7.0-ios16.1/MauiReactor.Canvas.dll": {}
         }
       },
-      "Reactor.Maui.ScaffoldGenerator/1.0.138": {
+      "Reactor.Maui.ScaffoldGenerator/1.0.139": {
         "type": "package",
         "dependencies": {
           "System.CodeDom": "7.0.0"
@@ -17800,6 +18070,36 @@
           }
         }
       },
+      "IdentityModel/5.2.0": {
+        "type": "package",
+        "compile": {
+          "lib/net5.0/IdentityModel.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net5.0/IdentityModel.dll": {
+            "related": ".pdb;.xml"
+          }
+        }
+      },
+      "IdentityModel.OidcClient/5.2.1": {
+        "type": "package",
+        "dependencies": {
+          "IdentityModel": "5.2.0",
+          "Microsoft.Extensions.Logging": "6.0.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/IdentityModel.OidcClient.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/IdentityModel.OidcClient.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "M.BindableProperty.Generator/0.9.0": {
         "type": "package"
       },
@@ -18011,7 +18311,7 @@
           "lib/net6.0-ios16.1/Plugin.Maui.ScreenBrightness.dll": {}
         }
       },
-      "Reactor.Maui/1.0.138": {
+      "Reactor.Maui/1.0.139": {
         "type": "package",
         "compile": {
           "lib/net7.0-ios16.1/MauiReactor.dll": {}
@@ -18020,10 +18320,10 @@
           "lib/net7.0-ios16.1/MauiReactor.dll": {}
         }
       },
-      "Reactor.Maui.Canvas/1.0.138": {
+      "Reactor.Maui.Canvas/1.0.139": {
         "type": "package",
         "dependencies": {
-          "Reactor.Maui": "1.0.138"
+          "Reactor.Maui": "1.0.139"
         },
         "compile": {
           "lib/net7.0-ios16.1/MauiReactor.Canvas.dll": {}
@@ -18032,7 +18332,7 @@
           "lib/net7.0-ios16.1/MauiReactor.Canvas.dll": {}
         }
       },
-      "Reactor.Maui.ScaffoldGenerator/1.0.138": {
+      "Reactor.Maui.ScaffoldGenerator/1.0.139": {
         "type": "package",
         "dependencies": {
           "System.CodeDom": "7.0.0"
@@ -18217,6 +18517,36 @@
           }
         }
       },
+      "IdentityModel/5.2.0": {
+        "type": "package",
+        "compile": {
+          "lib/net5.0/IdentityModel.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net5.0/IdentityModel.dll": {
+            "related": ".pdb;.xml"
+          }
+        }
+      },
+      "IdentityModel.OidcClient/5.2.1": {
+        "type": "package",
+        "dependencies": {
+          "IdentityModel": "5.2.0",
+          "Microsoft.Extensions.Logging": "6.0.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/IdentityModel.OidcClient.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/IdentityModel.OidcClient.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "M.BindableProperty.Generator/0.9.0": {
         "type": "package"
       },
@@ -18428,7 +18758,7 @@
           "lib/net6.0-ios16.1/Plugin.Maui.ScreenBrightness.dll": {}
         }
       },
-      "Reactor.Maui/1.0.138": {
+      "Reactor.Maui/1.0.139": {
         "type": "package",
         "compile": {
           "lib/net7.0-ios16.1/MauiReactor.dll": {}
@@ -18437,10 +18767,10 @@
           "lib/net7.0-ios16.1/MauiReactor.dll": {}
         }
       },
-      "Reactor.Maui.Canvas/1.0.138": {
+      "Reactor.Maui.Canvas/1.0.139": {
         "type": "package",
         "dependencies": {
-          "Reactor.Maui": "1.0.138"
+          "Reactor.Maui": "1.0.139"
         },
         "compile": {
           "lib/net7.0-ios16.1/MauiReactor.Canvas.dll": {}
@@ -18449,7 +18779,7 @@
           "lib/net7.0-ios16.1/MauiReactor.Canvas.dll": {}
         }
       },
-      "Reactor.Maui.ScaffoldGenerator/1.0.138": {
+      "Reactor.Maui.ScaffoldGenerator/1.0.139": {
         "type": "package",
         "dependencies": {
           "System.CodeDom": "7.0.0"
@@ -18634,6 +18964,36 @@
           }
         }
       },
+      "IdentityModel/5.2.0": {
+        "type": "package",
+        "compile": {
+          "lib/net5.0/IdentityModel.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net5.0/IdentityModel.dll": {
+            "related": ".pdb;.xml"
+          }
+        }
+      },
+      "IdentityModel.OidcClient/5.2.1": {
+        "type": "package",
+        "dependencies": {
+          "IdentityModel": "5.2.0",
+          "Microsoft.Extensions.Logging": "6.0.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/IdentityModel.OidcClient.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/IdentityModel.OidcClient.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "M.BindableProperty.Generator/0.9.0": {
         "type": "package"
       },
@@ -18845,7 +19205,7 @@
           "lib/net6.0-ios16.1/Plugin.Maui.ScreenBrightness.dll": {}
         }
       },
-      "Reactor.Maui/1.0.138": {
+      "Reactor.Maui/1.0.139": {
         "type": "package",
         "compile": {
           "lib/net7.0-ios16.1/MauiReactor.dll": {}
@@ -18854,10 +19214,10 @@
           "lib/net7.0-ios16.1/MauiReactor.dll": {}
         }
       },
-      "Reactor.Maui.Canvas/1.0.138": {
+      "Reactor.Maui.Canvas/1.0.139": {
         "type": "package",
         "dependencies": {
-          "Reactor.Maui": "1.0.138"
+          "Reactor.Maui": "1.0.139"
         },
         "compile": {
           "lib/net7.0-ios16.1/MauiReactor.Canvas.dll": {}
@@ -18866,7 +19226,7 @@
           "lib/net7.0-ios16.1/MauiReactor.Canvas.dll": {}
         }
       },
-      "Reactor.Maui.ScaffoldGenerator/1.0.138": {
+      "Reactor.Maui.ScaffoldGenerator/1.0.139": {
         "type": "package",
         "dependencies": {
           "System.CodeDom": "7.0.0"
@@ -19051,6 +19411,36 @@
           }
         }
       },
+      "IdentityModel/5.2.0": {
+        "type": "package",
+        "compile": {
+          "lib/net5.0/IdentityModel.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net5.0/IdentityModel.dll": {
+            "related": ".pdb;.xml"
+          }
+        }
+      },
+      "IdentityModel.OidcClient/5.2.1": {
+        "type": "package",
+        "dependencies": {
+          "IdentityModel": "5.2.0",
+          "Microsoft.Extensions.Logging": "6.0.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/IdentityModel.OidcClient.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/IdentityModel.OidcClient.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "M.BindableProperty.Generator/0.9.0": {
         "type": "package"
       },
@@ -19262,7 +19652,7 @@
           "lib/net6.0-ios16.1/Plugin.Maui.ScreenBrightness.dll": {}
         }
       },
-      "Reactor.Maui/1.0.138": {
+      "Reactor.Maui/1.0.139": {
         "type": "package",
         "compile": {
           "lib/net7.0-ios16.1/MauiReactor.dll": {}
@@ -19271,10 +19661,10 @@
           "lib/net7.0-ios16.1/MauiReactor.dll": {}
         }
       },
-      "Reactor.Maui.Canvas/1.0.138": {
+      "Reactor.Maui.Canvas/1.0.139": {
         "type": "package",
         "dependencies": {
-          "Reactor.Maui": "1.0.138"
+          "Reactor.Maui": "1.0.139"
         },
         "compile": {
           "lib/net7.0-ios16.1/MauiReactor.Canvas.dll": {}
@@ -19283,7 +19673,7 @@
           "lib/net7.0-ios16.1/MauiReactor.Canvas.dll": {}
         }
       },
-      "Reactor.Maui.ScaffoldGenerator/1.0.138": {
+      "Reactor.Maui.ScaffoldGenerator/1.0.139": {
         "type": "package",
         "dependencies": {
           "System.CodeDom": "7.0.0"
@@ -19468,6 +19858,36 @@
           }
         }
       },
+      "IdentityModel/5.2.0": {
+        "type": "package",
+        "compile": {
+          "lib/net5.0/IdentityModel.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net5.0/IdentityModel.dll": {
+            "related": ".pdb;.xml"
+          }
+        }
+      },
+      "IdentityModel.OidcClient/5.2.1": {
+        "type": "package",
+        "dependencies": {
+          "IdentityModel": "5.2.0",
+          "Microsoft.Extensions.Logging": "6.0.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/IdentityModel.OidcClient.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/IdentityModel.OidcClient.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "M.BindableProperty.Generator/0.9.0": {
         "type": "package"
       },
@@ -19679,7 +20099,7 @@
           "lib/net6.0-ios16.1/Plugin.Maui.ScreenBrightness.dll": {}
         }
       },
-      "Reactor.Maui/1.0.138": {
+      "Reactor.Maui/1.0.139": {
         "type": "package",
         "compile": {
           "lib/net7.0-ios16.1/MauiReactor.dll": {}
@@ -19688,10 +20108,10 @@
           "lib/net7.0-ios16.1/MauiReactor.dll": {}
         }
       },
-      "Reactor.Maui.Canvas/1.0.138": {
+      "Reactor.Maui.Canvas/1.0.139": {
         "type": "package",
         "dependencies": {
-          "Reactor.Maui": "1.0.138"
+          "Reactor.Maui": "1.0.139"
         },
         "compile": {
           "lib/net7.0-ios16.1/MauiReactor.Canvas.dll": {}
@@ -19700,7 +20120,7 @@
           "lib/net7.0-ios16.1/MauiReactor.Canvas.dll": {}
         }
       },
-      "Reactor.Maui.ScaffoldGenerator/1.0.138": {
+      "Reactor.Maui.ScaffoldGenerator/1.0.139": {
         "type": "package",
         "dependencies": {
           "System.CodeDom": "7.0.0"
@@ -19891,6 +20311,36 @@
           }
         }
       },
+      "IdentityModel/5.2.0": {
+        "type": "package",
+        "compile": {
+          "lib/net5.0/IdentityModel.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net5.0/IdentityModel.dll": {
+            "related": ".pdb;.xml"
+          }
+        }
+      },
+      "IdentityModel.OidcClient/5.2.1": {
+        "type": "package",
+        "dependencies": {
+          "IdentityModel": "5.2.0",
+          "Microsoft.Extensions.Logging": "6.0.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/IdentityModel.OidcClient.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/IdentityModel.OidcClient.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "M.BindableProperty.Generator/0.9.0": {
         "type": "package"
       },
@@ -20102,7 +20552,7 @@
           "lib/net6.0-ios16.1/Plugin.Maui.ScreenBrightness.dll": {}
         }
       },
-      "Reactor.Maui/1.0.138": {
+      "Reactor.Maui/1.0.139": {
         "type": "package",
         "compile": {
           "lib/net7.0-ios16.1/MauiReactor.dll": {}
@@ -20111,10 +20561,10 @@
           "lib/net7.0-ios16.1/MauiReactor.dll": {}
         }
       },
-      "Reactor.Maui.Canvas/1.0.138": {
+      "Reactor.Maui.Canvas/1.0.139": {
         "type": "package",
         "dependencies": {
-          "Reactor.Maui": "1.0.138"
+          "Reactor.Maui": "1.0.139"
         },
         "compile": {
           "lib/net7.0-ios16.1/MauiReactor.Canvas.dll": {}
@@ -20123,7 +20573,7 @@
           "lib/net7.0-ios16.1/MauiReactor.Canvas.dll": {}
         }
       },
-      "Reactor.Maui.ScaffoldGenerator/1.0.138": {
+      "Reactor.Maui.ScaffoldGenerator/1.0.139": {
         "type": "package",
         "dependencies": {
           "System.CodeDom": "7.0.0"
@@ -20314,6 +20764,36 @@
           }
         }
       },
+      "IdentityModel/5.2.0": {
+        "type": "package",
+        "compile": {
+          "lib/net5.0/IdentityModel.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net5.0/IdentityModel.dll": {
+            "related": ".pdb;.xml"
+          }
+        }
+      },
+      "IdentityModel.OidcClient/5.2.1": {
+        "type": "package",
+        "dependencies": {
+          "IdentityModel": "5.2.0",
+          "Microsoft.Extensions.Logging": "6.0.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/IdentityModel.OidcClient.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/IdentityModel.OidcClient.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "M.BindableProperty.Generator/0.9.0": {
         "type": "package"
       },
@@ -20525,7 +21005,7 @@
           "lib/net6.0-ios16.1/Plugin.Maui.ScreenBrightness.dll": {}
         }
       },
-      "Reactor.Maui/1.0.138": {
+      "Reactor.Maui/1.0.139": {
         "type": "package",
         "compile": {
           "lib/net7.0-ios16.1/MauiReactor.dll": {}
@@ -20534,10 +21014,10 @@
           "lib/net7.0-ios16.1/MauiReactor.dll": {}
         }
       },
-      "Reactor.Maui.Canvas/1.0.138": {
+      "Reactor.Maui.Canvas/1.0.139": {
         "type": "package",
         "dependencies": {
-          "Reactor.Maui": "1.0.138"
+          "Reactor.Maui": "1.0.139"
         },
         "compile": {
           "lib/net7.0-ios16.1/MauiReactor.Canvas.dll": {}
@@ -20546,7 +21026,7 @@
           "lib/net7.0-ios16.1/MauiReactor.Canvas.dll": {}
         }
       },
-      "Reactor.Maui.ScaffoldGenerator/1.0.138": {
+      "Reactor.Maui.ScaffoldGenerator/1.0.139": {
         "type": "package",
         "dependencies": {
           "System.CodeDom": "7.0.0"
@@ -20731,6 +21211,36 @@
           }
         }
       },
+      "IdentityModel/5.2.0": {
+        "type": "package",
+        "compile": {
+          "lib/net5.0/IdentityModel.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net5.0/IdentityModel.dll": {
+            "related": ".pdb;.xml"
+          }
+        }
+      },
+      "IdentityModel.OidcClient/5.2.1": {
+        "type": "package",
+        "dependencies": {
+          "IdentityModel": "5.2.0",
+          "Microsoft.Extensions.Logging": "6.0.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/IdentityModel.OidcClient.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/IdentityModel.OidcClient.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "M.BindableProperty.Generator/0.9.0": {
         "type": "package"
       },
@@ -20939,7 +21449,7 @@
           "lib/net6.0/Plugin.Maui.ScreenBrightness.dll": {}
         }
       },
-      "Reactor.Maui/1.0.138": {
+      "Reactor.Maui/1.0.139": {
         "type": "package",
         "compile": {
           "lib/net7.0-maccatalyst16.1/MauiReactor.dll": {}
@@ -20948,10 +21458,10 @@
           "lib/net7.0-maccatalyst16.1/MauiReactor.dll": {}
         }
       },
-      "Reactor.Maui.Canvas/1.0.138": {
+      "Reactor.Maui.Canvas/1.0.139": {
         "type": "package",
         "dependencies": {
-          "Reactor.Maui": "1.0.138"
+          "Reactor.Maui": "1.0.139"
         },
         "compile": {
           "lib/net7.0-maccatalyst16.1/MauiReactor.Canvas.dll": {}
@@ -20960,7 +21470,7 @@
           "lib/net7.0-maccatalyst16.1/MauiReactor.Canvas.dll": {}
         }
       },
-      "Reactor.Maui.ScaffoldGenerator/1.0.138": {
+      "Reactor.Maui.ScaffoldGenerator/1.0.139": {
         "type": "package",
         "dependencies": {
           "System.CodeDom": "7.0.0"
@@ -21151,6 +21661,36 @@
           }
         }
       },
+      "IdentityModel/5.2.0": {
+        "type": "package",
+        "compile": {
+          "lib/net5.0/IdentityModel.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net5.0/IdentityModel.dll": {
+            "related": ".pdb;.xml"
+          }
+        }
+      },
+      "IdentityModel.OidcClient/5.2.1": {
+        "type": "package",
+        "dependencies": {
+          "IdentityModel": "5.2.0",
+          "Microsoft.Extensions.Logging": "6.0.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/IdentityModel.OidcClient.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/IdentityModel.OidcClient.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "M.BindableProperty.Generator/0.9.0": {
         "type": "package"
       },
@@ -21359,7 +21899,7 @@
           "lib/net6.0/Plugin.Maui.ScreenBrightness.dll": {}
         }
       },
-      "Reactor.Maui/1.0.138": {
+      "Reactor.Maui/1.0.139": {
         "type": "package",
         "compile": {
           "lib/net7.0-maccatalyst16.1/MauiReactor.dll": {}
@@ -21368,10 +21908,10 @@
           "lib/net7.0-maccatalyst16.1/MauiReactor.dll": {}
         }
       },
-      "Reactor.Maui.Canvas/1.0.138": {
+      "Reactor.Maui.Canvas/1.0.139": {
         "type": "package",
         "dependencies": {
-          "Reactor.Maui": "1.0.138"
+          "Reactor.Maui": "1.0.139"
         },
         "compile": {
           "lib/net7.0-maccatalyst16.1/MauiReactor.Canvas.dll": {}
@@ -21380,7 +21920,7 @@
           "lib/net7.0-maccatalyst16.1/MauiReactor.Canvas.dll": {}
         }
       },
-      "Reactor.Maui.ScaffoldGenerator/1.0.138": {
+      "Reactor.Maui.ScaffoldGenerator/1.0.139": {
         "type": "package",
         "dependencies": {
           "System.CodeDom": "7.0.0"
@@ -21565,6 +22105,36 @@
           }
         }
       },
+      "IdentityModel/5.2.0": {
+        "type": "package",
+        "compile": {
+          "lib/net5.0/IdentityModel.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net5.0/IdentityModel.dll": {
+            "related": ".pdb;.xml"
+          }
+        }
+      },
+      "IdentityModel.OidcClient/5.2.1": {
+        "type": "package",
+        "dependencies": {
+          "IdentityModel": "5.2.0",
+          "Microsoft.Extensions.Logging": "6.0.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/IdentityModel.OidcClient.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/IdentityModel.OidcClient.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "M.BindableProperty.Generator/0.9.0": {
         "type": "package"
       },
@@ -21773,7 +22343,7 @@
           "lib/net6.0/Plugin.Maui.ScreenBrightness.dll": {}
         }
       },
-      "Reactor.Maui/1.0.138": {
+      "Reactor.Maui/1.0.139": {
         "type": "package",
         "compile": {
           "lib/net7.0-maccatalyst16.1/MauiReactor.dll": {}
@@ -21782,10 +22352,10 @@
           "lib/net7.0-maccatalyst16.1/MauiReactor.dll": {}
         }
       },
-      "Reactor.Maui.Canvas/1.0.138": {
+      "Reactor.Maui.Canvas/1.0.139": {
         "type": "package",
         "dependencies": {
-          "Reactor.Maui": "1.0.138"
+          "Reactor.Maui": "1.0.139"
         },
         "compile": {
           "lib/net7.0-maccatalyst16.1/MauiReactor.Canvas.dll": {}
@@ -21794,7 +22364,7 @@
           "lib/net7.0-maccatalyst16.1/MauiReactor.Canvas.dll": {}
         }
       },
-      "Reactor.Maui.ScaffoldGenerator/1.0.138": {
+      "Reactor.Maui.ScaffoldGenerator/1.0.139": {
         "type": "package",
         "dependencies": {
           "System.CodeDom": "7.0.0"
@@ -21979,6 +22549,36 @@
           }
         }
       },
+      "IdentityModel/5.2.0": {
+        "type": "package",
+        "compile": {
+          "lib/net5.0/IdentityModel.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net5.0/IdentityModel.dll": {
+            "related": ".pdb;.xml"
+          }
+        }
+      },
+      "IdentityModel.OidcClient/5.2.1": {
+        "type": "package",
+        "dependencies": {
+          "IdentityModel": "5.2.0",
+          "Microsoft.Extensions.Logging": "6.0.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/IdentityModel.OidcClient.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/IdentityModel.OidcClient.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "M.BindableProperty.Generator/0.9.0": {
         "type": "package"
       },
@@ -22187,7 +22787,7 @@
           "lib/net6.0/Plugin.Maui.ScreenBrightness.dll": {}
         }
       },
-      "Reactor.Maui/1.0.138": {
+      "Reactor.Maui/1.0.139": {
         "type": "package",
         "compile": {
           "lib/net7.0-maccatalyst16.1/MauiReactor.dll": {}
@@ -22196,10 +22796,10 @@
           "lib/net7.0-maccatalyst16.1/MauiReactor.dll": {}
         }
       },
-      "Reactor.Maui.Canvas/1.0.138": {
+      "Reactor.Maui.Canvas/1.0.139": {
         "type": "package",
         "dependencies": {
-          "Reactor.Maui": "1.0.138"
+          "Reactor.Maui": "1.0.139"
         },
         "compile": {
           "lib/net7.0-maccatalyst16.1/MauiReactor.Canvas.dll": {}
@@ -22208,7 +22808,7 @@
           "lib/net7.0-maccatalyst16.1/MauiReactor.Canvas.dll": {}
         }
       },
-      "Reactor.Maui.ScaffoldGenerator/1.0.138": {
+      "Reactor.Maui.ScaffoldGenerator/1.0.139": {
         "type": "package",
         "dependencies": {
           "System.CodeDom": "7.0.0"
@@ -22393,6 +22993,36 @@
           }
         }
       },
+      "IdentityModel/5.2.0": {
+        "type": "package",
+        "compile": {
+          "lib/net5.0/IdentityModel.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net5.0/IdentityModel.dll": {
+            "related": ".pdb;.xml"
+          }
+        }
+      },
+      "IdentityModel.OidcClient/5.2.1": {
+        "type": "package",
+        "dependencies": {
+          "IdentityModel": "5.2.0",
+          "Microsoft.Extensions.Logging": "6.0.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/IdentityModel.OidcClient.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/IdentityModel.OidcClient.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "M.BindableProperty.Generator/0.9.0": {
         "type": "package"
       },
@@ -22601,7 +23231,7 @@
           "lib/net6.0/Plugin.Maui.ScreenBrightness.dll": {}
         }
       },
-      "Reactor.Maui/1.0.138": {
+      "Reactor.Maui/1.0.139": {
         "type": "package",
         "compile": {
           "lib/net7.0-maccatalyst16.1/MauiReactor.dll": {}
@@ -22610,10 +23240,10 @@
           "lib/net7.0-maccatalyst16.1/MauiReactor.dll": {}
         }
       },
-      "Reactor.Maui.Canvas/1.0.138": {
+      "Reactor.Maui.Canvas/1.0.139": {
         "type": "package",
         "dependencies": {
-          "Reactor.Maui": "1.0.138"
+          "Reactor.Maui": "1.0.139"
         },
         "compile": {
           "lib/net7.0-maccatalyst16.1/MauiReactor.Canvas.dll": {}
@@ -22622,7 +23252,7 @@
           "lib/net7.0-maccatalyst16.1/MauiReactor.Canvas.dll": {}
         }
       },
-      "Reactor.Maui.ScaffoldGenerator/1.0.138": {
+      "Reactor.Maui.ScaffoldGenerator/1.0.139": {
         "type": "package",
         "dependencies": {
           "System.CodeDom": "7.0.0"
@@ -22807,6 +23437,36 @@
           }
         }
       },
+      "IdentityModel/5.2.0": {
+        "type": "package",
+        "compile": {
+          "lib/net5.0/IdentityModel.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net5.0/IdentityModel.dll": {
+            "related": ".pdb;.xml"
+          }
+        }
+      },
+      "IdentityModel.OidcClient/5.2.1": {
+        "type": "package",
+        "dependencies": {
+          "IdentityModel": "5.2.0",
+          "Microsoft.Extensions.Logging": "6.0.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/IdentityModel.OidcClient.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/IdentityModel.OidcClient.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "M.BindableProperty.Generator/0.9.0": {
         "type": "package"
       },
@@ -23015,7 +23675,7 @@
           "lib/net6.0/Plugin.Maui.ScreenBrightness.dll": {}
         }
       },
-      "Reactor.Maui/1.0.138": {
+      "Reactor.Maui/1.0.139": {
         "type": "package",
         "compile": {
           "lib/net7.0-maccatalyst16.1/MauiReactor.dll": {}
@@ -23024,10 +23684,10 @@
           "lib/net7.0-maccatalyst16.1/MauiReactor.dll": {}
         }
       },
-      "Reactor.Maui.Canvas/1.0.138": {
+      "Reactor.Maui.Canvas/1.0.139": {
         "type": "package",
         "dependencies": {
-          "Reactor.Maui": "1.0.138"
+          "Reactor.Maui": "1.0.139"
         },
         "compile": {
           "lib/net7.0-maccatalyst16.1/MauiReactor.Canvas.dll": {}
@@ -23036,7 +23696,7 @@
           "lib/net7.0-maccatalyst16.1/MauiReactor.Canvas.dll": {}
         }
       },
-      "Reactor.Maui.ScaffoldGenerator/1.0.138": {
+      "Reactor.Maui.ScaffoldGenerator/1.0.139": {
         "type": "package",
         "dependencies": {
           "System.CodeDom": "7.0.0"
@@ -23221,6 +23881,36 @@
           }
         }
       },
+      "IdentityModel/5.2.0": {
+        "type": "package",
+        "compile": {
+          "lib/net5.0/IdentityModel.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net5.0/IdentityModel.dll": {
+            "related": ".pdb;.xml"
+          }
+        }
+      },
+      "IdentityModel.OidcClient/5.2.1": {
+        "type": "package",
+        "dependencies": {
+          "IdentityModel": "5.2.0",
+          "Microsoft.Extensions.Logging": "6.0.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/IdentityModel.OidcClient.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/IdentityModel.OidcClient.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "M.BindableProperty.Generator/0.9.0": {
         "type": "package"
       },
@@ -23429,7 +24119,7 @@
           "lib/net6.0/Plugin.Maui.ScreenBrightness.dll": {}
         }
       },
-      "Reactor.Maui/1.0.138": {
+      "Reactor.Maui/1.0.139": {
         "type": "package",
         "compile": {
           "lib/net7.0-maccatalyst16.1/MauiReactor.dll": {}
@@ -23438,10 +24128,10 @@
           "lib/net7.0-maccatalyst16.1/MauiReactor.dll": {}
         }
       },
-      "Reactor.Maui.Canvas/1.0.138": {
+      "Reactor.Maui.Canvas/1.0.139": {
         "type": "package",
         "dependencies": {
-          "Reactor.Maui": "1.0.138"
+          "Reactor.Maui": "1.0.139"
         },
         "compile": {
           "lib/net7.0-maccatalyst16.1/MauiReactor.Canvas.dll": {}
@@ -23450,7 +24140,7 @@
           "lib/net7.0-maccatalyst16.1/MauiReactor.Canvas.dll": {}
         }
       },
-      "Reactor.Maui.ScaffoldGenerator/1.0.138": {
+      "Reactor.Maui.ScaffoldGenerator/1.0.139": {
         "type": "package",
         "dependencies": {
           "System.CodeDom": "7.0.0"
@@ -23638,6 +24328,36 @@
           }
         }
       },
+      "IdentityModel/5.2.0": {
+        "type": "package",
+        "compile": {
+          "lib/net5.0/IdentityModel.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net5.0/IdentityModel.dll": {
+            "related": ".pdb;.xml"
+          }
+        }
+      },
+      "IdentityModel.OidcClient/5.2.1": {
+        "type": "package",
+        "dependencies": {
+          "IdentityModel": "5.2.0",
+          "Microsoft.Extensions.Logging": "6.0.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/IdentityModel.OidcClient.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/IdentityModel.OidcClient.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "M.BindableProperty.Generator/0.9.0": {
         "type": "package"
       },
@@ -23846,7 +24566,7 @@
           "lib/net6.0/Plugin.Maui.ScreenBrightness.dll": {}
         }
       },
-      "Reactor.Maui/1.0.138": {
+      "Reactor.Maui/1.0.139": {
         "type": "package",
         "compile": {
           "lib/net7.0-maccatalyst16.1/MauiReactor.dll": {}
@@ -23855,10 +24575,10 @@
           "lib/net7.0-maccatalyst16.1/MauiReactor.dll": {}
         }
       },
-      "Reactor.Maui.Canvas/1.0.138": {
+      "Reactor.Maui.Canvas/1.0.139": {
         "type": "package",
         "dependencies": {
-          "Reactor.Maui": "1.0.138"
+          "Reactor.Maui": "1.0.139"
         },
         "compile": {
           "lib/net7.0-maccatalyst16.1/MauiReactor.Canvas.dll": {}
@@ -23867,7 +24587,7 @@
           "lib/net7.0-maccatalyst16.1/MauiReactor.Canvas.dll": {}
         }
       },
-      "Reactor.Maui.ScaffoldGenerator/1.0.138": {
+      "Reactor.Maui.ScaffoldGenerator/1.0.139": {
         "type": "package",
         "dependencies": {
           "System.CodeDom": "7.0.0"
@@ -24048,6 +24768,36 @@
         },
         "runtime": {
           "lib/net6.0/Maui.Skeleton.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "IdentityModel/5.2.0": {
+        "type": "package",
+        "compile": {
+          "lib/net5.0/IdentityModel.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net5.0/IdentityModel.dll": {
+            "related": ".pdb;.xml"
+          }
+        }
+      },
+      "IdentityModel.OidcClient/5.2.1": {
+        "type": "package",
+        "dependencies": {
+          "IdentityModel": "5.2.0",
+          "Microsoft.Extensions.Logging": "6.0.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/IdentityModel.OidcClient.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/IdentityModel.OidcClient.dll": {
             "related": ".xml"
           }
         }
@@ -24405,7 +25155,7 @@
           }
         }
       },
-      "Reactor.Maui/1.0.138": {
+      "Reactor.Maui/1.0.139": {
         "type": "package",
         "compile": {
           "lib/net7.0-windows10.0.19041/MauiReactor.dll": {}
@@ -24414,10 +25164,10 @@
           "lib/net7.0-windows10.0.19041/MauiReactor.dll": {}
         }
       },
-      "Reactor.Maui.Canvas/1.0.138": {
+      "Reactor.Maui.Canvas/1.0.139": {
         "type": "package",
         "dependencies": {
-          "Reactor.Maui": "1.0.138"
+          "Reactor.Maui": "1.0.139"
         },
         "compile": {
           "lib/net7.0-windows10.0.19041/MauiReactor.Canvas.dll": {}
@@ -24426,7 +25176,7 @@
           "lib/net7.0-windows10.0.19041/MauiReactor.Canvas.dll": {}
         }
       },
-      "Reactor.Maui.ScaffoldGenerator/1.0.138": {
+      "Reactor.Maui.ScaffoldGenerator/1.0.139": {
         "type": "package",
         "dependencies": {
           "System.CodeDom": "7.0.0"
@@ -24654,6 +25404,36 @@
           }
         }
       },
+      "IdentityModel/5.2.0": {
+        "type": "package",
+        "compile": {
+          "lib/net5.0/IdentityModel.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net5.0/IdentityModel.dll": {
+            "related": ".pdb;.xml"
+          }
+        }
+      },
+      "IdentityModel.OidcClient/5.2.1": {
+        "type": "package",
+        "dependencies": {
+          "IdentityModel": "5.2.0",
+          "Microsoft.Extensions.Logging": "6.0.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/IdentityModel.OidcClient.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/IdentityModel.OidcClient.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "M.BindableProperty.Generator/0.9.0": {
         "type": "package"
       },
@@ -24979,7 +25759,7 @@
           }
         }
       },
-      "Reactor.Maui/1.0.138": {
+      "Reactor.Maui/1.0.139": {
         "type": "package",
         "compile": {
           "lib/net7.0-windows10.0.19041/MauiReactor.dll": {}
@@ -24988,10 +25768,10 @@
           "lib/net7.0-windows10.0.19041/MauiReactor.dll": {}
         }
       },
-      "Reactor.Maui.Canvas/1.0.138": {
+      "Reactor.Maui.Canvas/1.0.139": {
         "type": "package",
         "dependencies": {
-          "Reactor.Maui": "1.0.138"
+          "Reactor.Maui": "1.0.139"
         },
         "compile": {
           "lib/net7.0-windows10.0.19041/MauiReactor.Canvas.dll": {}
@@ -25000,7 +25780,7 @@
           "lib/net7.0-windows10.0.19041/MauiReactor.Canvas.dll": {}
         }
       },
-      "Reactor.Maui.ScaffoldGenerator/1.0.138": {
+      "Reactor.Maui.ScaffoldGenerator/1.0.139": {
         "type": "package",
         "dependencies": {
           "System.CodeDom": "7.0.0"
@@ -25202,6 +25982,36 @@
           }
         }
       },
+      "IdentityModel/5.2.0": {
+        "type": "package",
+        "compile": {
+          "lib/net5.0/IdentityModel.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net5.0/IdentityModel.dll": {
+            "related": ".pdb;.xml"
+          }
+        }
+      },
+      "IdentityModel.OidcClient/5.2.1": {
+        "type": "package",
+        "dependencies": {
+          "IdentityModel": "5.2.0",
+          "Microsoft.Extensions.Logging": "6.0.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/IdentityModel.OidcClient.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/IdentityModel.OidcClient.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "M.BindableProperty.Generator/0.9.0": {
         "type": "package"
       },
@@ -25527,7 +26337,7 @@
           }
         }
       },
-      "Reactor.Maui/1.0.138": {
+      "Reactor.Maui/1.0.139": {
         "type": "package",
         "compile": {
           "lib/net7.0-windows10.0.19041/MauiReactor.dll": {}
@@ -25536,10 +26346,10 @@
           "lib/net7.0-windows10.0.19041/MauiReactor.dll": {}
         }
       },
-      "Reactor.Maui.Canvas/1.0.138": {
+      "Reactor.Maui.Canvas/1.0.139": {
         "type": "package",
         "dependencies": {
-          "Reactor.Maui": "1.0.138"
+          "Reactor.Maui": "1.0.139"
         },
         "compile": {
           "lib/net7.0-windows10.0.19041/MauiReactor.Canvas.dll": {}
@@ -25548,7 +26358,7 @@
           "lib/net7.0-windows10.0.19041/MauiReactor.Canvas.dll": {}
         }
       },
-      "Reactor.Maui.ScaffoldGenerator/1.0.138": {
+      "Reactor.Maui.ScaffoldGenerator/1.0.139": {
         "type": "package",
         "dependencies": {
           "System.CodeDom": "7.0.0"
@@ -25750,6 +26560,36 @@
           }
         }
       },
+      "IdentityModel/5.2.0": {
+        "type": "package",
+        "compile": {
+          "lib/net5.0/IdentityModel.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net5.0/IdentityModel.dll": {
+            "related": ".pdb;.xml"
+          }
+        }
+      },
+      "IdentityModel.OidcClient/5.2.1": {
+        "type": "package",
+        "dependencies": {
+          "IdentityModel": "5.2.0",
+          "Microsoft.Extensions.Logging": "6.0.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/IdentityModel.OidcClient.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/IdentityModel.OidcClient.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "M.BindableProperty.Generator/0.9.0": {
         "type": "package"
       },
@@ -26075,7 +26915,7 @@
           }
         }
       },
-      "Reactor.Maui/1.0.138": {
+      "Reactor.Maui/1.0.139": {
         "type": "package",
         "compile": {
           "lib/net7.0-windows10.0.19041/MauiReactor.dll": {}
@@ -26084,10 +26924,10 @@
           "lib/net7.0-windows10.0.19041/MauiReactor.dll": {}
         }
       },
-      "Reactor.Maui.Canvas/1.0.138": {
+      "Reactor.Maui.Canvas/1.0.139": {
         "type": "package",
         "dependencies": {
-          "Reactor.Maui": "1.0.138"
+          "Reactor.Maui": "1.0.139"
         },
         "compile": {
           "lib/net7.0-windows10.0.19041/MauiReactor.Canvas.dll": {}
@@ -26096,7 +26936,7 @@
           "lib/net7.0-windows10.0.19041/MauiReactor.Canvas.dll": {}
         }
       },
-      "Reactor.Maui.ScaffoldGenerator/1.0.138": {
+      "Reactor.Maui.ScaffoldGenerator/1.0.139": {
         "type": "package",
         "dependencies": {
           "System.CodeDom": "7.0.0"
@@ -26298,6 +27138,36 @@
           }
         }
       },
+      "IdentityModel/5.2.0": {
+        "type": "package",
+        "compile": {
+          "lib/net5.0/IdentityModel.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net5.0/IdentityModel.dll": {
+            "related": ".pdb;.xml"
+          }
+        }
+      },
+      "IdentityModel.OidcClient/5.2.1": {
+        "type": "package",
+        "dependencies": {
+          "IdentityModel": "5.2.0",
+          "Microsoft.Extensions.Logging": "6.0.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/IdentityModel.OidcClient.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/IdentityModel.OidcClient.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "M.BindableProperty.Generator/0.9.0": {
         "type": "package"
       },
@@ -26623,7 +27493,7 @@
           }
         }
       },
-      "Reactor.Maui/1.0.138": {
+      "Reactor.Maui/1.0.139": {
         "type": "package",
         "compile": {
           "lib/net7.0-windows10.0.19041/MauiReactor.dll": {}
@@ -26632,10 +27502,10 @@
           "lib/net7.0-windows10.0.19041/MauiReactor.dll": {}
         }
       },
-      "Reactor.Maui.Canvas/1.0.138": {
+      "Reactor.Maui.Canvas/1.0.139": {
         "type": "package",
         "dependencies": {
-          "Reactor.Maui": "1.0.138"
+          "Reactor.Maui": "1.0.139"
         },
         "compile": {
           "lib/net7.0-windows10.0.19041/MauiReactor.Canvas.dll": {}
@@ -26644,7 +27514,7 @@
           "lib/net7.0-windows10.0.19041/MauiReactor.Canvas.dll": {}
         }
       },
-      "Reactor.Maui.ScaffoldGenerator/1.0.138": {
+      "Reactor.Maui.ScaffoldGenerator/1.0.139": {
         "type": "package",
         "dependencies": {
           "System.CodeDom": "7.0.0"
@@ -26846,6 +27716,36 @@
           }
         }
       },
+      "IdentityModel/5.2.0": {
+        "type": "package",
+        "compile": {
+          "lib/net5.0/IdentityModel.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net5.0/IdentityModel.dll": {
+            "related": ".pdb;.xml"
+          }
+        }
+      },
+      "IdentityModel.OidcClient/5.2.1": {
+        "type": "package",
+        "dependencies": {
+          "IdentityModel": "5.2.0",
+          "Microsoft.Extensions.Logging": "6.0.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/IdentityModel.OidcClient.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/IdentityModel.OidcClient.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "M.BindableProperty.Generator/0.9.0": {
         "type": "package"
       },
@@ -27171,7 +28071,7 @@
           }
         }
       },
-      "Reactor.Maui/1.0.138": {
+      "Reactor.Maui/1.0.139": {
         "type": "package",
         "compile": {
           "lib/net7.0-windows10.0.19041/MauiReactor.dll": {}
@@ -27180,10 +28080,10 @@
           "lib/net7.0-windows10.0.19041/MauiReactor.dll": {}
         }
       },
-      "Reactor.Maui.Canvas/1.0.138": {
+      "Reactor.Maui.Canvas/1.0.139": {
         "type": "package",
         "dependencies": {
-          "Reactor.Maui": "1.0.138"
+          "Reactor.Maui": "1.0.139"
         },
         "compile": {
           "lib/net7.0-windows10.0.19041/MauiReactor.Canvas.dll": {}
@@ -27192,7 +28092,7 @@
           "lib/net7.0-windows10.0.19041/MauiReactor.Canvas.dll": {}
         }
       },
-      "Reactor.Maui.ScaffoldGenerator/1.0.138": {
+      "Reactor.Maui.ScaffoldGenerator/1.0.139": {
         "type": "package",
         "dependencies": {
           "System.CodeDom": "7.0.0"
@@ -27394,6 +28294,36 @@
           }
         }
       },
+      "IdentityModel/5.2.0": {
+        "type": "package",
+        "compile": {
+          "lib/net5.0/IdentityModel.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net5.0/IdentityModel.dll": {
+            "related": ".pdb;.xml"
+          }
+        }
+      },
+      "IdentityModel.OidcClient/5.2.1": {
+        "type": "package",
+        "dependencies": {
+          "IdentityModel": "5.2.0",
+          "Microsoft.Extensions.Logging": "6.0.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/IdentityModel.OidcClient.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/IdentityModel.OidcClient.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "M.BindableProperty.Generator/0.9.0": {
         "type": "package"
       },
@@ -27719,7 +28649,7 @@
           }
         }
       },
-      "Reactor.Maui/1.0.138": {
+      "Reactor.Maui/1.0.139": {
         "type": "package",
         "compile": {
           "lib/net7.0-windows10.0.19041/MauiReactor.dll": {}
@@ -27728,10 +28658,10 @@
           "lib/net7.0-windows10.0.19041/MauiReactor.dll": {}
         }
       },
-      "Reactor.Maui.Canvas/1.0.138": {
+      "Reactor.Maui.Canvas/1.0.139": {
         "type": "package",
         "dependencies": {
-          "Reactor.Maui": "1.0.138"
+          "Reactor.Maui": "1.0.139"
         },
         "compile": {
           "lib/net7.0-windows10.0.19041/MauiReactor.Canvas.dll": {}
@@ -27740,7 +28670,7 @@
           "lib/net7.0-windows10.0.19041/MauiReactor.Canvas.dll": {}
         }
       },
-      "Reactor.Maui.ScaffoldGenerator/1.0.138": {
+      "Reactor.Maui.ScaffoldGenerator/1.0.139": {
         "type": "package",
         "dependencies": {
           "System.CodeDom": "7.0.0"
@@ -27938,6 +28868,36 @@
         },
         "runtime": {
           "lib/net6.0/Maui.Skeleton.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "IdentityModel/5.2.0": {
+        "type": "package",
+        "compile": {
+          "lib/net5.0/IdentityModel.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net5.0/IdentityModel.dll": {
+            "related": ".pdb;.xml"
+          }
+        }
+      },
+      "IdentityModel.OidcClient/5.2.1": {
+        "type": "package",
+        "dependencies": {
+          "IdentityModel": "5.2.0",
+          "Microsoft.Extensions.Logging": "6.0.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/IdentityModel.OidcClient.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/IdentityModel.OidcClient.dll": {
             "related": ".xml"
           }
         }
@@ -28273,7 +29233,7 @@
           }
         }
       },
-      "Reactor.Maui/1.0.138": {
+      "Reactor.Maui/1.0.139": {
         "type": "package",
         "compile": {
           "lib/net7.0-windows10.0.19041/MauiReactor.dll": {}
@@ -28282,10 +29242,10 @@
           "lib/net7.0-windows10.0.19041/MauiReactor.dll": {}
         }
       },
-      "Reactor.Maui.Canvas/1.0.138": {
+      "Reactor.Maui.Canvas/1.0.139": {
         "type": "package",
         "dependencies": {
-          "Reactor.Maui": "1.0.138"
+          "Reactor.Maui": "1.0.139"
         },
         "compile": {
           "lib/net7.0-windows10.0.19041/MauiReactor.Canvas.dll": {}
@@ -28294,7 +29254,7 @@
           "lib/net7.0-windows10.0.19041/MauiReactor.Canvas.dll": {}
         }
       },
-      "Reactor.Maui.ScaffoldGenerator/1.0.138": {
+      "Reactor.Maui.ScaffoldGenerator/1.0.139": {
         "type": "package",
         "dependencies": {
           "System.CodeDom": "7.0.0"
@@ -28516,6 +29476,44 @@
         "horusstudio.maui.skeleton.nuspec",
         "lib/net6.0/Maui.Skeleton.dll",
         "lib/net6.0/Maui.Skeleton.xml"
+      ]
+    },
+    "IdentityModel/5.2.0": {
+      "sha512": "nuhkbaDH9l5QzNJp2MtP3qio57MPtiRneUN8Ocr7od0JvSYaIe3gBj/vxllr11S/Qvu1AG4GZXoyv5469ewYDA==",
+      "type": "package",
+      "path": "identitymodel/5.2.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "icon.jpg",
+        "identitymodel.5.2.0.nupkg.sha512",
+        "identitymodel.nuspec",
+        "lib/net461/IdentityModel.dll",
+        "lib/net461/IdentityModel.pdb",
+        "lib/net461/IdentityModel.xml",
+        "lib/net472/IdentityModel.dll",
+        "lib/net472/IdentityModel.pdb",
+        "lib/net472/IdentityModel.xml",
+        "lib/net5.0/IdentityModel.dll",
+        "lib/net5.0/IdentityModel.pdb",
+        "lib/net5.0/IdentityModel.xml",
+        "lib/netstandard2.0/IdentityModel.dll",
+        "lib/netstandard2.0/IdentityModel.pdb",
+        "lib/netstandard2.0/IdentityModel.xml"
+      ]
+    },
+    "IdentityModel.OidcClient/5.2.1": {
+      "sha512": "OuPhDNAw/EoJVEmYO6/ChZUBcug4OGoGKTKLUyBCsGhlKegxJk25LYQ0EL7GCBMgkEL+BYNJukNZyaJ+JNaWog==",
+      "type": "package",
+      "path": "identitymodel.oidcclient/5.2.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "icon.jpg",
+        "identitymodel.oidcclient.5.2.1.nupkg.sha512",
+        "identitymodel.oidcclient.nuspec",
+        "lib/netstandard2.0/IdentityModel.OidcClient.dll",
+        "lib/netstandard2.0/IdentityModel.OidcClient.xml"
       ]
     },
     "M.BindableProperty.Generator/0.9.0": {
@@ -29794,10 +30792,10 @@
         "plugin.maui.screenbrightness.nuspec"
       ]
     },
-    "Reactor.Maui/1.0.138": {
-      "sha512": "ND2+cWvcVsK8Kr7VVw8HR8t7gDgdljuxUCvso2Xsf2IASK7+wdWRKlgHL1MwBHZq1pi20vAhJekRVWjcq7Vqxg==",
+    "Reactor.Maui/1.0.139": {
+      "sha512": "q8ngOKcA3orB1OJDCgVusG34mIUtyG+MacyuiQt+7IhdwMTsOpu+sxJy6D/GwFVEV4bzUfUeq2dBpeXqqOpxlw==",
       "type": "package",
-      "path": "reactor.maui/1.0.138",
+      "path": "reactor.maui/1.0.139",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -29808,14 +30806,14 @@
         "lib/net7.0-maccatalyst16.1/MauiReactor.dll",
         "lib/net7.0-windows10.0.19041/MauiReactor.dll",
         "lib/net7.0/MauiReactor.dll",
-        "reactor.maui.1.0.138.nupkg.sha512",
+        "reactor.maui.1.0.139.nupkg.sha512",
         "reactor.maui.nuspec"
       ]
     },
-    "Reactor.Maui.Canvas/1.0.138": {
-      "sha512": "tZQXG3NODEZ14nQ1pvWDxXQN0PbkH0V3XosVR0TaIIOyAN6a0qz+OyDn5WAUxBJuMum09Npg4+CBdb2ooPKN7g==",
+    "Reactor.Maui.Canvas/1.0.139": {
+      "sha512": "FpSSQmjpHQyQpePhE0qpDFqj3D0Bq6/WjsYGCsGD8A3Q5F54W2qKjmU8ecIjDgPVPN9WSyHRhoApxoT9HIiHTg==",
       "type": "package",
-      "path": "reactor.maui.canvas/1.0.138",
+      "path": "reactor.maui.canvas/1.0.139",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -29826,19 +30824,19 @@
         "lib/net7.0-maccatalyst16.1/MauiReactor.Canvas.dll",
         "lib/net7.0-windows10.0.19041/MauiReactor.Canvas.dll",
         "lib/net7.0/MauiReactor.Canvas.dll",
-        "reactor.maui.canvas.1.0.138.nupkg.sha512",
+        "reactor.maui.canvas.1.0.139.nupkg.sha512",
         "reactor.maui.canvas.nuspec"
       ]
     },
-    "Reactor.Maui.ScaffoldGenerator/1.0.138": {
-      "sha512": "I9Fa0R9eFQpAOoMa4iV4w/7jYeULRteTj1aLa2mt0wN2TKrw37sP1SNsDtHd/5yWe9qJY9YAOd6hicLX/3rfuQ==",
+    "Reactor.Maui.ScaffoldGenerator/1.0.139": {
+      "sha512": "+escH0cE3FRHvyY5Ql4DtuWuR8eQ7jIPPQx2VxzWhlfoK9GlWaQeo9M3MWsW9e3u4mvq4+tkLU7ss4JjCCfyuQ==",
       "type": "package",
-      "path": "reactor.maui.scaffoldgenerator/1.0.138",
+      "path": "reactor.maui.scaffoldgenerator/1.0.139",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "analyzers/dotnet/cs/MauiReactor.ScaffoldGenerator.dll",
-        "reactor.maui.scaffoldgenerator.1.0.138.nupkg.sha512",
+        "reactor.maui.scaffoldgenerator.1.0.139.nupkg.sha512",
         "reactor.maui.scaffoldgenerator.nuspec"
       ]
     },
@@ -32410,6 +33408,7 @@
   "projectFileDependencyGroups": {
     "net7.0-android33.0": [
       "HorusStudio.Maui.Skeleton >= 2.0.0",
+      "IdentityModel.OidcClient >= 5.2.1",
       "Microsoft.Extensions.Configuration >= 7.0.0",
       "Microsoft.Extensions.DependencyInjection >= 7.0.0",
       "Microsoft.Extensions.Http >= 7.0.0",
@@ -32418,9 +33417,9 @@
       "Microsoft.Maui.Graphics >= 7.0.86",
       "Newtonsoft.Json >= 13.0.3",
       "Plugin.Maui.ScreenBrightness >= 1.0.0-preview3",
-      "Reactor.Maui >= 1.0.138",
-      "Reactor.Maui.Canvas >= 1.0.138",
-      "Reactor.Maui.ScaffoldGenerator >= 1.0.138",
+      "Reactor.Maui >= 1.0.139",
+      "Reactor.Maui.Canvas >= 1.0.139",
+      "Reactor.Maui.ScaffoldGenerator >= 1.0.139",
       "SimpleRatingControl.MAUI >= 0.0.3",
       "SkiaSharp.Extended.UI.Maui >= 2.0.0-preview.61",
       "Xamarin.Android.Glide >= 4.13.2.2",
@@ -32437,6 +33436,7 @@
     ],
     "net7.0-ios16.1": [
       "HorusStudio.Maui.Skeleton >= 2.0.0",
+      "IdentityModel.OidcClient >= 5.2.1",
       "Microsoft.Extensions.Configuration >= 7.0.0",
       "Microsoft.Extensions.DependencyInjection >= 7.0.0",
       "Microsoft.Extensions.Http >= 7.0.0",
@@ -32445,14 +33445,15 @@
       "Microsoft.Maui.Graphics >= 7.0.86",
       "Newtonsoft.Json >= 13.0.3",
       "Plugin.Maui.ScreenBrightness >= 1.0.0-preview3",
-      "Reactor.Maui >= 1.0.138",
-      "Reactor.Maui.Canvas >= 1.0.138",
-      "Reactor.Maui.ScaffoldGenerator >= 1.0.138",
+      "Reactor.Maui >= 1.0.139",
+      "Reactor.Maui.Canvas >= 1.0.139",
+      "Reactor.Maui.ScaffoldGenerator >= 1.0.139",
       "SimpleRatingControl.MAUI >= 0.0.3",
       "SkiaSharp.Extended.UI.Maui >= 2.0.0-preview.61"
     ],
     "net7.0-maccatalyst16.1": [
       "HorusStudio.Maui.Skeleton >= 2.0.0",
+      "IdentityModel.OidcClient >= 5.2.1",
       "Microsoft.Extensions.Configuration >= 7.0.0",
       "Microsoft.Extensions.DependencyInjection >= 7.0.0",
       "Microsoft.Extensions.Http >= 7.0.0",
@@ -32461,14 +33462,15 @@
       "Microsoft.Maui.Graphics >= 7.0.86",
       "Newtonsoft.Json >= 13.0.3",
       "Plugin.Maui.ScreenBrightness >= 1.0.0-preview3",
-      "Reactor.Maui >= 1.0.138",
-      "Reactor.Maui.Canvas >= 1.0.138",
-      "Reactor.Maui.ScaffoldGenerator >= 1.0.138",
+      "Reactor.Maui >= 1.0.139",
+      "Reactor.Maui.Canvas >= 1.0.139",
+      "Reactor.Maui.ScaffoldGenerator >= 1.0.139",
       "SimpleRatingControl.MAUI >= 0.0.3",
       "SkiaSharp.Extended.UI.Maui >= 2.0.0-preview.61"
     ],
     "net7.0-windows10.0.19041": [
       "HorusStudio.Maui.Skeleton >= 2.0.0",
+      "IdentityModel.OidcClient >= 5.2.1",
       "Microsoft.Extensions.Configuration >= 7.0.0",
       "Microsoft.Extensions.DependencyInjection >= 7.0.0",
       "Microsoft.Extensions.Http >= 7.0.0",
@@ -32480,15 +33482,16 @@
       "Microsoft.WindowsAppSDK >= 1.2.221209.1",
       "Newtonsoft.Json >= 13.0.3",
       "Plugin.Maui.ScreenBrightness >= 1.0.0-preview3",
-      "Reactor.Maui >= 1.0.138",
-      "Reactor.Maui.Canvas >= 1.0.138",
-      "Reactor.Maui.ScaffoldGenerator >= 1.0.138",
+      "Reactor.Maui >= 1.0.139",
+      "Reactor.Maui.Canvas >= 1.0.139",
+      "Reactor.Maui.ScaffoldGenerator >= 1.0.139",
       "SimpleRatingControl.MAUI >= 0.0.3",
       "SkiaSharp.Extended.UI.Maui >= 2.0.0-preview.61"
     ]
   },
   "packageFolders": {
     "C:\\Users\\trick\\.nuget\\packages\\": {},
+    "D:\\DevExpress\\Components\\Offline Packages": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
@@ -32502,10 +33505,12 @@
       "projectStyle": "PackageReference",
       "crossTargeting": true,
       "fallbackFolders": [
+        "D:\\DevExpress\\Components\\Offline Packages",
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
         "C:\\Users\\trick\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\DevExpress 23.1.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
@@ -32518,6 +33523,7 @@
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "C:\\Program Files\\dotnet\\library-packs": {},
+        "D:\\DevExpress\\Components\\System\\Components\\Packages": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -32551,6 +33557,10 @@
           "HorusStudio.Maui.Skeleton": {
             "target": "Package",
             "version": "[2.0.0, )"
+          },
+          "IdentityModel.OidcClient": {
+            "target": "Package",
+            "version": "[5.2.1, )"
           },
           "Microsoft.Extensions.Configuration": {
             "target": "Package",
@@ -32591,15 +33601,15 @@
           },
           "Reactor.Maui": {
             "target": "Package",
-            "version": "[1.0.138, )"
+            "version": "[1.0.139, )"
           },
           "Reactor.Maui.Canvas": {
             "target": "Package",
-            "version": "[1.0.138, )"
+            "version": "[1.0.139, )"
           },
           "Reactor.Maui.ScaffoldGenerator": {
             "target": "Package",
-            "version": "[1.0.138, )"
+            "version": "[1.0.139, )"
           },
           "SimpleRatingControl.MAUI": {
             "target": "Package",
@@ -32702,6 +33712,10 @@
             "target": "Package",
             "version": "[2.0.0, )"
           },
+          "IdentityModel.OidcClient": {
+            "target": "Package",
+            "version": "[5.2.1, )"
+          },
           "Microsoft.Extensions.Configuration": {
             "target": "Package",
             "version": "[7.0.0, )",
@@ -32741,15 +33755,15 @@
           },
           "Reactor.Maui": {
             "target": "Package",
-            "version": "[1.0.138, )"
+            "version": "[1.0.139, )"
           },
           "Reactor.Maui.Canvas": {
             "target": "Package",
-            "version": "[1.0.138, )"
+            "version": "[1.0.139, )"
           },
           "Reactor.Maui.ScaffoldGenerator": {
             "target": "Package",
-            "version": "[1.0.138, )"
+            "version": "[1.0.139, )"
           },
           "SimpleRatingControl.MAUI": {
             "target": "Package",
@@ -32797,6 +33811,10 @@
             "target": "Package",
             "version": "[2.0.0, )"
           },
+          "IdentityModel.OidcClient": {
+            "target": "Package",
+            "version": "[5.2.1, )"
+          },
           "Microsoft.Extensions.Configuration": {
             "target": "Package",
             "version": "[7.0.0, )",
@@ -32836,15 +33854,15 @@
           },
           "Reactor.Maui": {
             "target": "Package",
-            "version": "[1.0.138, )"
+            "version": "[1.0.139, )"
           },
           "Reactor.Maui.Canvas": {
             "target": "Package",
-            "version": "[1.0.138, )"
+            "version": "[1.0.139, )"
           },
           "Reactor.Maui.ScaffoldGenerator": {
             "target": "Package",
-            "version": "[1.0.138, )"
+            "version": "[1.0.139, )"
           },
           "SimpleRatingControl.MAUI": {
             "target": "Package",
@@ -32892,6 +33910,10 @@
           "HorusStudio.Maui.Skeleton": {
             "target": "Package",
             "version": "[2.0.0, )"
+          },
+          "IdentityModel.OidcClient": {
+            "target": "Package",
+            "version": "[5.2.1, )"
           },
           "Microsoft.Extensions.Configuration": {
             "target": "Package",
@@ -32948,15 +33970,15 @@
           },
           "Reactor.Maui": {
             "target": "Package",
-            "version": "[1.0.138, )"
+            "version": "[1.0.139, )"
           },
           "Reactor.Maui.Canvas": {
             "target": "Package",
-            "version": "[1.0.138, )"
+            "version": "[1.0.139, )"
           },
           "Reactor.Maui.ScaffoldGenerator": {
             "target": "Package",
-            "version": "[1.0.138, )"
+            "version": "[1.0.139, )"
           },
           "SimpleRatingControl.MAUI": {
             "target": "Package",

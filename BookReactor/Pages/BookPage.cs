@@ -51,6 +51,10 @@ class BookPage:Component<BookPageState, BookPageProps>
     {
         await Navigation.PushAsync<EBookPage>();
     }
+    private async void OpenFavoritePage()
+    {
+        await Navigation.PushAsync<FavoritePage>();
+    }
     protected override async void OnMounted()
     {
         InitializeState();
@@ -80,6 +84,10 @@ class BookPage:Component<BookPageState, BookPageProps>
             s.IsLoading = false;
         });
     }
+    private async void OpenLoginPage()
+    {
+        await Navigation.PushAsync<LoginPage>();
+    }
     void InitializeState()
     {
         if (DeviceInfo.Current.Platform == DevicePlatform.Android)
@@ -104,6 +112,8 @@ class BookPage:Component<BookPageState, BookPageProps>
                       .IsShown(State.IsSideMenuShown)
                       .HomePage(Back)
                       .OneBookPage(OpenEBookPage)
+                      .OpenLoginPage(OpenLoginPage)
+                      .OpenFavoritePage(OpenFavoritePage)
                       .MenuSelect(CommandMenuItem.Book)
                       .OnClose(()=>{
                       SetState(s=>s.IsSideMenuShown=false);
@@ -253,7 +263,7 @@ class BookPage:Component<BookPageState, BookPageProps>
         else
         {
             var authors = item.volumeInfo.authors.FirstOrDefault();
-            var source = item.volumeInfo.imageLinks.thumbnail.Replace("&edge=curl&source=gbs_api", "").Replace("http", "https");
+            var source = item.volumeInfo.imageLinks.thumbnail.Replace("http", "https");
             return new Border()
             {
                     new Grid("170,*","*")

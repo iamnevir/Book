@@ -11,6 +11,7 @@ namespace BookReactor.Pages;
 class DetailBookState
 {
     public bool IsRead { get; set; }
+    public int IsFavorite { get; set; } = -1;
 }
 class DetailBookProps
 {
@@ -21,6 +22,14 @@ class DetailBook:Component<DetailBookState, DetailBookProps>
     private async void Back()
     {
         await Navigation.PopAsync();
+    }
+    private async void AddToFavorite()
+    {
+        await Logger.AddFavoriteAsync(Props.Book.id);
+    }
+    private async void RemoveFromFavorite()
+    {
+        await Logger.RemoveFavoriteAsync(Props.Book.id);
     }
     public override VisualNode Render()
     {
@@ -97,14 +106,26 @@ class DetailBook:Component<DetailBookState, DetailBookProps>
                             {
                                 File="yeuthich.json"
                             })
-                            .RepeatCount(-1)
+                            .RepeatCount(State.IsFavorite)
                             .IsAnimationEnabled(true)
                             .IsEnabled(true)
                             .IsVisible(true)
                             .HeightRequest(50)
                             .WidthRequest(50)
                             .BackgroundColor(Colors.Transparent)
-                            .GridColumn(4),
+                            .GridColumn(4)
+                            .OnTapped(()=>{
+                                if (State.IsFavorite == -1)
+                                {
+                                    AddToFavorite();
+                                    SetState(s=>s.IsFavorite=0);
+                                }
+                                else
+                                {
+                                    RemoveFromFavorite();
+                                    SetState(s=>s.IsFavorite=0);
+                                }
+                            }),
                     }.GridRow(0)
                     .Margin(10,10,0,0),
                     new Grid("*","Auto,*,Auto")

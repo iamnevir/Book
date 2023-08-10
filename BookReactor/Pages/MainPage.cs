@@ -50,9 +50,13 @@ class MainPage : Component<MainPageState, MainPageProps>
     {
         await Navigation.PushAsync<EBookPage>();
     }
-    private async void OpenReadPage()
+    private async void OpenFavoritePage()
     {
-        await Navigation.PushAsync<ReadPage>();
+        await Navigation.PushAsync<FavoritePage>();
+    }
+    private async void OpenLoginPage()
+    {
+        await Navigation.PushAsync<LoginPage>();
     }
     public override VisualNode Render()
     {
@@ -76,6 +80,8 @@ class MainPage : Component<MainPageState, MainPageProps>
                       .IsShown(State.IsSideMenuShown)
                       .OnBookPage(OpenMarket)
                       .OneBookPage(OpenEBookPage)
+                      .OpenLoginPage(OpenLoginPage)
+                      .OpenFavoritePage(OpenFavoritePage)
                       .OnClose(()=>SetState(s=>s.IsSideMenuShown=false))
                   }.BackgroundColor(Colors.Transparent)
               }.Set(MauiControls.NavigationPage.HasNavigationBarProperty,false)
@@ -139,6 +145,7 @@ class HomePage : Component<HomePageState>
     }
     protected override async void OnMounted()
     {
+        InitializeState();
         var googleBook = Services.GetRequiredService<IGoogleServices>();
         State.IsLoading = true;
         var books = await googleBook.GetBook("Dark Nights: Metal");
@@ -153,7 +160,7 @@ class HomePage : Component<HomePageState>
             s.Books1 = books1.items;
             s.IsLoading = false;
         });
-        InitializeState();
+        
         base.OnMounted();
     }
     protected override void OnPropsChanged()
@@ -207,77 +214,96 @@ class HomePage : Component<HomePageState>
     }
     public override VisualNode Render()
     {
-        return new ScrollView
-        {
-             new Grid("60,400,Auto,340,*", "*")
+            return new ScrollView
             {
-                RenderHeader(),
-                RenderMain(),
-                new HStack
+                 new Grid("60,400,Auto,340,*", "*")
                 {
-                    new Label("Category")
-                    .TextColor(Colors.White)
-                    .FontAttributes(Microsoft.Maui.Controls.FontAttributes.Bold)
-                    .FontSize(20)
-                    .FontFamily(Theme.font)
-                    .BackgroundColor(Colors.Transparent)
-                    .OnTapped(()=>SetState(s=>s.IsCategoryVisible=!s.IsCategoryVisible)),
-                    new Border
-                                {
-                                    new Image(State.IsCategoryVisible?"mo":"kmo")
-                                    .HCenter().VCenter()
-                                    .Aspect(Aspect.AspectFit)
-                                    .HeightRequest(20)
-                                    .WidthRequest(20)
-                                    .ScaleX(0.8)
-                                }
-                                .OnTapped(()=>SetState(s=>s.IsCategoryVisible=!s.IsCategoryVisible))
-                                .BackgroundColor(Colors.Transparent)
-                                .Margin(0,0,0,1)
-                }.GridRow(2)
-                .Margin(0,0,20,-30)
-                .HEnd(),
-               //new CollectionView()
-               //.ItemsSource(Category.All,RenderCategoryItem)
-               //.ItemsLayout(new VerticalGridItemsLayout(3))
-               //.GridRow(3),
-               RenderCategory(),
-                   new Grid("Auto,Auto,Auto,*","*")
-                   {
-                       new Label(State.CategorySelected.Any()?"Search Book":"Horror Book")
+                    RenderMain(),
+                    RenderHeader(),
+                    new HStack
+                    {
+                        new Label("Category")
                         .TextColor(Colors.White)
+                        .FontAttributes(Microsoft.Maui.Controls.FontAttributes.Bold)
                         .FontSize(20)
                         .FontFamily(Theme.font)
-                        .GridRow(0)
-                        .Margin(20,0,0,5),
-                       new CollectionView()
-                       .ItemsSource(State.Books,RenderBookList)
-                       .ItemsLayout(new HorizontalLinearItemsLayout().ItemSpacing(10))
-                       .GridRow(1)
-                       .Margin(20,10,0,0),
-                       new Label("Popular Book")
-                        .TextColor(Colors.White)
-                        .FontSize(20)
-                        .FontFamily(Theme.font)
-                        .GridRow(2)
-                        .Margin(20,20,0,15),
-                       new ScrollView
-                        {
+                        .BackgroundColor(Colors.Transparent)
+                        .OnTapped(()=>SetState(s=>s.IsCategoryVisible=!s.IsCategoryVisible)),
+                        new Border
+                                    {
+                                        new Image(State.IsCategoryVisible?"mo":"kmo")
+                                        .HCenter().VCenter()
+                                        .Aspect(Aspect.AspectFit)
+                                        .HeightRequest(20)
+                                        .WidthRequest(20)
+                                        .ScaleX(0.8)
+                                    }
+                                    .OnTapped(()=>SetState(s=>s.IsCategoryVisible=!s.IsCategoryVisible))
+                                    .BackgroundColor(Colors.Transparent)
+                                    .Margin(0,0,0,1)
+                    }.GridRow(2)
+                    .Margin(0,0,20,-30)
+                    .HEnd(),
+                   //new CollectionView()
+                   //.ItemsSource(Category.All,RenderCategoryItem)
+                   //.ItemsLayout(new VerticalGridItemsLayout(3))
+                   //.GridRow(3),
+                   RenderCategory(),
+                       new Grid("Auto,Auto,Auto,*","*")
+                       {
+                           new Label(State.CategorySelected.Any()?"Search Book":"Horror Book")
+                            .TextColor(Colors.White)
+                            .FontSize(20)
+                            .FontFamily(Theme.font)
+                            .GridRow(0)
+                            .Margin(20,0,0,5),
+                           State.IsLoading?
+                           new SKLottieView()
+                            .Source(new SkiaSharp.Extended.UI.Controls.SKFileLottieImageSource()
+                            {
+                                File = "loading.json"
+                            })
+                            .RepeatCount(-1)
+                            .IsAnimationEnabled(true)
+                            .IsEnabled(true)
+                            .IsVisible(true)
+                            .HeightRequest(200)
+                            .WidthRequest(200)
+                            .VCenter().HCenter()
+                            .BackgroundColor(Colors.Transparent):
                            new CollectionView()
-                           .ItemsSource(State.Books1,RenderBookList1)
-                           .ItemsLayout(new VerticalLinearItemsLayout().ItemSpacing(10))
-                        }.GridRow(3)
-               }
-               .BackgroundColor(Theme.Bg)
-               .TranslationY(State.IsCategoryVisible?0:-300)
-               .WithAnimation(easing:Easing.CubicInOut,duration:500)
-               .GridRow(4)
-            }.BackgroundColor(Theme.Bg)
-            .ZIndex(0)
-        }.RotationY(State.RotationY)
-        .TranslationX(State.TranslationX)
-        .WithAnimation(easing: Easing.CubicIn, duration: 300)
-        ;
+                           .ItemsSource(State.Books,RenderBookList)
+                           .ItemsLayout(new HorizontalLinearItemsLayout().ItemSpacing(10))
+                           .GridRow(1)
+                           .Margin(20,10,0,0),
+                           new Label("Popular Book")
+                            .TextColor(Colors.White)
+                            .FontSize(20)
+                            .FontFamily(Theme.font)
+                            .GridRow(2)
+                            .Margin(20,20,0,15),
+                           new ScrollView
+                            {
+                               new CollectionView()
+                               .ItemsSource(State.Books1,RenderBookList1)
+                               .ItemsLayout(new VerticalLinearItemsLayout().ItemSpacing(10))
+                            }.GridRow(3)
+                   }
+                   .BackgroundColor(Theme.Bg)
+                   .TranslationY(State.IsCategoryVisible?0:-300)
+                   .WithAnimation(easing:Easing.CubicInOut,duration:500)
+                   .GridRow(4)
+                }.BackgroundColor(Theme.Bg)
+                .ZIndex(0)
+            }
+         .BackgroundColor(Theme.Bg)
+         .RotationY(State.RotationY)
+         .TranslationX(State.TranslationX)
+         .WithAnimation(easing: Easing.CubicIn, duration: 300)
+         ;
+        
+                 
+     
 
     }
 
@@ -979,7 +1005,9 @@ enum ScrollToMode
 
     Left,
 
-    Right
+    Right,
+    Top,
+    Bottom
 }
 enum CategorySelect
 {
