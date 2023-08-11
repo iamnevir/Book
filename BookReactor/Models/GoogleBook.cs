@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
@@ -7,6 +8,41 @@ using System.Threading.Tasks;
 
 namespace BookReactor.Models;
 
+public class UserInfo
+{
+    public string iss { get; set; }
+    public string azp { get; set; }
+    public string aud { get; set; }
+    public string sub { get; set; }
+    public string at_hash { get; set; }
+    public string hd { get; set; }
+    public string email { get; set; }
+    public string name { get; set; }
+    public string email_verified { get; set; }
+    public int iat { get; set; }
+    public int exp { get; set; }
+    public string nonce { get; set; }
+}
+public class LoginResponse
+{
+
+    [JsonProperty("access_token")]
+    public string AccessToken { get; set; }
+
+    [JsonProperty("expires_in")]
+    public int ExpiresIn { get; set; }
+    [JsonProperty("id_token")]
+    public string IdToken { get; set; }
+
+    [JsonProperty("refresh_token")]
+    public string RefreshToken { get; set; }
+
+    [JsonProperty("scope")]
+    public string Scope { get; set; }
+
+    [JsonProperty("token_type")]
+    public string TokenType { get; set; }
+}
 public class Book
 {
     public string kind { get; set; }
@@ -120,3 +156,20 @@ public class VolumeInfo
 
 
 
+public class Bookshelf
+{
+    public string kind { get; set; }
+    public int id { get; set; }
+    public string title { get; set; }
+    public string access { get; set; }
+    public DateTime updated { get; set; }
+    public DateTime created { get; set; }
+    public int volumeCount { get; set; }
+    public DateTime volumesLastUpdated { get; set; }
+}
+
+public class BookshelfList
+{
+    public string kind { get; set; }
+    public List<Bookshelf> items { get; set; }
+}

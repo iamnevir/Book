@@ -1,4 +1,5 @@
 ﻿
+using Microsoft.Extensions.DependencyInjection;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -57,13 +58,17 @@ class EbookDetail:Component<EbookDetailState, EbookDetailProps>
             }
         });
     }
-    private async void AddToFavorite()
+    private async void AddToFavorite(string id)
     {
-        await Logger.AddFavoriteAsync(Props.Book.id);
+        var googleBook = Services.GetRequiredService<IGoogleServices>();
+        var token = await Logger.ReadAsync(Logger.token);
+        await googleBook.AddBookToFavoriteAsync(token, id);
     }
-    private async void RemoveFromFavorite()
+    private async void RemoveFromFavorite(string id)
     {
-        await Logger.RemoveFavoriteAsync(Props.Book.id);
+        var googleBook = Services.GetRequiredService<IGoogleServices>();
+        var token = await Logger.ReadAsync(Logger.token);
+        await googleBook.RemoveBookToFavoriteAsync(token, id);
     }
     public override VisualNode Render()
     {
@@ -220,12 +225,12 @@ class EbookDetail:Component<EbookDetailState, EbookDetailProps>
                         if(State.IsFavorite)
                         {
                             SetState(s=>s.IsFavorite=false);
-                            RemoveFromFavorite();
+                            RemoveFromFavorite(Props.Book.id);
                         }
                         else
                         {
                             SetState(s=>s.IsFavorite=true);
-                            AddToFavorite();
+                            AddToFavorite(Props.Book.id);
                         }
                     }),
                     new Button("Start Reading")

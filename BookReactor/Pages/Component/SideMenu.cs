@@ -76,7 +76,7 @@ class SideMenu : Component<SideMenuState>
 
     protected override async void OnMounted()
     {
-        State.UserName=Logger.KiemTraLogin()? await Logger.GetLogAsync():"Unknown";
+        State.UserName=Logger.KiemTra(Logger.user)? await Logger.ReadAsync(Logger.user):"Unknown";
         State.TranslationX = _isShown ? 0 : -250;
         State.Opacity = _isShown ? 1.0 : 0.0;
         State.RotationY = _isShown ? 0.0 : 10;

@@ -1,4 +1,5 @@
 ﻿using Microsoft.Maui.Storage;
+using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -10,54 +11,27 @@ namespace BookReactor.Services;
 
 public static class Logger
 {
-    static string filePath = System.IO.Path.Combine(FileSystem.AppDataDirectory,"logs.txt");
-    static string favorite = System.IO.Path.Combine(FileSystem.AppDataDirectory,"favorite.txt");
+    public static string user = System.IO.Path.Combine(FileSystem.AppDataDirectory, "user.txt");
+    public static string token = System.IO.Path.Combine(FileSystem.AppDataDirectory, "token.txt");
+    public static string refreshtoken = System.IO.Path.Combine(FileSystem.AppDataDirectory, "refreshtoken.txt");
 
-    public static async Task WriteLogAsync(string text)
+    public static async Task WriteAsync(string path, string text)
     {
-        await File.WriteAllTextAsync(filePath, text);
+        await File.WriteAllTextAsync(path, text);
     }
-    public static bool KiemTraLogin()
+    public static bool KiemTra(string path)
     {
-        return File.Exists(filePath);
+        return File.Exists(path);
     }
-    public static bool KiemTraFavorite()
+    public static async Task<string> ReadAsync(string path)
     {
-        return File.Exists(favorite);
+        return await File.ReadAllTextAsync(path);
     }
-    public static void CreateLogAsync()
+    public static string GetName(string jwt)
     {
-        File.Create(filePath);
-    }
-    public static async Task<string> GetLogAsync()
-    {
-        return await File.ReadAllTextAsync(filePath);
-    }
-
-    public static async Task AddFavoriteAsync(string id)
-    {
-        if(File.Exists(favorite))
-        {
-            await File.AppendAllTextAsync(favorite, $",{id}");
-        }
-        else
-        {
-            await File.AppendAllTextAsync(favorite, $"{id}");
-        }
-        
-    }
-    public static async Task RemoveFavoriteAsync(string id)
-    {
-       var ids= await File.ReadAllTextAsync(favorite);
-       await File.WriteAllTextAsync(favorite, ids.Replace($",{id}",""));
-
-    }
-    public static void DeleteFavoriteAsync()
-    {
-         File.Delete(favorite);
-    }
-    public static async Task<string> GetFavoriteAsync()
-    {
-        return await File.ReadAllTextAsync(favorite);
+        var decodedToken = JWTDecoder.Decoder.DecodeToken(jwt);
+        string payload = decodedToken.Payload;
+        var jsonObject = JsonConvert.DeserializeObject<UserInfo>(payload);
+        return jsonObject.name;
     }
 }

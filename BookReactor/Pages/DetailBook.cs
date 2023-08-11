@@ -1,4 +1,5 @@
 ﻿using MauiReactor.Shapes;
+using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Maui.Devices;
 using System;
 using System.Collections.Generic;
@@ -23,13 +24,17 @@ class DetailBook:Component<DetailBookState, DetailBookProps>
     {
         await Navigation.PopAsync();
     }
-    private async void AddToFavorite()
+    private async void AddToFavorite(string id)
     {
-        await Logger.AddFavoriteAsync(Props.Book.id);
+        var googleBook = Services.GetRequiredService<IGoogleServices>();
+        var token = await Logger.ReadAsync(Logger.token);
+        await googleBook.AddBookToFavoriteAsync(token,id);
     }
-    private async void RemoveFromFavorite()
+    private async void RemoveFromFavorite(string id)
     {
-        await Logger.RemoveFavoriteAsync(Props.Book.id);
+        var googleBook = Services.GetRequiredService<IGoogleServices>();
+        var token = await Logger.ReadAsync(Logger.token);
+        await googleBook.RemoveBookToFavoriteAsync(token, id);
     }
     public override VisualNode Render()
     {
@@ -117,12 +122,12 @@ class DetailBook:Component<DetailBookState, DetailBookProps>
                             .OnTapped(()=>{
                                 if (State.IsFavorite == -1)
                                 {
-                                    AddToFavorite();
+                                    AddToFavorite(Props.Book.id);
                                     SetState(s=>s.IsFavorite=0);
                                 }
                                 else
                                 {
-                                    RemoveFromFavorite();
+                                    RemoveFromFavorite(Props.Book.id);
                                     SetState(s=>s.IsFavorite=0);
                                 }
                             }),

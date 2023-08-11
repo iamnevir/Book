@@ -12,6 +12,8 @@ public class MonoPackageManager_Resources {
 		"Maui.Skeleton.dll",
 		"IdentityModel.dll",
 		"IdentityModel.OidcClient.dll",
+		"JWTDecoder.dll",
+		"System.ComponentModel.Composition.dll",
 		"Microsoft.Extensions.Configuration.dll",
 		"Microsoft.Extensions.Configuration.Abstractions.dll",
 		"Microsoft.Extensions.DependencyInjection.dll",

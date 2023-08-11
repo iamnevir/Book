@@ -1,4 +1,5 @@
 ﻿using BookReactor.Pages.Component;
+using MauiReactor;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Maui.Devices;
 using System;
@@ -17,8 +18,12 @@ class FavoritePageState
     public double RotationY { get; set; } = -12;
     public double MarginLeft { get; set; } = -30.0;
     public bool IsLoading { get; set; }
-    public List<Item> FavoriteBookList { get; set; } = new();
-    public Item FirstBook { get; set; }
+    public Bookshelf Bookshelf1 { get; set; } 
+    public Bookshelf Bookshelf2 { get; set; }
+    public Bookshelf Bookshelf3 { get; set; } 
+    public Bookshelf Bookshelf4 { get; set; }
+    public Bookshelf Bookshelf5 { get; set; }
+
 }
 class FavoritePage : Component<FavoritePageState>
 {
@@ -36,34 +41,19 @@ class FavoritePage : Component<FavoritePageState>
 
         State.RotationY = !State.IsSideMenuShown ? 0.0 : -12;
     }
-    public async void Load()
-    {
-        var googleBook = Services.GetRequiredService<IGoogleServices>();
-        string ids = Logger.KiemTraFavorite() ? await Logger.GetFavoriteAsync() : string.Empty;
-        if (ids != string.Empty)
-        {
-            State.IsLoading = true;
-            string[] idList = ids.Split(",");
-            foreach (string id in idList)
-            {
-                State.FavoriteBookList.Add(await googleBook.GetBookById(id));
-            }
-            SetState(s =>
-            {
-                s.FirstBook = State.FavoriteBookList.FirstOrDefault();
-                s.IsLoading = false;
-            });
-        }
-    }
     protected override void OnMounted()
     {
         InitializeState();
+        //var googleBook = Services.GetRequiredService<IGoogleServices>();
+        //var token = await Logger.ReadAsync(Logger.token);
+        //var bookshelf = await googleBook.GetBookshelfListAsync(token);
+
         base.OnMounted();
     }
     protected override void OnPropsChanged()
     {
         InitializeState();
-        
+
         base.OnPropsChanged();
     }
     private async void OpenHomePage()
@@ -103,19 +93,41 @@ class FavoritePage : Component<FavoritePageState>
                             SetState(s=>s.IsSideMenuShown=false);
                             InitializeState();
                       }),
-              
+
                 new Grid("Auto,*","*")
                 {
-                    RenderFavoriteBook(),
+                    RenderFavorite(),
                     RenderHeader()
                 }.RotationY(State.RotationY)
                 .TranslationX(State.TranslationX)
                 .WithAnimation(easing: Easing.CubicIn, duration: 300)
-                
+
             }
         }.Set(MauiControls.NavigationPage.HasNavigationBarProperty, false)
         .BackgroundColor(Theme.Bg);
     }
+
+    private VisualNode RenderFavorite()
+    {
+        return new VStack
+        {
+            RenderBookshelf(0,Theme.Bookshelf1,"Yêu thích","tủ sách ưa thích của bạn"),
+            RenderBookshelf(3,Theme.Bookshelf2,"Đang đọc","chứa sách bạn đang đọc nè"),
+            RenderBookshelf(4,Theme.Bookshelf3,"Đã đọc","tủ sách mà bạn đã đọc"),
+            RenderBookshelf(8,Theme.Bookshelf4,"Gợi ý cho bạn","gợi ý sách cho bạn"),
+            RenderBookshelf(2,Theme.Bookshelf5,"Lịch sử xem","lịch sử"),
+        }.GridRow(1).Margin(5,125,5,0);
+    }
+
+    VisualNode RenderBookshelf(int id,Color bg, string bookshelf, string description)
+    {
+        return new BookshelfItem()
+            .GetBookshelfId(id)
+            .GetBookshelf(bookshelf)
+            .GetBg(bg)
+            .GetText(description);
+    }
+
     private VisualNode RenderHeader()
     {
         return new Grid("*", "Auto,Auto,*")
@@ -147,127 +159,224 @@ class FavoritePage : Component<FavoritePageState>
                 .Margin(20,0,0,0)
                 ,
             }
-            .Margin(10,0,0,0)
+            .Margin(10, 0, 0, 0)
             .GridRow(0).ZIndex(1).BackgroundColor(Theme.Bg);
     }
-    private VisualNode RenderFavoriteBook()
+}
+class BookshelfItemState
+{
+    public double Height { get; set; }
+    public double Margin { get; set; }
+    public List<Item> Books { get; set; } = new();
+}
+class BookshelfItem:Component<BookshelfItemState>
+{
+    
+    int _id;
+    string _bookshelf;
+    Color _bg;
+    string _description;
+    public BookshelfItem GetBookshelfId(int id)
     {
-
-        return new Grid("Auto,*", "*")
-                {
-                    //RenderGanDay()
-                    //,
-                    new Grid("Auto,*","*")
-                    {
-                        new Border
-                        {
-                            new Label("Your Favorite")
-                            .TextColor(Colors.White)
-                            .FontFamily(Theme.font)
-                            .FontSize(20)
-                            .Margin(10)
-                        }.GridRow(0).HeightRequest(50)
-                        .Margin(0,0,-2,0)
-                        .BackgroundColor(Theme.Bg)
-                        .Shadow(new Shadow().Brush(MauiControls.Brush.White).Offset(10,10).Opacity(0.5f))
-                        ,
-                            new CollectionView()
-                            .ItemsSource(State.FavoriteBookList,RenderBookItem)
-                            .ItemsLayout(new VerticalLinearItemsLayout().ItemSpacing(0))
-                        .GridRow(1)
-                        .Margin(0,20,0,0)
-                        ,
-                    }.GridRow(1).BackgroundColor(Theme.Bg)
-                }.GridRow(1);
+        _id = id;
+        return this;
     }
-
-    private VisualNode RenderGanDay()
+    public BookshelfItem GetBookshelf(string bookshelf)
+    {
+        _bookshelf = bookshelf;
+        return this;
+    }
+    public BookshelfItem GetBg(Color bg)
+    {
+        _bg = bg;
+        return this;
+    }
+    public BookshelfItem GetText(string text)
+    {
+        _description = text;
+        return this;
+    }
+    async void Load()
+    {
+        var googleBook = Services.GetRequiredService<IGoogleServices>();
+        var token = await Logger.ReadAsync(Logger.token);
+        var bookshelf = await googleBook.GetBookFromBookshelfAsync(token,_id);
+        SetState(s => s.Books = bookshelf.items);
+    }
+    void OnClick()
+    {
+        double margin=0;
+        switch (_id)
+        {
+            case 0:
+                margin = 0;
+                break;
+            case 3:
+                margin = 0;
+                break;
+            case 4:
+                margin = 125;
+                break;
+            case 8:
+                margin = 250;
+                break;
+            case 2:
+                margin = 375;
+                break;
+        }
+        if (State.Height > 0)
+        {
+            SetState(s => {
+                s.Height = 0;
+                s.Margin = 0;
+            });
+        }
+        else
+        {
+            SetState(s => {
+                s.Height = 400;
+                s.Margin = margin;
+            });
+        }
+    }
+    public override VisualNode Render()
     {
         return new Border
         {
-           new Grid("*","Auto,*")
-           {
-               new Image(State.FirstBook is not null?State.FirstBook.volumeInfo.imageLinks.extraLarge.Replace("http", "https"):"")
-               .HeightRequest(250)
-               .WidthRequest(159)
-               .Aspect(Aspect.Fill)
-               .GridColumn(0)
-               .VEnd()
-               .Margin(15,0,0,0)
-               ,
-               new Grid("Auto,Auto,Auto,*,Auto","*")
-               {
-                   new Label("ĐÃ ĐƯỢC ĐỌC GẦN ĐÂY:")
-                   .TextColor(Colors.Gray)
-                   .FontFamily(Theme.font)
-                   .FontSize(16)
-                   .GridRow(0)
-                   ,
-                   new Label(State.FirstBook is not null?State.FirstBook.volumeInfo.title:"")
-                   .TextColor(Colors.White)
-                   .FontFamily(Theme.font)
-                   .MaxLines(2)
-                   .FontSize(25)
-                   .Margin(0,20,0,20)
-                   .GridRow(1)
-                   ,
-                   new Label(State.FirstBook is not null?State.FirstBook.volumeInfo.authors[0]:"")
-                   .TextColor(Colors.Gray)
-                   .FontFamily(Theme.font)
-                   .FontSize(16)
-                   .GridRow(2)
-                   ,
-                   new Label("Tiếp tục >")
-                   .TextColor(Theme.XanhKem)
-                   .FontFamily(Theme.font)
-                   .FontSize(20)
-                   .HEnd()
-                   .Margin(0,0,0,10)
-                   .GridRow(4)
-               }.Margin(10,0,10,0)
-               .GridColumn(1),
-           }
-        }.HeightRequest(250)
-        .Margin(0,10,0,0)
-        .BackgroundColor(Theme.Bg);
+            new Grid("Auto,Auto,*","*,Auto")
+            {
+                new Label(_description)
+                .FontFamily(Theme.font)
+                .FontSize(16)
+                .TextColor(Colors.Black)
+                .GridRow(0)
+                ,
+                new Label(_bookshelf.ToUpper())
+                .FontFamily(Theme.font)
+                .FontSize(35)
+                .FontAttributes(Microsoft.Maui.Controls.FontAttributes.Bold)
+                .TextColor(Colors.Black)
+                .Margin(0,5,0,0)
+                .GridRow(1)
+                ,
+                new VStack
+                {
+                    new Label("books")
+                    .FontAttributes(Microsoft.Maui.Controls.FontAttributes.Bold)
+                    .FontFamily(Theme.font)
+                    .FontSize(18)
+                    .HCenter()
+                    .TextColor(Colors.Black),
+                     new Label("shelf")
+                    .FontFamily(Theme.font)
+                    .FontAttributes(Microsoft.Maui.Controls.FontAttributes.Bold)
+                    .FontSize(18)
+                    .TextColor(Colors.Black)
+                    .HCenter(),
+                }.Spacing(5)
+                .GridColumn(1)
+                .GridRowSpan(2)
+                ,
+                new Grid("Auto,*","*")
+                {
+                   _id==0?
+                    new Label("Danh sách yêu thích")
+                    .FontFamily(Theme.font)
+                    .FontSize(25)
+                    .FontAttributes(Microsoft.Maui.Controls.FontAttributes.Bold)
+                    .TextColor(Colors.Black)
+                    .Margin(0,30,0,0)
+                    .GridRow(0):null
+                    ,
+                    new CollectionView()
+                    .ItemsSource(State.Books,RenderBookItem)
+                    .ItemsLayout(new HorizontalLinearItemsLayout().ItemSpacing(10))
+                    .GridRow(1)
+                    .Margin(0,-50,0,0)
+                }.GridRow(2).VCenter()
+                .BackgroundColor(Colors.Transparent)
+                .IsVisible(State.Height>0)
+                .GridColumnSpan(2)
+            }.Margin(30,30,20,0)
+            .OnTapped(()=>{
+                    OnClick();
+                    Load();
+            })
+        }
+        .StrokeShape(new RoundRectangle().CornerRadius(40))
+            .HeightRequest(195+State.Height)
+            .Margin(0, -70 -State.Margin, 0, 0)
+            .WithAnimation(easing:Easing.CubicInOut,duration:600)
+            .BackgroundColor(_bg)
+            ;
+    }
+    private async void OpenDetailEBook(Item item)
+    {
+        await Navigation.PushAsync<DetailBook, DetailBookProps>(_ =>
+        {
+            _.Book = item;
+        });
     }
     private VisualNode RenderBookItem(Item item)
     {
-        var source = item.volumeInfo.imageLinks.thumbnail.Replace("http", "https");
-        return new Border
+        return new Grid
         {
-            new Grid("*","Auto,*")
-           {
-               new Image(source)
-               .HeightRequest(130)
-               .WidthRequest(94)
-               .Aspect(Aspect.Fill)
-               .GridColumn(0)
-               .VEnd()
-               ,
-               new Grid("Auto,Auto,*","*")
-               {
-                   new Label(item.volumeInfo.title)
-                   .TextColor(Colors.White)
-                   .FontFamily(Theme.font)
-                   .MaxLines(2)
-                   .FontSize(16)
-                   .Margin(0,0,0,20)
-                   .GridRow(1)
-                   ,
-                   new Label(item.volumeInfo.authors[0])
-                   .TextColor(Colors.Gray)
-                   .FontFamily(Theme.font)
-                   .FontSize(15)
-                   .GridRow(2)
-               }.Margin(10,0,10,0)
-               .GridColumn(1)
-               ,
-           }
-        }.HeightRequest(130)
-        .BackgroundColor(Colors.Black)
-        .StrokeShape(new RoundRectangle().CornerRadius(5))
-        .Margin(10).Shadow(new Shadow().Brush(MauiControls.Brush.White).Offset(1, 1).Opacity(0.5f))
-        ;
+             new Border
+                    {
+                        new Grid
+                        {
+                             new Image(item.volumeInfo.imageLinks.thumbnail.Replace("http","https"))
+                            .Aspect(Aspect.Fill)
+                            ,
+                             new HStack()
+                             {
+                                 new SimpleRatingControl()
+                                .Amount(5)
+                                .CurrentValue(item.volumeInfo.averageRating)
+                                .RatingType(SimpleRatingControlMaui.RatingType.Star)
+                                .AccentColor(Colors.White)
+                                .FontSize(13),
+                                 new Label(item.volumeInfo.averageRating)
+                                 .FontFamily(Theme.font)
+                                 .TextColor(Colors.White)
+                                 .FontSize(13)
+                             }.VEnd().HCenter().Margin(0,0,0,10).Spacing(15)
+                        }
+                    }.StrokeShape(new RoundRectangle().CornerRadius(20))
+                    .Margin(0,-120,0,0)
+                     .HeightRequest(180)
+                    .WidthRequest(135)
+                    .ZIndex(1),
+             new Border
+            {
+                new Grid
+                {
+                     new VStack
+                     {
+                        new Label(item.volumeInfo.title)
+                                 .FontFamily(Theme.font)
+                                 .FontAttributes(Microsoft.Maui.Controls.FontAttributes.Bold)
+                                 .TextColor(Colors.Black)
+                                 .MaxLines(1)
+                                 .FontSize(17),
+                        new Label(item.volumeInfo.authors[0])
+                                 .FontFamily(Theme.font)
+                                 .MaxLines(1)
+                                 .TextColor(Colors.Black)
+                                 .FontSize(13),
+                     }.Margin(20,0,20,15)
+                     .Spacing(5)
+                     .VEnd()
+                     .HCenter()
+                }
+            }
+            .HeightRequest(200)
+            .WidthRequest(170)
+            .StrokeShape(new RoundRectangle().CornerRadius(20))
+            .BackgroundColor(Colors.White)
+        }
+        .HeightRequest(250)
+         .WidthRequest(180)
+         .OnTapped(()=>OpenDetailEBook(item));
     }
 }

@@ -1,5 +1,7 @@
 ﻿using Android.App;
 using Android.Content.PM;
+using Android.OS;
+using Microsoft.Maui.Authentication;
 
 namespace BookReactor;
 
@@ -9,8 +11,7 @@ namespace BookReactor;
             Android.Content.Intent.CategoryDefault,
             Android.Content.Intent.CategoryBrowsable
            },
-           DataScheme = CALLBACK_SCHEME)]
+           DataScheme = "com.company.magicbook")]
 public class WebAuthenticationCallbackActivity : Microsoft.Maui.Authentication.WebAuthenticatorCallbackActivity
 {
-    const string CALLBACK_SCHEME = "myapp";
 }

@@ -28,17 +28,9 @@ public class Theme
     public static MauiControls.Brush ShadowDarkBrush { get; } = new MauiControls.SolidColorBrush(Shadow);
     public static Color Background2 { get; } = Color.FromUint(0xFF17203A);
 
-    public static List<Color> RandomColors = new()
-    {
-        Color.FromArgb("#FFCCFF"),
-        Color.FromArgb("#99FFFF"),
-        Color.FromArgb("#99FF00"),
-        Color.FromArgb("#0099FF"),
-        Color.FromArgb("#FF33FF"),
-        Color.FromArgb("#00EE00"),
-        Color.FromArgb("#0000FF"),
-        Color.FromArgb("#FFFF00"),
-        Color.FromArgb("#FF3366"),
-        Color.FromArgb("#FF99CC"),
-    };
+    public static Color Bookshelf1 = Color.FromArgb("#BAFF34");
+    public static Color Bookshelf2 = Color.FromArgb("#0EFF61");
+    public static Color Bookshelf3 = Color.FromArgb("#5263FF");
+    public static Color Bookshelf4 = Color.FromArgb("#C379FF");
+    public static Color Bookshelf5 = Color.FromArgb("#FF33FF");
 }

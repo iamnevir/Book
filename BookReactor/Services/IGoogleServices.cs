@@ -1,4 +1,4 @@
-﻿using BookReactor.Auth0;
+﻿
 using Microsoft.Extensions.DependencyInjection;
 using System;
 using System.Collections.Generic;
@@ -12,13 +12,14 @@ public interface IGoogleServices
 {
     Task<Book> GetBook(string filter);
     Task<Item> GetBookById(string id);
+    Task<BookshelfList> GetBookshelfListAsync(string token);
+    Task<Book> GetBookFromBookshelfAsync(string token, int id);
+    Task<bool> AddBookToFavoriteAsync(string token, string id);
+    Task<bool> RemoveBookToFavoriteAsync(string token, string id);
+    Task<bool> RemoveAllBookToFavoriteAsync(string token);
 }
 public static class ServiceCollectionExtensions
 {
-    public static void AddAuth0Services(this IServiceCollection services,Auth0Client auth0Client)
-    {
-        services.AddSingleton<IAuth0Client>(auth0Client);
-    }
     public static void AddBookServices(this IServiceCollection services, Uri serverUri)
     {
         services.AddSingleton<IGoogleServices, GoogleBookServices>();
