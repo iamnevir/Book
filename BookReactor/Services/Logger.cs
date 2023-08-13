@@ -34,4 +34,13 @@ public static class Logger
         var jsonObject = JsonConvert.DeserializeObject<UserInfo>(payload);
         return jsonObject.name;
     }
+    public static async Task Logout()
+    {
+        await Task.Run(() =>
+        {
+            File.Delete(user);
+            File.Delete(refreshtoken);
+            File.Delete(token);
+        });
+    }
 }

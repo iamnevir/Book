@@ -17,6 +17,7 @@ public interface IGoogleServices
     Task<bool> AddBookToFavoriteAsync(string token, string id);
     Task<bool> RemoveBookToFavoriteAsync(string token, string id);
     Task<bool> RemoveAllBookToFavoriteAsync(string token);
+    Task RefreshTokenAsync();
 }
 public static class ServiceCollectionExtensions
 {

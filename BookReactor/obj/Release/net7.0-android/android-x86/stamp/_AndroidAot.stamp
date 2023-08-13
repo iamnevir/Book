@@ -1,4 +1,8 @@
 obj\Release\net7.0-android\android-x86\aot\Maui.Skeleton.dll.so
+obj\Release\net7.0-android\android-x86\aot\IdentityModel.dll.so
+obj\Release\net7.0-android\android-x86\aot\IdentityModel.OidcClient.dll.so
+obj\Release\net7.0-android\android-x86\aot\JWTDecoder.dll.so
+obj\Release\net7.0-android\android-x86\aot\System.ComponentModel.Composition.dll.so
 obj\Release\net7.0-android\android-x86\aot\Microsoft.Extensions.Configuration.dll.so
 obj\Release\net7.0-android\android-x86\aot\Microsoft.Extensions.Configuration.Abstractions.dll.so
 obj\Release\net7.0-android\android-x86\aot\Microsoft.Extensions.DependencyInjection.dll.so
@@ -26,6 +30,7 @@ obj\Release\net7.0-android\android-x86\aot\System.CodeDom.dll.so
 obj\Release\net7.0-android\android-x86\aot\Xamarin.AndroidX.Activity.dll.so
 obj\Release\net7.0-android\android-x86\aot\Xamarin.AndroidX.AppCompat.dll.so
 obj\Release\net7.0-android\android-x86\aot\Xamarin.AndroidX.AppCompat.AppCompatResources.dll.so
+obj\Release\net7.0-android\android-x86\aot\Xamarin.AndroidX.Browser.dll.so
 obj\Release\net7.0-android\android-x86\aot\Xamarin.AndroidX.CardView.dll.so
 obj\Release\net7.0-android\android-x86\aot\Xamarin.AndroidX.Collection.dll.so
 obj\Release\net7.0-android\android-x86\aot\Xamarin.AndroidX.CoordinatorLayout.dll.so
@@ -68,6 +73,7 @@ obj\Release\net7.0-android\android-x86\aot\System.Diagnostics.Process.dll.so
 obj\Release\net7.0-android\android-x86\aot\System.Diagnostics.TraceSource.dll.so
 obj\Release\net7.0-android\android-x86\aot\System.Drawing.Primitives.dll.so
 obj\Release\net7.0-android\android-x86\aot\System.Drawing.dll.so
+obj\Release\net7.0-android\android-x86\aot\System.Formats.Asn1.dll.so
 obj\Release\net7.0-android\android-x86\aot\System.IO.Compression.dll.so
 obj\Release\net7.0-android\android-x86\aot\System.IO.Pipes.dll.so
 obj\Release\net7.0-android\android-x86\aot\System.Linq.Expressions.dll.so
@@ -92,6 +98,10 @@ obj\Release\net7.0-android\android-x86\aot\System.Runtime.Numerics.dll.so
 obj\Release\net7.0-android\android-x86\aot\System.Runtime.Serialization.Formatters.dll.so
 obj\Release\net7.0-android\android-x86\aot\System.Runtime.Serialization.Primitives.dll.so
 obj\Release\net7.0-android\android-x86\aot\System.Runtime.dll.so
+obj\Release\net7.0-android\android-x86\aot\System.Security.Claims.dll.so
+obj\Release\net7.0-android\android-x86\aot\System.Security.Cryptography.Algorithms.dll.so
+obj\Release\net7.0-android\android-x86\aot\System.Security.Cryptography.Primitives.dll.so
+obj\Release\net7.0-android\android-x86\aot\System.Security.Cryptography.X509Certificates.dll.so
 obj\Release\net7.0-android\android-x86\aot\System.Security.Cryptography.dll.so
 obj\Release\net7.0-android\android-x86\aot\System.Text.Encoding.Extensions.dll.so
 obj\Release\net7.0-android\android-x86\aot\System.Text.Encodings.Web.dll.so

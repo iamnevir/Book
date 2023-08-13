@@ -117,7 +117,10 @@ class EBookPage:Component<EBookPageState>
     }
     private async void OpenLoginPage()
     {
-        await Navigation.PushAsync<LoginPage>();
+        await Navigation.PushAsync<LoginPage, LoginPageProps>(_ =>
+        {
+            _.SauDangNhap =()=> OnMounted();
+        });
     }
     public override VisualNode Render()
     {
@@ -135,12 +138,13 @@ class EBookPage:Component<EBookPageState>
                       .IsShown(State.IsSideMenuShown)
                       .HomePage(OpenHomePage)
                       .OnBookPage(OpenBookPage)
-                      .OpenLoginPage(OpenLoginPage)
                       .OpenFavoritePage(OpenFavoritePage)
                       .MenuSelect(CommandMenuItem.EBook)
-                      .OnClose(()=>{
-                      SetState(s=>s.IsSideMenuShown=false);
-                      InitializeState(); }),
+                      .OnClose(()=>
+                      {
+                        SetState(s=>s.IsSideMenuShown=false);
+                        InitializeState();
+                      }),
                 new Grid("60,*","*")
                 {
                    RenderHeader(),

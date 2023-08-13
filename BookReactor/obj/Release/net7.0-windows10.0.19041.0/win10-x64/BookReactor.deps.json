@@ -10,6 +10,8 @@
       "BookReactor/1.0": {
         "dependencies": {
           "HorusStudio.Maui.Skeleton": "2.0.0",
+          "IdentityModel.OidcClient": "5.2.1",
+          "JWTDecoder": "0.9.2",
           "Microsoft.Extensions.Configuration": "7.0.0",
           "Microsoft.Extensions.DependencyInjection": "7.0.0",
           "Microsoft.Extensions.Http": "7.0.0",
@@ -21,9 +23,9 @@
           "Microsoft.WindowsAppSDK": "1.2.221209.1",
           "Newtonsoft.Json": "13.0.3",
           "Plugin.Maui.ScreenBrightness": "1.0.0-preview3",
-          "Reactor.Maui": "1.0.138",
-          "Reactor.Maui.Canvas": "1.0.138",
-          "Reactor.Maui.ScaffoldGenerator": "1.0.138",
+          "Reactor.Maui": "1.0.139",
+          "Reactor.Maui.Canvas": "1.0.139",
+          "Reactor.Maui.ScaffoldGenerator": "1.0.139",
           "SimpleRatingControl.MAUI": "0.0.3",
           "SkiaSharp.Extended.UI.Maui": "2.0.0-preview.61",
           "runtimepack.Microsoft.NETCore.App.Runtime.win-x64": "7.0.9",
@@ -808,6 +810,41 @@
           }
         }
       },
+      "IdentityModel/5.2.0": {
+        "runtime": {
+          "lib/net5.0/IdentityModel.dll": {
+            "assemblyVersion": "5.2.0.0",
+            "fileVersion": "5.2.0.0"
+          }
+        }
+      },
+      "IdentityModel.OidcClient/5.2.1": {
+        "dependencies": {
+          "IdentityModel": "5.2.0",
+          "Microsoft.Extensions.Logging": "7.0.0"
+        },
+        "runtime": {
+          "lib/netstandard2.0/IdentityModel.OidcClient.dll": {
+            "assemblyVersion": "5.0.0.0",
+            "fileVersion": "5.2.1.0"
+          }
+        }
+      },
+      "JWTDecoder/0.9.2": {
+        "dependencies": {
+          "Newtonsoft.Json": "13.0.3"
+        },
+        "runtime": {
+          "lib/netstandard2.0/JWTDecoder.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          },
+          "lib/netstandard2.0/System.ComponentModel.Composition.dll": {
+            "assemblyVersion": "4.0.0.0",
+            "fileVersion": "4.6.26419.2"
+          }
+        }
+      },
       "M.BindableProperty.Generator/0.9.0": {},
       "Microsoft.Extensions.Configuration/7.0.0": {
         "dependencies": {
@@ -1032,26 +1069,26 @@
           }
         }
       },
-      "Reactor.Maui/1.0.138": {
+      "Reactor.Maui/1.0.139": {
         "runtime": {
           "lib/net7.0-windows10.0.19041/MauiReactor.dll": {
-            "assemblyVersion": "1.0.138.0",
-            "fileVersion": "1.0.138.0"
+            "assemblyVersion": "1.0.139.0",
+            "fileVersion": "1.0.139.0"
           }
         }
       },
-      "Reactor.Maui.Canvas/1.0.138": {
+      "Reactor.Maui.Canvas/1.0.139": {
         "dependencies": {
-          "Reactor.Maui": "1.0.138"
+          "Reactor.Maui": "1.0.139"
         },
         "runtime": {
           "lib/net7.0-windows10.0.19041/MauiReactor.Canvas.dll": {
-            "assemblyVersion": "1.0.138.0",
-            "fileVersion": "1.0.138.0"
+            "assemblyVersion": "1.0.139.0",
+            "fileVersion": "1.0.139.0"
           }
         }
       },
-      "Reactor.Maui.ScaffoldGenerator/1.0.138": {
+      "Reactor.Maui.ScaffoldGenerator/1.0.139": {
         "dependencies": {
           "System.CodeDom": "7.0.0"
         }
@@ -1221,6 +1258,27 @@
       "path": "horusstudio.maui.skeleton/2.0.0",
       "hashPath": "horusstudio.maui.skeleton.2.0.0.nupkg.sha512"
     },
+    "IdentityModel/5.2.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-nuhkbaDH9l5QzNJp2MtP3qio57MPtiRneUN8Ocr7od0JvSYaIe3gBj/vxllr11S/Qvu1AG4GZXoyv5469ewYDA==",
+      "path": "identitymodel/5.2.0",
+      "hashPath": "identitymodel.5.2.0.nupkg.sha512"
+    },
+    "IdentityModel.OidcClient/5.2.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-OuPhDNAw/EoJVEmYO6/ChZUBcug4OGoGKTKLUyBCsGhlKegxJk25LYQ0EL7GCBMgkEL+BYNJukNZyaJ+JNaWog==",
+      "path": "identitymodel.oidcclient/5.2.1",
+      "hashPath": "identitymodel.oidcclient.5.2.1.nupkg.sha512"
+    },
+    "JWTDecoder/0.9.2": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-WXUr635+MTcMHRMgkuaSIHj1OiDAP25R32++RuRXzVK7VeWyQlPWnwdmNyjVNd06vGRsHFBy9/NBhuDy9g61Kw==",
+      "path": "jwtdecoder/0.9.2",
+      "hashPath": "jwtdecoder.0.9.2.nupkg.sha512"
+    },
     "M.BindableProperty.Generator/0.9.0": {
       "type": "package",
       "serviceable": true,
@@ -1340,26 +1398,26 @@
       "path": "plugin.maui.screenbrightness/1.0.0-preview3",
       "hashPath": "plugin.maui.screenbrightness.1.0.0-preview3.nupkg.sha512"
     },
-    "Reactor.Maui/1.0.138": {
+    "Reactor.Maui/1.0.139": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-ND2+cWvcVsK8Kr7VVw8HR8t7gDgdljuxUCvso2Xsf2IASK7+wdWRKlgHL1MwBHZq1pi20vAhJekRVWjcq7Vqxg==",
-      "path": "reactor.maui/1.0.138",
-      "hashPath": "reactor.maui.1.0.138.nupkg.sha512"
+      "sha512": "sha512-q8ngOKcA3orB1OJDCgVusG34mIUtyG+MacyuiQt+7IhdwMTsOpu+sxJy6D/GwFVEV4bzUfUeq2dBpeXqqOpxlw==",
+      "path": "reactor.maui/1.0.139",
+      "hashPath": "reactor.maui.1.0.139.nupkg.sha512"
     },
-    "Reactor.Maui.Canvas/1.0.138": {
+    "Reactor.Maui.Canvas/1.0.139": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-tZQXG3NODEZ14nQ1pvWDxXQN0PbkH0V3XosVR0TaIIOyAN6a0qz+OyDn5WAUxBJuMum09Npg4+CBdb2ooPKN7g==",
-      "path": "reactor.maui.canvas/1.0.138",
-      "hashPath": "reactor.maui.canvas.1.0.138.nupkg.sha512"
+      "sha512": "sha512-FpSSQmjpHQyQpePhE0qpDFqj3D0Bq6/WjsYGCsGD8A3Q5F54W2qKjmU8ecIjDgPVPN9WSyHRhoApxoT9HIiHTg==",
+      "path": "reactor.maui.canvas/1.0.139",
+      "hashPath": "reactor.maui.canvas.1.0.139.nupkg.sha512"
     },
-    "Reactor.Maui.ScaffoldGenerator/1.0.138": {
+    "Reactor.Maui.ScaffoldGenerator/1.0.139": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-I9Fa0R9eFQpAOoMa4iV4w/7jYeULRteTj1aLa2mt0wN2TKrw37sP1SNsDtHd/5yWe9qJY9YAOd6hicLX/3rfuQ==",
-      "path": "reactor.maui.scaffoldgenerator/1.0.138",
-      "hashPath": "reactor.maui.scaffoldgenerator.1.0.138.nupkg.sha512"
+      "sha512": "sha512-+escH0cE3FRHvyY5Ql4DtuWuR8eQ7jIPPQx2VxzWhlfoK9GlWaQeo9M3MWsW9e3u4mvq4+tkLU7ss4JjCCfyuQ==",
+      "path": "reactor.maui.scaffoldgenerator/1.0.139",
+      "hashPath": "reactor.maui.scaffoldgenerator.1.0.139.nupkg.sha512"
     },
     "SimpleRatingControl.MAUI/0.0.3": {
       "type": "package",

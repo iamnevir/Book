@@ -512,7 +512,7 @@
           }
         }
       },
-      "Reactor.Maui/1.0.139": {
+      "Reactor.Maui/1.0.140": {
         "type": "package",
         "compile": {
           "lib/net7.0-android33.0/MauiReactor.dll": {
@@ -525,10 +525,10 @@
           }
         }
       },
-      "Reactor.Maui.Canvas/1.0.139": {
+      "Reactor.Maui.Canvas/1.0.140": {
         "type": "package",
         "dependencies": {
-          "Reactor.Maui": "1.0.139"
+          "Reactor.Maui": "1.0.140"
         },
         "compile": {
           "lib/net7.0-android33.0/MauiReactor.Canvas.dll": {
@@ -541,7 +541,7 @@
           }
         }
       },
-      "Reactor.Maui.ScaffoldGenerator/1.0.139": {
+      "Reactor.Maui.ScaffoldGenerator/1.0.140": {
         "type": "package",
         "dependencies": {
           "System.CodeDom": "7.0.0"
@@ -2967,7 +2967,7 @@
           }
         }
       },
-      "Reactor.Maui/1.0.139": {
+      "Reactor.Maui/1.0.140": {
         "type": "package",
         "compile": {
           "lib/net7.0-android33.0/MauiReactor.dll": {
@@ -2980,10 +2980,10 @@
           }
         }
       },
-      "Reactor.Maui.Canvas/1.0.139": {
+      "Reactor.Maui.Canvas/1.0.140": {
         "type": "package",
         "dependencies": {
-          "Reactor.Maui": "1.0.139"
+          "Reactor.Maui": "1.0.140"
         },
         "compile": {
           "lib/net7.0-android33.0/MauiReactor.Canvas.dll": {
@@ -2996,7 +2996,7 @@
           }
         }
       },
-      "Reactor.Maui.ScaffoldGenerator/1.0.139": {
+      "Reactor.Maui.ScaffoldGenerator/1.0.140": {
         "type": "package",
         "dependencies": {
           "System.CodeDom": "7.0.0"
@@ -5407,7 +5407,7 @@
           }
         }
       },
-      "Reactor.Maui/1.0.139": {
+      "Reactor.Maui/1.0.140": {
         "type": "package",
         "compile": {
           "lib/net7.0-android33.0/MauiReactor.dll": {
@@ -5420,10 +5420,10 @@
           }
         }
       },
-      "Reactor.Maui.Canvas/1.0.139": {
+      "Reactor.Maui.Canvas/1.0.140": {
         "type": "package",
         "dependencies": {
-          "Reactor.Maui": "1.0.139"
+          "Reactor.Maui": "1.0.140"
         },
         "compile": {
           "lib/net7.0-android33.0/MauiReactor.Canvas.dll": {
@@ -5436,7 +5436,7 @@
           }
         }
       },
-      "Reactor.Maui.ScaffoldGenerator/1.0.139": {
+      "Reactor.Maui.ScaffoldGenerator/1.0.140": {
         "type": "package",
         "dependencies": {
           "System.CodeDom": "7.0.0"
@@ -7847,7 +7847,7 @@
           }
         }
       },
-      "Reactor.Maui/1.0.139": {
+      "Reactor.Maui/1.0.140": {
         "type": "package",
         "compile": {
           "lib/net7.0-android33.0/MauiReactor.dll": {
@@ -7860,10 +7860,10 @@
           }
         }
       },
-      "Reactor.Maui.Canvas/1.0.139": {
+      "Reactor.Maui.Canvas/1.0.140": {
         "type": "package",
         "dependencies": {
-          "Reactor.Maui": "1.0.139"
+          "Reactor.Maui": "1.0.140"
         },
         "compile": {
           "lib/net7.0-android33.0/MauiReactor.Canvas.dll": {
@@ -7876,7 +7876,7 @@
           }
         }
       },
-      "Reactor.Maui.ScaffoldGenerator/1.0.139": {
+      "Reactor.Maui.ScaffoldGenerator/1.0.140": {
         "type": "package",
         "dependencies": {
           "System.CodeDom": "7.0.0"
@@ -10287,7 +10287,7 @@
           }
         }
       },
-      "Reactor.Maui/1.0.139": {
+      "Reactor.Maui/1.0.140": {
         "type": "package",
         "compile": {
           "lib/net7.0-android33.0/MauiReactor.dll": {
@@ -10300,10 +10300,10 @@
           }
         }
       },
-      "Reactor.Maui.Canvas/1.0.139": {
+      "Reactor.Maui.Canvas/1.0.140": {
         "type": "package",
         "dependencies": {
-          "Reactor.Maui": "1.0.139"
+          "Reactor.Maui": "1.0.140"
         },
         "compile": {
           "lib/net7.0-android33.0/MauiReactor.Canvas.dll": {
@@ -10316,7 +10316,7 @@
           }
         }
       },
-      "Reactor.Maui.ScaffoldGenerator/1.0.139": {
+      "Reactor.Maui.ScaffoldGenerator/1.0.140": {
         "type": "package",
         "dependencies": {
           "System.CodeDom": "7.0.0"
@@ -12727,7 +12727,7 @@
           }
         }
       },
-      "Reactor.Maui/1.0.139": {
+      "Reactor.Maui/1.0.140": {
         "type": "package",
         "compile": {
           "lib/net7.0-android33.0/MauiReactor.dll": {
@@ -12740,10 +12740,10 @@
           }
         }
       },
-      "Reactor.Maui.Canvas/1.0.139": {
+      "Reactor.Maui.Canvas/1.0.140": {
         "type": "package",
         "dependencies": {
-          "Reactor.Maui": "1.0.139"
+          "Reactor.Maui": "1.0.140"
         },
         "compile": {
           "lib/net7.0-android33.0/MauiReactor.Canvas.dll": {
@@ -12756,7 +12756,7 @@
           }
         }
       },
-      "Reactor.Maui.ScaffoldGenerator/1.0.139": {
+      "Reactor.Maui.ScaffoldGenerator/1.0.140": {
         "type": "package",
         "dependencies": {
           "System.CodeDom": "7.0.0"
@@ -15164,7 +15164,7 @@
           }
         }
       },
-      "Reactor.Maui/1.0.139": {
+      "Reactor.Maui/1.0.140": {
         "type": "package",
         "compile": {
           "lib/net7.0-android33.0/MauiReactor.dll": {
@@ -15177,10 +15177,10 @@
           }
         }
       },
-      "Reactor.Maui.Canvas/1.0.139": {
+      "Reactor.Maui.Canvas/1.0.140": {
         "type": "package",
         "dependencies": {
-          "Reactor.Maui": "1.0.139"
+          "Reactor.Maui": "1.0.140"
         },
         "compile": {
           "lib/net7.0-android33.0/MauiReactor.Canvas.dll": {
@@ -15193,7 +15193,7 @@
           }
         }
       },
-      "Reactor.Maui.ScaffoldGenerator/1.0.139": {
+      "Reactor.Maui.ScaffoldGenerator/1.0.140": {
         "type": "package",
         "dependencies": {
           "System.CodeDom": "7.0.0"
@@ -17601,7 +17601,7 @@
           }
         }
       },
-      "Reactor.Maui/1.0.139": {
+      "Reactor.Maui/1.0.140": {
         "type": "package",
         "compile": {
           "lib/net7.0-android33.0/MauiReactor.dll": {
@@ -17614,10 +17614,10 @@
           }
         }
       },
-      "Reactor.Maui.Canvas/1.0.139": {
+      "Reactor.Maui.Canvas/1.0.140": {
         "type": "package",
         "dependencies": {
-          "Reactor.Maui": "1.0.139"
+          "Reactor.Maui": "1.0.140"
         },
         "compile": {
           "lib/net7.0-android33.0/MauiReactor.Canvas.dll": {
@@ -17630,7 +17630,7 @@
           }
         }
       },
-      "Reactor.Maui.ScaffoldGenerator/1.0.139": {
+      "Reactor.Maui.ScaffoldGenerator/1.0.140": {
         "type": "package",
         "dependencies": {
           "System.CodeDom": "7.0.0"
@@ -20024,7 +20024,7 @@
           "lib/net6.0-ios16.1/Plugin.Maui.ScreenBrightness.dll": {}
         }
       },
-      "Reactor.Maui/1.0.139": {
+      "Reactor.Maui/1.0.140": {
         "type": "package",
         "compile": {
           "lib/net7.0-ios16.1/MauiReactor.dll": {}
@@ -20033,10 +20033,10 @@
           "lib/net7.0-ios16.1/MauiReactor.dll": {}
         }
       },
-      "Reactor.Maui.Canvas/1.0.139": {
+      "Reactor.Maui.Canvas/1.0.140": {
         "type": "package",
         "dependencies": {
-          "Reactor.Maui": "1.0.139"
+          "Reactor.Maui": "1.0.140"
         },
         "compile": {
           "lib/net7.0-ios16.1/MauiReactor.Canvas.dll": {}
@@ -20045,7 +20045,7 @@
           "lib/net7.0-ios16.1/MauiReactor.Canvas.dll": {}
         }
       },
-      "Reactor.Maui.ScaffoldGenerator/1.0.139": {
+      "Reactor.Maui.ScaffoldGenerator/1.0.140": {
         "type": "package",
         "dependencies": {
           "System.CodeDom": "7.0.0"
@@ -20731,7 +20731,7 @@
           "lib/net6.0-ios16.1/Plugin.Maui.ScreenBrightness.dll": {}
         }
       },
-      "Reactor.Maui/1.0.139": {
+      "Reactor.Maui/1.0.140": {
         "type": "package",
         "compile": {
           "lib/net7.0-ios16.1/MauiReactor.dll": {}
@@ -20740,10 +20740,10 @@
           "lib/net7.0-ios16.1/MauiReactor.dll": {}
         }
       },
-      "Reactor.Maui.Canvas/1.0.139": {
+      "Reactor.Maui.Canvas/1.0.140": {
         "type": "package",
         "dependencies": {
-          "Reactor.Maui": "1.0.139"
+          "Reactor.Maui": "1.0.140"
         },
         "compile": {
           "lib/net7.0-ios16.1/MauiReactor.Canvas.dll": {}
@@ -20752,7 +20752,7 @@
           "lib/net7.0-ios16.1/MauiReactor.Canvas.dll": {}
         }
       },
-      "Reactor.Maui.ScaffoldGenerator/1.0.139": {
+      "Reactor.Maui.ScaffoldGenerator/1.0.140": {
         "type": "package",
         "dependencies": {
           "System.CodeDom": "7.0.0"
@@ -21420,7 +21420,7 @@
           "lib/net6.0-ios16.1/Plugin.Maui.ScreenBrightness.dll": {}
         }
       },
-      "Reactor.Maui/1.0.139": {
+      "Reactor.Maui/1.0.140": {
         "type": "package",
         "compile": {
           "lib/net7.0-ios16.1/MauiReactor.dll": {}
@@ -21429,10 +21429,10 @@
           "lib/net7.0-ios16.1/MauiReactor.dll": {}
         }
       },
-      "Reactor.Maui.Canvas/1.0.139": {
+      "Reactor.Maui.Canvas/1.0.140": {
         "type": "package",
         "dependencies": {
-          "Reactor.Maui": "1.0.139"
+          "Reactor.Maui": "1.0.140"
         },
         "compile": {
           "lib/net7.0-ios16.1/MauiReactor.Canvas.dll": {}
@@ -21441,7 +21441,7 @@
           "lib/net7.0-ios16.1/MauiReactor.Canvas.dll": {}
         }
       },
-      "Reactor.Maui.ScaffoldGenerator/1.0.139": {
+      "Reactor.Maui.ScaffoldGenerator/1.0.140": {
         "type": "package",
         "dependencies": {
           "System.CodeDom": "7.0.0"
@@ -22109,7 +22109,7 @@
           "lib/net6.0-ios16.1/Plugin.Maui.ScreenBrightness.dll": {}
         }
       },
-      "Reactor.Maui/1.0.139": {
+      "Reactor.Maui/1.0.140": {
         "type": "package",
         "compile": {
           "lib/net7.0-ios16.1/MauiReactor.dll": {}
@@ -22118,10 +22118,10 @@
           "lib/net7.0-ios16.1/MauiReactor.dll": {}
         }
       },
-      "Reactor.Maui.Canvas/1.0.139": {
+      "Reactor.Maui.Canvas/1.0.140": {
         "type": "package",
         "dependencies": {
-          "Reactor.Maui": "1.0.139"
+          "Reactor.Maui": "1.0.140"
         },
         "compile": {
           "lib/net7.0-ios16.1/MauiReactor.Canvas.dll": {}
@@ -22130,7 +22130,7 @@
           "lib/net7.0-ios16.1/MauiReactor.Canvas.dll": {}
         }
       },
-      "Reactor.Maui.ScaffoldGenerator/1.0.139": {
+      "Reactor.Maui.ScaffoldGenerator/1.0.140": {
         "type": "package",
         "dependencies": {
           "System.CodeDom": "7.0.0"
@@ -22798,7 +22798,7 @@
           "lib/net6.0-ios16.1/Plugin.Maui.ScreenBrightness.dll": {}
         }
       },
-      "Reactor.Maui/1.0.139": {
+      "Reactor.Maui/1.0.140": {
         "type": "package",
         "compile": {
           "lib/net7.0-ios16.1/MauiReactor.dll": {}
@@ -22807,10 +22807,10 @@
           "lib/net7.0-ios16.1/MauiReactor.dll": {}
         }
       },
-      "Reactor.Maui.Canvas/1.0.139": {
+      "Reactor.Maui.Canvas/1.0.140": {
         "type": "package",
         "dependencies": {
-          "Reactor.Maui": "1.0.139"
+          "Reactor.Maui": "1.0.140"
         },
         "compile": {
           "lib/net7.0-ios16.1/MauiReactor.Canvas.dll": {}
@@ -22819,7 +22819,7 @@
           "lib/net7.0-ios16.1/MauiReactor.Canvas.dll": {}
         }
       },
-      "Reactor.Maui.ScaffoldGenerator/1.0.139": {
+      "Reactor.Maui.ScaffoldGenerator/1.0.140": {
         "type": "package",
         "dependencies": {
           "System.CodeDom": "7.0.0"
@@ -23487,7 +23487,7 @@
           "lib/net6.0-ios16.1/Plugin.Maui.ScreenBrightness.dll": {}
         }
       },
-      "Reactor.Maui/1.0.139": {
+      "Reactor.Maui/1.0.140": {
         "type": "package",
         "compile": {
           "lib/net7.0-ios16.1/MauiReactor.dll": {}
@@ -23496,10 +23496,10 @@
           "lib/net7.0-ios16.1/MauiReactor.dll": {}
         }
       },
-      "Reactor.Maui.Canvas/1.0.139": {
+      "Reactor.Maui.Canvas/1.0.140": {
         "type": "package",
         "dependencies": {
-          "Reactor.Maui": "1.0.139"
+          "Reactor.Maui": "1.0.140"
         },
         "compile": {
           "lib/net7.0-ios16.1/MauiReactor.Canvas.dll": {}
@@ -23508,7 +23508,7 @@
           "lib/net7.0-ios16.1/MauiReactor.Canvas.dll": {}
         }
       },
-      "Reactor.Maui.ScaffoldGenerator/1.0.139": {
+      "Reactor.Maui.ScaffoldGenerator/1.0.140": {
         "type": "package",
         "dependencies": {
           "System.CodeDom": "7.0.0"
@@ -24182,7 +24182,7 @@
           "lib/net6.0-ios16.1/Plugin.Maui.ScreenBrightness.dll": {}
         }
       },
-      "Reactor.Maui/1.0.139": {
+      "Reactor.Maui/1.0.140": {
         "type": "package",
         "compile": {
           "lib/net7.0-ios16.1/MauiReactor.dll": {}
@@ -24191,10 +24191,10 @@
           "lib/net7.0-ios16.1/MauiReactor.dll": {}
         }
       },
-      "Reactor.Maui.Canvas/1.0.139": {
+      "Reactor.Maui.Canvas/1.0.140": {
         "type": "package",
         "dependencies": {
-          "Reactor.Maui": "1.0.139"
+          "Reactor.Maui": "1.0.140"
         },
         "compile": {
           "lib/net7.0-ios16.1/MauiReactor.Canvas.dll": {}
@@ -24203,7 +24203,7 @@
           "lib/net7.0-ios16.1/MauiReactor.Canvas.dll": {}
         }
       },
-      "Reactor.Maui.ScaffoldGenerator/1.0.139": {
+      "Reactor.Maui.ScaffoldGenerator/1.0.140": {
         "type": "package",
         "dependencies": {
           "System.CodeDom": "7.0.0"
@@ -24877,7 +24877,7 @@
           "lib/net6.0-ios16.1/Plugin.Maui.ScreenBrightness.dll": {}
         }
       },
-      "Reactor.Maui/1.0.139": {
+      "Reactor.Maui/1.0.140": {
         "type": "package",
         "compile": {
           "lib/net7.0-ios16.1/MauiReactor.dll": {}
@@ -24886,10 +24886,10 @@
           "lib/net7.0-ios16.1/MauiReactor.dll": {}
         }
       },
-      "Reactor.Maui.Canvas/1.0.139": {
+      "Reactor.Maui.Canvas/1.0.140": {
         "type": "package",
         "dependencies": {
-          "Reactor.Maui": "1.0.139"
+          "Reactor.Maui": "1.0.140"
         },
         "compile": {
           "lib/net7.0-ios16.1/MauiReactor.Canvas.dll": {}
@@ -24898,7 +24898,7 @@
           "lib/net7.0-ios16.1/MauiReactor.Canvas.dll": {}
         }
       },
-      "Reactor.Maui.ScaffoldGenerator/1.0.139": {
+      "Reactor.Maui.ScaffoldGenerator/1.0.140": {
         "type": "package",
         "dependencies": {
           "System.CodeDom": "7.0.0"
@@ -25563,7 +25563,7 @@
           "lib/net6.0/Plugin.Maui.ScreenBrightness.dll": {}
         }
       },
-      "Reactor.Maui/1.0.139": {
+      "Reactor.Maui/1.0.140": {
         "type": "package",
         "compile": {
           "lib/net7.0-maccatalyst16.1/MauiReactor.dll": {}
@@ -25572,10 +25572,10 @@
           "lib/net7.0-maccatalyst16.1/MauiReactor.dll": {}
         }
       },
-      "Reactor.Maui.Canvas/1.0.139": {
+      "Reactor.Maui.Canvas/1.0.140": {
         "type": "package",
         "dependencies": {
-          "Reactor.Maui": "1.0.139"
+          "Reactor.Maui": "1.0.140"
         },
         "compile": {
           "lib/net7.0-maccatalyst16.1/MauiReactor.Canvas.dll": {}
@@ -25584,7 +25584,7 @@
           "lib/net7.0-maccatalyst16.1/MauiReactor.Canvas.dll": {}
         }
       },
-      "Reactor.Maui.ScaffoldGenerator/1.0.139": {
+      "Reactor.Maui.ScaffoldGenerator/1.0.140": {
         "type": "package",
         "dependencies": {
           "System.CodeDom": "7.0.0"
@@ -26255,7 +26255,7 @@
           "lib/net6.0/Plugin.Maui.ScreenBrightness.dll": {}
         }
       },
-      "Reactor.Maui/1.0.139": {
+      "Reactor.Maui/1.0.140": {
         "type": "package",
         "compile": {
           "lib/net7.0-maccatalyst16.1/MauiReactor.dll": {}
@@ -26264,10 +26264,10 @@
           "lib/net7.0-maccatalyst16.1/MauiReactor.dll": {}
         }
       },
-      "Reactor.Maui.Canvas/1.0.139": {
+      "Reactor.Maui.Canvas/1.0.140": {
         "type": "package",
         "dependencies": {
-          "Reactor.Maui": "1.0.139"
+          "Reactor.Maui": "1.0.140"
         },
         "compile": {
           "lib/net7.0-maccatalyst16.1/MauiReactor.Canvas.dll": {}
@@ -26276,7 +26276,7 @@
           "lib/net7.0-maccatalyst16.1/MauiReactor.Canvas.dll": {}
         }
       },
-      "Reactor.Maui.ScaffoldGenerator/1.0.139": {
+      "Reactor.Maui.ScaffoldGenerator/1.0.140": {
         "type": "package",
         "dependencies": {
           "System.CodeDom": "7.0.0"
@@ -26941,7 +26941,7 @@
           "lib/net6.0/Plugin.Maui.ScreenBrightness.dll": {}
         }
       },
-      "Reactor.Maui/1.0.139": {
+      "Reactor.Maui/1.0.140": {
         "type": "package",
         "compile": {
           "lib/net7.0-maccatalyst16.1/MauiReactor.dll": {}
@@ -26950,10 +26950,10 @@
           "lib/net7.0-maccatalyst16.1/MauiReactor.dll": {}
         }
       },
-      "Reactor.Maui.Canvas/1.0.139": {
+      "Reactor.Maui.Canvas/1.0.140": {
         "type": "package",
         "dependencies": {
-          "Reactor.Maui": "1.0.139"
+          "Reactor.Maui": "1.0.140"
         },
         "compile": {
           "lib/net7.0-maccatalyst16.1/MauiReactor.Canvas.dll": {}
@@ -26962,7 +26962,7 @@
           "lib/net7.0-maccatalyst16.1/MauiReactor.Canvas.dll": {}
         }
       },
-      "Reactor.Maui.ScaffoldGenerator/1.0.139": {
+      "Reactor.Maui.ScaffoldGenerator/1.0.140": {
         "type": "package",
         "dependencies": {
           "System.CodeDom": "7.0.0"
@@ -27627,7 +27627,7 @@
           "lib/net6.0/Plugin.Maui.ScreenBrightness.dll": {}
         }
       },
-      "Reactor.Maui/1.0.139": {
+      "Reactor.Maui/1.0.140": {
         "type": "package",
         "compile": {
           "lib/net7.0-maccatalyst16.1/MauiReactor.dll": {}
@@ -27636,10 +27636,10 @@
           "lib/net7.0-maccatalyst16.1/MauiReactor.dll": {}
         }
       },
-      "Reactor.Maui.Canvas/1.0.139": {
+      "Reactor.Maui.Canvas/1.0.140": {
         "type": "package",
         "dependencies": {
-          "Reactor.Maui": "1.0.139"
+          "Reactor.Maui": "1.0.140"
         },
         "compile": {
           "lib/net7.0-maccatalyst16.1/MauiReactor.Canvas.dll": {}
@@ -27648,7 +27648,7 @@
           "lib/net7.0-maccatalyst16.1/MauiReactor.Canvas.dll": {}
         }
       },
-      "Reactor.Maui.ScaffoldGenerator/1.0.139": {
+      "Reactor.Maui.ScaffoldGenerator/1.0.140": {
         "type": "package",
         "dependencies": {
           "System.CodeDom": "7.0.0"
@@ -28313,7 +28313,7 @@
           "lib/net6.0/Plugin.Maui.ScreenBrightness.dll": {}
         }
       },
-      "Reactor.Maui/1.0.139": {
+      "Reactor.Maui/1.0.140": {
         "type": "package",
         "compile": {
           "lib/net7.0-maccatalyst16.1/MauiReactor.dll": {}
@@ -28322,10 +28322,10 @@
           "lib/net7.0-maccatalyst16.1/MauiReactor.dll": {}
         }
       },
-      "Reactor.Maui.Canvas/1.0.139": {
+      "Reactor.Maui.Canvas/1.0.140": {
         "type": "package",
         "dependencies": {
-          "Reactor.Maui": "1.0.139"
+          "Reactor.Maui": "1.0.140"
         },
         "compile": {
           "lib/net7.0-maccatalyst16.1/MauiReactor.Canvas.dll": {}
@@ -28334,7 +28334,7 @@
           "lib/net7.0-maccatalyst16.1/MauiReactor.Canvas.dll": {}
         }
       },
-      "Reactor.Maui.ScaffoldGenerator/1.0.139": {
+      "Reactor.Maui.ScaffoldGenerator/1.0.140": {
         "type": "package",
         "dependencies": {
           "System.CodeDom": "7.0.0"
@@ -28999,7 +28999,7 @@
           "lib/net6.0/Plugin.Maui.ScreenBrightness.dll": {}
         }
       },
-      "Reactor.Maui/1.0.139": {
+      "Reactor.Maui/1.0.140": {
         "type": "package",
         "compile": {
           "lib/net7.0-maccatalyst16.1/MauiReactor.dll": {}
@@ -29008,10 +29008,10 @@
           "lib/net7.0-maccatalyst16.1/MauiReactor.dll": {}
         }
       },
-      "Reactor.Maui.Canvas/1.0.139": {
+      "Reactor.Maui.Canvas/1.0.140": {
         "type": "package",
         "dependencies": {
-          "Reactor.Maui": "1.0.139"
+          "Reactor.Maui": "1.0.140"
         },
         "compile": {
           "lib/net7.0-maccatalyst16.1/MauiReactor.Canvas.dll": {}
@@ -29020,7 +29020,7 @@
           "lib/net7.0-maccatalyst16.1/MauiReactor.Canvas.dll": {}
         }
       },
-      "Reactor.Maui.ScaffoldGenerator/1.0.139": {
+      "Reactor.Maui.ScaffoldGenerator/1.0.140": {
         "type": "package",
         "dependencies": {
           "System.CodeDom": "7.0.0"
@@ -29685,7 +29685,7 @@
           "lib/net6.0/Plugin.Maui.ScreenBrightness.dll": {}
         }
       },
-      "Reactor.Maui/1.0.139": {
+      "Reactor.Maui/1.0.140": {
         "type": "package",
         "compile": {
           "lib/net7.0-maccatalyst16.1/MauiReactor.dll": {}
@@ -29694,10 +29694,10 @@
           "lib/net7.0-maccatalyst16.1/MauiReactor.dll": {}
         }
       },
-      "Reactor.Maui.Canvas/1.0.139": {
+      "Reactor.Maui.Canvas/1.0.140": {
         "type": "package",
         "dependencies": {
-          "Reactor.Maui": "1.0.139"
+          "Reactor.Maui": "1.0.140"
         },
         "compile": {
           "lib/net7.0-maccatalyst16.1/MauiReactor.Canvas.dll": {}
@@ -29706,7 +29706,7 @@
           "lib/net7.0-maccatalyst16.1/MauiReactor.Canvas.dll": {}
         }
       },
-      "Reactor.Maui.ScaffoldGenerator/1.0.139": {
+      "Reactor.Maui.ScaffoldGenerator/1.0.140": {
         "type": "package",
         "dependencies": {
           "System.CodeDom": "7.0.0"
@@ -30374,7 +30374,7 @@
           "lib/net6.0/Plugin.Maui.ScreenBrightness.dll": {}
         }
       },
-      "Reactor.Maui/1.0.139": {
+      "Reactor.Maui/1.0.140": {
         "type": "package",
         "compile": {
           "lib/net7.0-maccatalyst16.1/MauiReactor.dll": {}
@@ -30383,10 +30383,10 @@
           "lib/net7.0-maccatalyst16.1/MauiReactor.dll": {}
         }
       },
-      "Reactor.Maui.Canvas/1.0.139": {
+      "Reactor.Maui.Canvas/1.0.140": {
         "type": "package",
         "dependencies": {
-          "Reactor.Maui": "1.0.139"
+          "Reactor.Maui": "1.0.140"
         },
         "compile": {
           "lib/net7.0-maccatalyst16.1/MauiReactor.Canvas.dll": {}
@@ -30395,7 +30395,7 @@
           "lib/net7.0-maccatalyst16.1/MauiReactor.Canvas.dll": {}
         }
       },
-      "Reactor.Maui.ScaffoldGenerator/1.0.139": {
+      "Reactor.Maui.ScaffoldGenerator/1.0.140": {
         "type": "package",
         "dependencies": {
           "System.CodeDom": "7.0.0"
@@ -31205,7 +31205,7 @@
           }
         }
       },
-      "Reactor.Maui/1.0.139": {
+      "Reactor.Maui/1.0.140": {
         "type": "package",
         "compile": {
           "lib/net7.0-windows10.0.19041/MauiReactor.dll": {}
@@ -31214,10 +31214,10 @@
           "lib/net7.0-windows10.0.19041/MauiReactor.dll": {}
         }
       },
-      "Reactor.Maui.Canvas/1.0.139": {
+      "Reactor.Maui.Canvas/1.0.140": {
         "type": "package",
         "dependencies": {
-          "Reactor.Maui": "1.0.139"
+          "Reactor.Maui": "1.0.140"
         },
         "compile": {
           "lib/net7.0-windows10.0.19041/MauiReactor.Canvas.dll": {}
@@ -31226,7 +31226,7 @@
           "lib/net7.0-windows10.0.19041/MauiReactor.Canvas.dll": {}
         }
       },
-      "Reactor.Maui.ScaffoldGenerator/1.0.139": {
+      "Reactor.Maui.ScaffoldGenerator/1.0.140": {
         "type": "package",
         "dependencies": {
           "System.CodeDom": "7.0.0"
@@ -32051,7 +32051,7 @@
           }
         }
       },
-      "Reactor.Maui/1.0.139": {
+      "Reactor.Maui/1.0.140": {
         "type": "package",
         "compile": {
           "lib/net7.0-windows10.0.19041/MauiReactor.dll": {}
@@ -32060,10 +32060,10 @@
           "lib/net7.0-windows10.0.19041/MauiReactor.dll": {}
         }
       },
-      "Reactor.Maui.Canvas/1.0.139": {
+      "Reactor.Maui.Canvas/1.0.140": {
         "type": "package",
         "dependencies": {
-          "Reactor.Maui": "1.0.139"
+          "Reactor.Maui": "1.0.140"
         },
         "compile": {
           "lib/net7.0-windows10.0.19041/MauiReactor.Canvas.dll": {}
@@ -32072,7 +32072,7 @@
           "lib/net7.0-windows10.0.19041/MauiReactor.Canvas.dll": {}
         }
       },
-      "Reactor.Maui.ScaffoldGenerator/1.0.139": {
+      "Reactor.Maui.ScaffoldGenerator/1.0.140": {
         "type": "package",
         "dependencies": {
           "System.CodeDom": "7.0.0"
@@ -32871,7 +32871,7 @@
           }
         }
       },
-      "Reactor.Maui/1.0.139": {
+      "Reactor.Maui/1.0.140": {
         "type": "package",
         "compile": {
           "lib/net7.0-windows10.0.19041/MauiReactor.dll": {}
@@ -32880,10 +32880,10 @@
           "lib/net7.0-windows10.0.19041/MauiReactor.dll": {}
         }
       },
-      "Reactor.Maui.Canvas/1.0.139": {
+      "Reactor.Maui.Canvas/1.0.140": {
         "type": "package",
         "dependencies": {
-          "Reactor.Maui": "1.0.139"
+          "Reactor.Maui": "1.0.140"
         },
         "compile": {
           "lib/net7.0-windows10.0.19041/MauiReactor.Canvas.dll": {}
@@ -32892,7 +32892,7 @@
           "lib/net7.0-windows10.0.19041/MauiReactor.Canvas.dll": {}
         }
       },
-      "Reactor.Maui.ScaffoldGenerator/1.0.139": {
+      "Reactor.Maui.ScaffoldGenerator/1.0.140": {
         "type": "package",
         "dependencies": {
           "System.CodeDom": "7.0.0"
@@ -33691,7 +33691,7 @@
           }
         }
       },
-      "Reactor.Maui/1.0.139": {
+      "Reactor.Maui/1.0.140": {
         "type": "package",
         "compile": {
           "lib/net7.0-windows10.0.19041/MauiReactor.dll": {}
@@ -33700,10 +33700,10 @@
           "lib/net7.0-windows10.0.19041/MauiReactor.dll": {}
         }
       },
-      "Reactor.Maui.Canvas/1.0.139": {
+      "Reactor.Maui.Canvas/1.0.140": {
         "type": "package",
         "dependencies": {
-          "Reactor.Maui": "1.0.139"
+          "Reactor.Maui": "1.0.140"
         },
         "compile": {
           "lib/net7.0-windows10.0.19041/MauiReactor.Canvas.dll": {}
@@ -33712,7 +33712,7 @@
           "lib/net7.0-windows10.0.19041/MauiReactor.Canvas.dll": {}
         }
       },
-      "Reactor.Maui.ScaffoldGenerator/1.0.139": {
+      "Reactor.Maui.ScaffoldGenerator/1.0.140": {
         "type": "package",
         "dependencies": {
           "System.CodeDom": "7.0.0"
@@ -34511,7 +34511,7 @@
           }
         }
       },
-      "Reactor.Maui/1.0.139": {
+      "Reactor.Maui/1.0.140": {
         "type": "package",
         "compile": {
           "lib/net7.0-windows10.0.19041/MauiReactor.dll": {}
@@ -34520,10 +34520,10 @@
           "lib/net7.0-windows10.0.19041/MauiReactor.dll": {}
         }
       },
-      "Reactor.Maui.Canvas/1.0.139": {
+      "Reactor.Maui.Canvas/1.0.140": {
         "type": "package",
         "dependencies": {
-          "Reactor.Maui": "1.0.139"
+          "Reactor.Maui": "1.0.140"
         },
         "compile": {
           "lib/net7.0-windows10.0.19041/MauiReactor.Canvas.dll": {}
@@ -34532,7 +34532,7 @@
           "lib/net7.0-windows10.0.19041/MauiReactor.Canvas.dll": {}
         }
       },
-      "Reactor.Maui.ScaffoldGenerator/1.0.139": {
+      "Reactor.Maui.ScaffoldGenerator/1.0.140": {
         "type": "package",
         "dependencies": {
           "System.CodeDom": "7.0.0"
@@ -35331,7 +35331,7 @@
           }
         }
       },
-      "Reactor.Maui/1.0.139": {
+      "Reactor.Maui/1.0.140": {
         "type": "package",
         "compile": {
           "lib/net7.0-windows10.0.19041/MauiReactor.dll": {}
@@ -35340,10 +35340,10 @@
           "lib/net7.0-windows10.0.19041/MauiReactor.dll": {}
         }
       },
-      "Reactor.Maui.Canvas/1.0.139": {
+      "Reactor.Maui.Canvas/1.0.140": {
         "type": "package",
         "dependencies": {
-          "Reactor.Maui": "1.0.139"
+          "Reactor.Maui": "1.0.140"
         },
         "compile": {
           "lib/net7.0-windows10.0.19041/MauiReactor.Canvas.dll": {}
@@ -35352,7 +35352,7 @@
           "lib/net7.0-windows10.0.19041/MauiReactor.Canvas.dll": {}
         }
       },
-      "Reactor.Maui.ScaffoldGenerator/1.0.139": {
+      "Reactor.Maui.ScaffoldGenerator/1.0.140": {
         "type": "package",
         "dependencies": {
           "System.CodeDom": "7.0.0"
@@ -36151,7 +36151,7 @@
           }
         }
       },
-      "Reactor.Maui/1.0.139": {
+      "Reactor.Maui/1.0.140": {
         "type": "package",
         "compile": {
           "lib/net7.0-windows10.0.19041/MauiReactor.dll": {}
@@ -36160,10 +36160,10 @@
           "lib/net7.0-windows10.0.19041/MauiReactor.dll": {}
         }
       },
-      "Reactor.Maui.Canvas/1.0.139": {
+      "Reactor.Maui.Canvas/1.0.140": {
         "type": "package",
         "dependencies": {
-          "Reactor.Maui": "1.0.139"
+          "Reactor.Maui": "1.0.140"
         },
         "compile": {
           "lib/net7.0-windows10.0.19041/MauiReactor.Canvas.dll": {}
@@ -36172,7 +36172,7 @@
           "lib/net7.0-windows10.0.19041/MauiReactor.Canvas.dll": {}
         }
       },
-      "Reactor.Maui.ScaffoldGenerator/1.0.139": {
+      "Reactor.Maui.ScaffoldGenerator/1.0.140": {
         "type": "package",
         "dependencies": {
           "System.CodeDom": "7.0.0"
@@ -36977,7 +36977,7 @@
           }
         }
       },
-      "Reactor.Maui/1.0.139": {
+      "Reactor.Maui/1.0.140": {
         "type": "package",
         "compile": {
           "lib/net7.0-windows10.0.19041/MauiReactor.dll": {}
@@ -36986,10 +36986,10 @@
           "lib/net7.0-windows10.0.19041/MauiReactor.dll": {}
         }
       },
-      "Reactor.Maui.Canvas/1.0.139": {
+      "Reactor.Maui.Canvas/1.0.140": {
         "type": "package",
         "dependencies": {
-          "Reactor.Maui": "1.0.139"
+          "Reactor.Maui": "1.0.140"
         },
         "compile": {
           "lib/net7.0-windows10.0.19041/MauiReactor.Canvas.dll": {}
@@ -36998,7 +36998,7 @@
           "lib/net7.0-windows10.0.19041/MauiReactor.Canvas.dll": {}
         }
       },
-      "Reactor.Maui.ScaffoldGenerator/1.0.139": {
+      "Reactor.Maui.ScaffoldGenerator/1.0.140": {
         "type": "package",
         "dependencies": {
           "System.CodeDom": "7.0.0"
@@ -38662,10 +38662,10 @@
         "plugin.maui.screenbrightness.nuspec"
       ]
     },
-    "Reactor.Maui/1.0.139": {
-      "sha512": "q8ngOKcA3orB1OJDCgVusG34mIUtyG+MacyuiQt+7IhdwMTsOpu+sxJy6D/GwFVEV4bzUfUeq2dBpeXqqOpxlw==",
+    "Reactor.Maui/1.0.140": {
+      "sha512": "KrRcbxisQzJWK33uL+biBiVe/gvLQyy1t2KMVwosvRqv+1YsE9c9nJqE5Haer6KdLFJAatbezDo/e5rF15WZiQ==",
       "type": "package",
-      "path": "reactor.maui/1.0.139",
+      "path": "reactor.maui/1.0.140",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -38676,14 +38676,14 @@
         "lib/net7.0-maccatalyst16.1/MauiReactor.dll",
         "lib/net7.0-windows10.0.19041/MauiReactor.dll",
         "lib/net7.0/MauiReactor.dll",
-        "reactor.maui.1.0.139.nupkg.sha512",
+        "reactor.maui.1.0.140.nupkg.sha512",
         "reactor.maui.nuspec"
       ]
     },
-    "Reactor.Maui.Canvas/1.0.139": {
-      "sha512": "FpSSQmjpHQyQpePhE0qpDFqj3D0Bq6/WjsYGCsGD8A3Q5F54W2qKjmU8ecIjDgPVPN9WSyHRhoApxoT9HIiHTg==",
+    "Reactor.Maui.Canvas/1.0.140": {
+      "sha512": "Ezh6DrPlRU1o2S40rF1YKPZAMr2femb0ajJd8mwGt8ZQUis462fEfV4CIenJpHJaBoRu/DaO86MK4nChfIQbQw==",
       "type": "package",
-      "path": "reactor.maui.canvas/1.0.139",
+      "path": "reactor.maui.canvas/1.0.140",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -38694,19 +38694,19 @@
         "lib/net7.0-maccatalyst16.1/MauiReactor.Canvas.dll",
         "lib/net7.0-windows10.0.19041/MauiReactor.Canvas.dll",
         "lib/net7.0/MauiReactor.Canvas.dll",
-        "reactor.maui.canvas.1.0.139.nupkg.sha512",
+        "reactor.maui.canvas.1.0.140.nupkg.sha512",
         "reactor.maui.canvas.nuspec"
       ]
     },
-    "Reactor.Maui.ScaffoldGenerator/1.0.139": {
-      "sha512": "+escH0cE3FRHvyY5Ql4DtuWuR8eQ7jIPPQx2VxzWhlfoK9GlWaQeo9M3MWsW9e3u4mvq4+tkLU7ss4JjCCfyuQ==",
+    "Reactor.Maui.ScaffoldGenerator/1.0.140": {
+      "sha512": "03W+5YhrbSE2lnyY8K2g0oKHZBKo2r9OU0nJygjZphTqDOoKjR4Q3+ZHsDldAV07gfFSdLqAUJ+afCLQ3b4yCw==",
       "type": "package",
-      "path": "reactor.maui.scaffoldgenerator/1.0.139",
+      "path": "reactor.maui.scaffoldgenerator/1.0.140",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "analyzers/dotnet/cs/MauiReactor.ScaffoldGenerator.dll",
-        "reactor.maui.scaffoldgenerator.1.0.139.nupkg.sha512",
+        "reactor.maui.scaffoldgenerator.1.0.140.nupkg.sha512",
         "reactor.maui.scaffoldgenerator.nuspec"
       ]
     },
@@ -41288,9 +41288,9 @@
       "Microsoft.Maui.Graphics >= 7.0.86",
       "Newtonsoft.Json >= 13.0.3",
       "Plugin.Maui.ScreenBrightness >= 1.0.0-preview3",
-      "Reactor.Maui >= 1.0.139",
-      "Reactor.Maui.Canvas >= 1.0.139",
-      "Reactor.Maui.ScaffoldGenerator >= 1.0.139",
+      "Reactor.Maui >= 1.0.140",
+      "Reactor.Maui.Canvas >= 1.0.140",
+      "Reactor.Maui.ScaffoldGenerator >= 1.0.140",
       "SimpleRatingControl.MAUI >= 0.0.3",
       "SkiaSharp.Extended.UI.Maui >= 2.0.0-preview.61",
       "Xamarin.Android.Glide >= 4.13.2.2",
@@ -41317,9 +41317,9 @@
       "Microsoft.Maui.Graphics >= 7.0.86",
       "Newtonsoft.Json >= 13.0.3",
       "Plugin.Maui.ScreenBrightness >= 1.0.0-preview3",
-      "Reactor.Maui >= 1.0.139",
-      "Reactor.Maui.Canvas >= 1.0.139",
-      "Reactor.Maui.ScaffoldGenerator >= 1.0.139",
+      "Reactor.Maui >= 1.0.140",
+      "Reactor.Maui.Canvas >= 1.0.140",
+      "Reactor.Maui.ScaffoldGenerator >= 1.0.140",
       "SimpleRatingControl.MAUI >= 0.0.3",
       "SkiaSharp.Extended.UI.Maui >= 2.0.0-preview.61"
     ],
@@ -41335,9 +41335,9 @@
       "Microsoft.Maui.Graphics >= 7.0.86",
       "Newtonsoft.Json >= 13.0.3",
       "Plugin.Maui.ScreenBrightness >= 1.0.0-preview3",
-      "Reactor.Maui >= 1.0.139",
-      "Reactor.Maui.Canvas >= 1.0.139",
-      "Reactor.Maui.ScaffoldGenerator >= 1.0.139",
+      "Reactor.Maui >= 1.0.140",
+      "Reactor.Maui.Canvas >= 1.0.140",
+      "Reactor.Maui.ScaffoldGenerator >= 1.0.140",
       "SimpleRatingControl.MAUI >= 0.0.3",
       "SkiaSharp.Extended.UI.Maui >= 2.0.0-preview.61"
     ],
@@ -41356,9 +41356,9 @@
       "Microsoft.WindowsAppSDK >= 1.2.221209.1",
       "Newtonsoft.Json >= 13.0.3",
       "Plugin.Maui.ScreenBrightness >= 1.0.0-preview3",
-      "Reactor.Maui >= 1.0.139",
-      "Reactor.Maui.Canvas >= 1.0.139",
-      "Reactor.Maui.ScaffoldGenerator >= 1.0.139",
+      "Reactor.Maui >= 1.0.140",
+      "Reactor.Maui.Canvas >= 1.0.140",
+      "Reactor.Maui.ScaffoldGenerator >= 1.0.140",
       "SimpleRatingControl.MAUI >= 0.0.3",
       "SkiaSharp.Extended.UI.Maui >= 2.0.0-preview.61"
     ]
@@ -41479,15 +41479,15 @@
           },
           "Reactor.Maui": {
             "target": "Package",
-            "version": "[1.0.139, )"
+            "version": "[1.0.140, )"
           },
           "Reactor.Maui.Canvas": {
             "target": "Package",
-            "version": "[1.0.139, )"
+            "version": "[1.0.140, )"
           },
           "Reactor.Maui.ScaffoldGenerator": {
             "target": "Package",
-            "version": "[1.0.139, )"
+            "version": "[1.0.140, )"
           },
           "SimpleRatingControl.MAUI": {
             "target": "Package",
@@ -41637,15 +41637,15 @@
           },
           "Reactor.Maui": {
             "target": "Package",
-            "version": "[1.0.139, )"
+            "version": "[1.0.140, )"
           },
           "Reactor.Maui.Canvas": {
             "target": "Package",
-            "version": "[1.0.139, )"
+            "version": "[1.0.140, )"
           },
           "Reactor.Maui.ScaffoldGenerator": {
             "target": "Package",
-            "version": "[1.0.139, )"
+            "version": "[1.0.140, )"
           },
           "SimpleRatingControl.MAUI": {
             "target": "Package",
@@ -41740,15 +41740,15 @@
           },
           "Reactor.Maui": {
             "target": "Package",
-            "version": "[1.0.139, )"
+            "version": "[1.0.140, )"
           },
           "Reactor.Maui.Canvas": {
             "target": "Package",
-            "version": "[1.0.139, )"
+            "version": "[1.0.140, )"
           },
           "Reactor.Maui.ScaffoldGenerator": {
             "target": "Package",
-            "version": "[1.0.139, )"
+            "version": "[1.0.140, )"
           },
           "SimpleRatingControl.MAUI": {
             "target": "Package",
@@ -41860,15 +41860,15 @@
           },
           "Reactor.Maui": {
             "target": "Package",
-            "version": "[1.0.139, )"
+            "version": "[1.0.140, )"
           },
           "Reactor.Maui.Canvas": {
             "target": "Package",
-            "version": "[1.0.139, )"
+            "version": "[1.0.140, )"
           },
           "Reactor.Maui.ScaffoldGenerator": {
             "target": "Package",
-            "version": "[1.0.139, )"
+            "version": "[1.0.140, )"
           },
           "SimpleRatingControl.MAUI": {
             "target": "Package",

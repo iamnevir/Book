@@ -91,6 +91,7 @@
     <None Remove="Resources\Images\SideMenu\favorites_img.png" />
     <None Remove="Resources\Images\SideMenu\help_img.png" />
     <None Remove="Resources\Images\SideMenu\homeback.png" />
+    <None Remove="Resources\Images\SideMenu\logout.png" />
     <None Remove="Resources\Images\SideMenu\user_dark.svg" />
     <None Remove="Resources\Images\trove.png" />
     <None Remove="Resources\Raw\back.json" />
@@ -128,6 +129,7 @@
     <MauiImage Include="Resources\Images\Ebook\miura.png" />
     <MauiImage Include="Resources\Images\Ebook\scott.jpg" />
     <MauiImage Include="Resources\Images\Ebook\stephenking.jpg" />
+    <EmbeddedResource Include="Resources\Images\SideMenu\logout.png" />
     <MauiImage Include="Resources\Images\SideMenu\user_dark.svg" />
     <MauiImage Include="Resources\Images\StartPage\sp1.jpg" />
     <MauiImage Include="Resources\Images\StartPage\sp2.jpg" />
@@ -140,9 +142,9 @@
     <PackageReference Include="Microsoft.Extensions.Http" Version="7.0.0" />
     <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
     <PackageReference Include="Plugin.Maui.ScreenBrightness" Version="1.0.0-preview3" />
-    <PackageReference Include="Reactor.Maui" Version="1.0.139" />
-    <PackageReference Include="Reactor.Maui.Canvas" Version="1.0.139" />
-    <PackageReference Include="Reactor.Maui.ScaffoldGenerator" Version="1.0.139" OutputItemType="Analyzer" ReferenceOutputAssembly="false" />
+    <PackageReference Include="Reactor.Maui" Version="1.0.140" />
+    <PackageReference Include="Reactor.Maui.Canvas" Version="1.0.140" />
+    <PackageReference Include="Reactor.Maui.ScaffoldGenerator" Version="1.0.140" OutputItemType="Analyzer" ReferenceOutputAssembly="false" />
     <PackageReference Include="SimpleRatingControl.MAUI" Version="0.0.3" />
     <PackageReference Include="SkiaSharp.Extended.UI.Maui" Version="2.0.0-preview.61" />
   </ItemGroup>

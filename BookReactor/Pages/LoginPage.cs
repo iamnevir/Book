@@ -12,14 +12,21 @@ namespace BookReactor.Pages;
 
 class LoginPageState
 {
+    public bool OnLogin { get; set; }
 }
-class LoginPage : Component<LoginPageState>
+class LoginPageProps
 {
+    public Action SauDangNhap { get; set; }
+}
+class LoginPage : Component<LoginPageState, LoginPageProps>
+{
+    
     private async void DaDangNhap()
     {
+        Props.SauDangNhap.Invoke();
         await Navigation.PopAsync();
     }
-    public async void LoginCommand()
+    public async Task LoginCommand()
                 {
                     var authUrl = $"{Constants.Google.auth_uri}?response_type=code" +
                                   $"&redirect_uri=com.company.magicbook://" +
@@ -69,8 +76,6 @@ class LoginPage : Component<LoginPageState>
                     {
                         // Use stopped auth
                     }
-
-
                 }
     public override VisualNode Render()
     {
@@ -79,21 +84,33 @@ class LoginPage : Component<LoginPageState>
             new Grid
             {
                 new Image("loginbg").Aspect(Aspect.Fill),
-                new SKLottieView()
-                .Source(new SkiaSharp.Extended.UI.Controls.SKFileLottieImageSource()
+                new VStack
                 {
-                    File="ggicon.json"
-                })
-                .IsAnimationEnabled(true)
-                .IsEnabled(true)
-                .IsVisible(true)
-                .HeightRequest(150)
-                .WidthRequest(150)
+                    new Label("Đăng nhập bằng Google")
+                    .FontSize(25)
+                    .FontFamily(Theme.font)
+                    .TextColor(Colors.White)
+                    ,
+                    new SKLottieView()
+                    .Source(new SkiaSharp.Extended.UI.Controls.SKFileLottieImageSource()
+                    {
+                        File="ggicon.json"
+                    })
+                    .IsAnimationEnabled(State.OnLogin)
+                    .IsVisible(true)
+                    .HeightRequest(150)
+                    .WidthRequest(150)
+                    .BackgroundColor(Colors.Transparent)
+                    .ZIndex(1)
+                    .OnTapped(async ()=>
+                    {
+                        SetState(s=>s.OnLogin=true);
+                       await LoginCommand();
+                        DaDangNhap();
+                    })
+                }.Margin(0,0,0,50)
                 .VEnd().HCenter()
-                .Margin(0,0,0,50)
-                .BackgroundColor(Colors.Transparent)
-                .ZIndex(1)
-                .OnTapped(LoginCommand)
+
             }
         }.Set(MauiControls.NavigationPage.HasNavigationBarProperty, false);
     }

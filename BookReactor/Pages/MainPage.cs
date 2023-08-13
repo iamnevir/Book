@@ -32,6 +32,7 @@ class MainPageState
 class MainPageProps
 {
     public bool IsStartPage { get; set; }=true;
+    
 }
 class MainPage : Component<MainPageState, MainPageProps>
 {
@@ -56,7 +57,10 @@ class MainPage : Component<MainPageState, MainPageProps>
     }
     private async void OpenLoginPage()
     {
-        await Navigation.PushAsync<LoginPage>();
+        await Navigation.PushAsync<LoginPage, LoginPageProps>(_ =>
+        {
+            _.SauDangNhap = () => OnMounted();
+        });
     }
     public override VisualNode Render()
     {
@@ -80,7 +84,6 @@ class MainPage : Component<MainPageState, MainPageProps>
                       .IsShown(State.IsSideMenuShown)
                       .OnBookPage(OpenMarket)
                       .OneBookPage(OpenEBookPage)
-                      .OpenLoginPage(OpenLoginPage)
                       .OpenFavoritePage(OpenFavoritePage)
                       .OnClose(()=>SetState(s=>s.IsSideMenuShown=false))
                   }.BackgroundColor(Colors.Transparent)
@@ -783,133 +786,141 @@ class StartPage : Component<StartPageState>
     }
     protected override void OnMounted()
     {
-        SetState(s=>s.StartPageVisible= _isVisible);
+        SetState(s=>s.StartPageVisible=_isVisible);
+        if (Logger.KiemTra(Logger.token) && State.StartPageVisible)
+        {
+            var googleBook = Services.GetRequiredService<IGoogleServices>();
+            googleBook.RefreshTokenAsync();
+        }
         base.OnMounted();
     }
     public override VisualNode Render()
     {
-        var currentImage = StartPageImage.StartPageImages[State.ImageIndex];
-        var leftImage = StartPageImage.StartPageImages[State.ImageIndex > 0 ? State.ImageIndex - 1 : StartPageImage.StartPageImages.Length - 1];
-        var rightImage = StartPageImage.StartPageImages[State.ImageIndex < StartPageImage.StartPageImages.Length - 1 ? State.ImageIndex + 1 : 0];
-        return new Grid
-        {
-              new Grid
-                {
-                    new Image(leftImage.Image)
-                    .TranslationX(-State.ImageSize.Width+State.PanX)
-                    .Aspect(Aspect.Fill),
-
-                    new Image(rightImage.Image)
-                    .Aspect(Aspect.Fill)
-                    .TranslationX(State.ImageSize.Width+State.PanX),
-
-                    new Image(currentImage.Image)
-                    .Aspect(Aspect.Fill)
-                    .TranslationX(State.PanX),
-                     new AnimationController
+            var currentImage = StartPageImage.StartPageImages[State.ImageIndex];
+            var leftImage = StartPageImage.StartPageImages[State.ImageIndex > 0 ? State.ImageIndex - 1 : StartPageImage.StartPageImages.Length - 1];
+            var rightImage = StartPageImage.StartPageImages[State.ImageIndex < StartPageImage.StartPageImages.Length - 1 ? State.ImageIndex + 1 : 0];
+            return new Grid
+            {
+                  new Grid
                     {
-                        new SequenceAnimation
+                        new Image(leftImage.Image)
+                        .TranslationX(-State.ImageSize.Width+State.PanX)
+                        .Aspect(Aspect.Fill),
+
+                        new Image(rightImage.Image)
+                        .Aspect(Aspect.Fill)
+                        .TranslationX(State.ImageSize.Width+State.PanX),
+
+                        new Image(currentImage.Image)
+                        .Aspect(Aspect.Fill)
+                        .TranslationX(State.PanX),
+                         new AnimationController
                         {
-                            new DoubleAnimation()
-                                .StartValue(State.PanX)
-                                .TargetValue(State.ScrollTo == ScrollToMode.Right ? State.ImageSize.Width : -State.ImageSize.Width)
-                                .OnTick(v => SetState(s => s.PanX = v))
-                                .Duration(300)
-                        }
-                    }
-                     .IsEnabled(State.ScrollTo != ScrollToMode.None)
-                    .OnIsEnabledChanged(enabled =>
-                    {
-                        SetState(s =>
-                        {
-                            if (!enabled)
+                            new SequenceAnimation
                             {
-                                s.ImageIndex = s.ScrollTo == ScrollToMode.Left ?
-                                    (s.ImageIndex < StartPageImage.StartPageImages.Length-1 ? s.ImageIndex + 1 : 0)
-                                    :
-                                    (s.ImageIndex >0 ? s.ImageIndex-1 :StartPageImage.StartPageImages.Length-1);
-                                s.ScrollTo = ScrollToMode.None;
-                                s.PanX=0;
+                                new DoubleAnimation()
+                                    .StartValue(State.PanX)
+                                    .TargetValue(State.ScrollTo == ScrollToMode.Right ? State.ImageSize.Width : -State.ImageSize.Width)
+                                    .OnTick(v => SetState(s => s.PanX = v))
+                                    .Duration(300)
                             }
-                        });
-                    })
-                }
-                 .OnSizeChanged(imageSize =>
-                 {
-                     SetState(s => s.ImageSize = new Size(imageSize.Width, imageSize.Height));
-                 })
-                .OnPanUpdated(OnPan),
-             new Border
-                  {
-                      new HStack
-                      {
-                          new RoundRectangle()
-                          .HeightRequest(10)
-                          .WidthRequest(State.ImageIndex==0?30:10)
-                          .Stroke(State.ImageIndex==0?Colors.White: Colors.Gray)
-                          .StrokeThickness(1).CornerRadius(10)
-                          .Fill(State.ImageIndex==0?Colors.White:Colors.Transparent)
-                          .WithAnimation(easing:Easing.CubicInOut,duration:500)
-                          ,
-                          new RoundRectangle()
-                           .HeightRequest(10)
-                          .WidthRequest(State.ImageIndex==1?30:10)
-                          .Stroke(State.ImageIndex==1?Colors.White: Colors.Gray)
-                          .StrokeThickness(1).CornerRadius(10)
-                          .Fill(State.ImageIndex==1?Colors.White:Colors.Transparent)
-                          .WithAnimation(easing:Easing.CubicInOut,duration:500),
-                          new RoundRectangle()
-                           .HeightRequest(10)
-                          .WidthRequest(State.ImageIndex==2?30:10)
-                          .Stroke(State.ImageIndex==2?Colors.White: Colors.Gray)
-                          .StrokeThickness(1)
-                          .CornerRadius(10)
-                          .Fill(State.ImageIndex==2?Colors.White:Colors.Transparent)
-                          .WithAnimation(easing:Easing.CubicInOut,duration:500),
-                      }.Spacing(10).HCenter()
-                  }.HeightRequest(50)
-                  .WidthRequest(100)
-                  .BackgroundColor(Colors.Transparent)
-                  .VEnd().HCenter()
-                  .Margin(0,0,0,100),
-              new Border
-                {
-                    new VStack
-                    {
-                          new Label("Immerse in the story")
-                         .FontSize(27)
-                         .MaxLines(1)
-                         .FontFamily(Theme.font)
-                         .VCenter().HCenter()
-                         .FontAttributes(Microsoft.Maui.Controls.FontAttributes.Bold)
-                         .TextColor(Colors.White),
-                        new Label("The books contain stories that have never been told, mysteries that lie deep in the dark waiting to be answered")
-                         .FontSize(13)
-                         .MaxLines(3)
-                         .FontFamily(Theme.font)
-                         .VCenter().HCenter()
-                         .HorizontalTextAlignment(TextAlignment.Center)
-                         .FontAttributes(Microsoft.Maui.Controls.FontAttributes.Bold)
-                         .TextColor(Colors.Gray)
+                        }
+                         .IsEnabled(State.ScrollTo != ScrollToMode.None)
+                        .OnIsEnabledChanged(enabled =>
+                        {
+                            SetState(s =>
+                            {
+                                if (!enabled)
+                                {
+                                    s.ImageIndex = s.ScrollTo == ScrollToMode.Left ?
+                                        (s.ImageIndex < StartPageImage.StartPageImages.Length-1 ? s.ImageIndex + 1 : 0)
+                                        :
+                                        (s.ImageIndex >0 ? s.ImageIndex-1 :StartPageImage.StartPageImages.Length-1);
+                                    s.ScrollTo = ScrollToMode.None;
+                                    s.PanX=0;
+                                }
+                            });
+                        })
                     }
-                }.HeightRequest(120)
-                  .WidthRequest(State.ImageSize.Width-80)
-                  .BackgroundColor(Colors.Transparent)
-                  .VEnd().HCenter()
-                  .Margin(0,0,0,130),
-                new Button("Skip")
-                     .FontSize(18)
-                     .FontFamily(Theme.font)
-                     .TextColor(Colors.Black)
-                     .VEnd().HCenter()
-                     .BackgroundColor(Colors.White)
-                     .HeightRequest(50)
-                     .WidthRequest(100)
-                     .CornerRadius(30)
-                     .Margin(0,0,0,50)
-                     .OnClicked(()=>SetState(s=>s.StartPageVisible=false))
-        }.IsVisible(State.StartPageVisible).ZIndex(1).Margin(0, 0, 0, -2)
-          ;
+                     .OnSizeChanged(imageSize =>
+                     {
+                         SetState(s => s.ImageSize = new Size(imageSize.Width, imageSize.Height));
+                     })
+                    .OnPanUpdated(OnPan),
+                 new Border
+                      {
+                          new HStack
+                          {
+                              new RoundRectangle()
+                              .HeightRequest(10)
+                              .WidthRequest(State.ImageIndex==0?30:10)
+                              .Stroke(State.ImageIndex==0?Colors.White: Colors.Gray)
+                              .StrokeThickness(1).CornerRadius(10)
+                              .Fill(State.ImageIndex==0?Colors.White:Colors.Transparent)
+                              .WithAnimation(easing:Easing.CubicInOut,duration:500)
+                              ,
+                              new RoundRectangle()
+                               .HeightRequest(10)
+                              .WidthRequest(State.ImageIndex==1?30:10)
+                              .Stroke(State.ImageIndex==1?Colors.White: Colors.Gray)
+                              .StrokeThickness(1).CornerRadius(10)
+                              .Fill(State.ImageIndex==1?Colors.White:Colors.Transparent)
+                              .WithAnimation(easing:Easing.CubicInOut,duration:500),
+                              new RoundRectangle()
+                               .HeightRequest(10)
+                              .WidthRequest(State.ImageIndex==2?30:10)
+                              .Stroke(State.ImageIndex==2?Colors.White: Colors.Gray)
+                              .StrokeThickness(1)
+                              .CornerRadius(10)
+                              .Fill(State.ImageIndex==2?Colors.White:Colors.Transparent)
+                              .WithAnimation(easing:Easing.CubicInOut,duration:500),
+                          }.Spacing(10).HCenter()
+                      }.HeightRequest(50)
+                      .WidthRequest(100)
+                      .BackgroundColor(Colors.Transparent)
+                      .VEnd().HCenter()
+                      .Margin(0,0,0,100),
+                  new Border
+                    {
+                        new VStack
+                        {
+                              new Label("Immerse in the story")
+                             .FontSize(27)
+                             .MaxLines(1)
+                             .FontFamily(Theme.font)
+                             .VCenter().HCenter()
+                             .FontAttributes(Microsoft.Maui.Controls.FontAttributes.Bold)
+                             .TextColor(Colors.White),
+                            new Label("The books contain stories that have never been told, mysteries that lie deep in the dark waiting to be answered")
+                             .FontSize(13)
+                             .MaxLines(3)
+                             .FontFamily(Theme.font)
+                             .VCenter().HCenter()
+                             .HorizontalTextAlignment(TextAlignment.Center)
+                             .FontAttributes(Microsoft.Maui.Controls.FontAttributes.Bold)
+                             .TextColor(Colors.Gray)
+                        }
+                    }.HeightRequest(120)
+                      .WidthRequest(State.ImageSize.Width-80)
+                      .BackgroundColor(Colors.Transparent)
+                      .VEnd().HCenter()
+                      .Margin(0,0,0,130),
+                    new Button("Skip")
+                         .FontSize(18)
+                         .FontFamily(Theme.font)
+                         .TextColor(Colors.Black)
+                         .VEnd().HCenter()
+                         .BackgroundColor(Colors.White)
+                         .HeightRequest(50)
+                         .WidthRequest(100)
+                         .CornerRadius(30)
+                         .Margin(0,0,0,50)
+                         .OnClicked(()=>SetState(s=>s.StartPageVisible=false))
+            }.ZIndex(1)
+            .IsVisible(State.StartPageVisible)
+            .Margin(0, 0, 0, -2)
+              ;
+       
     }
     //private VisualNode RenderStartItem(Start start)
     //{

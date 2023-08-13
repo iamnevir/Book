@@ -559,3 +559,9 @@ C:\Users\trick\source\repos\Book\BookReactor\obj\Release\net7.0-maccatalyst\macc
 C:\Users\trick\source\repos\Book\BookReactor\obj\Release\net7.0-maccatalyst\maccatalyst-x64\resizetizer\r\Resources\miura.png
 C:\Users\trick\source\repos\Book\BookReactor\obj\Release\net7.0-maccatalyst\maccatalyst-x64\resizetizer\r\Resources\scott.jpg
 C:\Users\trick\source\repos\Book\BookReactor\obj\Release\net7.0-maccatalyst\maccatalyst-x64\resizetizer\r\Resources\stephenking.jpg
+C:\Users\trick\source\repos\Book\BookReactor\bin\Release\net7.0-maccatalyst\maccatalyst-x64\IdentityModel.dll
+C:\Users\trick\source\repos\Book\BookReactor\bin\Release\net7.0-maccatalyst\maccatalyst-x64\IdentityModel.OidcClient.dll
+C:\Users\trick\source\repos\Book\BookReactor\bin\Release\net7.0-maccatalyst\maccatalyst-x64\JWTDecoder.dll
+C:\Users\trick\source\repos\Book\BookReactor\bin\Release\net7.0-maccatalyst\maccatalyst-x64\System.ComponentModel.Composition.dll
+C:\Users\trick\source\repos\Book\BookReactor\obj\Release\net7.0-maccatalyst\maccatalyst-x64\resizetizer\r\Resources\ifavori.png
+C:\Users\trick\source\repos\Book\BookReactor\obj\Release\net7.0-maccatalyst\maccatalyst-x64\resizetizer\r\Resources\loginbg.jpg

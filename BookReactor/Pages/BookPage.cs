@@ -112,12 +112,13 @@ class BookPage:Component<BookPageState, BookPageProps>
                       .IsShown(State.IsSideMenuShown)
                       .HomePage(Back)
                       .OneBookPage(OpenEBookPage)
-                      .OpenLoginPage(OpenLoginPage)
                       .OpenFavoritePage(OpenFavoritePage)
                       .MenuSelect(CommandMenuItem.Book)
-                      .OnClose(()=>{
-                      SetState(s=>s.IsSideMenuShown=false);
-                      InitializeState(); })
+                      .OnClose(()=>
+                      {
+                        SetState(s=>s.IsSideMenuShown=false);
+                        InitializeState(); 
+                      })
                 ,
                 new Grid("60,100,Auto,*","*")
                 {

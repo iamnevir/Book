@@ -3250,6 +3250,8 @@ C:\Users\trick\source\repos\Book\BookReactor\obj\Debug\net7.0-android\android\as
 C:\Users\trick\source\repos\Book\BookReactor\obj\Debug\net7.0-android\android\assets\IdentityModel.pdb
 C:\Users\trick\source\repos\Book\BookReactor\obj\Debug\net7.0-android\android\assets\Java.Interop.dll
 C:\Users\trick\source\repos\Book\BookReactor\obj\Debug\net7.0-android\android\assets\Java.Interop.pdb
+C:\Users\trick\source\repos\Book\BookReactor\obj\Debug\net7.0-android\android\assets\JWTDecoder.dll
+C:\Users\trick\source\repos\Book\BookReactor\obj\Debug\net7.0-android\android\assets\JWTDecoder.pdb
 C:\Users\trick\source\repos\Book\BookReactor\obj\Debug\net7.0-android\android\assets\Maui.Skeleton.dll
 C:\Users\trick\source\repos\Book\BookReactor\obj\Debug\net7.0-android\android\assets\MauiReactor.Canvas.dll
 C:\Users\trick\source\repos\Book\BookReactor\obj\Debug\net7.0-android\android\assets\MauiReactor.dll
@@ -3309,6 +3311,7 @@ C:\Users\trick\source\repos\Book\BookReactor\obj\Debug\net7.0-android\android\as
 C:\Users\trick\source\repos\Book\BookReactor\obj\Debug\net7.0-android\android\assets\System.Collections.NonGeneric.dll
 C:\Users\trick\source\repos\Book\BookReactor\obj\Debug\net7.0-android\android\assets\System.Collections.Specialized.dll
 C:\Users\trick\source\repos\Book\BookReactor\obj\Debug\net7.0-android\android\assets\System.ComponentModel.Annotations.dll
+C:\Users\trick\source\repos\Book\BookReactor\obj\Debug\net7.0-android\android\assets\System.ComponentModel.Composition.dll
 C:\Users\trick\source\repos\Book\BookReactor\obj\Debug\net7.0-android\android\assets\System.ComponentModel.DataAnnotations.dll
 C:\Users\trick\source\repos\Book\BookReactor\obj\Debug\net7.0-android\android\assets\System.ComponentModel.dll
 C:\Users\trick\source\repos\Book\BookReactor\obj\Debug\net7.0-android\android\assets\System.ComponentModel.EventBasedAsync.dll
@@ -4116,9 +4119,7 @@ C:\Users\trick\source\repos\Book\BookReactor\obj\Debug\net7.0-android\stamp\_Con
 C:\Users\trick\source\repos\Book\BookReactor\obj\Debug\net7.0-android\stamp\_GenerateJavaStubs.stamp
 C:\Users\trick\source\repos\Book\BookReactor\obj\Debug\net7.0-android\stamp\_GeneratePackageManagerJava.stamp
 C:\Users\trick\source\repos\Book\BookReactor\obj\Debug\net7.0-android\stamp\_ResolveLibraryProjectImports.stamp
-C:\Users\trick\source\repos\Book\BookReactor\obj\Debug\net7.0-android\android\assets\JWTDecoder.dll
-C:\Users\trick\source\repos\Book\BookReactor\obj\Debug\net7.0-android\android\assets\JWTDecoder.pdb
-C:\Users\trick\source\repos\Book\BookReactor\obj\Debug\net7.0-android\android\assets\System.ComponentModel.Composition.dll
+C:\Users\trick\source\repos\Book\BookReactor\obj\Debug\net7.0-android\resizetizer\r\drawable\logout.png
 C:\Users\trick\source\repos\Book\BookReactor\obj\Debug\net7.0-android\android\assets\mscorlib.dll
 C:\Users\trick\source\repos\Book\BookReactor\obj\Debug\net7.0-android\android\assets\System.Collections.Concurrent.dll
 C:\Users\trick\source\repos\Book\BookReactor\obj\Debug\net7.0-android\android\assets\System.Data.Common.dll

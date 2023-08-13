@@ -115,15 +115,15 @@
             },
             "Reactor.Maui": {
               "target": "Package",
-              "version": "[1.0.139, )"
+              "version": "[1.0.140, )"
             },
             "Reactor.Maui.Canvas": {
               "target": "Package",
-              "version": "[1.0.139, )"
+              "version": "[1.0.140, )"
             },
             "Reactor.Maui.ScaffoldGenerator": {
               "target": "Package",
-              "version": "[1.0.139, )"
+              "version": "[1.0.140, )"
             },
             "SimpleRatingControl.MAUI": {
               "target": "Package",
@@ -273,15 +273,15 @@
             },
             "Reactor.Maui": {
               "target": "Package",
-              "version": "[1.0.139, )"
+              "version": "[1.0.140, )"
             },
             "Reactor.Maui.Canvas": {
               "target": "Package",
-              "version": "[1.0.139, )"
+              "version": "[1.0.140, )"
             },
             "Reactor.Maui.ScaffoldGenerator": {
               "target": "Package",
-              "version": "[1.0.139, )"
+              "version": "[1.0.140, )"
             },
             "SimpleRatingControl.MAUI": {
               "target": "Package",
@@ -376,15 +376,15 @@
             },
             "Reactor.Maui": {
               "target": "Package",
-              "version": "[1.0.139, )"
+              "version": "[1.0.140, )"
             },
             "Reactor.Maui.Canvas": {
               "target": "Package",
-              "version": "[1.0.139, )"
+              "version": "[1.0.140, )"
             },
             "Reactor.Maui.ScaffoldGenerator": {
               "target": "Package",
-              "version": "[1.0.139, )"
+              "version": "[1.0.140, )"
             },
             "SimpleRatingControl.MAUI": {
               "target": "Package",
@@ -496,15 +496,15 @@
             },
             "Reactor.Maui": {
               "target": "Package",
-              "version": "[1.0.139, )"
+              "version": "[1.0.140, )"
             },
             "Reactor.Maui.Canvas": {
               "target": "Package",
-              "version": "[1.0.139, )"
+              "version": "[1.0.140, )"
             },
             "Reactor.Maui.ScaffoldGenerator": {
               "target": "Package",
-              "version": "[1.0.139, )"
+              "version": "[1.0.140, )"
             },
             "SimpleRatingControl.MAUI": {
               "target": "Package",

@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "Opz5kaCwQnxmjl6LTpuvnW3mQ7VoufBdPGwFJfHHce6qC9Nf2ce3sdTwwcvWk9ngK8JcHUr73cE77LFK36y2Fw==",
+  "dgSpecHash": "wvwo/HIdOLT9B4xC3h1bGyC5ek1pIhvcclTW2WutRYO1u6DvO29cLWqzMco/od8zNVy8LbdmwPXjVYT+WJpdwQ==",
   "success": true,
   "projectFilePath": "C:\\Users\\trick\\source\\repos\\Book\\BookReactor\\BookReactor.csproj",
   "expectedPackageFiles": [
@@ -26,9 +26,9 @@
     "C:\\Users\\trick\\.nuget\\packages\\microsoft.windowsappsdk\\1.2.221209.1\\microsoft.windowsappsdk.1.2.221209.1.nupkg.sha512",
     "C:\\Users\\trick\\.nuget\\packages\\newtonsoft.json\\13.0.3\\newtonsoft.json.13.0.3.nupkg.sha512",
     "C:\\Users\\trick\\.nuget\\packages\\plugin.maui.screenbrightness\\1.0.0-preview3\\plugin.maui.screenbrightness.1.0.0-preview3.nupkg.sha512",
-    "C:\\Users\\trick\\.nuget\\packages\\reactor.maui\\1.0.139\\reactor.maui.1.0.139.nupkg.sha512",
-    "C:\\Users\\trick\\.nuget\\packages\\reactor.maui.canvas\\1.0.139\\reactor.maui.canvas.1.0.139.nupkg.sha512",
-    "C:\\Users\\trick\\.nuget\\packages\\reactor.maui.scaffoldgenerator\\1.0.139\\reactor.maui.scaffoldgenerator.1.0.139.nupkg.sha512",
+    "C:\\Users\\trick\\.nuget\\packages\\reactor.maui\\1.0.140\\reactor.maui.1.0.140.nupkg.sha512",
+    "C:\\Users\\trick\\.nuget\\packages\\reactor.maui.canvas\\1.0.140\\reactor.maui.canvas.1.0.140.nupkg.sha512",
+    "C:\\Users\\trick\\.nuget\\packages\\reactor.maui.scaffoldgenerator\\1.0.140\\reactor.maui.scaffoldgenerator.1.0.140.nupkg.sha512",
     "C:\\Users\\trick\\.nuget\\packages\\simpleratingcontrol.maui\\0.0.3\\simpleratingcontrol.maui.0.0.3.nupkg.sha512",
     "C:\\Users\\trick\\.nuget\\packages\\skiasharp\\2.88.1\\skiasharp.2.88.1.nupkg.sha512",
     "C:\\Users\\trick\\.nuget\\packages\\skiasharp.extended\\2.0.0-preview.61\\skiasharp.extended.2.0.0-preview.61.nupkg.sha512",

@@ -27,14 +27,26 @@ class DetailBook:Component<DetailBookState, DetailBookProps>
     private async void AddToFavorite(string id)
     {
         var googleBook = Services.GetRequiredService<IGoogleServices>();
-        var token = await Logger.ReadAsync(Logger.token);
-        await googleBook.AddBookToFavoriteAsync(token,id);
+        if (Logger.KiemTra(Logger.token))
+        {
+            var token = await Logger.ReadAsync(Logger.token);
+            await googleBook.AddBookToFavoriteAsync(token, id);
+        }
+        else
+        {
+        }
     }
     private async void RemoveFromFavorite(string id)
     {
         var googleBook = Services.GetRequiredService<IGoogleServices>();
-        var token = await Logger.ReadAsync(Logger.token);
-        await googleBook.RemoveBookToFavoriteAsync(token, id);
+        if (Logger.KiemTra(Logger.token))
+        {
+            var token = await Logger.ReadAsync(Logger.token);
+            await googleBook.RemoveBookToFavoriteAsync(token, id);
+        }
+        else
+        {
+        }
     }
     public override VisualNode Render()
     {

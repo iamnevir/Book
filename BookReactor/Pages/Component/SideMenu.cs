@@ -30,17 +30,10 @@ class SideMenu : Component<SideMenuState>
     private Action _openeBookPage;
     private Action _homePage;
     private Action _openFavoritePage;
-    private Action _openLoginPage;
     private CommandMenuItem _menuSelect;
-
     public SideMenu MenuSelect(CommandMenuItem com)
     {
         _menuSelect = com;
-        return this;
-    }
-    public SideMenu OpenLoginPage(Action action)
-    {
-        _openLoginPage = action;
         return this;
     }
     public SideMenu HomePage(Action action)
@@ -92,7 +85,13 @@ class SideMenu : Component<SideMenuState>
         SetState(s => s.SelectedMenuItem = _menuSelect);
         base.OnPropsChanged();
     }
-
+    private async void OpenLoginPage()
+    {
+        await Navigation.PushAsync<LoginPage, LoginPageProps>(_ =>
+        {
+            _.SauDangNhap = () => OnMounted();
+        });
+    }
     public override VisualNode Render()
     {
         return new Grid("39, *,50", "250")
@@ -167,10 +166,9 @@ class SideMenu : Component<SideMenuState>
         }
         .Margin(18, 0);
     }
-
     VisualNode RenderBrowse()
     {
-        return new Grid("16, 180,16,120,20", "*")
+        return new Grid("16, 180,16,180", "*")
         {
             new Label("BROWSE")
                 .FontSize(12)
@@ -183,7 +181,7 @@ class SideMenu : Component<SideMenuState>
             {
                 RenderMenuItem("Home", "homeback.png", CommandMenuItem.Home,_homePage),
                 RenderMenuItem("Favorites", "favorites_img.png", CommandMenuItem.Favorites,_openFavoritePage),
-                RenderMenuItem("Help", "help_img.png", CommandMenuItem.Help,_openLoginPage),
+                RenderMenuItem("Help", "help_img.png", CommandMenuItem.Help,OpenLoginPage),
             }
             .Margin(20,8,0,0)
             .GridRow(1),
@@ -198,6 +196,7 @@ class SideMenu : Component<SideMenuState>
             {
                 RenderMenuItem("Books Market", "book_img.png", CommandMenuItem.Book,_openBookPage),
                 RenderMenuItem("eBook", "ebook_img.png", CommandMenuItem.EBook,_openeBookPage),
+                RenderMenuItem("Đăng xuất", "logout.png", CommandMenuItem.Logout,async ()=>{await Logger.Logout();OnMounted(); },logout:true)
             }.GridRow(3)
             .Margin(20,8,0,0)
             ,
@@ -207,11 +206,12 @@ class SideMenu : Component<SideMenuState>
     }
 
 
-    VisualNode RenderMenuItem(string title, string icon, CommandMenuItem command,Action action=null, bool firstItem = false)
+    VisualNode RenderMenuItem(string title, string icon, CommandMenuItem command,Action action=null, bool firstItem = false,bool logout=false)
     {
         return new SideMenuItem()
             .Label(title)
             .Icon(icon)
+            .IsLogout(logout)
             .FirstItem(firstItem)
             .IsSelected(State.SelectedMenuItem == command)
             .OnSelect(() =>
@@ -232,10 +232,15 @@ class SideMenuItem : Component<SideMenuItemState>
 {
     private string _label;
     private string _icon;
+    private bool _logout;
     private bool _selected;
     private Action _selectAction;
     private bool _firstItem;
-
+    public SideMenuItem IsLogout(bool logout)
+    {
+        _logout = logout;
+        return this;
+    }
     public SideMenuItem Label(string label)
     {
         _label = label;
@@ -333,7 +338,8 @@ class SideMenuItem : Component<SideMenuItemState>
         .BackgroundColor(Colors.Transparent)
         .OnTapped(_selectAction)
         .WidthRequest(225.0)
-        .HeightRequest(52);
+        .HeightRequest(52)
+        .IsVisible(_logout?Logger.KiemTra(Logger.user):true);
     }
 }
 
@@ -437,6 +443,7 @@ enum CommandMenuItem
     Book,
 
     EBook,
+    Logout,
 
     Hehe
 }

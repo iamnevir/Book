@@ -4,6 +4,10 @@ public class MonoPackageManager_Resources {
 		/* We need to ensure that "BookReactor.dll" comes first in this list. */
 		"BookReactor.dll",
 		"Maui.Skeleton.dll",
+		"IdentityModel.dll",
+		"IdentityModel.OidcClient.dll",
+		"JWTDecoder.dll",
+		"System.ComponentModel.Composition.dll",
 		"Microsoft.Extensions.Configuration.dll",
 		"Microsoft.Extensions.Configuration.Abstractions.dll",
 		"Microsoft.Extensions.DependencyInjection.dll",
@@ -34,6 +38,7 @@ public class MonoPackageManager_Resources {
 		"Xamarin.AndroidX.Activity.dll",
 		"Xamarin.AndroidX.AppCompat.dll",
 		"Xamarin.AndroidX.AppCompat.AppCompatResources.dll",
+		"Xamarin.AndroidX.Browser.dll",
 		"Xamarin.AndroidX.CardView.dll",
 		"Xamarin.AndroidX.Collection.dll",
 		"Xamarin.AndroidX.CoordinatorLayout.dll",

@@ -86,7 +86,6 @@ class FavoritePage : Component<FavoritePageState>
                       .HomePage(OpenHomePage)
                       .OnBookPage(OpenBookPage)
                       .OneBookPage(OpenEBookPage)
-                      .OpenLoginPage(OpenLoginPage)
                       .MenuSelect(CommandMenuItem.Favorites)
                       .OnClose(()=>
                       {
@@ -280,7 +279,7 @@ class BookshelfItem:Component<BookshelfItemState>
                 new Grid("Auto,*","*")
                 {
                    _id==0?
-                    new Label("Danh sách yêu thích")
+                    new Label($"Danh sách {_bookshelf.ToLower()} ({State.Books.Count})")
                     .FontFamily(Theme.font)
                     .FontSize(25)
                     .FontAttributes(Microsoft.Maui.Controls.FontAttributes.Bold)
