@@ -64,6 +64,7 @@
   <ItemGroup>
     <None Remove="Resources\Fonts\Poppins-Regular.ttf" />
     <None Remove="Resources\Fonts\Roboto-Regular.ttf" />
+    <None Remove="Resources\Images\delet.png" />
     <None Remove="Resources\Images\EbookDetail\back.png" />
     <None Remove="Resources\Images\EbookDetail\favori.png" />
     <None Remove="Resources\Images\EbookDetail\ifavori.png" />

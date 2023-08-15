@@ -123,9 +123,10 @@ public class GoogleBookServices: IGoogleServices
             request.Content = content;
             var response = await httpClient.SendAsync(request);
             response.EnsureSuccessStatusCode();
-            var token = await response.Content.ReadFromJsonAsync<LoginResponse>();
-            await Logger.WriteAsync(Logger.token, token.AccessToken);
-            await Logger.WriteAsync(Logger.refreshtoken, token.RefreshToken);
+            var token = await response.Content.ReadAsStringAsync();
+            var token1 = JsonConvert.DeserializeObject<LoginResponse>(token);
+            await Logger.WriteAsync(Logger.token, token1.AccessToken);
+            await Logger.WriteAsync(Logger.refreshtoken, token1.RefreshToken);
         }
         catch (TaskCanceledException )
         {

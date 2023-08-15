@@ -10,6 +10,9 @@ obj\Debug\net7.0-android\resizetizer\r\drawable\bai6.jpg
 obj\Debug\net7.0-android\resizetizer\r\drawable\bai7.jpg
 obj\Debug\net7.0-android\resizetizer\r\drawable\bai8.jpg
 obj\Debug\net7.0-android\resizetizer\r\drawable\bai9.jpg
+obj\Debug\net7.0-android\resizetizer\r\drawable\dele.png
+obj\Debug\net7.0-android\resizetizer\r\drawable\delet.png
+obj\Debug\net7.0-android\resizetizer\r\drawable\delete.png
 obj\Debug\net7.0-android\resizetizer\r\drawable\favori.png
 obj\Debug\net7.0-android\resizetizer\r\drawable\favorite.png
 obj\Debug\net7.0-android\resizetizer\r\drawable\ifavori.png

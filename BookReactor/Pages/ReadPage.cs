@@ -268,7 +268,7 @@ class ReadPage:Component<ReadPageState, ReadPageProps>
                 .BackgroundColor(Theme.XanhDam)
                 .TranslationY(State.OpenSetting?-330: 0)
                 .IsVisible(State.OpenBorder)
-                .WithAnimation(easing:Easing.CubicInOut,duration:300)
+                .WithAnimation(easing:Easing.BounceOut,duration:600)
                 ,
 
                  new Border

@@ -20,6 +20,7 @@ public class Theme
     public static Color Tim = Color.FromArgb("#651D80");
     public static Color Cam = Color.FromArgb("#FA784A");
     public static Color XanhKem = Color.FromArgb("#CBFF37");
+    public static Color Do = Color.FromArgb("#DB3A3C");
     public static string font = "OpenSan";
     public static Color Background { get; } = Color.FromUint(0xFFF2F6FF);
     public static Color Shadow { get; } = Color.FromUint(0xFF4A5367);

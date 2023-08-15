@@ -6,6 +6,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 
 namespace BookReactor.Pages;
@@ -167,6 +168,8 @@ class BookshelfItemState
     public double Height { get; set; }
     public double Margin { get; set; }
     public List<Item> Books { get; set; } = new();
+    public bool OnXoa { get; set; }
+    public bool ChuaDangNhap { get; set; }
 }
 class BookshelfItem:Component<BookshelfItemState>
 {
@@ -197,10 +200,20 @@ class BookshelfItem:Component<BookshelfItemState>
     }
     async void Load()
     {
-        var googleBook = Services.GetRequiredService<IGoogleServices>();
-        var token = await Logger.ReadAsync(Logger.token);
-        var bookshelf = await googleBook.GetBookFromBookshelfAsync(token,_id);
-        SetState(s => s.Books = bookshelf.items);
+        if (Logger.KiemTra(Logger.token))
+        {
+            var googleBook = Services.GetRequiredService<IGoogleServices>();
+            var token = await Logger.ReadAsync(Logger.token);
+            var bookshelf = await googleBook.GetBookFromBookshelfAsync(token, _id);
+            if (bookshelf.items != null)
+            {
+                SetState(s => s.Books = bookshelf.items);
+            }
+        }
+        else
+        {
+            SetState(s => s.ChuaDangNhap = true);
+        }
     }
     void OnClick()
     {
@@ -278,24 +291,25 @@ class BookshelfItem:Component<BookshelfItemState>
                 ,
                 new Grid("Auto,*","*")
                 {
-                   _id==0?
-                    new Label($"Danh sách {_bookshelf.ToLower()} ({State.Books.Count})")
+                    new Label(State.ChuaDangNhap?"Bạn chưa đăng nhập!":$"Danh sách {_bookshelf.ToLower()} ({State.Books.Count})")
                     .FontFamily(Theme.font)
                     .FontSize(25)
                     .FontAttributes(Microsoft.Maui.Controls.FontAttributes.Bold)
                     .TextColor(Colors.Black)
                     .Margin(0,30,0,0)
-                    .GridRow(0):null
+                    .GridRow(0)
                     ,
                     new CollectionView()
                     .ItemsSource(State.Books,RenderBookItem)
                     .ItemsLayout(new HorizontalLinearItemsLayout().ItemSpacing(10))
                     .GridRow(1)
                     .Margin(0,-50,0,0)
-                }.GridRow(2).VCenter()
+                }
+                .GridRow(2).VCenter()
                 .BackgroundColor(Colors.Transparent)
                 .IsVisible(State.Height>0)
                 .GridColumnSpan(2)
+               
             }.Margin(30,30,20,0)
             .OnTapped(()=>{
                     OnClick();
@@ -309,6 +323,7 @@ class BookshelfItem:Component<BookshelfItemState>
             .BackgroundColor(_bg)
             ;
     }
+
     private async void OpenDetailEBook(Item item)
     {
         await Navigation.PushAsync<DetailBook, DetailBookProps>(_ =>
@@ -316,31 +331,63 @@ class BookshelfItem:Component<BookshelfItemState>
             _.Book = item;
         });
     }
+    MauiControls.Command<string> RemoveFromFavoriteAsync => new MauiControls.Command<string>(Loaded);
+
+    private async void Loaded(string id)
+    {
+        var googleBook = Services.GetRequiredService<IGoogleServices>();
+        var token = await Logger.ReadAsync(Logger.token);
+        await googleBook.RemoveBookToFavoriteAsync(token, id);
+        Load();
+    }
+
     private VisualNode RenderBookItem(Item item)
     {
         return new Grid
         {
              new Border
                     {
-                        new Grid
+                        new SwipeView
                         {
-                             new Image(item.volumeInfo.imageLinks.thumbnail.Replace("http","https"))
-                            .Aspect(Aspect.Fill)
-                            ,
-                             new HStack()
-                             {
-                                 new SimpleRatingControl()
-                                .Amount(5)
-                                .CurrentValue(item.volumeInfo.averageRating)
-                                .RatingType(SimpleRatingControlMaui.RatingType.Star)
-                                .AccentColor(Colors.White)
-                                .FontSize(13),
-                                 new Label(item.volumeInfo.averageRating)
-                                 .FontFamily(Theme.font)
-                                 .TextColor(Colors.White)
-                                 .FontSize(13)
-                             }.VEnd().HCenter().Margin(0,0,0,10).Spacing(15)
+                            new Grid
+                            {
+
+                                 new Image(item.volumeInfo.imageLinks.thumbnail.Replace("http","https"))
+                                .Aspect(Aspect.Fill)
+                                ,
+                                 new HStack()
+                                 {
+                                     new SimpleRatingControl()
+                                    .Amount(5)
+                                    .CurrentValue(item.volumeInfo.averageRating)
+                                    .RatingType(SimpleRatingControlMaui.RatingType.Star)
+                                    .AccentColor(Colors.White)
+                                    .FontSize(13),
+                                     new Label(item.volumeInfo.averageRating)
+                                     .FontFamily(Theme.font)
+                                     .TextColor(Colors.White)
+                                     .FontSize(13)
+                                 }.VEnd().HCenter().Margin(0,0,0,10).Spacing(15)
+                            }
                         }
+                        .BottomItems(new MauiControls.SwipeItems(new List<MauiControls.SwipeItem>()
+                                {
+                                    new MauiControls.SwipeItem
+                                    {
+                                        BackgroundColor = Theme.Do,
+                                        IconImageSource = "delet.png",
+                                        Command = RemoveFromFavoriteAsync,
+                                        CommandParameter = item.id,
+                                        Text="Xóa",
+                                    }
+                                })
+                            {
+                                SwipeBehaviorOnInvoked = SwipeBehaviorOnInvoked.RemainOpen,
+                                Mode = SwipeMode.Reveal,
+                            }
+                        )
+                        .Set(MauiControls.PlatformConfiguration.AndroidSpecific.SwipeView.SwipeTransitionModeProperty,SwipeTransitionMode.Reveal)
+                        
                     }.StrokeShape(new RoundRectangle().CornerRadius(20))
                     .Margin(0,-120,0,0)
                      .HeightRequest(180)
@@ -378,4 +425,5 @@ class BookshelfItem:Component<BookshelfItemState>
          .WidthRequest(180)
          .OnTapped(()=>OpenDetailEBook(item));
     }
+
 }
