@@ -25,6 +25,8 @@ partial class SKLottieView { }
 partial class SimpleRatingControl { }
 class MainPageState
 {
+    public bool IsShown { get; set; }
+    public bool? Result { get; set; }
     public bool IsSideMenuShown { get; set; }
     public Item SelectedBook { get; set; }
     public CommandMenuItem SelectedMenu { get; set; } = CommandMenuItem.Home;
@@ -38,7 +40,7 @@ class MainPage : Component<MainPageState, MainPageProps>
 {
     private async void OpenDetailBook(Item book)
     {
-        await Navigation.PushAsync<DetailBook, DetailBookProps>(_ =>
+        await Navigation.PushAsync<BookDetail, BookDetailProps>(_ =>
         {
             _.Book = book;
         });
@@ -47,20 +49,17 @@ class MainPage : Component<MainPageState, MainPageProps>
     {
         await Navigation.PushAsync<BookPage>();
     }
-    private async void OpenEBookPage()
+    private async void OpenMagicBookPage()
     {
-        await Navigation.PushAsync<EBookPage>();
+        await Navigation.PushAsync<MagicBookPage>();
     }
     private async void OpenFavoritePage()
     {
         await Navigation.PushAsync<FavoritePage>();
     }
-    private async void OpenLoginPage()
+    private async void OpenEBookPage()
     {
-        await Navigation.PushAsync<LoginPage, LoginPageProps>(_ =>
-        {
-            _.SauDangNhap = () => OnMounted();
-        });
+        await Navigation.PushAsync<EBookPage>();
     }
     public override VisualNode Render()
     {
@@ -72,6 +71,7 @@ class MainPage : Component<MainPageState, MainPageProps>
                   {
                       new StartPage()
                       .Visible(Props.IsStartPage)
+                      
                       ,
                       new HomePage()
                       .IsHidden(State.IsSideMenuShown)
@@ -83,7 +83,8 @@ class MainPage : Component<MainPageState, MainPageProps>
                       .MenuSelect(State.SelectedMenu)
                       .IsShown(State.IsSideMenuShown)
                       .OnBookPage(OpenMarket)
-                      .OneBookPage(OpenEBookPage)
+                      .OnEBookPage(OpenEBookPage)
+                      .OnMagicBookPage(OpenMagicBookPage)
                       .OpenFavoritePage(OpenFavoritePage)
                       .OnClose(()=>SetState(s=>s.IsSideMenuShown=false))
                   }.BackgroundColor(Colors.Transparent)
@@ -107,6 +108,8 @@ class HomePageState
     public bool IsCategoryVisible { get; set; }
     public List<CategorySelect> CategorySelected { get; set; } = new();
     public List<Item> Books1 { get; set; }
+    public List<Item> Books2 { get; set; }
+    public List<Item> Books3 { get; set; }
     public double TranslationX { get; set; } = 220;
 
     public double RotationY { get; set; } = -12;
@@ -152,7 +155,9 @@ class HomePage : Component<HomePageState>
         var googleBook = Services.GetRequiredService<IGoogleServices>();
         State.IsLoading = true;
         var books = await googleBook.GetBook("Dark Nights: Metal");
-        var books1 = await googleBook.GetBook("Dark Nights: Death Metal");
+        var books1 = await googleBook.GetBookWithCount("Dark Nights: Death Metal",5);
+        var books2 = await googleBook.GetBook("+subject:Fiction");
+        var books3 = await googleBook.GetBook("+inauthor:\"stephen king\"");
         var headerbook = await googleBook.GetBookById("ubVYEAAAQBAJ");
         SetState(s =>
         {
@@ -161,6 +166,8 @@ class HomePage : Component<HomePageState>
             s.HeaderBookAuthor = headerbook.volumeInfo.authors.First();
             s.Books = books.items;
             s.Books1 = books1.items;
+            s.Books2 = books2.items;
+            s.Books3 = books3.items;
             s.IsLoading = false;
         });
         
@@ -217,7 +224,7 @@ class HomePage : Component<HomePageState>
     }
     public override VisualNode Render()
     {
-            return new ScrollView
+        return new ScrollView
             {
                  new Grid("60,400,Auto,340,*", "*")
                 {
@@ -252,7 +259,7 @@ class HomePage : Component<HomePageState>
                    //.ItemsLayout(new VerticalGridItemsLayout(3))
                    //.GridRow(3),
                    RenderCategory(),
-                       new Grid("Auto,Auto,Auto,*","*")
+                       new Grid("Auto,Auto,,Auto,Auto,Auto,Auto,*,Auto","*")
                        {
                            new Label(State.CategorySelected.Any()?"Search Book":"Horror Book")
                             .TextColor(Colors.White)
@@ -276,25 +283,91 @@ class HomePage : Component<HomePageState>
                             .BackgroundColor(Colors.Transparent):
                            new CollectionView()
                            .ItemsSource(State.Books,RenderBookList)
-                           .ItemsLayout(new HorizontalLinearItemsLayout().ItemSpacing(10))
+                           .ItemsLayout(new HorizontalGridItemsLayout(2).HorizontalItemSpacing(10).VerticalItemSpacing(10))
                            .GridRow(1)
                            .Margin(20,10,0,0),
+                           new Label("Fiction Book")
+                            .TextColor(Colors.White)
+                            .FontSize(20)
+                            .FontFamily(Theme.font)
+                            .GridRow(3)
+                            .Margin(20,20,0,15),
+                           new CollectionView()
+                           .ItemsSource(State.Books2,RenderBookList)
+                           .ItemsLayout(new HorizontalGridItemsLayout(2).HorizontalItemSpacing(10).VerticalItemSpacing(10))
+                           .GridRow(4)
+                           .Margin(20,10,0,0),
+                           new CarouselView()
+                               .ItemsSource(State.Books3,RenderBookList3)
+                               .ItemsLayout(new HorizontalLinearItemsLayout()
+                               .SnapPointsType(Microsoft.Maui.Controls.SnapPointsType.MandatorySingle)
+                               .SnapPointsAlignment(Microsoft.Maui.Controls.SnapPointsAlignment.Center))
+                           .HeightRequest(240)
+                           .Margin(0,20,0,0)
+                           .GridRow(2)
+                           ,
                            new Label("Popular Book")
                             .TextColor(Colors.White)
                             .FontSize(20)
                             .FontFamily(Theme.font)
-                            .GridRow(2)
+                            .GridRow(5)
                             .Margin(20,20,0,15),
-                           new ScrollView
-                            {
-                               new CollectionView()
+                           new CollectionView()
                                .ItemsSource(State.Books1,RenderBookList1)
                                .ItemsLayout(new VerticalLinearItemsLayout().ItemSpacing(10))
-                            }.GridRow(3)
+                               .GridRow(6)
+                               .Margin(10,10,10,0)
+                               ,
+                           new Grid("Auto,Auto,*","Auto,*,Auto")
+                           {
+                               new Label("Magic Book")
+                                .TextColor(Colors.White)
+                                .FontSize(15)
+                                .FontFamily(Theme.font)
+                                .GridRow(0)
+                                .GridColumn(0)
+                                .Margin(0,10,0,0),
+                               new Label("Made by Nanhdz")
+                                .TextColor(Colors.White)
+                                .FontSize(15)
+                                .FontFamily(Theme.font)
+                                .GridRow(1)
+                                .GridColumn(0)
+                                .Margin(0,10,0,0),
+                               new Label("Version 1.0.1")
+                                .TextColor(Colors.White)
+                                .FontSize(15)
+                                .FontFamily(Theme.font)
+                                .GridRow(2)
+                                .GridColumn(0)
+                                .Margin(0,10,0,0),
+                               new Label("Thông tin liên hệ")
+                                .TextColor(Colors.White)
+                                .FontSize(15)
+                                .FontFamily(Theme.font)
+                                .GridRow(0)
+                                .GridColumn(2)
+                                .Margin(0,10,0,0),
+                               new Label("SDT: 0374168741")
+                                .TextColor(Colors.White)
+                                .FontSize(15)
+                                .FontFamily(Theme.font)
+                                .GridRow(1)
+                                .GridColumn(2)
+                                .Margin(0,10,0,0),
+                               new Label("Email: nanhdz@gmail.com")
+                                .TextColor(Colors.White)
+                                .FontSize(15)
+                                .FontFamily(Theme.font)
+                                .GridRow(2)
+                                .GridColumn(2)
+                                .Margin(0,10,0,0),
+                           }.GridRow(7).Margin(10,150,10,-450).IsVisible(!State.IsCategoryVisible)
+                               
                    }
                    .BackgroundColor(Theme.Bg)
                    .TranslationY(State.IsCategoryVisible?0:-300)
-                   .WithAnimation(easing:Easing.CubicInOut,duration:500)
+                   .WithAnimation(easing:Easing.CubicIn,duration:300)
                    .GridRow(4)
                 }.BackgroundColor(Theme.Bg)
                 .ZIndex(0)
@@ -304,35 +377,96 @@ class HomePage : Component<HomePageState>
          .TranslationX(State.TranslationX)
          .WithAnimation(easing: Easing.CubicIn, duration: 300)
          ;
-        
-                 
-     
+    }
 
+    private VisualNode RenderBookList3(Item item)
+    {
+        return new Grid
+        {
+            new Image(item.volumeInfo.imageLinks.thumbnail.Replace("http", "https"))
+            .Aspect(Aspect.Fill).Opacity(0.4)
+            ,
+            new Border
+            {
+                new Grid("*","Auto,Auto")
+                {
+                    new Border
+                    {
+                        new Image(item.volumeInfo.imageLinks.thumbnail.Replace("http", "https"))
+                        .Aspect(Aspect.Fill)
+                    }.StrokeShape(new RoundRectangle().CornerRadius(10))
+                    .Stroke(Colors.Transparent)
+                    .GridColumn(0)
+                    .HeightRequest(151)
+                    .WidthRequest(110)
+                    ,
+                    new Grid("Auto,Auto,Auto,Auto","*")
+                    {
+                         new Label(item.volumeInfo.title)
+                        .TextColor(Colors.White)
+                        .FontAttributes(Microsoft.Maui.Controls.FontAttributes.Bold)
+                        .FontSize(16)
+                        .FontFamily(Theme.font)
+                        .MaxLines(2)
+                        .GridRow(0),
+                         new Label($"Tác giả: {item.volumeInfo.authors[0]}")
+                        .TextColor(Colors.White)
+                        .FontSize(13)
+                        .FontFamily(Theme.font)
+                        .MaxLines(1)
+                        .GridRow(1).Margin(0,10,0,0),
+                         new Label($"Thể loại: {item.volumeInfo.categories[0]}")
+                        .TextColor(Colors.White)
+                        .FontSize(13)
+                        .FontFamily(Theme.font)
+                        .MaxLines(1)
+                        .GridRow(2).Margin(0,10,0,0),
+                         new HStack
+                         {
+                             new Image("heart")
+                             .HeightRequest(20)
+                             .WidthRequest(20)
+                             ,
+                             new Label(item .volumeInfo.averageRating)
+                             .TextColor(Colors.White)
+                            .FontSize(13)
+                            .FontFamily(Theme.font).Margin(0,2,0,0)
+                         }.Spacing(10).GridRow(3).Margin(0,10,0,0)
+                    }.GridColumn(1).Margin(15,0,0,0)
+                }.Margin(15)
+            }.Margin(40,30,40,30)
+            .StrokeShape(new RoundRectangle().CornerRadius(10))
+            .BackgroundColor(Color.FromUint(0xFFFFFFFF).WithAlpha(0.3f))
+
+        }.OnTapped(() =>
+        {
+            SetState(s => s.SelectedBook = item);
+            _selectBook(State.SelectedBook);
+        });
     }
 
     private VisualNode RenderBookList1(Item item)
     {
-        var authors = item.volumeInfo.authors.FirstOrDefault();
-        var source =  item.volumeInfo.imageLinks.thumbnail.Replace("http", "https");
         return new Border
         {
-            new Grid("*","100,*")
+            new Grid("*","128,*")
             {
                 
-                 new Image(source).Aspect(Aspect.AspectFit)
-                .HeightRequest(100)
+                 new Image(item.volumeInfo.imageLinks.thumbnail.Replace("http", "https")).Aspect(Aspect.Fill)
+                .HeightRequest(176)
+                .WidthRequest(128)
                 .GridColumn(0)
                ,
                 new VStack
                 {
                     new Label(item.volumeInfo.title)
                     .TextColor(Colors.White)
-                        .FontSize(17)
+                        .FontSize(20)
                         .FontFamily(Theme.font)
                         .MaxLines(1),
-                    new Label(authors)
+                    new Label(item.volumeInfo.authors[0])
                     .TextColor(Colors.Gray)
-                        .FontSize(11)
+                        .FontSize(15)
                         .FontFamily(Theme.font),
                     new HStack
                     {
@@ -341,15 +475,15 @@ class HomePage : Component<HomePageState>
                         .CurrentValue(item.volumeInfo.averageRating)
                         .RatingType(SimpleRatingControlMaui.RatingType.Star)
                         .AccentColor(Colors.Yellow)
-                        .FontSize(13)
+                        .FontSize(15)
                         ,
                         new Label($"Rating : {item.volumeInfo.ratingsCount}")
                         .TextColor(Colors.Gray)
-                            .FontSize(13)
+                            .FontSize(15)
                             .FontFamily(Theme.font)
                             ,
                     }.Spacing(10)
-                }.GridColumn(1).Spacing(10)
+                }.GridColumn(1).Spacing(15).Margin(20,0,0,0)
             }
         }.BackgroundColor(Colors.Transparent)
         .OnTapped(() =>

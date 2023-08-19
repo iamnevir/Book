@@ -1,15 +1,14 @@
 ﻿using BookReactor.Pages.Component;
-using MauiReactor;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Maui.Devices;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Runtime.Intrinsics.X86;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace BookReactor.Pages;
+
 class EBookPageState
 {
     public bool IsSideMenuShown { get; set; }
@@ -17,41 +16,14 @@ class EBookPageState
 
     public double RotationY { get; set; } = -12;
     public double MarginLeft { get; set; } = -30.0;
-    public bool IsLoading { get; set; } = true;
-    public List<Item> Book { get; set; } = new();
-    public List<BaiSelect> Bai { get; set; } = new();
+    public bool IsLoading { get; set; }
+    public string TextSearch { get; set; }
+    public List<Result> BookList { get; set; }
+    public List<Result> BookList1 { get; set; }
 }
 class EBookPage:Component<EBookPageState>
 {
-    private async void OpenDetailAuthor(AuthorVip author)
-    {
-        await Navigation.PushAsync<AuthorDetail, AuthorDetailProps>(_ =>
-        {
-            _.AuthorDetail = author;
-        });
-    }
-    private async void OpenDetailEBook(Item item)
-    {
-        await Navigation.PushAsync<EbookDetail, EbookDetailProps>(_ =>
-        {
-            _.Book = item;
-        });
-    }
-    private async void OpenHomePage()
-    {
-        await Navigation.PushAsync<MainPage, MainPageProps>(_ =>
-        {
-            _.IsStartPage = false;
-        });
-    }
-    private async void OpenBookPage()
-    {
-        await Navigation.PushAsync<BookPage>();
-    }
-    private async void OpenFavoritePage()
-    {
-        await Navigation.PushAsync<FavoritePage>();
-    }
+
     void InitializeState()
     {
         if (DeviceInfo.Current.Platform == DevicePlatform.Android)
@@ -66,213 +38,313 @@ class EBookPage:Component<EBookPageState>
 
         State.RotationY = !State.IsSideMenuShown ? 0.0 : -12;
     }
-    string TimIdTheoBai(BaiSelect baiSelect)
-    {
-        switch (baiSelect)
-        {
-            case BaiSelect.bai1:
-                return "PcWrDwAAQBAJ";
-            case BaiSelect.bai2:
-                return "yzowDwAAQBAJ";
-            case BaiSelect.bai3:
-                return "uicqDwAAQBAJ";
-            case BaiSelect.bai4:
-                return "BCgqDwAAQBAJ";
-            case BaiSelect.bai5:
-                return "gTowDwAAQBAJ";
-            case BaiSelect.bai6:
-                return "pjowDwAAQBAJ";
-            case BaiSelect.bai7:
-                return "LS81DwAAQBAJ";
-            case BaiSelect.bai8:
-                return "FJkAEAAAQBAJ";
-            case BaiSelect.bai9:
-                return "q7ACEAAAQBAJ";        
-        }return null;
-    } 
-    protected override void OnMounted()
+    protected override async void OnMounted()
     {
         InitializeState();
+        var gutendex = Services.GetRequiredService<IGutenbergApiService>();
+        var book = await gutendex.GetBookDetailAsync("11,12,71180,45839,50133");
+        var book1 = await gutendex.GetBookDetailAsync("1661,74,28885,33361,39341");
+        if (book is not null)
+        {
+            SetState(s => 
+            {
+                s.BookList = book.results;
+                s.BookList1 = book1.results;
+            });
+        }
         base.OnMounted();
     }
-    protected override async void OnPropsChanged()
+    protected override void OnPropsChanged()
     {
         InitializeState();
-        var googleBook = Services.GetRequiredService<IGoogleServices>();
-        var id1 = TimIdTheoBai(State.Bai[0]);
-        var id2 = TimIdTheoBai(State.Bai[1]);
-        var id3 = TimIdTheoBai(State.Bai[2]);
 
-        var book1 = await googleBook.GetBookById($"{id1}");
-        var book2 = await googleBook.GetBookById($"{id2}");
-        var book3 = await googleBook.GetBookById($"{id3}");
-        SetState(s =>
-        {
-            s.Book.Add(book1);
-            s.Book.Add(book2);
-            s.Book.Add(book3);
-            s.IsLoading = false;
-        });
         base.OnPropsChanged();
     }
-    private async void OpenLoginPage()
+    private async void OpenHomePage()
     {
-        await Navigation.PushAsync<LoginPage, LoginPageProps>(_ =>
+        await Navigation.PushAsync<MainPage, MainPageProps>(_ =>
         {
-            _.SauDangNhap =()=> OnMounted();
+            _.IsStartPage = false;
+        });
+    }
+    private async void OpenBookPage()
+    {
+        await Navigation.PushAsync<BookPage>();
+    }
+    private async void OpenMagicBookPage()
+    {
+        await Navigation.PushAsync<MagicBookPage>();
+    }
+    private async void OpenFavoritePage()
+    {
+        await Navigation.PushAsync<FavoritePage>();
+    }
+    private async void OpenReadBook(string id)
+    {
+        await Navigation.PushAsync<ReadPage, ReadPageProps>(_ =>
+        {
+            _.Id = id;
         });
     }
     public override VisualNode Render()
     {
-
         return new ContentPage
         {
             new Grid
             {
-                new CardPage()
-                .OnSelected(b=>{
-                SetState(s=>s.Bai=b);
-                OnPropsChanged(); })
-                ,
-                new SideMenu()
+                new Grid("Auto,*","*")
+                {
+                    RenderHeader(),
+                    RenderMain(),
+                    new Border
+                    {
+                        new Label("+")
+                        .FontSize(35)
+                        .TextColor(Colors.White)
+                        .VCenter()
+                        .HCenter()
+                        .ZIndex(3)
+                    }.BackgroundColor(Theme.Hong)
+                    .HeightRequest(60)
+                    .WidthRequest(60)
+                    .StrokeShape(new RoundRectangle().CornerRadius(50))
+                    .GridRow(1)
+                    .VEnd()
+                    .HEnd()
+                    .Margin(0,0,15,15)
+                    .ZIndex(2)
+                }
+                .RotationY(State.RotationY)
+                .TranslationX(State.TranslationX)
+                .WithAnimation(easing: Easing.CubicIn, duration: 400),
+                 new SideMenu()
                       .IsShown(State.IsSideMenuShown)
                       .HomePage(OpenHomePage)
                       .OnBookPage(OpenBookPage)
-                      .OpenFavoritePage(OpenFavoritePage)
+                      .OnMagicBookPage(OpenMagicBookPage)
                       .MenuSelect(CommandMenuItem.EBook)
+                      .OpenFavoritePage(OpenFavoritePage)
                       .OnClose(()=>
                       {
-                        SetState(s=>s.IsSideMenuShown=false);
-                        InitializeState();
+                            SetState(s=>s.IsSideMenuShown=false);
+                            InitializeState();
                       }),
-                new Grid("60,*","*")
-                {
-                   RenderHeader(),
-                   RenderMain(),
-                }.RotationY(State.RotationY)
-            .TranslationX(State.TranslationX)
-            .WithAnimation(easing: Easing.CubicIn, duration: 300)
-
             }
+
         }.BackgroundColor(Theme.Bg)
-        .Set(MauiControls.NavigationPage.HasNavigationBarProperty,false);
+        .Set(MauiControls.NavigationPage.HasNavigationBarProperty, false);
     }
 
     private VisualNode RenderMain()
     {
-        return new Grid("Auto,Auto,Auto,*,Auto","*")
+        return new Grid("Auto,*","*")
         {
             new Grid
             {
-                new Label("Tác giả nổi bật")
-                .TextColor(Colors.White)
-                            .FontSize(20)
-
-                            .HStart()
-                            .VCenter()
-                            .HorizontalTextAlignment(TextAlignment.Center)
-                            ,
-                new Label("Xem thêm")
-                .TextColor(Colors.Blue)
-                            .FontSize(20)
-                            .FontFamily(Theme.font)
-                            .HEnd()
-                            .VCenter()
-                            .HorizontalTextAlignment(TextAlignment.Center)
-            }.GridRow(0).Margin(20,30,30,0)
-            ,
-            new CollectionView()
-            .ItemsSource(AuthorVip.authors,RenderAuthorItem)
-            .ItemsLayout(new HorizontalLinearItemsLayout().ItemSpacing(15))
-            .GridRow(1)
-            .Margin(20,10,0,0)
-            .VCenter()
-            ,
-             new Label("Book for you")
-                .TextColor(Colors.White)
-                            .FontSize(20)
-                            .FontFamily(Theme.font)
-                            .GridRow(2)
-                            .VStart()
-                            .Margin(20,20,0,0)
-            ,
-             State.IsLoading==false?
-            new BookForYou()
-            .BookList(State.Book)
-            .OpenDetail(OpenDetailEBook)
-            :
-            new SKLottieView()
-                .Source(new SkiaSharp.Extended.UI.Controls.SKFileLottieImageSource()
+                new Border()
+                .StrokeShape(new RoundRectangle().CornerRadius(30))
+                .BackgroundColor(Theme.Tim1).Margin(40,15,40,0)
+                .HeightRequest(50),
+                new Border
                 {
-                    File="loading.json"
-                })
-                .RepeatCount(-1)
-                .IsAnimationEnabled(true)
-                .IsEnabled(true)
-                .IsVisible(true)
-                .HeightRequest(200)
-                .WidthRequest(200)
-                .VCenter().HCenter()
-                .BackgroundColor(Colors.Transparent)
-                .GridRow(3)
-            ,
-            new Button("Add a Book")
-            .BackgroundColor(Theme.XanhKem)
-            .TextColor(Colors.Black)
-            .FontFamily (Theme.font)
-            .FontSize (20)
-            .Margin(50,0,50,20)
-            .HeightRequest(65)
-            .CornerRadius(50)
-            .GridRow(4)
+                    new HStack
+                    {
+                        new Image("search")
+                        .Aspect(Aspect.AspectFit)
+                        .HeightRequest(30)
+                        ,
+                        new Entry()
+                                 .TextColor(Colors.Black)
+                                 .VCenter()
+                                 .HCenter()
+                                 .HeightRequest(60)
+                                 .WidthRequest(200)
+                                 .FontFamily(Theme.font)
+                                 .FontSize(20)
+                                 .Placeholder("Find your stories")
+                                 .PlaceholderColor(Colors.Gray)
+                                 .BackgroundColor(Colors.Transparent)
+                                 .OnTextChanged(v => SetState(s => s.TextSearch = v)),
+                    }.Margin(20,0,0,0).Spacing(10)
+                }
+                .StrokeShape(new RoundRectangle().CornerRadius(30))
+                .Stroke(Theme.Tim1).Margin(20).ZIndex(1)
+                .HeightRequest(50)
+                .StrokeThickness(3)
+                .BackgroundColor(Colors.White)
+            }
+            .GridRow(0),
+            new ScrollView
+            {
+                new Grid("Auto,Auto,Auto,*","*")
+                {
+                    new Label("Recommendations")
+                    .FontFamily(Theme.font)
+                    .FontSize(20)
+                    .FontAttributes(Microsoft.Maui.Controls.FontAttributes.Bold)
+                    .TextColor(Colors.White)
+                    .GridRow(0)
+                    .Margin(20,0,0,0),
+                    new Border()
+                    {
+                        new CollectionView()
+                        .ItemsSource(State.BookList,RenderItem)
+                        .ItemsLayout(new HorizontalLinearItemsLayout().ItemSpacing(15))
+                        .Margin(20,20,0,20)
+                    }.StrokeShape(new RoundRectangle().CornerRadius(20,0,20,0))
+                    .Margin(20,20,0,0)
+                    .BackgroundColor(Theme.Hong)
+                    .GridRow(1),
+                    new Label("Continue Reading")
+                    .FontFamily(Theme.font)
+                    .FontSize(20)
+                    .FontAttributes(Microsoft.Maui.Controls.FontAttributes.Bold)
+                    .TextColor(Colors.White)
+                    .GridRow(2)
+                    .Margin(20,20,0,0),
+                     new CollectionView()
+                        .ItemsSource(State.BookList1,RenderItem1)
+                        .ItemsLayout(new VerticalLinearItemsLayout().ItemSpacing(15))
+                        .Margin(20)
+                        .GridRow(3)
+                }
+            }.GridRow(1)
         }.GridRow(1);
     }
 
-    private VisualNode RenderAuthorItem(AuthorVip author)
+    private VisualNode RenderItem1(Result item)
     {
-        return new Grid
+        var a = new Random().Next(1, 5);
+        var b = new Random().Next(1, 9);
+        var c = double.Parse($"{a}.{b}");
+        return new Border
         {
-            new Grid("*,Auto","*")
+            new Grid("*","Auto,*")
+            {
+                   new Border
+                    {
+                        new Image(item.formats.imagejpeg)
+                        .Aspect(Aspect.Fill)
+                    }.HeightRequest(150)
+                    .WidthRequest(100)
+                    .VCenter().HCenter()
+                    .StrokeShape(new RoundRectangle().CornerRadius(10))
+                    .GridColumn(0),
+                    new VStack
+                    {
+                        new Label(item.title)
+                        .FontFamily(Theme.font)
+                        .FontSize(15)
+                        .MaxLines(2)
+                        .FontAttributes(Microsoft.Maui.Controls.FontAttributes.Bold)
+                        .TextColor(Colors.White)
+                        ,
+                        new Label(item.authors[0].name)
+                        .FontFamily(Theme.font)
+                        .FontSize(13)
+                        .MaxLines(1)
+                        .FontAttributes(Microsoft.Maui.Controls.FontAttributes.Bold)
+                        .TextColor(Colors.Gray),
+                        new HStack
+                        {
+                            new Label($"{a}.{b}")
+                            .TextColor(Colors.White)
+                            .FontAttributes(Microsoft.Maui.Controls.FontAttributes.Bold)
+                                .FontSize(13)
+                                .FontFamily(Theme.font),
+                             new SimpleRatingControl()
+                            .Amount(5)
+                            .CurrentValue(c)
+                            .RatingType(SimpleRatingControlMaui.RatingType.Star)
+                            .AccentColor(Colors.Yellow)
+                            .FontSize(13)
+                        }
+                        .Spacing(10),
+                        new Label("hehe")
+                        .FontFamily(Theme.font)
+                        .FontSize(13)
+                        .TextColor(Colors.White),
+                        new Border
+                        {
+
+                        }.BackgroundColor(Theme.Hong)
+                        .Stroke(Colors.White)
+                        .StrokeThickness(2)
+                        .HeightRequest(30)
+                        .StrokeShape(new RoundRectangle().CornerRadius(20))
+                    }.GridColumn(1).Margin(15,0,15,0).Spacing(5)
+            }.Margin(20)
+        }.Margin(15)
+        .BackgroundColor(Colors.Transparent)
+        .HeightRequest(200)
+        .Stroke(Theme.Hong)
+        .StrokeDashArray(new MauiControls.DoubleCollection(new double[] {5,5}))
+        .StrokeDashOffset(6)
+        .StrokeThickness(2)
+        .StrokeShape(new RoundRectangle().CornerRadius(20))
+        .OnTapped(()=>OpenReadBook(item.id.ToString()));
+    }
+
+    private VisualNode RenderItem(Result item)
+    {
+        var a = new Random().Next(1,5);
+        var b = new Random().Next(1,9);
+        var c = double.Parse($"{a}.{b}");
+        return new Border
+        {
+            new Grid("Auto,*","*")
             {
                 new Border
                 {
-                    new Image(author.Source)
-                    .Aspect(Aspect.AspectFit)
-                }.GridRow(0)
-                .StrokeShape(new MauiReactor.Shapes.Ellipse())
-                .Stroke(Colors.Transparent)
-                .HeightRequest(70).WidthRequest(70)
-                .OnTapped(()=>OpenDetailAuthor(author))
+                    new Image(item.formats.imagejpeg)
+                    .Aspect(Aspect.Fill)
+                }.HeightRequest(150)
+                .WidthRequest(100)
+                .VCenter().HCenter()
+                .StrokeShape(new RoundRectangle().CornerRadius(10))
+                .GridRow(0)
                 ,
-                    new Label(author.Name)
-                    .TextColor(Colors.Gray)
-                            .FontSize(11)
-                            .FontFamily(Theme.font)
-                            .HCenter()
-                            .HorizontalTextAlignment(TextAlignment.Center)
+                new VStack
+                {
+                    new HStack
+                    {
+                        new Label($"{a}.{b}")
+                        .TextColor(Colors.Black)
+                        .FontAttributes(Microsoft.Maui.Controls.FontAttributes.Bold)
+                            .FontSize(13)
+                            .FontFamily(Theme.font),
+                         new SimpleRatingControl()
+                        .Amount(5)
+                        .CurrentValue(c)
+                        .RatingType(SimpleRatingControlMaui.RatingType.Star)
+                        .AccentColor(Colors.Yellow)
+                        .FontSize(13)
+                    }
+                    .Spacing(10),
+                    new RoundRectangle()
+                    .BackgroundColor(Colors.Black)
+                    .HeightRequest(1)
+                    .Margin(10),
+                    new Label(item.title)
+                    .FontFamily(Theme.font)
+                    .FontSize(15)
                     .MaxLines(1)
-                    .GridRow(1)
-                    .WidthRequest(70)
-            }
-        }.HeightRequest(100).WidthRequest(70)
-        ;
+                    .FontAttributes(Microsoft.Maui.Controls.FontAttributes.Bold)
+                    .TextColor(Colors.Black)
+                    ,
+                    new Label(item.authors[0].name)
+                    .FontFamily(Theme.font)
+                    .FontSize(13)
+                    .MaxLines(1)
+                    .FontAttributes(Microsoft.Maui.Controls.FontAttributes.Bold)
+                    .TextColor(Colors.Gray)
+                }.GridRow(1)
+            }.Margin(15,10,15,10)
+        }.HeightRequest(250)
+        .StrokeShape(new RoundRectangle().CornerRadius(20))
+        .WidthRequest(130)
+        .OnTapped(() => OpenReadBook(item.id.ToString()));
     }
-
-    //private VisualNode RenderBookItem(Item item)
-    //{
-    //    var source = item.volumeInfo.imageLinks.extraLarge is not null? item.volumeInfo.imageLinks.extraLarge.Replace("http", "https"):"";
-    //    return new Border
-    //            {
-    //                new Image(source)
-    //                .Aspect(Aspect.Fill)
-    //            }.GridRow(0)
-    //            .StrokeShape(new RoundRectangle().CornerRadius(30))
-    //            .Shadow(new Shadow().Offset(0,12).Opacity((float)0.35).Radius(12))
-    //            .HeightRequest(300).WidthRequest(200)
-    //            .Stroke(Colors.Transparent)
-    //            .OnTapped(()=>OpenDetailEBook(item))
-    //    ;
-    //}
 
     private VisualNode RenderHeader()
     {
@@ -293,10 +365,10 @@ class EBookPage:Component<EBookPageState>
                 .OnTapped(()=>{
                                     SetState(s=>s.IsSideMenuShown=true);
                                      InitializeState();
-                                    })
+                 })
                 .GridColumn(0)
                 ,
-                new Label("Your Nightmare")
+                new Label("EBook")
                 .TextColor(Colors.White)
                 .FontAttributes(Microsoft.Maui.Controls.FontAttributes.Bold)
                 .FontSize(30)
@@ -305,208 +377,7 @@ class EBookPage:Component<EBookPageState>
                 .Margin(20,0,0,0)
                 ,
             }
-            .Margin(15, 20, 10, 0)
-            .BackgroundColor(Colors.Transparent)
-            .GridRow(0);
-    }
-}
-
-class BookForYouState
-{
-    public double PanX { get; set; }
-    public Size ImageSize { get; set; }
-    public ScrollToMode ScrollTo { get; set; }
-    public int ImageIndex { get; set; } = 1;
-    public bool IsPanning { get; set; }
-    public DateTime StartDragTime { get; set; }
-    public bool StartPageVisible { get; set; } = true;
-}
-class BookForYou : Component<BookForYouState>
-{
-    List<Item> _bookList;
-    Action<Item> _action;
-    public BookForYou OpenDetail(Action<Item> action)
-    {
-        _action = action;
-        return this;
-    }
-    public BookForYou BookList(List<Item> item)
-    {
-        _bookList = item;
-        return this;
-    }
-    private static string GetSource(string source) => source.Replace("http", "https");
-    public override VisualNode Render()
-    {
-        var currentImage = _bookList[State.ImageIndex];
-        var leftImage = _bookList[State.ImageIndex > 0 ? State.ImageIndex - 1 : _bookList.Count - 1];
-        var rightImage = _bookList[State.ImageIndex < _bookList.Count - 1 ? State.ImageIndex + 1 : 0];
-        return new Grid("*,Auto","*")
-        {
-            new Grid
-            {
-                    new Border
-                    {
-                        new Image(GetSource(rightImage.volumeInfo.imageLinks.extraLarge))
-                        .Aspect(Aspect.Fill)
-                    }
-                    .StrokeShape(new RoundRectangle().CornerRadius(30))
-                    .Shadow(new Shadow().Offset(0,12).Opacity((float)0.35).Radius(12))
-                    .HeightRequest(300).WidthRequest(200)
-                    .Stroke(Colors.Transparent)
-                    .TranslationX(State.ImageSize.Width + State.PanX)
-                    .OnTapped(()=>_action(rightImage))
-                    .Rotation(10)
-                    .Opacity(0.5).OnPanUpdated(OnPan)
-                    .Margin(0,10,200,0),
-                    new Border
-                    {
-                        new Image(GetSource(leftImage.volumeInfo.imageLinks.extraLarge))
-                        .Aspect(Aspect.Fill)
-                    }
-                    .StrokeShape(new RoundRectangle().CornerRadius(30))
-                    .Shadow(new Shadow().Offset(0,12).Opacity((float)0.35).Radius(12))
-                    .HeightRequest(300).WidthRequest(200)
-                    .Stroke(Colors.Transparent)
-                    .TranslationX(-State.ImageSize.Width + State.PanX)
-                    .OnTapped(()=>_action(leftImage))
-                    .Rotation(-10).Margin(200,60,0,0)
-                    .Opacity(0.5).OnPanUpdated(OnPan),
-                    new Border
-                    {
-                        new Image(GetSource(currentImage.volumeInfo.imageLinks.extraLarge))
-                        .Aspect(Aspect.Fill)
-                    }
-                    .StrokeShape(new RoundRectangle().CornerRadius(30))
-                    .Shadow(new Shadow().Offset(0,12).Opacity((float)0.35).Radius(12))
-                    .HeightRequest(300).WidthRequest(200)
-                    .Margin(0,0,0,10)
-                    .Stroke(Colors.Transparent)
-                    .TranslationX(State.PanX)
-                    .OnTapped(()=>_action(currentImage))
-                    .OnPanUpdated(OnPan),
-                    new AnimationController
-                    {
-                        new SequenceAnimation
-                        {
-                            new DoubleAnimation()
-                                    .StartValue(State.PanX)
-                                    .TargetValue(State.ScrollTo == ScrollToMode.Right ? State.ImageSize.Width : -State.ImageSize.Width)
-                                    .OnTick(v => SetState(s => s.PanX = v))
-                                    .Duration(0)
-                        }
-                    }.IsEnabled(State.ScrollTo != ScrollToMode.None)
-                    .OnIsEnabledChanged(enabled =>
-                    {
-                        SetState(s =>
-                        {
-                            if (!enabled)
-                            {
-                                s.ImageIndex = s.ScrollTo == ScrollToMode.Left ?
-                                    (s.ImageIndex < _bookList.Count - 1 ? s.ImageIndex + 1 : 0)
-                                    :
-                                    (s.ImageIndex > 0 ? s.ImageIndex - 1 : _bookList.Count - 1);
-                                s.ScrollTo = ScrollToMode.None;
-                                s.PanX = 0;
-                            }
-                        });
-                    })
-            }.GridRow(0)
-            .OnPanUpdated(OnPan)
-            .OnSizeChanged(imageSize =>
-                 {
-                     SetState(s => s.ImageSize = new Size(imageSize.Width, imageSize.Height));
-                 })
-                ,
-            new Border
-            {
-                new HStack
-                {
-                    new RoundRectangle()
-                          .HeightRequest(10)
-                          .WidthRequest(State.ImageIndex==0 ?30:10)
-                          .Stroke(State.ImageIndex == 0 ? Colors.White : Colors.Gray)
-                          .StrokeThickness(1)
-                          .CornerRadius(10)
-                          .Fill(State.ImageIndex == 0 ? Colors.White : Colors.Transparent)
-                          .WithAnimation(easing:Easing.CubicInOut,duration:500)
-                          ,
-                    new RoundRectangle()
-                           .HeightRequest(10)
-                          .WidthRequest(State.ImageIndex==1 ?30:10)
-                          .Stroke(State.ImageIndex == 1 ? Colors.White : Colors.Gray)
-                          .StrokeThickness(1).CornerRadius(10)
-                          .Fill(State.ImageIndex == 1 ? Colors.White : Colors.Transparent)
-                          .WithAnimation(easing:Easing.CubicInOut,duration:500),
-                    new RoundRectangle()
-                           .HeightRequest(10)
-                          .WidthRequest(State.ImageIndex==2 ?30:10)
-                          .Stroke(State.ImageIndex == 2 ? Colors.White : Colors.Gray)
-                          .StrokeThickness(1).CornerRadius(10)
-                          .Fill(State.ImageIndex == 2 ? Colors.White : Colors.Transparent)
-                          .WithAnimation(easing:Easing.CubicInOut,duration:500),
-                }.Spacing(10).HCenter()
-            }.HeightRequest(50)
-                  .WidthRequest(100)
-                  .BackgroundColor(Colors.Transparent)
-                  .VEnd().HCenter()
-                  .Margin(0, 0, 0, 20)
-                  .GridRow(1),
-        }.GridRow(3).Margin(0,30,0,0);
-        void OnPan(object? sender, MauiControls.PanUpdatedEventArgs args)
-        {
-            if (State.ImageSize.IsZero)
-            {
-                return;
-            }
-
-            if (State.ScrollTo != ScrollToMode.None)
-            {
-                return;
-            }
-
-            if (args.StatusType == GestureStatus.Started ||
-                args.StatusType == GestureStatus.Running)
-            {
-                if (args.StatusType == GestureStatus.Started)
-                {
-                    State.StartDragTime = DateTime.Now;
-                }
-
-                SetState(s =>
-                {
-                    s.PanX = args.TotalX;
-                    s.IsPanning = true;
-                });
-            }
-            else if (args.StatusType == GestureStatus.Canceled)
-            {
-                SetState(s =>
-                {
-                    s.PanX = 0;
-                    s.IsPanning = true;
-                });
-            }
-            else// if (args.StatusType == GestureStatus.Completed)
-            {
-                if (Math.Abs(State.PanX) > State.ImageSize.Width / 4.0 ||
-                    (Math.Abs(State.PanX) > 10 && (DateTime.Now - State.StartDragTime).TotalMilliseconds < 100))
-                {
-                    SetState(s =>
-                    {
-                        s.IsPanning = false;
-                        s.ScrollTo = State.PanX > 0 ? ScrollToMode.Right : ScrollToMode.Left;
-                    });
-                }
-                else
-                {
-                    SetState(s =>
-                    {
-                        s.PanX = 0;
-                        s.IsPanning = false;
-                    });
-                }
-            }
-        }
+            .Margin(10, 0, 0, 0)
+            .GridRow(0).ZIndex(1).BackgroundColor(Theme.Bg);
     }
 }

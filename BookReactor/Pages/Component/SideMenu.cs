@@ -20,6 +20,8 @@ class SideMenuState
 
     public CommandMenuItem SelectedMenuItem { get; set; }
     public string UserName { get; set; }
+    public bool IsShown { get; set; }
+    public bool? Result { get; set; }
 }
 
 class SideMenu : Component<SideMenuState>
@@ -27,13 +29,19 @@ class SideMenu : Component<SideMenuState>
     private bool _isShown;
     private Action _onClose;
     private Action _openBookPage;
-    private Action _openeBookPage;
+    private Action _openMagicBookPage;
     private Action _homePage;
     private Action _openFavoritePage;
+    private Action _openEBookPage;
     private CommandMenuItem _menuSelect;
     public SideMenu MenuSelect(CommandMenuItem com)
     {
         _menuSelect = com;
+        return this;
+    }
+    public SideMenu OnEBookPage(Action action)
+    {
+        _openEBookPage = action;
         return this;
     }
     public SideMenu HomePage(Action action)
@@ -51,9 +59,9 @@ class SideMenu : Component<SideMenuState>
         _openBookPage = action;
         return this;
     }
-    public SideMenu OneBookPage(Action action)
+    public SideMenu OnMagicBookPage(Action action)
     {
-        _openeBookPage = action;
+        _openMagicBookPage = action;
         return this;
     }
     public SideMenu OnClose(Action action)
@@ -92,6 +100,7 @@ class SideMenu : Component<SideMenuState>
             _.SauDangNhap = () => OnMounted();
         });
     }
+    private CommunityToolkit.Maui.Views.Popup? _popup;
     public override VisualNode Render()
     {
         return new Grid("39, *,50", "250")
@@ -108,7 +117,49 @@ class SideMenu : Component<SideMenuState>
                 .HStart()
                 .GridRow (2)
                 .Margin(30,0,0,0),
+             new Grid
+                    {
+                         new PopupHost(r => _popup = r)
+                        {
+                            new Border
+                            {
+                                new Grid("Auto,*,Auto","*")
+                                {
+                                    new Label("Bạn có muốn đăng xuất?")
+                                    .TextColor(Colors.Black)
+                                    .FontAttributes(Microsoft.Maui.Controls.FontAttributes.Bold)
+                                    .FontSize(18)
+                                    .FontFamily(Theme.font)
+                                    .Margin(0,0,0,0)
+                                    .GridRow(0),
+                                    new Grid("*","Auto,*,Auto")
+                                    {
+                                        new Button("OK", ()=> _popup?.Close(true))
+                                        .GridColumn(0)
+                                        .TextColor(Colors.White)
+                                        .BackgroundColor(Colors.Blue)
+                                        .CornerRadius(20),
 
+                                        new Button("Cancel", ()=> _popup?.Close(false))
+                                        .TextColor(Colors.Blue)
+                                        .BackgroundColor(Colors.Transparent)
+                                        .GridColumn(2)
+                                        .CornerRadius(20),
+                                    }.GridRow(1).Margin(0,30,0,0)
+                                }.Margin(30,20,30,20)
+                            }.BackgroundColor(Colors.White)
+                             .StrokeShape(new RoundRectangle().CornerRadius(20))
+                        }
+                        .IsShown(State.IsShown)
+                        .OnClosed(result =>
+                        {
+                            SetState(s =>s.IsShown = false);
+                            if ((bool)result)
+                            {
+                                Logout();
+                            }
+                        }),
+                    },
         }
         .Padding(0, 60)
         .RotationY(State.RotationY)
@@ -166,9 +217,14 @@ class SideMenu : Component<SideMenuState>
         }
         .Margin(18, 0);
     }
+    async void Logout()
+    {
+        await Logger.Logout(); 
+        OnMounted(); 
+    }
     VisualNode RenderBrowse()
     {
-        return new Grid("16, 180,16,180", "*")
+        return new Grid("16, 180,16,240", "*")
         {
             new Label("BROWSE")
                 .FontSize(12)
@@ -181,7 +237,7 @@ class SideMenu : Component<SideMenuState>
             {
                 RenderMenuItem("Home", "homeback.png", CommandMenuItem.Home,_homePage),
                 RenderMenuItem("Favorites", "favorites_img.png", CommandMenuItem.Favorites,_openFavoritePage),
-                RenderMenuItem("Help", "help_img.png", CommandMenuItem.Help,OpenLoginPage),
+                RenderMenuItem("Help", "help_img.png", CommandMenuItem.Help),
             }
             .Margin(20,8,0,0)
             .GridRow(1),
@@ -192,13 +248,30 @@ class SideMenu : Component<SideMenuState>
                 .FontAttributes(MauiControls.FontAttributes.Bold)
                 .VEnd()
                 .GridRow(2),
-            new VStack(spacing: 0)
+            new Grid("60,60,60,60","*")
             {
-                RenderMenuItem("Books Market", "book_img.png", CommandMenuItem.Book,_openBookPage),
-                RenderMenuItem("eBook", "ebook_img.png", CommandMenuItem.EBook,_openeBookPage),
-                RenderMenuItem("Đăng xuất", "logout.png", CommandMenuItem.Logout,async ()=>{await Logger.Logout();OnMounted(); },logout:true)
+                new VStack
+                {
+                    RenderMenuItem("Books Market", "book_img.png", CommandMenuItem.Book,_openBookPage),
+                }.GridRow(0),
+                new VStack
+                {
+                    RenderMenuItem("Magic Book", "magicbook_img.png", CommandMenuItem.MagicBook,_openMagicBookPage),
+                }.GridRow(1),
+                new VStack
+                {
+                    RenderMenuItem("EBook", "ebook_img.png", CommandMenuItem.EBook,_openEBookPage),
+                }.GridRow(2),
+                new VStack
+                {
+                    RenderMenuItem("Logout", "logout.png", CommandMenuItem.Logout,()=>SetState(s=>s.IsShown=true),logout:true)
+                }.GridRow(3),
+                new VStack
+                {
+                    RenderMenuItem("Login", "login.png", CommandMenuItem.Login,OpenLoginPage)
+                }.GridRow(3),
             }.GridRow(3)
-            .Margin(20,8,0,0)
+            .Margin(20,0,0,0)
             ,
         }
         .Margin(30, 37)
@@ -233,6 +306,7 @@ class SideMenuItem : Component<SideMenuItemState>
     private string _label;
     private string _icon;
     private bool _logout;
+    private bool _isVisible;
     private bool _selected;
     private Action _selectAction;
     private bool _firstItem;
@@ -252,7 +326,11 @@ class SideMenuItem : Component<SideMenuItemState>
         _icon = icon;
         return this;
     }
-
+    public SideMenuItem IsVisible(bool visible)
+    {
+        _isVisible = visible;
+        return this;
+    }
     public SideMenuItem IsSelected(bool selected)
     {
         _selected = selected;
@@ -339,7 +417,7 @@ class SideMenuItem : Component<SideMenuItemState>
         .OnTapped(_selectAction)
         .WidthRequest(225.0)
         .HeightRequest(52)
-        .IsVisible(_logout?Logger.KiemTra(Logger.user):true);
+        .IsVisible(_logout?Logger.KiemTra(Logger.user):_label=="Login"?!Logger.KiemTra(Logger.user):true);
     }
 }
 
@@ -442,8 +520,10 @@ enum CommandMenuItem
 
     Book,
 
+    MagicBook,
     EBook,
     Logout,
+    Login,
 
     Hehe
 }

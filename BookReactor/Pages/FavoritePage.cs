@@ -1,13 +1,7 @@
 ﻿using BookReactor.Pages.Component;
-using MauiReactor;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Maui.Devices;
-using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading;
-using System.Threading.Tasks;
 
 namespace BookReactor.Pages;
 
@@ -19,11 +13,7 @@ class FavoritePageState
     public double RotationY { get; set; } = -12;
     public double MarginLeft { get; set; } = -30.0;
     public bool IsLoading { get; set; }
-    public Bookshelf Bookshelf1 { get; set; } 
-    public Bookshelf Bookshelf2 { get; set; }
-    public Bookshelf Bookshelf3 { get; set; } 
-    public Bookshelf Bookshelf4 { get; set; }
-    public Bookshelf Bookshelf5 { get; set; }
+
 
 }
 class FavoritePage : Component<FavoritePageState>
@@ -45,9 +35,6 @@ class FavoritePage : Component<FavoritePageState>
     protected override void OnMounted()
     {
         InitializeState();
-        //var googleBook = Services.GetRequiredService<IGoogleServices>();
-        //var token = await Logger.ReadAsync(Logger.token);
-        //var bookshelf = await googleBook.GetBookshelfListAsync(token);
 
         base.OnMounted();
     }
@@ -68,13 +55,13 @@ class FavoritePage : Component<FavoritePageState>
     {
         await Navigation.PushAsync<BookPage>();
     }
+    private async void OpenMagicBookPage()
+    {
+        await Navigation.PushAsync<MagicBookPage>();
+    }
     private async void OpenEBookPage()
     {
         await Navigation.PushAsync<EBookPage>();
-    }
-    private async void OpenLoginPage()
-    {
-        await Navigation.PushAsync<LoginPage>();
     }
     public override VisualNode Render()
     {
@@ -86,14 +73,15 @@ class FavoritePage : Component<FavoritePageState>
                       .IsShown(State.IsSideMenuShown)
                       .HomePage(OpenHomePage)
                       .OnBookPage(OpenBookPage)
-                      .OneBookPage(OpenEBookPage)
+                      .OnMagicBookPage(OpenMagicBookPage)
                       .MenuSelect(CommandMenuItem.Favorites)
+                      .OnEBookPage(OpenEBookPage)
                       .OnClose(()=>
                       {
                             SetState(s=>s.IsSideMenuShown=false);
                             InitializeState();
                       }),
-
+              
                 new Grid("Auto,*","*")
                 {
                     RenderFavorite(),
@@ -114,8 +102,8 @@ class FavoritePage : Component<FavoritePageState>
             RenderBookshelf(0,Theme.Bookshelf1,"Yêu thích","tủ sách ưa thích của bạn"),
             RenderBookshelf(3,Theme.Bookshelf2,"Đang đọc","chứa sách bạn đang đọc nè"),
             RenderBookshelf(4,Theme.Bookshelf3,"Đã đọc","tủ sách mà bạn đã đọc"),
-            RenderBookshelf(8,Theme.Bookshelf4,"Gợi ý cho bạn","gợi ý sách cho bạn"),
-            RenderBookshelf(2,Theme.Bookshelf5,"Lịch sử xem","lịch sử"),
+            RenderBookshelf(8,Theme.Bookshelf4,"Gợi ý","gợi ý sách cho bạn"),
+            RenderBookshelf(2,Theme.Bookshelf5,"Để đọc","tủ sách để đọc"),
         }.GridRow(1).Margin(5,125,5,0);
     }
 
@@ -170,6 +158,8 @@ class BookshelfItemState
     public List<Item> Books { get; set; } = new();
     public bool OnXoa { get; set; }
     public bool ChuaDangNhap { get; set; }
+    public bool IsShown { get; set; }
+
 }
 class BookshelfItem:Component<BookshelfItemState>
 {
@@ -208,6 +198,10 @@ class BookshelfItem:Component<BookshelfItemState>
             if (bookshelf.items != null)
             {
                 SetState(s => s.Books = bookshelf.items);
+            }
+            else
+            {
+                SetState(s => s.Books = new());
             }
         }
         else
@@ -251,9 +245,8 @@ class BookshelfItem:Component<BookshelfItemState>
             });
         }
     }
-    public override VisualNode Render()
-    {
-        return new Border
+    private CommunityToolkit.Maui.Views.Popup? _popup;
+    public override VisualNode Render() => new Border
         {
             new Grid("Auto,Auto,*","*,Auto")
             {
@@ -291,25 +284,84 @@ class BookshelfItem:Component<BookshelfItemState>
                 ,
                 new Grid("Auto,*","*")
                 {
-                    new Label(State.ChuaDangNhap?"Bạn chưa đăng nhập!":$"Danh sách {_bookshelf.ToLower()} ({State.Books.Count})")
-                    .FontFamily(Theme.font)
-                    .FontSize(25)
-                    .FontAttributes(Microsoft.Maui.Controls.FontAttributes.Bold)
-                    .TextColor(Colors.Black)
-                    .Margin(0,30,0,0)
+                    new Grid
+                    {
+                         new PopupHost(r => _popup = r)
+                        {
+                            new Border
+                            {
+                                new Grid("Auto,*,Auto","*")
+                                {
+                                    new Label("Bạn có muốn xóa hết?")
+                                    .TextColor(Colors.Black)
+                                    .FontAttributes(Microsoft.Maui.Controls.FontAttributes.Bold)
+                                    .FontSize(18)
+                                    .FontFamily(Theme.font)
+                                    .Margin(0,0,0,0)
+                                    .GridRow(0),
+                                    new Grid("*","Auto,*,Auto")
+                                    {
+                                        new Button("OK", ()=> _popup?.Close(true))
+                                        .GridColumn(0)
+                                        .TextColor(Colors.White)
+                                        .BackgroundColor(Colors.Blue)
+                                        .CornerRadius(20),
+
+                                        new Button("Cancel", ()=> _popup?.Close(false))
+                                        .TextColor(Colors.Blue)
+                                        .BackgroundColor(Colors.Transparent)
+                                        .GridColumn(2)
+                                        .CornerRadius(20),
+                                    }.GridRow(1).Margin(0,30,0,0)
+                                }.Margin(30,20,30,20)
+                            }.BackgroundColor(Colors.White)
+                             .StrokeShape(new RoundRectangle().CornerRadius(20))
+                        }
+                        .IsShown(State.IsShown)
+                        .OnClosed(result =>
+                        { 
+                            SetState(s =>s.IsShown = false);
+                            if ((bool)result)
+                            {
+                                ClearAll();
+                            }
+                        }),
+                    },
+                    new Grid("*","Auto,*,Auto")
+                    {
+                        new Label(State.ChuaDangNhap?"Bạn chưa đăng nhập!":State.Books.Count==0?"Không có cuốn sách nào!":$"Danh sách {_bookshelf.ToLower()} ({State.Books.Count})")
+                        .FontFamily(Theme.font)
+                        .FontSize(20)
+                        .FontAttributes(Microsoft.Maui.Controls.FontAttributes.Bold)
+                        .Margin(0,6,0,0)
+                        .TextColor(Colors.Black).GridColumn(0),
+                        new Button("Clear")
+                        .CornerRadius(30)
+                        .HeightRequest(40)
+                        .WidthRequest(80)
+                        .FontFamily(Theme.font)
+                        .FontSize(16)
+                        .FontAttributes(Microsoft.Maui.Controls.FontAttributes.Bold)
+                        .BackgroundColor(Theme.Do)
+                        .TextColor(Colors.White)
+                        .IsVisible(State.Books.Count>0)
+                        .OnTapped(()=>SetState(s=>s.IsShown=true))
+                        .GridColumn(2),
+
+                    }
                     .GridRow(0)
                     ,
                     new CollectionView()
                     .ItemsSource(State.Books,RenderBookItem)
                     .ItemsLayout(new HorizontalLinearItemsLayout().ItemSpacing(10))
                     .GridRow(1)
-                    .Margin(0,-50,0,0)
-                }
+                    .Margin(0,0,0,50)
+                }.Margin(0,30,0,0)
                 .GridRow(2).VCenter()
                 .BackgroundColor(Colors.Transparent)
                 .IsVisible(State.Height>0)
                 .GridColumnSpan(2)
-               
+
             }.Margin(30,30,20,0)
             .OnTapped(()=>{
                     OnClick();
@@ -317,16 +369,27 @@ class BookshelfItem:Component<BookshelfItemState>
             })
         }
         .StrokeShape(new RoundRectangle().CornerRadius(40))
-            .HeightRequest(195+State.Height)
-            .Margin(0, -70 -State.Margin, 0, 0)
-            .WithAnimation(easing:Easing.CubicInOut,duration:600)
+            .HeightRequest(195 + State.Height)
+            .Margin(0, -70 - State.Margin, 0, 0)
+            .WithAnimation(easing: Easing.CubicInOut, duration: 600)
             .BackgroundColor(_bg)
             ;
+
+    private async void ClearAll()
+    {
+        var googleBook = Services.GetRequiredService<IGoogleServices>();
+        var token = await Logger.ReadAsync(Logger.token);
+        var kq =await googleBook.RemoveAllBookToFavoriteAsync(token);
+        if (kq)
+        {
+            Load();
+            Logger.RemoveAllFavorite();
+        }
     }
 
-    private async void OpenDetailEBook(Item item)
+    private async void OpenDetailBook(Item item)
     {
-        await Navigation.PushAsync<DetailBook, DetailBookProps>(_ =>
+        await Navigation.PushAsync<BookDetail, BookDetailProps>(_ =>
         {
             _.Book = item;
         });
@@ -338,9 +401,9 @@ class BookshelfItem:Component<BookshelfItemState>
         var googleBook = Services.GetRequiredService<IGoogleServices>();
         var token = await Logger.ReadAsync(Logger.token);
         await googleBook.RemoveBookToFavoriteAsync(token, id);
+        await Logger.RemoveFavoriteAsync(id);
         Load();
     }
-
     private VisualNode RenderBookItem(Item item)
     {
         return new Grid
@@ -389,6 +452,7 @@ class BookshelfItem:Component<BookshelfItemState>
                         .Set(MauiControls.PlatformConfiguration.AndroidSpecific.SwipeView.SwipeTransitionModeProperty,SwipeTransitionMode.Reveal)
                         
                     }.StrokeShape(new RoundRectangle().CornerRadius(20))
+                    .Stroke(Colors.Transparent)
                     .Margin(0,-120,0,0)
                      .HeightRequest(180)
                     .WidthRequest(135)
@@ -423,7 +487,7 @@ class BookshelfItem:Component<BookshelfItemState>
         }
         .HeightRequest(250)
          .WidthRequest(180)
-         .OnTapped(()=>OpenDetailEBook(item));
+         .OnTapped(()=>OpenDetailBook(item));
     }
 
 }

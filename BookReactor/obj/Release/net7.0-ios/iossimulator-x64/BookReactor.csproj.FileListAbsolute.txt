@@ -619,3 +619,13 @@ C:\Users\trick\source\repos\Book\BookReactor\obj\Release\net7.0-ios\iossimulator
 C:\Users\trick\source\repos\Book\BookReactor\obj\Release\net7.0-ios\iossimulator-x64\BookReactor.pdb
 C:\Users\trick\source\repos\Book\BookReactor\obj\Release\net7.0-ios\iossimulator-x64\BookReactor.genruntimeconfig.cache
 C:\Users\trick\source\repos\Book\BookReactor\obj\Release\net7.0-ios\iossimulator-x64\ref\BookReactor.dll
+C:\Users\trick\source\repos\Book\BookReactor\obj\Release\net7.0-ios\iossimulator-x64\resizetizer\r\Resources\delet.png
+C:\Users\trick\source\repos\Book\BookReactor\bin\Release\net7.0-ios\iossimulator-x64\CommunityToolkit.Maui.dll
+C:\Users\trick\source\repos\Book\BookReactor\bin\Release\net7.0-ios\iossimulator-x64\CommunityToolkit.Maui.Core.dll
+C:\Users\trick\source\repos\Book\BookReactor\bin\Release\net7.0-ios\iossimulator-x64\Microsoft.IdentityModel.Abstractions.dll
+C:\Users\trick\source\repos\Book\BookReactor\bin\Release\net7.0-ios\iossimulator-x64\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\Users\trick\source\repos\Book\BookReactor\bin\Release\net7.0-ios\iossimulator-x64\Microsoft.IdentityModel.Logging.dll
+C:\Users\trick\source\repos\Book\BookReactor\bin\Release\net7.0-ios\iossimulator-x64\Microsoft.IdentityModel.Tokens.dll
+C:\Users\trick\source\repos\Book\BookReactor\bin\Release\net7.0-ios\iossimulator-x64\System.IdentityModel.Tokens.Jwt.dll
+C:\Users\trick\source\repos\Book\BookReactor\obj\Release\net7.0-ios\iossimulator-x64\resizetizer\r\Resources\heart.png
+C:\Users\trick\source\repos\Book\BookReactor\obj\Release\net7.0-ios\iossimulator-x64\resizetizer\r\Resources\search.png

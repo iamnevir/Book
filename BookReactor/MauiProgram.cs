@@ -1,4 +1,5 @@
 ﻿
+using CommunityToolkit.Maui;
 using SimpleRatingControlMaui;
 using SkiaSharp.Views.Maui.Controls.Hosting;
 using System;
@@ -14,6 +15,7 @@ public static class MauiProgram
             .UseMauiReactorApp<MainPage>()
             .UseSkiaSharp()
             .UseSimpleRatingControl()
+            .UseMauiCommunityToolkit()
 #if DEBUG
         .EnableMauiReactorHotReload()
 #endif

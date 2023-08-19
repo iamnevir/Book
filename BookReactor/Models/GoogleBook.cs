@@ -8,6 +8,10 @@ using System.Threading.Tasks;
 
 namespace BookReactor.Models;
 
+public class Token
+{
+    public string token { get; set; }
+}
 public class UserInfo
 {
     public string iss { get; set; }

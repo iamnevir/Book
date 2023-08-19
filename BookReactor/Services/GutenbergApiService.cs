@@ -15,8 +15,18 @@ public class GutenbergApiService : IGutenbergApiService
     public GutenbergApiService(IHttpClientFactory httpClientFactory)
     { _httpClientFactory = httpClientFactory; }
     HttpClient httpClient => _httpClientFactory.CreateClient(BookHttpClientName);
-    public async Task<GutenbergBook?> GetBookDetailAsync(string id) =>
-    await httpClient.GetFromJsonAsync<GutenbergBook>(
-       $"books?ids={id}");
+    public async Task<GutenbergBook?> GetBookDetailAsync(string id)
+    {
+        try
+        {
+            return await httpClient.GetFromJsonAsync<GutenbergBook>(
+                    $"books?ids={id}");
+        }
+        catch (Exception)
+        {
 
+            return null;
+        }
+        
+    }
 }

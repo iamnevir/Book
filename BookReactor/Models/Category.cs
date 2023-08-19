@@ -60,18 +60,3 @@ public class Category
         },
     };
 }
-
-public class Start
-{
-    public int Id { get; set; }
-    public string Source { get; set; }
-    public string Title { get; set; }
-    public string Description { get; set; }
-
-    public static Start[] Starts =
-    {
-        new Start { Id = 1,Source="sp1",Title="Immerse in the story",Description="The books contain stories that have never been told, mysteries that lie deep in the dark waiting to be answered"},
-        new Start { Id = 2,Source="sp2",Title="Dark Hole",Description="No one can run from the darkness"},
-        new Start { Id = 3,Source="sp3",Title="Roles Hell", Description="Dead"},
-    };
-}

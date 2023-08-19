@@ -23,7 +23,7 @@ class AuthorDetail:Component<AuthorDetailState, AuthorDetailProps>
 {
     private async void OpenDetailBook(Item book)
     {
-        await Navigation.PushAsync<DetailBook, DetailBookProps>(_ =>
+        await Navigation.PushAsync<BookDetail, BookDetailProps>(_ =>
         {
             _.Book = book;
         });
@@ -177,12 +177,14 @@ class AuthorDetail:Component<AuthorDetailState, AuthorDetailProps>
                   }.GridRow(1).Margin(10,10,20,0),
                   new Rectangle().Fill(Color.FromArgb("#E6E6E6"))
                     .HeightRequest(1).GridRow(2).Margin(20),
-                  new Label(Props.AuthorDetail.Description)
-                  .TextColor(Colors.Gray)
+                  new ScrollView
+                  {
+                      new Label(Props.AuthorDetail.Description)
+                                .TextColor(Colors.Gray)
                                     .FontSize(18)
                                     .FontFamily("Poppins")
-                                    .GridRow(3)
-                                    .Margin(20,0,20,0),
+                  }.GridRow(3)
+                   .Margin(20,0,20,0),
                   new Label("Book of Author")
                   .TextColor(Colors.White)
                                     .FontSize(20)

@@ -14,7 +14,18 @@ public class GetTextServices: IGetTextServices
     public GetTextServices(IHttpClientFactory httpClientFactory)
     { _httpClientFactory = httpClientFactory; }
     HttpClient httpClient => _httpClientFactory.CreateClient(StringHttpClientName);
-    public async Task<string> GetTextAsync(string link) =>
-    await httpClient.GetStringAsync(
-       $"{link}");
+    public async Task<string> GetTextAsync(string link)
+    {
+        try
+        {
+            return await httpClient.GetStringAsync(
+            $"{link}");
+        }
+        catch (Exception)
+        {
+
+            return null;
+        }
+       
+    }
 }

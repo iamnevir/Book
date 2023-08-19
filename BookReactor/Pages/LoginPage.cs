@@ -4,6 +4,7 @@ using Microsoft.Maui.Authentication;
 using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Net.Http;
 using System.Threading.Tasks;
 
@@ -70,8 +71,27 @@ class LoginPage : Component<LoginPageState, LoginPageProps>
                             await Logger.WriteAsync(Logger.token,$"{loginResponse.AccessToken}");
                             await Logger.WriteAsync(Logger.refreshtoken,$"{loginResponse.RefreshToken}");
                             await Logger.WriteAsync(Logger.user,Logger.GetName(loginResponse.IdToken));
+                            var googleBook = Services.GetRequiredService<IGoogleServices>();
+                            var bookshelf = await googleBook.GetBookFromBookshelfAsync(loginResponse.AccessToken, 0);
+                            if (bookshelf.items is not null)
+                            {
+                                var a = string.Empty;
+                                foreach(var item in bookshelf.items)
+                                {
+                                    if (item == bookshelf.items[0])
+                                    {
+                                        a += $"{item.id}";
+                                    }
+                                    else
+                                    {
+                                        a += $",{item.id}";
+                                    }
+                                }
+                                await Logger.WriteFavoriteAsync(a);
+                            }
                         }
-                    }
+                        
+        }
                     catch (TaskCanceledException)
                     {
                         // Use stopped auth

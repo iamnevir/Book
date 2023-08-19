@@ -65,25 +65,27 @@
     <None Remove="Resources\Fonts\Poppins-Regular.ttf" />
     <None Remove="Resources\Fonts\Roboto-Regular.ttf" />
     <None Remove="Resources\Images\delet.png" />
-    <None Remove="Resources\Images\EbookDetail\back.png" />
-    <None Remove="Resources\Images\EbookDetail\favori.png" />
-    <None Remove="Resources\Images\EbookDetail\ifavori.png" />
-    <None Remove="Resources\Images\Ebook\authors.png" />
-    <None Remove="Resources\Images\Ebook\backgroundbai.jpg" />
-    <None Remove="Resources\Images\Ebook\bai1.jpg" />
-    <None Remove="Resources\Images\Ebook\bai2.jpg" />
-    <None Remove="Resources\Images\Ebook\bai3.jpg" />
-    <None Remove="Resources\Images\Ebook\bai4.jpg" />
-    <None Remove="Resources\Images\Ebook\bai5.jpg" />
-    <None Remove="Resources\Images\Ebook\bai6.jpg" />
-    <None Remove="Resources\Images\Ebook\bai7.jpg" />
-    <None Remove="Resources\Images\Ebook\bai8.jpg" />
-    <None Remove="Resources\Images\Ebook\bai9.jpg" />
-    <None Remove="Resources\Images\Ebook\Itagaki.jpg" />
-    <None Remove="Resources\Images\Ebook\lungbai.jpg" />
-    <None Remove="Resources\Images\Ebook\miura.png" />
-    <None Remove="Resources\Images\Ebook\scott.jpg" />
-    <None Remove="Resources\Images\Ebook\stephenking.jpg" />
+    <None Remove="Resources\Images\BookDetail\back.png" />
+    <None Remove="Resources\Images\BookDetail\favori.png" />
+    <None Remove="Resources\Images\BookDetail\ifavori.png" />
+    <None Remove="Resources\Images\EBook\search.png" />
+    <None Remove="Resources\Images\heart.png" />
+    <None Remove="Resources\Images\Magicbook\authors.png" />
+    <None Remove="Resources\Images\Magicbook\backgroundbai.jpg" />
+    <None Remove="Resources\Images\Magicbook\bai1.jpg" />
+    <None Remove="Resources\Images\Magicbook\bai2.jpg" />
+    <None Remove="Resources\Images\Magicbook\bai3.jpg" />
+    <None Remove="Resources\Images\Magicbook\bai4.jpg" />
+    <None Remove="Resources\Images\Magicbook\bai5.jpg" />
+    <None Remove="Resources\Images\Magicbook\bai6.jpg" />
+    <None Remove="Resources\Images\Magicbook\bai7.jpg" />
+    <None Remove="Resources\Images\Magicbook\bai8.jpg" />
+    <None Remove="Resources\Images\Magicbook\bai9.jpg" />
+    <None Remove="Resources\Images\Magicbook\Itagaki.jpg" />
+    <None Remove="Resources\Images\Magicbook\lungbai.jpg" />
+    <None Remove="Resources\Images\Magicbook\miura.png" />
+    <None Remove="Resources\Images\Magicbook\scott.jpg" />
+    <None Remove="Resources\Images\Magicbook\stephenking.jpg" />
     <None Remove="Resources\Images\kmo.png" />
     <None Remove="Resources\Images\loginbg.jpg" />
     <None Remove="Resources\Images\mo.png" />
@@ -92,7 +94,9 @@
     <None Remove="Resources\Images\SideMenu\favorites_img.png" />
     <None Remove="Resources\Images\SideMenu\help_img.png" />
     <None Remove="Resources\Images\SideMenu\homeback.png" />
+    <None Remove="Resources\Images\SideMenu\login.png" />
     <None Remove="Resources\Images\SideMenu\logout.png" />
+    <None Remove="Resources\Images\SideMenu\magicbook_img.png" />
     <None Remove="Resources\Images\SideMenu\user_dark.svg" />
     <None Remove="Resources\Images\trove.png" />
     <None Remove="Resources\Raw\back.json" />
@@ -111,32 +115,36 @@
     <EmbeddedResource Include="Resources\Images\SideMenu\favorites_img.png" />
     <EmbeddedResource Include="Resources\Images\SideMenu\help_img.png" />
     <EmbeddedResource Include="Resources\Images\SideMenu\homeback.png" />
-    <MauiImage Include="Resources\Images\EbookDetail\back.png" />
-    <MauiImage Include="Resources\Images\EbookDetail\favori.png" />
-    <MauiImage Include="Resources\Images\EbookDetail\ifavori.png" />
-    <MauiImage Include="Resources\Images\Ebook\authors.png" />
-    <MauiImage Include="Resources\Images\Ebook\backgroundbai.jpg" />
-    <MauiImage Include="Resources\Images\Ebook\bai1.jpg" />
-    <MauiImage Include="Resources\Images\Ebook\bai2.jpg" />
-    <MauiImage Include="Resources\Images\Ebook\bai3.jpg" />
-    <MauiImage Include="Resources\Images\Ebook\bai4.jpg" />
-    <MauiImage Include="Resources\Images\Ebook\bai5.jpg" />
-    <MauiImage Include="Resources\Images\Ebook\bai6.jpg" />
-    <MauiImage Include="Resources\Images\Ebook\bai7.jpg" />
-    <MauiImage Include="Resources\Images\Ebook\bai8.jpg" />
-    <MauiImage Include="Resources\Images\Ebook\bai9.jpg" />
-    <MauiImage Include="Resources\Images\Ebook\itagaki.jpg" />
-    <MauiImage Include="Resources\Images\Ebook\lungbai.jpg" />
-    <MauiImage Include="Resources\Images\Ebook\miura.png" />
-    <MauiImage Include="Resources\Images\Ebook\scott.jpg" />
-    <MauiImage Include="Resources\Images\Ebook\stephenking.jpg" />
+    <EmbeddedResource Include="Resources\Images\SideMenu\magicbook_img.png" />
+    <MauiImage Include="Resources\Images\BookDetail\back.png" />
+    <MauiImage Include="Resources\Images\BookDetail\favori.png" />
+    <MauiImage Include="Resources\Images\BookDetail\ifavori.png" />
+    <MauiImage Include="Resources\Images\EBook\search.png" />
+    <MauiImage Include="Resources\Images\Magicbook\authors.png" />
+    <MauiImage Include="Resources\Images\Magicbook\backgroundbai.jpg" />
+    <MauiImage Include="Resources\Images\Magicbook\bai1.jpg" />
+    <MauiImage Include="Resources\Images\Magicbook\bai2.jpg" />
+    <MauiImage Include="Resources\Images\Magicbook\bai3.jpg" />
+    <MauiImage Include="Resources\Images\Magicbook\bai4.jpg" />
+    <MauiImage Include="Resources\Images\Magicbook\bai5.jpg" />
+    <MauiImage Include="Resources\Images\Magicbook\bai6.jpg" />
+    <MauiImage Include="Resources\Images\Magicbook\bai7.jpg" />
+    <MauiImage Include="Resources\Images\Magicbook\bai8.jpg" />
+    <MauiImage Include="Resources\Images\Magicbook\bai9.jpg" />
+    <MauiImage Include="Resources\Images\Magicbook\itagaki.jpg" />
+    <MauiImage Include="Resources\Images\Magicbook\lungbai.jpg" />
+    <MauiImage Include="Resources\Images\Magicbook\miura.png" />
+    <MauiImage Include="Resources\Images\Magicbook\scott.jpg" />
+    <MauiImage Include="Resources\Images\Magicbook\stephenking.jpg" />
     <EmbeddedResource Include="Resources\Images\SideMenu\logout.png" />
+    <EmbeddedResource Include="Resources\Images\SideMenu\login.png" />
     <MauiImage Include="Resources\Images\SideMenu\user_dark.svg" />
     <MauiImage Include="Resources\Images\StartPage\sp1.jpg" />
     <MauiImage Include="Resources\Images\StartPage\sp2.jpg" />
     <MauiImage Include="Resources\Images\StartPage\sp3.jpg" />
   </ItemGroup>
   <ItemGroup>
+    <PackageReference Include="CommunityToolkit.Maui" Version="5.3.0" />
     <PackageReference Include="HorusStudio.Maui.Skeleton" Version="2.0.0" />
     <PackageReference Include="IdentityModel.OidcClient" Version="5.2.1" />
     <PackageReference Include="JWTDecoder" Version="0.9.2" />
@@ -148,5 +156,6 @@
     <PackageReference Include="Reactor.Maui.ScaffoldGenerator" Version="1.0.140" OutputItemType="Analyzer" ReferenceOutputAssembly="false" />
     <PackageReference Include="SimpleRatingControl.MAUI" Version="0.0.3" />
     <PackageReference Include="SkiaSharp.Extended.UI.Maui" Version="2.0.0-preview.61" />
+    <PackageReference Include="System.IdentityModel.Tokens.Jwt" Version="6.32.1" />
   </ItemGroup>
 </Project>

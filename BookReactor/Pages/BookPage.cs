@@ -2,7 +2,6 @@
 using BookReactor.Pages.Component;
 using Maui.Skeleton;
 using Maui.Skeleton.Animations;
-using MauiReactor;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Maui.Devices;
 using System;
@@ -15,14 +14,15 @@ class BookPageState
 {
     public List<Item> Books { get; set; }
     public bool IsLoading { get; set; }
+    public bool IsSearching { get; set; }
     public Item SelectedBook { get;  set; }
     public string TextSearch { get; set; }
     public Category CategorySelected { get; set; }
     public bool IsSideMenuShown { get; set; }
     public double TranslationX { get; set; } = 220;
-
     public double RotationY { get; set; } = -12;
     public double MarginLeft { get; set; } = -30.0;
+    public List<Item> BookHelp { get; set; } = new();
 
 }
 public class BookPageProps
@@ -42,18 +42,22 @@ class BookPage:Component<BookPageState, BookPageProps>
     }
     private async void OpenDetailBook(Item book)
     {
-        await Navigation.PushAsync<DetailBook, DetailBookProps>(_ =>
+        await Navigation.PushAsync<BookDetail, BookDetailProps>(_ =>
         {
             _.Book = book;
         });
     }
-    private async void OpenEBookPage()
+    private async void OpenMagicBookPage()
     {
-        await Navigation.PushAsync<EBookPage>();
+        await Navigation.PushAsync<MagicBookPage>();
     }
     private async void OpenFavoritePage()
     {
         await Navigation.PushAsync<FavoritePage>();
+    }
+    private async void OpenEBookPage()
+    {
+        await Navigation.PushAsync<EBookPage>();
     }
     protected override async void OnMounted()
     {
@@ -84,10 +88,6 @@ class BookPage:Component<BookPageState, BookPageProps>
             s.IsLoading = false;
         });
     }
-    private async void OpenLoginPage()
-    {
-        await Navigation.PushAsync<LoginPage>();
-    }
     void InitializeState()
     {
         if (DeviceInfo.Current.Platform == DevicePlatform.Android)
@@ -111,13 +111,14 @@ class BookPage:Component<BookPageState, BookPageProps>
                 new SideMenu()
                       .IsShown(State.IsSideMenuShown)
                       .HomePage(Back)
-                      .OneBookPage(OpenEBookPage)
+                      .OnMagicBookPage(OpenMagicBookPage)
                       .OpenFavoritePage(OpenFavoritePage)
                       .MenuSelect(CommandMenuItem.Book)
+                      .OnEBookPage(OpenEBookPage)
                       .OnClose(()=>
                       {
                         SetState(s=>s.IsSideMenuShown=false);
-                        InitializeState(); 
+                        InitializeState();
                       })
                 ,
                 new Grid("60,100,Auto,*","*")
@@ -162,10 +163,14 @@ class BookPage:Component<BookPageState, BookPageProps>
                              .HCenter()
                              .HeightRequest(60)
                              .WidthRequest(200)
-                             .FontFamily (Theme.font)
+                             .FontFamily(Theme.font)
                              .FontSize(20)
                              .BackgroundColor(Colors.Transparent)
-                             .OnTextChanged(v=>SetState(s=>s.TextSearch=v)),
+                             .OnTextChanged(v =>
+                             {
+                                 SetState(s => s.TextSearch = v);
+                                 SearchHelp();
+                             }),
                             new SKLottieView()
                             .Source(new SkiaSharp.Extended.UI.Controls.SKFileLottieImageSource()
                             {
@@ -180,7 +185,11 @@ class BookPage:Component<BookPageState, BookPageProps>
                             .BackgroundColor(Colors.Transparent)
                             .OnTapped(() =>
                             {
-                                SetState(s=>s.IsLoading=true);
+                                SetState(s=>
+                                {
+                                    s.IsLoading=true;
+                                    s.IsSearching=false; 
+                                });
                                 Search();
                             })
                          }.Margin(20,0,0,0)
@@ -190,6 +199,26 @@ class BookPage:Component<BookPageState, BookPageProps>
                        .BackgroundColor(Colors.Black)
                        .StrokeShape(new RoundRectangle().CornerRadius(40))
                        .GridRow(1),
+                     new Grid("20,*","")
+                     {
+                         new Grid().GridRow(0).BackgroundColor(Colors.Black)
+                         ,
+                         new CollectionView()
+                         .ItemsSource(State.BookHelp,RenderSearchHelp)
+                         .ItemsLayout(new VerticalLinearItemsLayout().ItemSpacing(5))
+                         .BackgroundColor(Colors.Black)
+                         .GridRow(1)
+                     }.Margin(0,-180,0,0)
+                     .ZIndex(1)
+                     .WidthRequest(250)
+                     .HeightRequest(500)
+                     .HCenter()
+                     .GridRow(2)
+                     .GridRowSpan(2)
+                     .IsVisible(State.IsSearching&&State.TextSearch!="")
+                     .BackgroundColor(Colors.Black)
+
+                     ,
                      new CollectionView()
                      .ItemsSource(Category.All,RenderCategorySearch)
                      .ItemsLayout(new HorizontalLinearItemsLayout().ItemSpacing(5))
@@ -209,6 +238,57 @@ class BookPage:Component<BookPageState, BookPageProps>
         .BackgroundColor(Theme.Bg)
         }
         .Set(MauiControls.NavigationPage.HasNavigationBarProperty,false);
+    }
+
+    private VisualNode RenderSearchHelp(Item item)
+    {
+        if(item.volumeInfo.imageLinks is not null)
+        {
+            return new Border
+            {
+                new Grid("*","Auto,*")
+                {
+                    new Image(item.volumeInfo.imageLinks.thumbnail.Replace("http","https"))
+                    .HeightRequest(133)
+                    .WidthRequest(100)
+                    .GridColumn(0)
+                    ,
+                    new Label(item.volumeInfo.title)
+                    .MaxLines(2)
+                    .FontFamily(Theme.font)
+                    .FontSize(17)
+                    .TextColor(Colors.White)
+                    .GridColumn(2)
+                }.WidthRequest(250)
+                .HeightRequest(133)
+            }.BackgroundColor(Colors.Black)
+            .OnTapped(() => OpenDetailBook(item));
+        }
+        else
+        {
+            return null;
+        }
+       
+    }
+
+    private async void SearchHelp()
+    {
+        if(State.TextSearch is not null&&State.TextSearch!="")
+        {
+            
+            var googleBook = Services.GetRequiredService<IGoogleServices>();
+            var books = await googleBook.GetBook(State.TextSearch);
+            SetState(s =>
+            {
+                s.IsSearching = true;
+                s.BookHelp = books.items;
+            });
+        }
+        else
+        {
+            SetState(s => s.IsSearching = false);
+        }
+        
     }
 
     private VisualNode RenderCategorySearch(Category item)

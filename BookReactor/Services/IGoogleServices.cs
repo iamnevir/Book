@@ -15,6 +15,7 @@ public interface IGoogleServices
     Task<BookshelfList> GetBookshelfListAsync(string token);
     Task<Book> GetBookFromBookshelfAsync(string token, int id);
     Task<bool> AddBookToFavoriteAsync(string token, string id);
+    Task<Book> GetBookWithCount(string filter, int maxCount);
     Task<bool> RemoveBookToFavoriteAsync(string token, string id);
     Task<bool> RemoveAllBookToFavoriteAsync(string token);
     Task RefreshTokenAsync();

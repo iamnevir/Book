@@ -19,20 +19,64 @@ public class GoogleBookServices: IGoogleServices
     public GoogleBookServices(IHttpClientFactory httpClientFactory)
     { _httpClientFactory = httpClientFactory; }
     HttpClient httpClient => _httpClientFactory.CreateClient(BookHttpClientName);
-    public async Task<Book> GetBook(string filter) =>
-       await httpClient.GetFromJsonAsync<Book>(
+    public async Task<Book> GetBook(string filter)
+    {
+        try
+        {
+            return await httpClient.GetFromJsonAsync<Book>(
            $"volumes?q={filter}&key={ApiKey}");
-    public async Task<Item> GetBookById(string id) =>
-       await httpClient.GetFromJsonAsync<Item>(
+        }
+        catch (TaskCanceledException)
+        {
+            return null;
+        }
+        
+    }
+
+    public async Task<Book> GetBookWithCount(string filter, int maxCount)
+    {
+        try
+        {
+            return await httpClient.GetFromJsonAsync<Book>(
+           $"volumes?q={filter}&maxResults={maxCount}&key={ApiKey}");
+        }
+        catch (TaskCanceledException)
+        {
+            return null;
+        }
+        
+    }
+
+    public async Task<Item> GetBookById(string id)
+    {
+        try
+        {
+            return await httpClient.GetFromJsonAsync<Item>(
            $"volumes/{id}?key={ApiKey}");
+        }
+        catch (TaskCanceledException)
+        {
+            return null;
+        }
+        
+    }
+
     public async Task<BookshelfList> GetBookshelfListAsync(string token)
     {
-        var request = new HttpRequestMessage(HttpMethod.Get, "https://www.googleapis.com/books/v1/mylibrary/bookshelves");
-        request.Headers.Add("Authorization", $"Bearer {token}");
-        var response = await httpClient.SendAsync(request);
-        response.EnsureSuccessStatusCode();
-        var data = await response.Content.ReadAsStringAsync();
-        return JsonConvert.DeserializeObject<BookshelfList>(data);
+        try
+        {
+            var request = new HttpRequestMessage(HttpMethod.Get, "https://www.googleapis.com/books/v1/mylibrary/bookshelves");
+            request.Headers.Add("Authorization", $"Bearer {token}");
+            var response = await httpClient.SendAsync(request);
+            response.EnsureSuccessStatusCode();
+            var data = await response.Content.ReadAsStringAsync();
+            return JsonConvert.DeserializeObject<BookshelfList>(data);
+        }
+        catch (TaskCanceledException)
+        {
+            return null;
+        }
+        
     }
     public async Task<Book> GetBookFromBookshelfAsync(string token,int id)
     {
@@ -92,7 +136,7 @@ public class GoogleBookServices: IGoogleServices
     {
         try
         {
-            var request = new HttpRequestMessage(HttpMethod.Get, $"https://www.googleapis.com/books/v1/mylibrary/bookshelves/0/removeVolume?clearVolumes");
+            var request = new HttpRequestMessage(HttpMethod.Get, $"https://www.googleapis.com/books/v1/mylibrary/bookshelves/0/clearVolumes");
             request.Headers.Add("Authorization", $"Bearer {token}");
             var content = new StringContent(string.Empty);
             content.Headers.ContentType = new MediaTypeHeaderValue("application/json");

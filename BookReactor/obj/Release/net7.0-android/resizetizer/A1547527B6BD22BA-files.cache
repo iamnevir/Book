@@ -10,8 +10,10 @@ obj\Release\net7.0-android\resizetizer\r\drawable\bai6.jpg
 obj\Release\net7.0-android\resizetizer\r\drawable\bai7.jpg
 obj\Release\net7.0-android\resizetizer\r\drawable\bai8.jpg
 obj\Release\net7.0-android\resizetizer\r\drawable\bai9.jpg
+obj\Release\net7.0-android\resizetizer\r\drawable\delet.png
 obj\Release\net7.0-android\resizetizer\r\drawable\favori.png
 obj\Release\net7.0-android\resizetizer\r\drawable\favorite.png
+obj\Release\net7.0-android\resizetizer\r\drawable\heart.png
 obj\Release\net7.0-android\resizetizer\r\drawable\ifavori.png
 obj\Release\net7.0-android\resizetizer\r\drawable\itagaki.jpg
 obj\Release\net7.0-android\resizetizer\r\drawable\kmo.png
@@ -20,6 +22,7 @@ obj\Release\net7.0-android\resizetizer\r\drawable\lungbai.jpg
 obj\Release\net7.0-android\resizetizer\r\drawable\miura.png
 obj\Release\net7.0-android\resizetizer\r\drawable\mo.png
 obj\Release\net7.0-android\resizetizer\r\drawable\scott.jpg
+obj\Release\net7.0-android\resizetizer\r\drawable\search.png
 obj\Release\net7.0-android\resizetizer\r\drawable\sp1.jpg
 obj\Release\net7.0-android\resizetizer\r\drawable\sp2.jpg
 obj\Release\net7.0-android\resizetizer\r\drawable\sp3.jpg
