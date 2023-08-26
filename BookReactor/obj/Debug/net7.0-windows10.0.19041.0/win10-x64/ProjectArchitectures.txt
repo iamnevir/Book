@@ -1,0 +1,1 @@
+C:\Users\trick\source\repos\Book\BookReactor\BookReactor.csproj;x64

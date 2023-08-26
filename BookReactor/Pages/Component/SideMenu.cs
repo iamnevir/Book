@@ -247,6 +247,7 @@ class SideMenu : Component<SideMenuState>
                 .TextColor(Colors.White.WithAlpha(0.6f))
                 .FontAttributes(MauiControls.FontAttributes.Bold)
                 .VEnd()
+                .Margin(0,0,0,0)
                 .GridRow(2),
             new Grid("60,60,60,60","*")
             {
@@ -271,7 +272,7 @@ class SideMenu : Component<SideMenuState>
                     RenderMenuItem("Login", "login.png", CommandMenuItem.Login,OpenLoginPage)
                 }.GridRow(3),
             }.GridRow(3)
-            .Margin(20,0,0,0)
+            .Margin(20,10,0,0)
             ,
         }
         .Margin(30, 37)

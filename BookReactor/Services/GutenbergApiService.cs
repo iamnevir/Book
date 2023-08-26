@@ -29,4 +29,18 @@ public class GutenbergApiService : IGutenbergApiService
         }
         
     }
+    public async Task<GutenbergBook?> SearchBookAsync(string text)
+    {
+        try
+        {
+            return await httpClient.GetFromJsonAsync<GutenbergBook>(
+                    $"books?search=+{text}");
+        }
+        catch (Exception)
+        {
+
+            return null;
+        }
+
+    }
 }

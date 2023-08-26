@@ -1,7 +1,9 @@
 ﻿using CommunityToolkit.Maui.Core;
+using IdentityModel.OidcClient;
 using Microsoft.IdentityModel.Tokens;
 using Microsoft.Maui.Storage;
 using Newtonsoft.Json;
+using SkiaSharp;
 using System;
 using System.Collections.Generic;
 using System.IdentityModel.Tokens.Jwt;
@@ -20,19 +22,7 @@ public static class Logger
     public static string token = System.IO.Path.Combine(FileSystem.AppDataDirectory, "token.txt");
     public static string refreshtoken = System.IO.Path.Combine(FileSystem.AppDataDirectory, "refreshtoken.txt");
     public static string favorite = System.IO.Path.Combine(FileSystem.AppDataDirectory, "favorite.txt");
-    public static string TaoFile(string file)
-    {
-        try
-        {
-            return System.IO.Path.Combine(FileSystem.AppDataDirectory, file);
-        }
-        catch (Exception)
-        {
-
-            return null;
-        }
-        
-    }
+    public static string continueRead = System.IO.Path.Combine(FileSystem.AppDataDirectory, "continueRead.txt");
 
     public static async Task WriteAsync(string path, string text)
     {
@@ -46,7 +36,7 @@ public static class Logger
         }
         
     }
-    public static async Task WriteFavoriteAsync( string text)
+    public static async Task WriteFavoriteAsync(string text)
     {
         try
         {
@@ -57,17 +47,17 @@ public static class Logger
         }
        
     }
-    public static async Task AddFavoriteAsync( string text)
+    public static async Task AddFavoriteAsync( string file,string text)
     {
         try
         {
-            if (File.Exists(favorite))
+            if (File.Exists(file))
             {
-                await File.AppendAllTextAsync(favorite, $",{text}");
+                await File.AppendAllTextAsync(file, $",{text}");
             }
             else
             {
-                await File.AppendAllTextAsync(favorite, $"{text}");
+                await File.AppendAllTextAsync(file, $"{text}");
             }
         }
         catch (Exception)
@@ -76,11 +66,11 @@ public static class Logger
        
         
     }
-    public static async Task RemoveFavoriteAsync(string id)
+    public static async Task RemoveFavoriteAsync(string file,string id)
     {
         try
         {
-            var a = await File.ReadAllTextAsync(favorite);
+            var a = await File.ReadAllTextAsync(file);
             var list = a.Split(",");
             if (list[0] == id)
             {
@@ -90,7 +80,7 @@ public static class Logger
             {
                 a = a.Replace($",{id}", string.Empty);
             }
-            await File.WriteAllTextAsync(favorite, a);
+            await File.WriteAllTextAsync(file, a);
         }
         catch (Exception)
         {
@@ -98,11 +88,11 @@ public static class Logger
         
 
     }
-    public static async Task<string[]> ReadFavoriteAsync()
+    public static async Task<string[]> ReadFavoriteAsync(string file)
     {
         try
         {
-            var a = await File.ReadAllTextAsync(favorite);
+            var a = await File.ReadAllTextAsync(file);
             return a.Split(",");
         }
         catch (Exception)

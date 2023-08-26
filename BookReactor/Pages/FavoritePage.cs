@@ -401,7 +401,7 @@ class BookshelfItem:Component<BookshelfItemState>
         var googleBook = Services.GetRequiredService<IGoogleServices>();
         var token = await Logger.ReadAsync(Logger.token);
         await googleBook.RemoveBookToFavoriteAsync(token, id);
-        await Logger.RemoveFavoriteAsync(id);
+        await Logger.RemoveFavoriteAsync(Logger.favorite,id);
         Load();
     }
     private VisualNode RenderBookItem(Item item)

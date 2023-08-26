@@ -1,4 +1,5 @@
-﻿using MauiReactor;
+﻿using EpubSharp;
+using MauiReactor;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Maui.Devices;
 using Plugin.Maui.ScreenBrightness;
@@ -19,12 +20,13 @@ class ReadPageState
     public bool IsLoading { get; set; }
     public MauNen Mau { get; set; }
     public int FontChu { get; set; } = 1;
-    public bool OpenSetting { get; set; }
+    public bool OpenSetting { get; set; } = true;
     public bool OpenBorder { get; set; }
 }
 class ReadPageProps
 {
     public string Id { get; set; }
+    public string Name { get; set; }
 }
 class ReadPage:Component<ReadPageState, ReadPageProps>
 {
@@ -34,14 +36,22 @@ class ReadPage:Component<ReadPageState, ReadPageProps>
     }
     protected override async void OnMounted()
     {
-        var gutenberg = Services.GetRequiredService<IGetTextServices>();
-        State.IsLoading = true;
-        var text = await gutenberg.GetTextAsync($"cache/epub/{Props.Id}/pg{Props.Id}.txt");
-        SetState(s =>
+        if(Props.Id is not null)
         {
-            s.Text = text;
-            s.IsLoading = false;
-        });
+            var gutenberg = Services.GetRequiredService<IGetTextServices>();
+            State.IsLoading = true;
+            var text = await gutenberg.GetTextAsync($"cache/epub/{Props.Id}/pg{Props.Id}.txt");
+            SetState(s =>
+            {
+                s.Text = text;
+                s.IsLoading = false;
+            });
+        }
+        else
+        {
+            var book = EpubReader.Read(Props.Name);
+            SetState(s=>s.Text =book.ToPlainText());
+        }
         base.OnMounted();
     }
     void ChangeFontSize()

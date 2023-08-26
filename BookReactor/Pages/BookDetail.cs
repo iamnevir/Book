@@ -27,7 +27,7 @@ class BookDetail:Component<BookDetailState, BookDetailProps>
     {
         if (Logger.KiemTra(Logger.favorite))
         {
-            var a = await Logger.ReadFavoriteAsync();
+            var a = await Logger.ReadFavoriteAsync(Logger.favorite);
             if (a.FirstOrDefault(f => f == Props.Book.id)==Props.Book.id)
             {
                 SetState(s => s.IsFavorite = true); 
@@ -45,7 +45,7 @@ class BookDetail:Component<BookDetailState, BookDetailProps>
             if (add)
             {
                 await Logger.ToastButton("Đã thêm vào yêu thích!");
-                await Logger.AddFavoriteAsync(id);
+                await Logger.AddFavoriteAsync(Logger.favorite, id);
             }
             else
             {
@@ -70,7 +70,7 @@ class BookDetail:Component<BookDetailState, BookDetailProps>
             if (add)
             {
                 await Logger.ToastButton("Đã bỏ yêu thích!");
-                await Logger.RemoveFavoriteAsync(id);
+                await Logger.RemoveFavoriteAsync(Logger.favorite, id);
             }
             else
             {
