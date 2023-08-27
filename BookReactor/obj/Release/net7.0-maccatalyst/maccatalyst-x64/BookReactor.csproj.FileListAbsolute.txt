@@ -575,3 +575,7 @@ C:\Users\trick\source\repos\Book\BookReactor\bin\Release\net7.0-maccatalyst\macc
 C:\Users\trick\source\repos\Book\BookReactor\bin\Release\net7.0-maccatalyst\maccatalyst-x64\System.IdentityModel.Tokens.Jwt.dll
 C:\Users\trick\source\repos\Book\BookReactor\obj\Release\net7.0-maccatalyst\maccatalyst-x64\resizetizer\r\Resources\heart.png
 C:\Users\trick\source\repos\Book\BookReactor\obj\Release\net7.0-maccatalyst\maccatalyst-x64\resizetizer\r\Resources\search.png
+C:\Users\trick\source\repos\Book\BookReactor\bin\Release\net7.0-maccatalyst\maccatalyst-x64\EpubSharp.dll
+C:\Users\trick\source\repos\Book\BookReactor\bin\Release\net7.0-maccatalyst\maccatalyst-x64\Microsoft.CodeAnalysis.dll
+C:\Users\trick\source\repos\Book\BookReactor\bin\Release\net7.0-maccatalyst\maccatalyst-x64\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\trick\source\repos\Book\BookReactor\bin\Release\net7.0-maccatalyst\maccatalyst-x64\Microsoft.CodeAnalysis.VisualBasic.dll

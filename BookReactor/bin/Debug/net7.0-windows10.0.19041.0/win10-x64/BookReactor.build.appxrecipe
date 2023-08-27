@@ -667,16 +667,16 @@
     <AppxPackagedFile Include="C:\Users\trick\.nuget\packages\microsoft.graphics.win2d\1.0.5.1\lib\net5.0-windows10.0.17763.0\Microsoft.Graphics.Canvas.Interop.dll">
       <PackagePath>Microsoft.Graphics.Canvas.Interop.dll</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\trick\.nuget\packages\microsoft.identitymodel.abstractions\6.32.1\lib\net6.0\Microsoft.IdentityModel.Abstractions.dll">
+    <AppxPackagedFile Include="C:\Users\trick\.nuget\packages\microsoft.identitymodel.abstractions\6.32.2\lib\net6.0\Microsoft.IdentityModel.Abstractions.dll">
       <PackagePath>Microsoft.IdentityModel.Abstractions.dll</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\trick\.nuget\packages\microsoft.identitymodel.jsonwebtokens\6.32.1\lib\net6.0\Microsoft.IdentityModel.JsonWebTokens.dll">
+    <AppxPackagedFile Include="C:\Users\trick\.nuget\packages\microsoft.identitymodel.jsonwebtokens\6.32.2\lib\net6.0\Microsoft.IdentityModel.JsonWebTokens.dll">
       <PackagePath>Microsoft.IdentityModel.JsonWebTokens.dll</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\trick\.nuget\packages\microsoft.identitymodel.logging\6.32.1\lib\net6.0\Microsoft.IdentityModel.Logging.dll">
+    <AppxPackagedFile Include="C:\Users\trick\.nuget\packages\microsoft.identitymodel.logging\6.32.2\lib\net6.0\Microsoft.IdentityModel.Logging.dll">
       <PackagePath>Microsoft.IdentityModel.Logging.dll</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\trick\.nuget\packages\microsoft.identitymodel.tokens\6.32.1\lib\net6.0\Microsoft.IdentityModel.Tokens.dll">
+    <AppxPackagedFile Include="C:\Users\trick\.nuget\packages\microsoft.identitymodel.tokens\6.32.2\lib\net6.0\Microsoft.IdentityModel.Tokens.dll">
       <PackagePath>Microsoft.IdentityModel.Tokens.dll</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\trick\.nuget\packages\microsoft.maui.graphics\7.0.92\lib\net7.0-windows10.0.19041\Microsoft.Maui.Graphics.dll">
@@ -775,7 +775,7 @@
     <AppxPackagedFile Include="C:\Users\trick\.nuget\packages\system.codedom\7.0.0\lib\net7.0\System.CodeDom.dll">
       <PackagePath>System.CodeDom.dll</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\trick\.nuget\packages\system.identitymodel.tokens.jwt\6.32.1\lib\net6.0\System.IdentityModel.Tokens.Jwt.dll">
+    <AppxPackagedFile Include="C:\Users\trick\.nuget\packages\system.identitymodel.tokens.jwt\6.32.2\lib\net6.0\System.IdentityModel.Tokens.Jwt.dll">
       <PackagePath>System.IdentityModel.Tokens.Jwt.dll</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\trick\.nuget\packages\system.management\7.0.0\runtimes\win\lib\net7.0\System.Management.dll">

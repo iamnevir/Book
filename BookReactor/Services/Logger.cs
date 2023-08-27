@@ -1,14 +1,10 @@
 ﻿using CommunityToolkit.Maui.Core;
-using IdentityModel.OidcClient;
 using Microsoft.IdentityModel.Tokens;
 using Microsoft.Maui.Storage;
 using Newtonsoft.Json;
-using SkiaSharp;
 using System;
-using System.Collections.Generic;
 using System.IdentityModel.Tokens.Jwt;
 using System.IO;
-using System.Linq;
 using System.Security.Claims;
 using System.Text;
 using System.Threading;
@@ -23,6 +19,7 @@ public static class Logger
     public static string refreshtoken = System.IO.Path.Combine(FileSystem.AppDataDirectory, "refreshtoken.txt");
     public static string favorite = System.IO.Path.Combine(FileSystem.AppDataDirectory, "favorite.txt");
     public static string continueRead = System.IO.Path.Combine(FileSystem.AppDataDirectory, "continueRead.txt");
+    public static string ebook = System.IO.Path.Combine(FileSystem.AppDataDirectory, "ebook");
 
     public static async Task WriteAsync(string path, string text)
     {
@@ -53,6 +50,11 @@ public static class Logger
         {
             if (File.Exists(file))
             {
+                var a= await File.ReadAllTextAsync(file);
+                if (a.Contains(text))
+                {
+                    return;
+                }
                 await File.AppendAllTextAsync(file, $",{text}");
             }
             else

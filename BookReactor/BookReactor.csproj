@@ -157,6 +157,6 @@
     <PackageReference Include="Reactor.Maui.ScaffoldGenerator" Version="1.0.140" OutputItemType="Analyzer" ReferenceOutputAssembly="false" />
     <PackageReference Include="SimpleRatingControl.MAUI" Version="0.0.3" />
     <PackageReference Include="SkiaSharp.Extended.UI.Maui" Version="2.0.0-preview.61" />
-    <PackageReference Include="System.IdentityModel.Tokens.Jwt" Version="6.32.1" />
+    <PackageReference Include="System.IdentityModel.Tokens.Jwt" Version="6.32.2" />
   </ItemGroup>
 </Project>

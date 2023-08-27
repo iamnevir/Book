@@ -1,5 +1,4 @@
 ﻿using EpubSharp;
-using MauiReactor;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Maui.Devices;
 using Plugin.Maui.ScreenBrightness;

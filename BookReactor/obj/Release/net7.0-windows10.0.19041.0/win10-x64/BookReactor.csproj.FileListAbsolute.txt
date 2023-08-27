@@ -739,3 +739,16 @@ C:\Users\trick\source\repos\Book\BookReactor\bin\Release\net7.0-windows10.0.1904
 C:\Users\trick\source\repos\Book\BookReactor\bin\Release\net7.0-windows10.0.19041.0\win10-x64\System.Speech.dll
 C:\Users\trick\source\repos\Book\BookReactor\obj\Release\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\heart.scale-100.png
 C:\Users\trick\source\repos\Book\BookReactor\obj\Release\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\search.scale-100.png
+C:\Users\trick\source\repos\Book\BookReactor\bin\Release\net7.0-windows10.0.19041.0\win10-x64\EpubSharp.dll
+C:\Users\trick\source\repos\Book\BookReactor\bin\Release\net7.0-windows10.0.19041.0\win10-x64\Microsoft.CodeAnalysis.dll
+C:\Users\trick\source\repos\Book\BookReactor\bin\Release\net7.0-windows10.0.19041.0\win10-x64\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\trick\source\repos\Book\BookReactor\bin\Release\net7.0-windows10.0.19041.0\win10-x64\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\trick\source\repos\Book\BookReactor\bin\Release\net7.0-windows10.0.19041.0\win10-x64\SOS.NETCore.dll
+C:\Users\trick\source\repos\Book\BookReactor\bin\Release\net7.0-windows10.0.19041.0\win10-x64\libuv.dll
+C:\Users\trick\source\repos\Book\BookReactor\bin\Release\net7.0-windows10.0.19041.0\win10-x64\dotnet.exe
+C:\Users\trick\source\repos\Book\BookReactor\bin\Release\net7.0-windows10.0.19041.0\win10-x64\System.Private.CoreLib.ni.dll
+C:\Users\trick\source\repos\Book\BookReactor\bin\Release\net7.0-windows10.0.19041.0\win10-x64\dbgshim.dll
+C:\Users\trick\source\repos\Book\BookReactor\bin\Release\net7.0-windows10.0.19041.0\win10-x64\mscorlib.ni.dll
+C:\Users\trick\source\repos\Book\BookReactor\bin\Release\net7.0-windows10.0.19041.0\win10-x64\mscorrc.debug.dll
+C:\Users\trick\source\repos\Book\BookReactor\bin\Release\net7.0-windows10.0.19041.0\win10-x64\sos.dll
+C:\Users\trick\source\repos\Book\BookReactor\bin\Release\net7.0-windows10.0.19041.0\win10-x64\clrcompression.dll

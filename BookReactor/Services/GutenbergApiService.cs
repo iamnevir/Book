@@ -19,6 +19,13 @@ public class GutenbergApiService : IGutenbergApiService
     {
         try
         {
+            if (id is not null)
+            {
+                if (id.FirstOrDefault() == char.Parse(","))
+                {
+                    id=id.Remove(0, 1);
+                }
+            }
             return await httpClient.GetFromJsonAsync<GutenbergBook>(
                     $"books?ids={id}");
         }

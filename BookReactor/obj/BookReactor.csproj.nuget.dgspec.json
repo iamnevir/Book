@@ -140,7 +140,7 @@
             },
             "System.IdentityModel.Tokens.Jwt": {
               "target": "Package",
-              "version": "[6.32.1, )"
+              "version": "[6.32.2, )"
             },
             "Xamarin.Android.Glide": {
               "target": "Package",
@@ -310,7 +310,7 @@
             },
             "System.IdentityModel.Tokens.Jwt": {
               "target": "Package",
-              "version": "[6.32.1, )"
+              "version": "[6.32.2, )"
             }
           },
           "imports": [
@@ -425,7 +425,7 @@
             },
             "System.IdentityModel.Tokens.Jwt": {
               "target": "Package",
-              "version": "[6.32.1, )"
+              "version": "[6.32.2, )"
             }
           },
           "imports": [
@@ -551,7 +551,7 @@
             },
             "System.IdentityModel.Tokens.Jwt": {
               "target": "Package",
-              "version": "[6.32.1, )"
+              "version": "[6.32.2, )"
             }
           },
           "imports": [

@@ -1,21 +1,13 @@
 ﻿using BookReactor.Pages.Component;
 using CommunityToolkit.Maui.Converters;
-using CommunityToolkit.Maui.Core.Primitives;
-using CommunityToolkit.Maui.Storage;
 using EpubSharp;
-using IdentityModel.OidcClient;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Maui.Devices;
 using Microsoft.Maui.Storage;
-using SkiaSharp;
 using System;
 using System.Collections.Generic;
-using System.ComponentModel;
 using System.IO;
 using System.Linq;
-using System.Text;
-using System.Threading;
-using System.Threading.Tasks;
 
 namespace BookReactor.Pages;
 
@@ -34,6 +26,7 @@ class EBookPageState
     public List<Result> BookSearch { get; set; } = new();
     public List<EpubBook> BookList2 { get; set; } = new();
     public bool IsSearching { get; set; }
+    public double TienDo { get; set; }
 }
 class EBookPage : Component<EBookPageState>
 {
@@ -47,12 +40,13 @@ class EBookPage : Component<EBookPageState>
             });
             if (result is null) { return; }
             var stream = await result.OpenReadAsync();
-            string targetFile = System.IO.Path.Combine(FileSystem.Current.AppDataDirectory, result.FileName);
+            Directory.CreateDirectory(Logger.ebook);
+            string targetFile = System.IO.Path.Combine(Logger.ebook, result.FileName);
             using FileStream outputStream = File.Create(targetFile);
             await stream.CopyToAsync(outputStream);
             outputStream.Close();
             var book2 = EpubReader.Read(targetFile);
-            File.Move(targetFile, System.IO.Path.Combine(FileSystem.Current.AppDataDirectory, $"{book2.Title.Trim().ToLower().Replace(" ", "").Remove(5).Replace("'", "")}.epub"), true);
+            File.Move(targetFile, System.IO.Path.Combine(Logger.ebook, $"{book2.Title.Trim().ToLower().Replace(" ", "").Remove(5).Replace("'", "")}.epub"), true);
             Load();
         }
         catch (Exception)
@@ -82,7 +76,7 @@ class EBookPage : Component<EBookPageState>
         {
             s.BookList2.Clear();
         });
-        foreach (var file in Directory.EnumerateFiles(FileSystem.AppDataDirectory, "*.epub"))
+        foreach (var file in Directory.EnumerateFiles(Logger.ebook, "*.epub"))
         {
             var book2 = EpubReader.Read(file);
             SetState(s =>
@@ -97,13 +91,27 @@ class EBookPage : Component<EBookPageState>
         var gutendex = Services.GetRequiredService<IGutenbergApiService>();
         if (Logger.KiemTra(Logger.continueRead))
         {
-            var book1 = await gutendex.GetBookDetailAsync(await File.ReadAllTextAsync(Logger.continueRead));
-            if (book1 is not null)
+            if (Logger.KiemTra(Logger.continueRead))
             {
-                SetState(s =>
+                var a = await File.ReadAllTextAsync(Logger.continueRead);
+                if (a != "")
                 {
-                    s.BookList1 = book1.results;
-                });
+                    var book1 = await gutendex.GetBookDetailAsync(a);
+                    if (book1 is not null)
+                    {
+                        SetState(s =>
+                        {
+                            s.BookList1 = book1.results;
+                        });
+                    }
+                }
+                else
+                {
+                    SetState(s =>
+                    {
+                        s.BookList1.Clear();
+                    });
+                }
             }
         }
 
@@ -112,9 +120,33 @@ class EBookPage : Component<EBookPageState>
     {
         InitializeState();
         var gutendex = Services.GetRequiredService<IGutenbergApiService>();
-        var book = await gutendex.GetBookDetailAsync("11,12,71180,1661,39341");
-        Load1Async();
-        Load();
+        var book = await gutendex.GetBookDetailAsync("11,74,71180,1661,39341");
+        if (Logger.KiemTra(Logger.continueRead))
+        {
+            var a = await File.ReadAllTextAsync(Logger.continueRead);
+            if (a != "")
+            {
+                var book1 = await gutendex.GetBookDetailAsync(a);
+                if (book1 is not null)
+                {
+                    SetState(s =>
+                    {
+                        s.BookList1 = book1.results;
+                    });
+                }
+            }
+        }
+        if (Directory.Exists(Logger.ebook))
+        {
+            foreach (var file in Directory.EnumerateFiles(Logger.ebook, "*.epub"))
+            {
+                var book2 = EpubReader.Read(file);
+                SetState(s =>
+                {
+                    s.BookList2.Add(book2);
+                });
+            }
+        }
         if (book is not null)
         {
             SetState(s =>
@@ -311,7 +343,14 @@ class EBookPage : Component<EBookPageState>
                     .FontAttributes(Microsoft.Maui.Controls.FontAttributes.Bold)
                     .TextColor(Colors.White)
                     .GridRow(2)
-                    .Margin(20,20,0,0):null,
+                    .Margin(20,20,0,0):
+                    new Label("Bạn chưa đọc cuốn sách nào!!")
+                    .FontFamily(Theme.font)
+                    .FontSize(20)
+                    .FontAttributes(Microsoft.Maui.Controls.FontAttributes.Bold)
+                    .TextColor(Colors.White)
+                    .GridRow(2)
+                    .Margin(20,20,0,0),
                      new CollectionView()
                         .ItemsSource(State.BookList1,RenderItem1)
                         .ItemsLayout(new VerticalLinearItemsLayout().ItemSpacing(15))
@@ -383,6 +422,7 @@ class EBookPage : Component<EBookPageState>
         var a = new Random().Next(1, 5);
         var b = new Random().Next(1, 9);
         var c = double.Parse($"{a}.{b}");
+        var d = new Random().Next(1, 100);
         return new Border
         {
             new SwipeView
@@ -397,7 +437,8 @@ class EBookPage : Component<EBookPageState>
                         .WidthRequest(100)
                         .VCenter().HCenter()
                         .StrokeShape(new RoundRectangle().CornerRadius(10))
-                        .GridColumn(0),
+                        .GridColumn(0)
+                        .Margin(0,0,0,15),
                         new VStack
                         {
                             new Label(item.title)
@@ -428,20 +469,23 @@ class EBookPage : Component<EBookPageState>
                                 .FontSize(13)
                             }
                             .Spacing(10),
-                            new Label("hehe")
+                            new Label("Tiến độ")
                             .FontFamily(Theme.font)
                             .FontSize(13)
                             .TextColor(Colors.White),
                             new Border
                             {
-                                
-                            }.BackgroundColor(Theme.Hong)
-                            .Stroke(Colors.White)
-                            .StrokeThickness(2)
-                            .HeightRequest(30)
-                            .StrokeShape(new RoundRectangle().CornerRadius(20))
+                                new TienDo()
+                                .TienDoDoc(d)
+                                .OnSize(State.TienDo)
+                            }.HeightRequest(50)
+                            .BackgroundColor(Colors.Transparent)
+                            .OnSizeChanged(size =>
+                             {
+                                 SetState(s=>s.TienDo=size.Width);
+                             })
                         }.GridColumn(1).Margin(15,0,15,0).Spacing(5)
-                }.Margin(20).OnTapped(()=>OpenReadBook(item.id.ToString(),null))
+                }.Margin(20,20,10,5).OnTapped(()=>OpenReadBook(item.id.ToString(),null))
             }
                         .RightItems(new MauiControls.SwipeItems(new List<MauiControls.SwipeItem>()
                                 {
@@ -473,6 +517,7 @@ class EBookPage : Component<EBookPageState>
         var a = new Random().Next(1, 5);
         var b = new Random().Next(1, 9);
         var c = double.Parse($"{a}.{b}");
+        var d = new Random().Next(1, 100);
         var author = item.Authors.FirstOrDefault();
         var image = new ByteArrayToImageSourceConverter().ConvertFrom(item.CoverImage);
         return new Border
@@ -521,20 +566,24 @@ class EBookPage : Component<EBookPageState>
                                 .FontSize(13)
                             }
                             .Spacing(10),
-                            new Label("hehe")
+                            new Label("Tiến độ")
                             .FontFamily(Theme.font)
                             .FontSize(13)
                             .TextColor(Colors.White),
-                            new Border
-                            {
-
-                            }.BackgroundColor(Theme.Hong)
-                            .Stroke(Colors.White)
-                            .StrokeThickness(2)
-                            .HeightRequest(30)
-                            .StrokeShape(new RoundRectangle().CornerRadius(20))
+                             new Border
+                             {
+                                new TienDo()
+                                .TienDoDoc(d)
+                                .OnSize(State.TienDo)
+                             }.HeightRequest(50)
+                             .BackgroundColor(Colors.Transparent)
+                             .Margin(0,0,0,0)
+                             .OnSizeChanged(size =>
+                             {
+                                 SetState(s=>s.TienDo=size.Width);
+                             })
                         }.GridColumn(1).Margin(15,0,15,0).Spacing(5)
-                }.Margin(20).OnTapped(() => OpenReadBook(null, System.IO.Path.Combine(FileSystem.Current.AppDataDirectory, $"{item.Title.Trim().ToLower().Replace(" ", "").Remove(5).Replace("'", "")}.epub")))
+                }.Margin(20,20,10,5).OnTapped(() => OpenReadBook(null, System.IO.Path.Combine(Logger.ebook, $"{item.Title.Trim().ToLower().Replace(" ", "").Remove(5).Replace("'", "")}.epub")))
             }
                         .RightItems(new MauiControls.SwipeItems(new List<MauiControls.SwipeItem>()
                                 {
@@ -542,7 +591,7 @@ class EBookPage : Component<EBookPageState>
                                     {
                                         BackgroundColor = Theme.Bg,
                                         Command = RemoveFromFavoriteAsync,
-                                        CommandParameter = System.IO.Path.Combine(FileSystem.Current.AppDataDirectory, $"{item.Title.Trim().ToLower().Replace(" ", "").Remove(5).Replace("'", "")}.epub"),
+                                        CommandParameter = System.IO.Path.Combine(Logger.ebook, $"{item.Title.Trim().ToLower().Replace(" ", "").Remove(5).Replace("'", "")}.epub"),
                                     }
                                 })
                         {
@@ -559,7 +608,7 @@ class EBookPage : Component<EBookPageState>
         .StrokeDashOffset(6)
         .StrokeThickness(2)
         .StrokeShape(new RoundRectangle().CornerRadius(20))
-        .OnTapped(() => OpenReadBook(null, System.IO.Path.Combine(FileSystem.Current.AppDataDirectory, $"{item.Title.Trim().ToLower().Replace(" ", "").Remove(5).Replace("'", "")}.epub")));
+        .OnTapped(() => OpenReadBook(null, System.IO.Path.Combine(Logger.ebook, $"{item.Title.Trim().ToLower().Replace(" ", "").Remove(5).Replace("'", "")}.epub")));
     }
     private VisualNode RenderItem(Result item)
     {
@@ -667,9 +716,15 @@ class TienDoState
 class TienDo:Component<TienDoState>
 {
     int _tienDoDoc;
+    double _size;
     public TienDo TienDoDoc(int value)
     {
         _tienDoDoc = value;
+        return this;
+    }
+    public TienDo OnSize(double value)
+    {
+        _size = value;
         return this;
     }
     public override VisualNode Render()
@@ -678,7 +733,36 @@ class TienDo:Component<TienDoState>
         {
             new Group
             {
-
+                new Box
+                {
+                    new Box()
+                    .BackgroundColor(Theme.Hong)
+                    .Margin(1,0,(int)(_size-(_tienDoDoc* 0.01*_size))-5,0)
+                    .CornerRadius(30)
+                }
+                .BackgroundColor(Colors.Transparent)
+                .BorderColor(Colors.White)
+                .BorderSize(2)
+                .CornerRadius(30)
+                .Margin(5,12,5,12)
+                ,
+                new Row("35")
+                {
+                     new Group
+                    {
+                        new Box().CornerRadius(50)
+                        .BackgroundColor(Theme.Tim1)
+                        .BorderColor(Colors.White)
+                        .BorderSize(2)
+                        ,
+                        new Text($"{_tienDoDoc}%")
+                        .FontColor(Colors.White)
+                        .FontSize(15)
+                        .HorizontalAlignment(HorizontalAlignment.Center)
+                        .VerticalAlignment(VerticalAlignment.Center)
+                    }
+                }.Margin((int)(_tienDoDoc* 0.01*_size)-(int)(_tienDoDoc/2.5),6,(int)(_size-(_tienDoDoc * 0.01*_size)),6).ZIndex(2)
+               
             }
         };
     }
