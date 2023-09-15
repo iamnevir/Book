@@ -2,6 +2,8 @@
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Maui.Devices;
 using Plugin.Maui.ScreenBrightness;
+using System;
+using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 
 namespace BookReactor.Pages;
@@ -16,6 +18,7 @@ class ReadPageState
     public Color BgColor { get; set; } 
     [MaxLength(int.MaxValue)]
     public string Text { get; set; }
+    public List<string> Texts { get; set; }
     public bool IsLoading { get; set; }
     public MauNen Mau { get; set; }
     public int FontChu { get; set; } = 1;
@@ -33,6 +36,24 @@ class ReadPage:Component<ReadPageState, ReadPageProps>
     {
         await Navigation.PopAsync();
     }
+    void Load(string input, double maxLength)
+    {
+        List<string> result = new();
+        int length = input.Length;
+        int startIndex = 0;
+
+        while (startIndex < length)
+        {
+            int endIndex = Math.Min(startIndex + (int)maxLength, length);
+            string substring = input.Substring(startIndex, endIndex - startIndex);
+            result.Add(substring);
+            startIndex = endIndex;
+        }
+        SetState(s =>
+        {
+            s.Texts = result;
+        });
+    }
     protected override async void OnMounted()
     {
         if(Props.Id is not null)
@@ -40,16 +61,30 @@ class ReadPage:Component<ReadPageState, ReadPageProps>
             var gutenberg = Services.GetRequiredService<IGetTextServices>();
             State.IsLoading = true;
             var text = await gutenberg.GetTextAsync($"cache/epub/{Props.Id}/pg{Props.Id}.txt");
+            List<string> result = new();
+            int length = text.Length;
+            int startIndex = 0;
+
+            while (startIndex < length)
+            {
+                int endIndex = Math.Min(startIndex + 1000, length);
+                string substring = text.Substring(startIndex, endIndex - startIndex);
+                result.Add(substring);
+                startIndex = endIndex;
+            }
             SetState(s =>
             {
                 s.Text = text;
+                s.Texts = result;
                 s.IsLoading = false;
             });
         }
         else
         {
             var book = EpubReader.Read(Props.Name);
-            SetState(s=>s.Text =book.ToPlainText());
+            SetState(s=> {
+                s.Text = book.ToPlainText();
+            });
         }
         base.OnMounted();
     }
@@ -77,18 +112,26 @@ class ReadPage:Component<ReadPageState, ReadPageProps>
         {
             new Grid
             {
-                new ScrollView
-                {
-                    new Label(State.Text)
-                        .TextColor(State.Mau==MauNen.Trang?Colors.Black:State.Mau==MauNen.Den?Colors.White:State.Mau==MauNen.Xam?Colors.White:Colors.Black)
-                        .FontSize(State.FontSize)
-                        .FontFamily(State.Font)
-                        .LineHeight(State.LineHeight)
-                        .CharacterSpacing(State.CharacterSpacing)
-                        .OnTapped(()=>SetState(s=>s.OpenBorder=!s.OpenBorder))
-                }.Margin(30)
+                new CarouselView()
+                .ItemsLayout(new HorizontalGridItemsLayout()
+                    .SnapPointsType(MauiControls.SnapPointsType.MandatorySingle)
+                    .SnapPointsAlignment(MauiControls.SnapPointsAlignment.Center))
+                .ItemsSource(State.Texts,RenderPage)
                 .BackgroundColor(Colors.Transparent)
-                .VerticalScrollBarVisibility(ScrollBarVisibility.Never)
+                //,
+                //new ScrollView
+                //{
+                //    new Label(State.Text)
+                //        .TextColor(State.Mau==MauNen.Trang?Colors.Black:State.Mau==MauNen.Den?Colors.White:State.Mau==MauNen.Xam?Colors.White:Colors.Black)
+                //        .FontSize(State.FontSize)
+                //        .FontFamily(State.Font)
+                //        .LineHeight(State.LineHeight)
+                //        .CharacterSpacing(State.CharacterSpacing)
+                //        .OnTapped(()=>SetState(s=>s.OpenBorder=!s.OpenBorder)) 
+                        
+                //}.Margin(30)
+                //.BackgroundColor(Colors.Transparent)
+                //.VerticalScrollBarVisibility(ScrollBarVisibility.Always)
                 ,
                 new Border
                 {
@@ -153,7 +196,28 @@ class ReadPage:Component<ReadPageState, ReadPageProps>
                                           new Slider()
                                         .HeightRequest(60)
                                         .WidthRequest(100)
-                                        .OnValueChanged(v=>SetState(s=>s.FontSize=v))
+                                        .OnValueChanged(v=>{
+                                            SetState(s=>s.FontSize=v);
+                                            var a=0;
+                                            switch (v)
+                                            {
+                                                case <30: a=17000;
+                                                    break;
+                                                case <40: a=14000;
+                                                    break;
+                                                case <50: a=11000;
+                                                    break;
+                                                case <60: a=9000;
+                                                    break;
+                                                case <70: a=6000;
+                                                    break;
+                                                case <=80: a=2000;
+                                                    break;
+                                                case >80: a=1000;
+                                                    break;
+                                            }
+                                            Load(State.Text,a/v);
+                                        })
                                         .Maximum(30).HCenter()
                                         .Minimum(10)
                                         .MaximumTrackColor(Colors.Gray)
@@ -301,6 +365,24 @@ class ReadPage:Component<ReadPageState, ReadPageProps>
         .BackgroundColor(State.Mau == MauNen.Trang ? Colors.White : State.Mau == MauNen.Den ? Colors.Black : State.Mau == MauNen.Xam ? Theme.Bg : Theme.Kem)
         .HeightRequest(DeviceDisplay.MainDisplayInfo.Height);
     }
+
+    private VisualNode RenderPage(string arg)
+    {
+        return new Grid()
+        {
+                new Label(arg)
+                .LineBreakMode(LineBreakMode.WordWrap)
+                        .TextColor(State.Mau==MauNen.Trang?Colors.Black:State.Mau==MauNen.Den?Colors.White:State.Mau==MauNen.Xam?Colors.White:Colors.Black)
+                        .FontSize(State.FontSize)
+                        .FontFamily(State.Font)
+                        .LineHeight(State.LineHeight)
+                        .CharacterSpacing(State.CharacterSpacing)
+                        .OnTapped(()=>SetState(s=>s.OpenBorder=!s.OpenBorder))
+                        .GridRow(0),
+        }.Margin(30)
+        .BackgroundColor(Colors.Transparent);
+    }
+
     Border RenderColorPicker(Color textcolor,bool ontick,Color bg,MauNen theme) =>
         new Border
                                 {

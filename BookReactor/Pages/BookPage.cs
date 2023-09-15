@@ -254,6 +254,7 @@ class BookPage:Component<BookPageState, BookPageProps>
                     .GridColumn(0)
                     ,
                     new Label(item.volumeInfo.title)
+                    .LineBreakMode(LineBreakMode.TailTruncation)
                     .MaxLines(2)
                     .FontFamily(Theme.font)
                     .FontSize(17)
@@ -365,6 +366,7 @@ class BookPage:Component<BookPageState, BookPageProps>
                              new Label(item.volumeInfo.title)
                             .TextColor(Colors.White)
                                     .FontSize(15)
+                                    .LineBreakMode(LineBreakMode.TailTruncation)
                                     .FontFamily(Theme.font)
                                     .MaxLines(1),
                             new Label(authors)
@@ -378,6 +380,7 @@ class BookPage:Component<BookPageState, BookPageProps>
                                     .TextColor(Colors.Gray)
                                     .FontSize(13)
                                     .FontFamily(Theme.font)
+                                    .LineBreakMode(LineBreakMode.TailTruncation)
                                     .GridColumn(0)
                                     .MaxLines(1)
                                     .Margin(0,10,0,0),

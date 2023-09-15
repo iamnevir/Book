@@ -4135,6 +4135,10 @@ C:\Users\trick\source\repos\Book\BookReactor\obj\Debug\net7.0-android\android\sr
 C:\Users\trick\source\repos\Book\BookReactor\obj\Debug\net7.0-android\android\src\crc64d6358e7bf64fbac4\SpeechToTextImplementation_SpeechRecognitionListener.java
 C:\Users\trick\source\repos\Book\BookReactor\obj\Debug\net7.0-android\resizetizer\r\drawable\heart.png
 C:\Users\trick\source\repos\Book\BookReactor\obj\Debug\net7.0-android\resizetizer\r\drawable\search.png
+C:\Users\trick\source\repos\Book\BookReactor\obj\Debug\net7.0-android\android\assets\EpubSharp.dll
+C:\Users\trick\source\repos\Book\BookReactor\obj\Debug\net7.0-android\android\assets\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\trick\source\repos\Book\BookReactor\obj\Debug\net7.0-android\android\assets\Microsoft.CodeAnalysis.dll
+C:\Users\trick\source\repos\Book\BookReactor\obj\Debug\net7.0-android\android\assets\Microsoft.CodeAnalysis.VisualBasic.dll
 C:\Users\trick\source\repos\Book\BookReactor\obj\Debug\net7.0-android\android\assets\mscorlib.dll
 C:\Users\trick\source\repos\Book\BookReactor\obj\Debug\net7.0-android\android\assets\System.Collections.Concurrent.dll
 C:\Users\trick\source\repos\Book\BookReactor\obj\Debug\net7.0-android\android\assets\System.Data.Common.dll
@@ -4148,10 +4152,3 @@ C:\Users\trick\source\repos\Book\BookReactor\obj\Debug\net7.0-android\android\as
 C:\Users\trick\source\repos\Book\BookReactor\obj\Debug\net7.0-android\android\assets\System.Runtime.Extensions.dll
 C:\Users\trick\source\repos\Book\BookReactor\obj\Debug\net7.0-android\android\assets\System.Runtime.Serialization.Formatters.dll
 C:\Users\trick\source\repos\Book\BookReactor\obj\Debug\net7.0-android\android\assets\System.Xml.dll
-C:\Users\trick\source\repos\Book\BookReactor\obj\Debug\net7.0-android\android\assets\HtmlAgilityPack.dll
-C:\Users\trick\source\repos\Book\BookReactor\obj\Debug\net7.0-android\android\assets\HtmlAgilityPack.pdb
-C:\Users\trick\source\repos\Book\BookReactor\obj\Debug\net7.0-android\android\assets\VersOne.Epub.dll
-C:\Users\trick\source\repos\Book\BookReactor\obj\Debug\net7.0-android\android\assets\EpubSharp.dll
-C:\Users\trick\source\repos\Book\BookReactor\obj\Debug\net7.0-android\android\assets\Microsoft.CodeAnalysis.CSharp.dll
-C:\Users\trick\source\repos\Book\BookReactor\obj\Debug\net7.0-android\android\assets\Microsoft.CodeAnalysis.dll
-C:\Users\trick\source\repos\Book\BookReactor\obj\Debug\net7.0-android\android\assets\Microsoft.CodeAnalysis.VisualBasic.dll

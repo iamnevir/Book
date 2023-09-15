@@ -403,6 +403,7 @@ class HomePage : Component<HomePageState>
                     {
                          new Label(item.volumeInfo.title)
                         .TextColor(Colors.White)
+                        .LineBreakMode(LineBreakMode.TailTruncation)
                         .FontAttributes(Microsoft.Maui.Controls.FontAttributes.Bold)
                         .FontSize(16)
                         .FontFamily(Theme.font)
@@ -461,6 +462,7 @@ class HomePage : Component<HomePageState>
                     new Label(item.volumeInfo.title)
                     .TextColor(Colors.White)
                         .FontSize(20)
+                        .LineBreakMode(LineBreakMode.TailTruncation)
                         .FontFamily(Theme.font)
                         .MaxLines(1),
                     new Label(item.volumeInfo.authors[0])
@@ -511,6 +513,7 @@ class HomePage : Component<HomePageState>
                     .Aspect(Aspect.AspectFill),
                     new Label(item.volumeInfo.title)
                     .TextColor(Colors.White)
+                    .LineBreakMode(LineBreakMode.TailTruncation)
                             .FontSize(13)
                             .FontFamily(Theme.font)
                             .MaxLines(1),
